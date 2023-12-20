@@ -2,8 +2,8 @@
   "gameTitle": "DinoGenics",
   "home": {
     "title": "DinoGenics Solo Helper",
-    "play1": "Play <a href='https://boardgamegeek.com/boardgame/210296/dinogenics' target='_blank' rel='noopener'><b>DinoGenics</b></a> against a XXX, the Solo Opponent.",
-    "play2": "TBD",
+    "play1": "Play <a href='https://boardgamegeek.com/boardgame/210296/dinogenics' target='_blank' rel='noopener'><b>DinoGenics</b></a> against a DiNO, the Solo Opponent.",
+    "play2": "DINO can be used for any 1-4 player game including the DinoGenics base game and Controlled Chaos expansion.",
     "feedback": "Discussion and Feedback:"
   },
   "setup": {
