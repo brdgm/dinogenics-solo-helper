@@ -1,6 +1,11 @@
-import Action from './enum/Action'
+import Dinosaur from './enum/Dinosaur'
+import Location from './enum/Location'
+import RuleChange from './enum/RuleChange'
 
 export default interface Card {
   id: number
-  action: Action
+  locations: Location[]
+  slot: number
+  dinosaurs: Dinosaur[]
+  ruleChange: RuleChange
 }
