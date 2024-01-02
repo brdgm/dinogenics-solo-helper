@@ -7,7 +7,23 @@
     "feedback": "Discussion and Feedback:"
   },
   "setup": {
-    "title": "Setup Game"
+    "title": "Setup Game",
+    "difficultyLevel": {
+      "title": "Difficulty Level",
+      "easy": "Easy",
+      "hard": "Hard"
+    },
+    "expansions": {
+      "title": "Expansions",
+      "controlled-chaos": "Controlled Chaos"
+    }
+  },
+  "difficultyLevel": {
+    "1": "Very Easy",
+    "2": "Easy", 
+    "3": "Normal",
+    "4": "Hard",
+    "5": "Very Hard"
   },
   "notfound": {
     "title": "Not Found"
