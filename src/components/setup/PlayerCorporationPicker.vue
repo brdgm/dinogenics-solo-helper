@@ -39,6 +39,7 @@ export default defineComponent({
   }    
 })
 </script>
+
 <style lang="scss" scoped>
 .icon {
   width: 3rem;
