@@ -22,9 +22,11 @@
       "easy": "Easy",
       "hard": "Hard"
     },
-    "expansions": {
-      "title": "Expansions",
-      "controlled-chaos": "Controlled Chaos"
+    "modules": {
+      "title": "Modules and Expansions",
+      "dino-advanced": "DiNO Advanced Mode",
+      "controlled-chaos": "Controlled Chaos Expansion",
+      "controlled-chaos-dinosaur-elites": "Controlled Chaos Expansion: Dinosaur Elites Module"
     }
   },
   "setupBot": {

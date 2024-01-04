@@ -3,7 +3,7 @@
 
   <PlayersSetup/>
   <DifficultyLevel/>
-  <ExpansionSetup/>
+  <ModuleSetup/>
 
   <RouterLink class="btn btn-primary btn-lg mt-4" to="/setupBot">
     {{t('action.next')}}
@@ -17,7 +17,7 @@ import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import FooterButtons from '@/components/structure/FooterButtons.vue'
 import DifficultyLevel from '@/components/setup/DifficultyLevel.vue'
-import ExpansionSetup from '@/components/setup/ExpansionSetup.vue'
+import ModuleSetup from '@/components/setup/ModuleSetup.vue'
 import PlayersSetup from '@/components/setup/PlayersSetup.vue'
 import { RouterLink } from 'vue-router'
 
@@ -27,7 +27,7 @@ export default defineComponent({
     FooterButtons,
     PlayersSetup,
     DifficultyLevel,
-    ExpansionSetup,
+    ModuleSetup,
     RouterLink
   },
   setup() {

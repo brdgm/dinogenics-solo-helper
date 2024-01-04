@@ -20,7 +20,7 @@
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useStateStore } from '@/store/state'
-import Expansion from '@/services/enum/Expansion'
+import Module from '@/services/enum/Module'
 import DNACollectionArrangement from '../round/DNACollectionArrangement.vue'
 
 export default defineComponent({
@@ -38,7 +38,7 @@ export default defineComponent({
       return this.state.setup.playerSetup.playerCount + this.state.setup.playerSetup.botCount
     },
     hasControlledChaos(): boolean {
-      return this.state.setup.expansions.includes(Expansion.CONTROLLED_CHAOS)
+      return this.state.setup.modules.includes(Module.CONTROLLED_CHAOS)
     }
   }
 })

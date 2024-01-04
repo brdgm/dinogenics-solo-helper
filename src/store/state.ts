@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
 import { name } from '@/../package.json'
 import DifficultyLevel from '@/services/enum/DifficultyLevel'
-import Expansion from '@/services/enum/Expansion'
+import Module from '@/services/enum/Module'
 import Corporation from '@/services/enum/Corporation'
 
 export const useStateStore = defineStore(`${name}.state`, {
@@ -16,7 +16,7 @@ export const useStateStore = defineStore(`${name}.state`, {
           playerCorporations: [Corporation.NTEK,Corporation.BLUESEA_GENETICS_PLC,Corporation.TRAPEZOHEDRON_INCORPORATED,Corporation.DINO_LIBRE,Corporation.BIOTHESAURI]
         },
         difficultyLevel: DifficultyLevel.NORMAL,
-        expansions: []
+        modules: []
       },
       rounds: []
     } as State
@@ -42,7 +42,7 @@ export interface State {
 export interface Setup {
   playerSetup: PlayerSetup
   difficultyLevel: DifficultyLevel
-  expansions: Expansion[]
+  modules: Module[]
 }
 export interface PlayerSetup {
   playerCount: number
