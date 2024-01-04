@@ -2,39 +2,39 @@
   <h3 class="mt-4 mb-3">{{t('setup.players.title')}}</h3>
 
   <div class="row mt-3">
-    <div class="col-5 col-md-4">
+    <div class="col-4 col-md-3">
       <label for="playerCount" class="form-label">{{t('setup.players.playerCount')}}</label>
     </div>
-    <div class="col-6 col-md-4">
+    <div class="col-7 col-md-4">
       <select class="form-select" id="playerCount" v-model="playerCount">
         <option v-for="i in maxPlayerCount" :key="i" :value="i">{{t('setup.players.playerCountItem', {count:i}, i)}}</option>
       </select>
     </div>
   </div>  
   <div class="row mt-3" v-for="playerCorporationIndex in playerCount" :key="playerCorporationIndex+playerCorporations[playerCorporationIndex-1]">
-    <div class="col-5 col-md-4">
+    <div class="col-4 col-md-3">
       <label for="playerCount" class="form-label">{{t('setup.players.playerColor', {index:playerCorporationIndex}, playerCount)}}</label>
     </div>
-    <div class="col-5 col-md-3">
+    <div class="col-8 col-md-9">
       <PlayerCorporationPicker :model-value="playerCorporations[playerCorporationIndex-1]" @update:model-value="corporation => playerCorporationChanged(playerCorporationIndex-1, corporation)"/>
     </div>
   </div>  
 
   <div class="row mt-3">
-    <div class="col-5 col-md-4">
+    <div class="col-4 col-md-3">
       <label for="botCount" class="form-label">{{t('setup.players.botCount')}}</label>
     </div>
-    <div class="col-6 col-md-4">
+    <div class="col-7 col-md-4">
       <select class="form-select" id="botCount" v-model="botCount">
         <option v-for="i in maxBotCount" :key="i" :value="i">{{t('setup.players.botCountItem', {count:i}, i)}}</option>
       </select>
     </div>
   </div>  
   <div class="row mt-3" v-for="botColorIndex in botCount" :key="botColorIndex+playerCorporations[playerCount+botColorIndex-1]">
-    <div class="col-5 col-md-4">
+    <div class="col-4 col-md-3">
       <label for="playerCount" class="form-label">{{t('setup.players.botColor', botCount)}}</label>
     </div>
-    <div class="col-5 col-md-3">
+    <div class="col-8 col-md-9">
       <PlayerCorporationPicker :model-value="playerCorporations[playerCount+botColorIndex-1]" @update:model-value="corporation => playerCorporationChanged(playerCount+botColorIndex-1, corporation)"/>
     </div>
   </div>  

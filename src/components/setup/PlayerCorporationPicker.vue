@@ -1,17 +1,20 @@
 <template>
-  <svg v-for="corporation in corporations" :key="corporation" width="1.5rem" height="1.5rem" class="color"
-      :class="{selected:corporation==selectedCorporation}" @click="selectCorporation(corporation)">
-    <rect width="1rem" height="1rem" :style="`fill:${getColorCode(corporation)};'`"/>
-  </svg>
+  <AppIcon v-for="corporation in corporations" :key="corporation"
+      type="corporation" :name="corporation" class="icon"
+      :class="{selected:corporation==selectedCorporation}" @click="selectCorporation(corporation)"/>
 </template>
 
 <script lang="ts">
 import Corporation from '@/services/enum/Corporation'
 import { defineComponent } from 'vue'
 import getCorporationColorCode from '@/util/getCorporationColorCode'
+import AppIcon from '../structure/AppIcon.vue'
 
 export default defineComponent({
   name: 'PlayerCorporationPicker',
+  components: {
+    AppIcon
+  },
   emits: ['update:modelValue'],
   props: {
     modelValue: {
@@ -26,24 +29,25 @@ export default defineComponent({
     }
   },
   methods: {
-    getColorCode(corporation : Corporation) : string {
+    getColorCode(corporation: Corporation): string {
       return getCorporationColorCode(corporation)
     },
-    selectCorporation(corporation : Corporation) : void {
+    selectCorporation(corporation: Corporation): void {
       this.selectedCorporation = corporation
       this.$emit('update:modelValue', corporation)
     }
-  }
+  }    
 })
 </script>
 <style lang="scss" scoped>
-.color {
+.icon {
+  width: 3rem;
   margin-right: 0.5rem;
   border: 4px solid transparent;
-  border-radius: 0.25rem;
+  border-radius: 1.5rem;
   cursor: pointer;
   &.selected {
-    border: 4px solid #999;
+    border: 5px solid #f00;
   }
 }
 </style>

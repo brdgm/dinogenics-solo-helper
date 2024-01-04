@@ -13,7 +13,7 @@ export const useStateStore = defineStore(`${name}.state`, {
         playerSetup: {
           playerCount: 1,
           botCount: 1,
-          playerCorporations: [Corporation.BIOTHESAURI,Corporation.BLUESEA_GENETICS_PLC,Corporation.DINO_LIBRE,Corporation.NTEK,Corporation.TRAPEZOHEDRON_INCORPORATED]
+          playerCorporations: [Corporation.NTEK,Corporation.BLUESEA_GENETICS_PLC,Corporation.TRAPEZOHEDRON_INCORPORATED,Corporation.DINO_LIBRE,Corporation.BIOTHESAURI]
         },
         difficultyLevel: DifficultyLevel.NORMAL,
         expansions: []
