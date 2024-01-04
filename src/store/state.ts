@@ -52,4 +52,14 @@ export interface PlayerSetup {
 
 export interface Round {
   round: number
+  botRound: BotRound[]
+}
+export interface BotRound {
+  round: number
+  bot: number
+  cardDeck: CardDeckPersistence
+}
+export interface CardDeckPersistence {
+  pile: number[]
+  discard: number[]
 }
