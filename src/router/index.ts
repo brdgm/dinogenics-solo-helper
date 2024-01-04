@@ -5,6 +5,7 @@ import createRouter from 'brdgm-commons/src/util/router/createRouter'
 import { name } from '@/../package.json'
 import SetupGame from '@/views/SetupGame.vue'
 import SetupBot from '@/views/SetupBot.vue'
+import RoundTurn from '@/views/RoundTurn.vue'
 
 const LOCALSTORAGE_KEY = `${name}.route`
 
@@ -23,6 +24,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/setupBot',
     name: 'SetupBot',
     component: SetupBot
+  },
+  {
+    path: '/round/:round/turn/:turn',
+    name: 'RoundTurn',
+    component: RoundTurn
   },
   {
     path: '/:pathMatch(.*)*',

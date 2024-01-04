@@ -1,13 +1,11 @@
 <template>
-  <h1>{{t('setupBot.title')}}</h1>
+  <h1>{{t('roundTurn.title')}}</h1>
 
-  <SetupBotInstructions/>
-
-  <button class="btn btn-primary btn-lg mt-4" @click="startGame()">
-    {{t('action.startGame')}}
+  <button class="btn btn-primary btn-lg mt-4" @click="next()">
+    {{t('action.next')}}
   </button>
 
-  <FooterButtons backButtonRouteTo="/setupGame" endGameButtonType="abortGame"/>
+  <FooterButtons :backButtonRouteTo="backButtonRouteTo" endGameButtonType="abortGame"/>
 </template>
 
 <script lang="ts">
@@ -15,23 +13,26 @@ import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useStateStore } from '@/store/state'
 import FooterButtons from '@/components/structure/FooterButtons.vue'
-import SetupBotInstructions from '@/components/setup/SetupBotInstructions.vue'
 
 export default defineComponent({
-  name: 'SetupBot',
+  name: 'RoundTurn',
   components: {
-    FooterButtons,
-    SetupBotInstructions
+    FooterButtons
   },
   setup() {
     const { t } = useI18n()
     const state = useStateStore()
     return { t, state }
   },
+  computed: {
+    backButtonRouteTo() : string {
+      return ''
+    }
+  },
   methods: {
-    startGame() : void {
+    next() : void {
       this.state.resetGame()
-      this.$router.push('/round/1/turn/1')
+      this.$router.push('/round/1')
     }
   }
 })
