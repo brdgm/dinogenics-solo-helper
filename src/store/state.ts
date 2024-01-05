@@ -53,10 +53,11 @@ export interface PlayerSetup {
 export interface Round {
   round: number
   playerOrder: Corporation[]
-  botRound: BotRound[]
+  botRounds: BotRound[]
 }
 export interface BotRound {
   round: number
+  turn: number
   corporation: Corporation
   cardDeck: CardDeckPersistence
 }

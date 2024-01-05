@@ -1,6 +1,7 @@
+import CardDeck from '@/services/CardDeck'
 import Corporation from '@/services/enum/Corporation'
 import Module from '@/services/enum/Module'
-import { BotRound, Round, State } from '@/store/state'
+import { Round, State } from '@/store/state'
 import { RouteLocation } from 'vue-router'
 
 export default class NavigationState {
@@ -12,9 +13,9 @@ export default class NavigationState {
   readonly playerOrder : Corporation[]
   readonly currentCorporation : Corporation
   readonly isPlayerTurn : boolean
-  readonly botRound? : BotRound
   readonly modules : Module[]
   readonly hasControlledChaos : boolean
+  readonly cardDeck? : CardDeck
 
   public constructor(route : RouteLocation, state : State) {    
     this.round = parseInt(route.params['round'] as string)
@@ -40,12 +41,14 @@ export default class NavigationState {
     // check current worker number
     this.worker = ((this.turn - playerIndex - 1) / playerTotalCount) + 1
 
-    // get bot round data
-    this.botRound = roundData?.botRound.find(item => item.corporation == this.currentCorporation)
-
     // module setup
     this.modules = state.setup.modules
     this.hasControlledChaos = this.modules.includes(Module.CONTROLLED_CHAOS)
+
+    // card deck for bot round
+    if (!this.isPlayerTurn) {
+      this.cardDeck = getBotRoundCardDeck(this.round, this.turn, this.currentCorporation, state)
+    }
   }
 
   public get turnCount() : number {
@@ -87,4 +90,28 @@ function determinePlayerOrder(round : number, roundData : Round|undefined, state
   // get from player setup
   const { playerCorporations, playerCount, botCount } = state.setup.playerSetup
   return playerCorporations.slice(0, playerCount + botCount)
+}
+
+function getBotRoundCardDeck(round : number, turn : number, corporation : Corporation, state : State) : CardDeck {
+  const roundData = state.rounds.find(item => item.round == round)
+  if (roundData) {
+    // find stored turn this round
+    const botRound = roundData.botRounds.find(item => item.corporation == corporation && item.turn == turn)
+    if (botRound) {
+      return CardDeck.fromPersistence(botRound.cardDeck)
+    }
+    // find previous turn in this round
+    const previousTurnBotRound = roundData.botRounds
+      .sort((item1, item2) => item1.turn - item2.turn)
+      .findLast(item => item.corporation == corporation && item.turn < turn)
+    if (previousTurnBotRound) {
+      return CardDeck.fromPersistence(previousTurnBotRound.cardDeck)
+    }
+  }
+  // find last turn from previous round
+  if (round > 1) {
+    return getBotRoundCardDeck(round - 1, 99, corporation, state)
+  }
+  // create new card deck
+  return CardDeck.new()
 }

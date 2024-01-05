@@ -5,12 +5,12 @@ export default function (params?: MockRoundParams) : Round {
   return {
     round: params?.round ?? 1,
     playerOrder: params?.playerOrder ?? [],
-    botRound: params?.botRound ?? []
+    botRounds: params?.botRounds ?? []
   }
 }
 
 export interface MockRoundParams {
   round? : number
   playerOrder? : Corporation[]
-  botRound? : BotRound[]
+  botRounds? : BotRound[]
 }
