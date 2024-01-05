@@ -62,7 +62,7 @@ export default defineComponent({
 })
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .player-order {
   display: flex;
   gap: 10px;
@@ -70,6 +70,7 @@ export default defineComponent({
 }
 .icon {
   height: 4rem;
+  filter: drop-shadow(0.15rem 0.15rem 0.15rem #aaa);
   cursor: pointer;
 }
 </style>

@@ -54,7 +54,7 @@
     "drawSpecialists": "Draw two new specialists to the specialist display spaces."
   },
   "roundTurn": {
-    "title": "Round Turn"
+    "title": "Turn"
   },
   "roundUpkeepPhase": {
     "title": "Upkeep Phase",
@@ -65,6 +65,9 @@
     "gainDinosaurFacilityResources": "Gain resources from dinosaurs and facilities",
     "returnWorkers": "Return workers from the Mainland board to each owner’s park",
     "advanceVisitorOverlay": "Advance the Visitor Overlay one column to the left"
+  },
+  "sideBar": {
+    "round": "Round"
   },
   "dnaCollectionArrangement": {
     "title": "DINO DNA Collection and Arrangement",

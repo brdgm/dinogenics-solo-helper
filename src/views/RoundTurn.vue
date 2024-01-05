@@ -1,5 +1,12 @@
 <template>
-  <h1>{{t('roundTurn.title')}}</h1>
+  <SideBar :navigationState="navigationState"/>
+  <h1>
+    <AppIcon type="corporation" :name="navigationState.currentCorporation" class="corporation"/>
+    {{t('roundTurn.title')}}
+  </h1>
+
+  <TurnPlayer v-if="navigationState.isPlayerTurn" :navigationState="navigationState" />
+  <TurnBot v-if="navigationState.isBotTurn" :navigationState="navigationState" />
 
   <button class="btn btn-primary btn-lg mt-4" @click="next()">
     {{t('action.next')}}
@@ -15,11 +22,19 @@ import { useStateStore } from '@/store/state'
 import FooterButtons from '@/components/structure/FooterButtons.vue'
 import { useRoute } from 'vue-router'
 import NavigationState from '@/util/NavigationState'
+import SideBar from '@/components/round/SideBar.vue'
+import TurnPlayer from '@/components/round/TurnPlayer.vue'
+import TurnBot from '@/components/round/TurnBot.vue'
+import AppIcon from '@/components/structure/AppIcon.vue'
 
 export default defineComponent({
   name: 'RoundTurn',
   components: {
-    FooterButtons
+    FooterButtons,
+    SideBar,
+    TurnPlayer,
+    TurnBot,
+    AppIcon
   },
   setup() {
     const { t } = useI18n()
@@ -51,3 +66,10 @@ export default defineComponent({
   }
 })
 </script>
+
+<style lang="scss" scoped>
+.corporation {
+  height: 4rem;
+  filter: drop-shadow(0.15rem 0.15rem 0.15rem #aaa);
+}
+</style>

@@ -1,4 +1,5 @@
 <template>
+  <SideBar :navigationState="navigationState"/>
   <h1>{{t('roundOpenSeason.title')}}</h1>
 
   <ol>
@@ -32,12 +33,14 @@ import { useRoute } from 'vue-router'
 import NavigationState from '@/util/NavigationState'
 import DeterminePlayerOrder from '@/components/round/DeterminePlayerOrder.vue'
 import Corporation from '@/services/enum/Corporation'
+import SideBar from '@/components/round/SideBar.vue'
 
 export default defineComponent({
   name: 'RoundOpenSeason',
   components: {
     FooterButtons,
-    DeterminePlayerOrder
+    DeterminePlayerOrder,
+    SideBar
   },
   setup() {
     const { t } = useI18n()

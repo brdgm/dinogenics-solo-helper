@@ -78,7 +78,7 @@ export default defineComponent({
       }
       this.storePlayerSetup()
     },
-    playerColors() {
+    playerCorporations() {
       this.storePlayerSetup()
     },
     botCount() {

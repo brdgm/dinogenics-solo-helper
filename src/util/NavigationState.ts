@@ -23,7 +23,7 @@ export default class NavigationState {
     this.playerOrder = determinePlayerOrder(this.round, roundData, state)
 
     // check if current player is a human player
-    this.currentCorporation = this.playerOrder[this.turn]
+    this.currentCorporation = this.playerOrder[this.turn - 1]
     const { playerCorporations, playerCount } = state.setup.playerSetup
     this.isPlayerTurn = playerCorporations.indexOf(this.currentCorporation) < playerCount
 
