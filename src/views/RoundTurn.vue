@@ -2,7 +2,7 @@
   <SideBar :navigationState="navigationState"/>
   <h1>
     <AppIcon type="corporation" :name="navigationState.currentCorporation" class="corporation"/>
-    {{t('roundTurn.title')}}
+    {{t('roundTurn.title', {worker})}}
   </h1>
 
   <TurnPlayer v-if="navigationState.isPlayerTurn" :navigationState="navigationState" />
@@ -41,8 +41,8 @@ export default defineComponent({
     const route = useRoute()
     const state = useStateStore()
     const navigationState = new NavigationState(route, state)
-    const { round, turn, turnCount } = navigationState
-    return { t, state, navigationState, round, turn, turnCount }
+    const { round, turn, worker, turnCount } = navigationState
+    return { t, state, navigationState, round, turn, worker, turnCount }
   },
   computed: {
     backButtonRouteTo() : string {

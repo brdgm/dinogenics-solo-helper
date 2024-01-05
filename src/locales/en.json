@@ -54,7 +54,7 @@
     "drawSpecialists": "Draw two new specialists to the specialist display spaces."
   },
   "roundTurn": {
-    "title": "Turn"
+    "title": "Worker {worker}"
   },
   "roundUpkeepPhase": {
     "title": "Upkeep Phase",
