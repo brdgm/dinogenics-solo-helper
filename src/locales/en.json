@@ -38,6 +38,33 @@
     "botDNACardArrangement": "Place DiNO’s DNA cards face up and all Manipulation Cards face down on stacks next to DiNO’s Island Board as indicated.",
     "botTurnOrder": "DiNO always starts last in turn order on the first round of the game."
   },
+  "roundOpenSeason": {
+    "title": "Open Season",
+    "playerOrder": "Determine player order based on reputation",
+    "determinePlayerOrder": {
+      "currentItems": "Current Player Order",
+      "newItems": "New Player Order",
+      "newItemsSelect": "Please determine the new player order."
+    },
+    "assignVisitors": "Assign visitors based on player order",
+    "assignBonusVisitors": "Assign bonus visitors",
+    "receiveIncome": "Each player receives 1 credit for each visitor in their park",
+    "breakingNews": "Resolve the next Breaking News card, and draw a new upcoming one",
+    "drawFacilityTiles": "Draw one random tile to each of the 2nd/3rd/4th facility stacks in the City Center"
+  },
+  "roundTurn": {
+    "title": "Round Turn"
+  },
+  "roundUpkeepPhase": {
+    "title": "Upkeep Phase",
+    "feedCarnivores": "Feed all carnivores (must feed carnivores as much as possible)",
+    "checkRampage": "Check for rampage, and roll if necessary",
+    "gainVisitorVPs": "Gain 3 VPs for every two visitors leaving the park alive",
+    "gainDinosaurFacilityVPs": "Gain Victory Points from dinosaurs and facilities",
+    "gainDinosaurFacilityResources": "Gain resources from dinosaurs and facilities",
+    "returnWorkers": "Return workers from the Mainland board to each owner’s park",
+    "advanceVisitorOverlay": "Advance the Visitor Overlay one column to the left"
+  },
   "dnaCollectionArrangement": {
     "title": "DINO DNA Collection and Arrangement",
     "setCollection": "During the game DINO will focus on collecting DNA sets of up to 4 different species. As part of DINO’s setup, create the preferred species’ stacks beside DINO’s Island Board. Unique species will form their own column while duplicates will be stacked as they are drawn.",

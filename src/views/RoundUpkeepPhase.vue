@@ -1,5 +1,15 @@
 <template>
-  <h1>{{t('roundTurn.title')}}</h1>
+  <h1>{{t('roundUpkeepPhase.title')}}</h1>
+
+  <ol>
+    <li v-html="t('roundUpkeepPhase.feedCarnivores')"></li>
+    <li v-html="t('roundUpkeepPhase.checkRampage')"></li>
+    <li v-html="t('roundUpkeepPhase.gainVisitorVPs')"></li>
+    <li v-html="t('roundUpkeepPhase.gainDinosaurFacilityVPs')"></li>
+    <li v-html="t('roundUpkeepPhase.gainDinosaurFacilityResources')"></li>
+    <li v-html="t('roundUpkeepPhase.returnWorkers')"></li>
+    <li v-html="t('roundUpkeepPhase.advanceVisitorOverlay')"></li>
+  </ol>
 
   <button class="btn btn-primary btn-lg mt-4" @click="next()">
     {{t('action.next')}}
@@ -17,7 +27,7 @@ import { useRoute } from 'vue-router'
 import NavigationState from '@/util/NavigationState'
 
 export default defineComponent({
-  name: 'RoundTurn',
+  name: 'RoundUpkeepPhase',
   components: {
     FooterButtons
   },
@@ -26,27 +36,17 @@ export default defineComponent({
     const route = useRoute()
     const state = useStateStore()
     const navigationState = new NavigationState(route, state)
-    const { round, turn, turnCount } = navigationState
-    return { t, state, navigationState, round, turn, turnCount }
+    const { round, turnCount } = navigationState
+    return { t, state, round, turnCount }
   },
   computed: {
     backButtonRouteTo() : string {
-      if (this.turn > 1) {
-        return `/round/${this.round}/turn/${this.turn - 1}`
-      }
-      else {
-        return `/round/${this.round}/openSeason`
-      }
+      return `/round/${this.round}/turn/${this.turnCount}`
     }
   },
   methods: {
     next() : void {
-      if (this.turn < this.turnCount) {
-        this.$router.push(`/round/${this.round}/turn/${this.turn + 1}`)
-      }
-      else {
-        this.$router.push(`/round/${this.round}/upkeepPhase`)
-      }
+      this.$router.push(`/round/${this.round + 1}/openSeason`)
     }
   }
 })

@@ -31,7 +31,7 @@ export default defineComponent({
   methods: {
     startGame() : void {
       this.state.resetGame()
-      this.$router.push('/round/1/turn/1')
+      this.$router.push('/round/1/openSeason')
     }
   }
 })

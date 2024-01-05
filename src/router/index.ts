@@ -5,7 +5,9 @@ import createRouter from 'brdgm-commons/src/util/router/createRouter'
 import { name } from '@/../package.json'
 import SetupGame from '@/views/SetupGame.vue'
 import SetupBot from '@/views/SetupBot.vue'
+import RoundOpenSeason from '@/views/RoundOpenSeason.vue'
 import RoundTurn from '@/views/RoundTurn.vue'
+import RoundUpkeepPhase from '@/views/RoundUpkeepPhase.vue'
 
 const LOCALSTORAGE_KEY = `${name}.route`
 
@@ -26,9 +28,19 @@ const routes: Array<RouteRecordRaw> = [
     component: SetupBot
   },
   {
+    path: '/round/:round/openSeason',
+    name: 'RoundOpenSeason',
+    component: RoundOpenSeason
+  },
+  {
     path: '/round/:round/turn/:turn',
     name: 'RoundTurn',
     component: RoundTurn
+  },
+  {
+    path: '/round/:round/upkeepPhase',
+    name: 'RoundUpkeepPhase',
+    component: RoundUpkeepPhase
   },
   {
     path: '/:pathMatch(.*)*',
