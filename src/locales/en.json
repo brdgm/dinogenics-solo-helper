@@ -50,7 +50,8 @@
     "assignBonusVisitors": "Assign bonus visitors",
     "receiveIncome": "Each player receives 1 credit for each visitor in their park",
     "breakingNews": "Resolve the next Breaking News card, and draw a new upcoming one",
-    "drawFacilityTiles": "Draw one random tile to each of the 2nd/3rd/4th facility stacks in the City Center"
+    "drawFacilityTiles": "Draw one random tile to each of the 2nd/3rd/4th facility stacks in the City Center",
+    "drawSpecialists": "Draw two new specialists to the specialist display spaces."
   },
   "roundTurn": {
     "title": "Round Turn"

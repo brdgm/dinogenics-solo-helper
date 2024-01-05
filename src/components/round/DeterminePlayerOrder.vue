@@ -21,9 +21,8 @@
 
 <script lang="ts">
 import Corporation from '@/services/enum/Corporation'
-import { defineComponent } from 'vue'
+import { defineComponent, PropType } from 'vue'
 import AppIcon from '@/components/structure/AppIcon.vue'
-import { PropType } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 export default defineComponent({

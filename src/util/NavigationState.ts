@@ -1,4 +1,5 @@
 import Corporation from '@/services/enum/Corporation'
+import Module from '@/services/enum/Module'
 import { BotRound, Round, State } from '@/store/state'
 import { RouteLocation } from 'vue-router'
 
@@ -10,6 +11,8 @@ export default class NavigationState {
   readonly currentCorporation : Corporation
   readonly isPlayerTurn : boolean
   readonly botRound? : BotRound
+  readonly modules : Module[]
+  readonly hasControlledChaos : boolean
 
   public constructor(route : RouteLocation, state : State) {    
     this.round = parseInt(route.params['round'] as string)
@@ -26,6 +29,10 @@ export default class NavigationState {
 
     // get bot round data
     this.botRound = roundData?.botRound.find(item => item.corporation == this.currentCorporation)
+
+    // module setup
+    this.modules = state.setup.modules
+    this.hasControlledChaos = this.modules.includes(Module.CONTROLLED_CHAOS)
   }
 
   public get turnCount() : number {

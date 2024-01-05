@@ -13,6 +13,7 @@
       <li v-html="t('roundOpenSeason.breakingNews')"></li>
     </template>
     <li v-html="t('roundOpenSeason.drawFacilityTiles')"></li>
+    <li v-if="hasControlledChaos" v-html="t('roundOpenSeason.drawSpecialists')"></li>
   </ol>
 
   <button class="btn btn-primary btn-lg mt-4" @click="next()" :disabled="!hasValidPlayerOrder">
@@ -43,8 +44,8 @@ export default defineComponent({
     const route = useRoute()
     const state = useStateStore()
     const navigationState = new NavigationState(route, state)
-    const { round, playerOrder } = navigationState
-    return { t, state, round, navigationState, playerOrder }
+    const { round, playerOrder, hasControlledChaos } = navigationState
+    return { t, state, round, navigationState, playerOrder, hasControlledChaos }
   },
   data() {
     return {
