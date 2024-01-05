@@ -56,6 +56,12 @@
   "roundTurn": {
     "title": "Worker {worker}"
   },
+  "turnPlayer": {
+    "takeYourTurn": "Take your turn."
+  },
+  "turnBot": {
+
+  },
   "roundUpkeepPhase": {
     "title": "Upkeep Phase",
     "feedCarnivores": "Feed all carnivores (must feed carnivores as much as possible)",

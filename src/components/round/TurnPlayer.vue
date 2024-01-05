@@ -1,5 +1,5 @@
 <template>
-  <p class="mt-4">Take your turn.</p>
+  <p class="mt-4" v-html="t('turnPlayer.takeYourTurn')"></p>
 </template>
 
 <script lang="ts">
