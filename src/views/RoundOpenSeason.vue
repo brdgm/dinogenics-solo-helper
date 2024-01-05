@@ -27,13 +27,14 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { Round, useStateStore } from '@/store/state'
+import { BotRound, Round, useStateStore } from '@/store/state'
 import FooterButtons from '@/components/structure/FooterButtons.vue'
 import { useRoute } from 'vue-router'
 import NavigationState from '@/util/NavigationState'
 import DeterminePlayerOrder from '@/components/round/DeterminePlayerOrder.vue'
 import Corporation from '@/services/enum/Corporation'
 import SideBar from '@/components/round/SideBar.vue'
+import CardDeck from '@/services/CardDeck'
 
 export default defineComponent({
   name: 'RoundOpenSeason',
@@ -70,10 +71,23 @@ export default defineComponent({
   },
   methods: {
     next() : void {
+      const botRounds : BotRound[] = []
+      if (this.round == 1) {
+        // store initial bot card decks for round 1
+        const { playerCount, botCount, playerCorporations } = this.state.setup.playerSetup
+        for (let playerIndex = playerCount; playerIndex < playerCount + botCount; playerIndex++) {
+          botRounds.push({
+            round: 1,
+            turn: playerIndex + 1,
+            corporation: playerCorporations[playerIndex],
+            cardDeck: CardDeck.new().toPersistence()
+          })
+        }
+      }
       const roundData : Round = {
         round: this.round,
         playerOrder: this.newPlayerOrder,
-        botRound: []
+        botRounds
       }
       this.state.storeRound(roundData)
       this.$router.push(`/round/${this.round}/turn/1`)

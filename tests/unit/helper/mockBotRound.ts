@@ -1,4 +1,4 @@
-import { BotRound, CardDeckPersistence } from '@/store/state'
+import { BotRound } from '@/store/state'
 import Corporation from '@/services/enum/Corporation'
 
 export default function (params?: MockBotRoundParams) : BotRound {
