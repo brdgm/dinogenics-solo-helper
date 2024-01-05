@@ -5,8 +5,9 @@
     {{t('roundTurn.title', {worker})}}
   </h1>
 
-  <TurnPlayer v-if="navigationState.isPlayerTurn" :navigationState="navigationState" />
-  <TurnBot v-if="navigationState.isBotTurn" :navigationState="navigationState" />
+  <TurnPlayer v-if="navigationState.isPlayerTurn" :navigationState="navigationState"/>
+  <TurnBot v-if="navigationState.isBotTurn && navigationState.cardDeck"
+      :navigationState="navigationState" :cardDeck="navigationState.cardDeck"/>
 
   <button class="btn btn-primary btn-lg mt-4" @click="next()">
     {{t('action.next')}}

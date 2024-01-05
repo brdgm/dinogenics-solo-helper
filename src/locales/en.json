@@ -92,6 +92,68 @@
     "4": "Hard",
     "5": "Very Hard"
   },
+  "location": {
+    "site-a": {
+      "title": "Site A",
+      "shortDescription": "Only if less than 2 complete DNA sets."
+    },
+    "site-b": {
+      "title": "Site B",
+      "shortDescription": "Only if less than 2 complete DNA sets."
+    },
+    "boneyard": {
+      "title": "The Boneyard",
+      "shortDescription": "If contains card for one of the 4 preferred species."
+    },
+    "agency": {
+      "title": "The Agency",
+      "shortDescription": "If available."
+    },
+    "uplink": {
+      "title": "The Uplink",
+      "shortDescription": "Manipulation stack not empty."
+    },
+    "farm": {
+      "title": "The Farm",
+      "shortDescription": "If no/not enough goats for this season and next."
+    },
+    "ferry": {
+      "title": "The Ferry",
+      "shortDescription": "If available."
+    },
+    "time-share": {
+      "title": "Time Share",
+      "shortDescription": "Only if uneven number of visitors."
+    },
+    "outsource": {
+      "title": "Outsource",
+      "shortDescription": "Draw another card to determine action."
+    },
+    "city-center": {
+      "title": "The City Center",
+      "shortDescription": "3 fences, repair/hotel/slot, market buy/sell."
+    },
+    "dinogenics-iom": {
+      "title": "DinoGenics IOM",
+      "shortDescription": "If complete set, suitable habitat and goats."
+    },
+    "special-action": {
+      "title": "Special Action",
+      "shortDescription": "If 5/8/12/14/15/16/20/28/D3 Breaking News is active."
+    },
+    "site-d": {
+      "title": "Site D",
+      "shortDescription": "Only if less than 2 complete DNA sets."
+    },
+    "refinement": {
+      "title": "Refinement",
+      "shortDescription": "If less than 2 refined DNA tokens."
+    },
+    "intelligen-designs-hq": {
+      "title": "IntelliGen Designs HQ",
+      "shortDescription": "Draw two more cards to determine slots."
+    }
+  },
   "notfound": {
     "title": "Not Found"
   },

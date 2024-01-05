@@ -102,7 +102,7 @@ function getBotRoundCardDeck(round : number, turn : number, corporation : Corpor
     }
     // find previous turn in this round
     const previousTurnBotRound = roundData.botRounds
-      .sort((item1, item2) => item1.turn - item2.turn)
+      .toSorted((item1, item2) => item1.turn - item2.turn)
       .findLast(item => item.corporation == corporation && item.turn < turn)
     if (previousTurnBotRound) {
       return CardDeck.fromPersistence(previousTurnBotRound.cardDeck)
