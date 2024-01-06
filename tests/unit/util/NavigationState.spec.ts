@@ -1,12 +1,13 @@
 import NavigationState from '@/util/NavigationState'
 import { expect } from 'chai'
-import mockRouteLocation from '../helper/mockRouteLocation'
-import mockState from '../helper/mockState'
 import Module from '@/services/enum/Module'
 import Corporation from '@/services/enum/Corporation'
 import { State } from '@/store/state'
+import mockRouteLocation from '../helper/mockRouteLocation'
+import mockState from '../helper/mockState'
 import mockRound from '../helper/mockRound'
-import mockBotRound from '../helper/mockBotRound'
+import mockTurn from '../helper/mockTurn'
+import mockBotTurn from '../helper/mockBotTurn'
 
 describe('util/NavigationState', () => {
   it('turnCount-workerCount-round1-3player', () => {
@@ -93,7 +94,7 @@ describe('util/NavigationState', () => {
     assertRoundTurn(state, 1, 8, {worker: 2, corp: Corporation.BLUESEA_GENETICS_PLC, player: false})
   })
 
-  it('carddeck-round1-turn2-nopersistence', () => {
+  it('bot-round1-turn2-nopersistence', () => {
     const navigationState = new NavigationState(
       mockRouteLocation({name:'RoundTurn',params:{'round':'1','turn':'2'}}),
       mockState({
@@ -105,12 +106,14 @@ describe('util/NavigationState', () => {
     expect(navigationState.round).to.eq(1)
     expect(navigationState.turn).to.eq(2)
     expect(navigationState.currentCorporation).to.eq(Corporation.DINO_LIBRE)
-    expect(navigationState.cardDeck?.pile.length).to.eq(22)
+    expect(navigationState.bots.length).to.eq(2)
+    expect(navigationState.currentBot).to.not.undefined
+    expect(navigationState.currentBot?.cardDeck.pile.length).to.eq(22)
   })
 
-  it('carddeck-round1-turn5', () => {
+  it('bot-round1-turn3', () => {
     const navigationState = new NavigationState(
-      mockRouteLocation({name:'RoundTurn',params:{'round':'1','turn':'5'}}),
+      mockRouteLocation({name:'RoundTurn',params:{'round':'1','turn':'3'}}),
       mockState({
         playerCount: 1,
         botCount: 2,
@@ -119,50 +122,32 @@ describe('util/NavigationState', () => {
           mockRound({
             round: 1,
             playerOrder: [Corporation.BIOTHESAURI,Corporation.DINO_LIBRE,Corporation.NTEK],
-            botRounds: [
-              mockBotRound({round:1,turn:2,corporation:Corporation.DINO_LIBRE,cardDeckPile:[1,2,3]}),
-              mockBotRound({round:1,turn:3,corporation:Corporation.NTEK,cardDeckPile:[11,12,13]}),
-              mockBotRound({round:1,turn:5,corporation:Corporation.DINO_LIBRE,cardDeckPile:[2,3],cardDecDiscard:[1]}),
-              mockBotRound({round:1,turn:6,corporation:Corporation.NTEK,cardDeckPile:[13],cardDecDiscard:[11,12]})
+            turns: [
+              mockTurn({round:1,turn:1,botTurns:[
+                mockBotTurn({corporation:Corporation.DINO_LIBRE,cardDeckPile:[1,2,3]}),
+                mockBotTurn({corporation:Corporation.NTEK,cardDeckPile:[11,12,13]})
+              ]}),
+              mockTurn({round:1,turn:2,botTurns:[
+                mockBotTurn({corporation:Corporation.DINO_LIBRE,cardDeckPile:[2,3],cardDecDiscard:[1]}),
+                mockBotTurn({corporation:Corporation.NTEK,cardDeckPile:[12,13],cardDecDiscard:[11]})
+              ]}),
+              mockTurn({round:1,turn:3,botTurns:[
+                mockBotTurn({corporation:Corporation.DINO_LIBRE,cardDeckPile:[3],cardDecDiscard:[1,2]}),
+                mockBotTurn({corporation:Corporation.NTEK,cardDeckPile:[13],cardDecDiscard:[11,12]})
+              ]})
             ]
           })
         ]
       })
     )
     expect(navigationState.round).to.eq(1)
-    expect(navigationState.turn).to.eq(5)
-    expect(navigationState.currentCorporation).to.eq(Corporation.DINO_LIBRE)
-    expect(navigationState.cardDeck).to.not.undefined
-    expect(navigationState.cardDeck?.toPersistence().pile).to.eql([2,3])
+    expect(navigationState.turn).to.eq(3)
+    expect(navigationState.currentCorporation).to.eq(Corporation.NTEK)
+    expect(navigationState.currentBot).to.not.undefined
+    expect(navigationState.currentBot?.cardDeck.toPersistence().pile).to.eql([12,13])
   })
 
-  it('carddeck-round1-turn5-previousturn', () => {
-    const navigationState = new NavigationState(
-      mockRouteLocation({name:'RoundTurn',params:{'round':'1','turn':'5'}}),
-      mockState({
-        playerCount: 1,
-        botCount: 2,
-        playerCorporations: [Corporation.BIOTHESAURI,Corporation.DINO_LIBRE,Corporation.NTEK],
-        rounds: [
-          mockRound({
-            round: 1,
-            playerOrder: [Corporation.BIOTHESAURI,Corporation.DINO_LIBRE,Corporation.NTEK],
-            botRounds: [
-              mockBotRound({round:1,turn:2,corporation:Corporation.DINO_LIBRE,cardDeckPile:[1,2,3]}),
-              mockBotRound({round:1,turn:3,corporation:Corporation.NTEK,cardDeckPile:[11,12,13]})
-            ]
-          })
-        ]
-      })
-    )
-    expect(navigationState.round).to.eq(1)
-    expect(navigationState.turn).to.eq(5)
-    expect(navigationState.currentCorporation).to.eq(Corporation.DINO_LIBRE)
-    expect(navigationState.cardDeck).to.not.undefined
-    expect(navigationState.cardDeck?.toPersistence().pile).to.eql([1,2,3])
-  })
-
-  it('carddeck-round2-turn2-previousround-lastturn', () => {
+  it('bot-round2-turn2-previousround-lastturn', () => {
     const navigationState = new NavigationState(
       mockRouteLocation({name:'RoundTurn',params:{'round':'2','turn':'2'}}),
       mockState({
@@ -173,11 +158,19 @@ describe('util/NavigationState', () => {
           mockRound({
             round: 1,
             playerOrder: [Corporation.BIOTHESAURI,Corporation.DINO_LIBRE,Corporation.NTEK],
-            botRounds: [
-              mockBotRound({round:1,turn:2,corporation:Corporation.DINO_LIBRE,cardDeckPile:[1,2,3]}),
-              mockBotRound({round:1,turn:3,corporation:Corporation.NTEK,cardDeckPile:[11,12,13]}),
-              mockBotRound({round:1,turn:5,corporation:Corporation.DINO_LIBRE,cardDeckPile:[2,3],cardDecDiscard:[1]}),
-              mockBotRound({round:1,turn:6,corporation:Corporation.NTEK,cardDeckPile:[13],cardDecDiscard:[11,12]})
+            turns: [
+              mockTurn({round:1,turn:1,botTurns:[
+                mockBotTurn({corporation:Corporation.DINO_LIBRE,cardDeckPile:[1,2,3]}),
+                mockBotTurn({corporation:Corporation.NTEK,cardDeckPile:[11,12,13]})
+              ]}),
+              mockTurn({round:1,turn:2,botTurns:[
+                mockBotTurn({corporation:Corporation.DINO_LIBRE,cardDeckPile:[2,3],cardDecDiscard:[1]}),
+                mockBotTurn({corporation:Corporation.NTEK,cardDeckPile:[12,13],cardDecDiscard:[11]})
+              ]}),
+              mockTurn({round:1,turn:3,botTurns:[
+                mockBotTurn({corporation:Corporation.DINO_LIBRE,cardDeckPile:[3],cardDecDiscard:[1,2]}),
+                mockBotTurn({corporation:Corporation.NTEK,cardDeckPile:[13],cardDecDiscard:[11,12]})
+              ]})
             ]
           })
         ]
@@ -186,8 +179,8 @@ describe('util/NavigationState', () => {
     expect(navigationState.round).to.eq(2)
     expect(navigationState.turn).to.eq(2)
     expect(navigationState.currentCorporation).to.eq(Corporation.DINO_LIBRE)
-    expect(navigationState.cardDeck).to.not.undefined
-    expect(navigationState.cardDeck?.toPersistence().pile).to.eql([2,3])
+    expect(navigationState.currentBot).to.not.undefined
+    expect(navigationState.currentBot?.cardDeck.toPersistence().pile).to.eql([3])
   })
 
 })

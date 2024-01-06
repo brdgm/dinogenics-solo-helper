@@ -1,16 +1,16 @@
-import { BotRound, Round } from '@/store/state'
+import { Round, Turn } from '@/store/state'
 import Corporation from '@/services/enum/Corporation'
 
 export default function (params?: MockRoundParams) : Round {
   return {
     round: params?.round ?? 1,
     playerOrder: params?.playerOrder ?? [],
-    botRounds: params?.botRounds ?? []
+    turns: params?.turns ?? []
   }
 }
 
 export interface MockRoundParams {
   round? : number
   playerOrder? : Corporation[]
-  botRounds? : BotRound[]
+  turns? : Turn[]
 }

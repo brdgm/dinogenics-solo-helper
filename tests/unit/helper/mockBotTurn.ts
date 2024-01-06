@@ -1,10 +1,8 @@
-import { BotRound } from '@/store/state'
 import Corporation from '@/services/enum/Corporation'
+import { BotTurn } from '@/store/state'
 
-export default function (params?: MockBotRoundParams) : BotRound {
+export default function (params?: MockBotTurnParams) : BotTurn {
   return {
-    round: params?.round ?? 1,
-    turn: params?.turn ?? 1,
     corporation: params?.corporation ?? Corporation.NTEK,
     cardDeck: {
       pile: params?.cardDeckPile ?? [],
@@ -13,9 +11,7 @@ export default function (params?: MockBotRoundParams) : BotRound {
   }
 }
 
-export interface MockBotRoundParams {
-  round? : number
-  turn? : number
+export interface MockBotTurnParams {
   corporation? : Corporation
   cardDeckPile?: number[]
   cardDecDiscard?: number[]

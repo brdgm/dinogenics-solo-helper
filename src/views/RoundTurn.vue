@@ -6,8 +6,8 @@
   </h1>
 
   <TurnPlayer v-if="navigationState.isPlayerTurn" :navigationState="navigationState"/>
-  <TurnBot v-if="navigationState.isBotTurn && navigationState.cardDeck"
-      :navigationState="navigationState" :cardDeck="navigationState.cardDeck"/>
+  <TurnBot v-if="navigationState.isBotTurn && navigationState.currentBot"
+      :navigationState="navigationState" :bot="navigationState.currentBot"/>
 
   <button class="btn btn-primary btn-lg mt-4" @click="next()">
     {{t('action.next')}}

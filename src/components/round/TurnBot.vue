@@ -3,6 +3,7 @@
 </template>
 
 <script lang="ts">
+import Bot from '@/services/Bot'
 import CardDeck from '@/services/CardDeck'
 import Location from '@/services/enum/Location'
 import NavigationState from '@/util/NavigationState'
@@ -21,8 +22,8 @@ export default defineComponent({
       type: NavigationState,
       required: true
     },
-    cardDeck: {
-      type: CardDeck,
+    bot: {
+      type: Bot,
       required: true
     }
   },
@@ -32,6 +33,9 @@ export default defineComponent({
     }
   },
   computed: {
+    cardDeck() : CardDeck {
+      return this.bot.cardDeck
+    },
     validLocations() : Location[] {
       return this.cardDeck.currentCard.locations
           .filter(item => isLocationAvailable(item, this.navigationState.modules))
