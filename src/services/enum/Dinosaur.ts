@@ -22,6 +22,12 @@ enum Dinosaur {
   PARASAUROLOPHUS = 'parasaurolophus',
   DIMETRODON = 'dimetrodon',
   DREADNOUGHTUS = 'dreadnoughtus',
-  PACHYCEPHALOSAURUS = 'pachycephalosaurus'
+  PACHYCEPHALOSAURUS = 'pachycephalosaurus',
+  // new arrivales mini expansion
+  QUETZALCOATLUS = 'quetzalcoatlus',
+  COMPSOGNATHUS = 'compsognathus',
+  CARNOTAURUS = 'carnotaurus',
+  DUNKLEOSTEUS = 'dunkleosteus',
+  DILOPHOSAURUS = 'dilophosaurus'
 }
 export default Dinosaur

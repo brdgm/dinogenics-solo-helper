@@ -22,6 +22,12 @@ export default function(dinosaur: Dinosaur, modules: Module[]) : boolean {
     case Dinosaur.DREADNOUGHTUS:
     case Dinosaur.PACHYCEPHALOSAURUS:
       return modules.includes(Module.CONTROLLED_CHAOS_DINOSAUR_ELITES)
+    case Dinosaur.QUETZALCOATLUS:
+    case Dinosaur.COMPSOGNATHUS:
+    case Dinosaur.CARNOTAURUS:
+    case Dinosaur.DUNKLEOSTEUS:
+    case Dinosaur.DILOPHOSAURUS:
+      return modules.includes(Module.NEW_ARRIVALS_MINI_EXPANSION)
     default:
       return true
   }
