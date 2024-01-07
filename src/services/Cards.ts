@@ -9,7 +9,7 @@ const cards : Card[] = [
     id: 1,
     locations: [Location.FARM,Location.SITE_A,Location.AGENCY,Location.UPLINK],
     slot: 1,
-    dinosaurs: [Dinosaur.GALLIMIMUS,/*Quetzalcoatlus,??*/Dinosaur.MOSASAUR],
+    dinosaurs: [Dinosaur.GALLIMIMUS,Dinosaur.QUETZALCOATLUS,Dinosaur.MOSASAUR],
     ruleChange: RuleChange.NONE
   },
   {
@@ -37,21 +37,21 @@ const cards : Card[] = [
     id: 5,
     locations: [Location.DINOGENICS_IOM,Location.SITE_A,Location.AGENCY,Location.FERRY],
     slot: 2,
-    dinosaurs: [Dinosaur.ICHTHYOSAUR,Dinosaur.ANKYLOSAURUS,/*Compsognathus??*/],
+    dinosaurs: [Dinosaur.ICHTHYOSAUR,Dinosaur.ANKYLOSAURUS,Dinosaur.COMPSOGNATHUS],
     ruleChange: RuleChange.NO_UPLINK_ACTION
   },
   {
     id: 6,
     locations: [Location.BONEYARD,Location.CITY_CENTER,Location.UPLINK,Location.AGENCY],
     slot: 5,
-    dinosaurs: [Dinosaur.PLESIOSAURUS,Dinosaur.ICHTHYOSAUR,/*Carnotaurus??*/],
+    dinosaurs: [Dinosaur.PLESIOSAURUS,Dinosaur.ICHTHYOSAUR,Dinosaur.CARNOTAURUS],
     ruleChange: RuleChange.NO_FERRY_ACTION
   },
   {
     id: 7,
     locations: [Location.CITY_CENTER,Location.REFINEMENT,Location.FERRY,Location.UPLINK],
     slot: 6,
-    dinosaurs: [Dinosaur.STEGOSAURUS,Dinosaur.PLESIOSAURUS,/*Dunkleoteus??*/],
+    dinosaurs: [Dinosaur.STEGOSAURUS,Dinosaur.PLESIOSAURUS,Dinosaur.DUNKLEOSTEUS],
     ruleChange: RuleChange.SPECIALISTS_INACTIVE
   },
   {
@@ -79,7 +79,7 @@ const cards : Card[] = [
     id: 11,
     locations: [Location.SPECIAL_ACTION,Location.SITE_D,Location.FARM,Location.REFINEMENT],
     slot: 1,
-    dinosaurs: [Dinosaur.MOSASAUR,Dinosaur.SPINOSAURUS,/*Dilophosaurus??*/],
+    dinosaurs: [Dinosaur.MOSASAUR,Dinosaur.SPINOSAURUS,Dinosaur.DILOPHOSAURUS],
     ruleChange: RuleChange.NO_WATER_DINOSAURS
   },
   {
@@ -107,28 +107,28 @@ const cards : Card[] = [
     id: 15,
     locations: [Location.DINOGENICS_IOM,Location.CITY_CENTER,Location.FERRY,Location.BONEYARD],
     slot: 2,
-    dinosaurs: [/*Compsognathus??,*/Dinosaur.MEGALODON,Dinosaur.STEGOSAURUS],
+    dinosaurs: [Dinosaur.COMPSOGNATHUS,Dinosaur.MEGALODON,Dinosaur.STEGOSAURUS],
     ruleChange: RuleChange.LAND_DINOSAURS_HABITAT_ONE_SIZE_LARGER
   },
   {
     id: 16,
     locations: [Location.DINOGENICS_IOM,Location.TIME_SHARE,Location.OUTSOURCE,Location.REFINEMENT],
     slot: 3,
-    dinosaurs: [/*Carnotaurus??,Compsognathus??,*/Dinosaur.PLESIOSAURUS],
+    dinosaurs: [Dinosaur.COMPSOGNATHUS,Dinosaur.PLESIOSAURUS],
     ruleChange: RuleChange.NO_VISITORS_VP
   },
   {
     id: 17,
     locations: [Location.DINOGENICS_IOM,Location.SITE_B,Location.CITY_CENTER,Location.OUTSOURCE],
     slot: 3,
-    dinosaurs: [/*Dunkleoteus??,Carnotaurus??,*/Dinosaur.ICHTHYOSAUR],
+    dinosaurs: [Dinosaur.DUNKLEOSTEUS,Dinosaur.CARNOTAURUS,Dinosaur.ICHTHYOSAUR],
     ruleChange: RuleChange.TURN_ORDER_LAST
   },
   {
     id: 18,
     locations: [Location.SITE_D,Location.INTELLIGEN_DESIGNS_HQ,Location.UPLINK,Location.TIME_SHARE],
     slot: 4,
-    dinosaurs: [Dinosaur.PARASAUROLOPHUS,/*Dunkleoteus??,*/Dinosaur.ANKYLOSAURUS],
+    dinosaurs: [Dinosaur.PARASAUROLOPHUS,Dinosaur.DUNKLEOSTEUS,Dinosaur.ANKYLOSAURUS],
     ruleChange: RuleChange.DINOSAURS_PAIRED_BEFORE_NEW_SPECIES
   },
   {
@@ -149,7 +149,7 @@ const cards : Card[] = [
     id: 21,
     locations: [Location.REFINEMENT,Location.BONEYARD,Location.SITE_A,Location.SITE_D],
     slot: 6,
-    dinosaurs: [/*Dilophosaurus??,*/Dinosaur.MUTANT,Dinosaur.GALLIMIMUS],
+    dinosaurs: [Dinosaur.DILOPHOSAURUS,Dinosaur.MUTANT,Dinosaur.GALLIMIMUS],
     ruleChange: RuleChange.DINOSAUR_DNA_ONE_MORE
   },
   {
