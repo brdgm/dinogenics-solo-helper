@@ -19,7 +19,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { useStateStore } from '@/store/state'
+import { Turn, useStateStore } from '@/store/state'
 import FooterButtons from '@/components/structure/FooterButtons.vue'
 import { useRoute } from 'vue-router'
 import NavigationState from '@/util/NavigationState'
@@ -57,6 +57,12 @@ export default defineComponent({
   },
   methods: {
     next() : void {
+      const turnData : Turn = {
+        round: this.round,
+        turn: this.turn,
+        botTurns: this.navigationState.bots.map(bot => bot.toPersistence())
+      }
+      this.state.storeTurn(turnData)
       if (this.turn < this.turnCount) {
         this.$router.push(`/round/${this.round}/turn/${this.turn + 1}`)
       }

@@ -20,4 +20,11 @@ export default class Bot {
     return this._cardDeck
   }
 
+  public toPersistence() : BotTurn {
+    return {
+      corporation: this._corporation,
+      cardDeck: this._cardDeck.toPersistence()
+    }
+  }
+
 }
