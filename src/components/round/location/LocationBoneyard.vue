@@ -1,12 +1,14 @@
 <template>
-  <h3>Boneyard</h3>
-  <p>TBD</p>
+  <ul>
+    <li v-html="t(`location.boneyard.locationUse`)"></li>
+    <li v-html="t(`location.boneyard.severalMatches`)"></li>
+    <li v-html="t(`location.boneyard.scandalToken`)"></li>
+  </ul>
 </template>
 
 <script lang="ts">
 import { defineComponent, PropType } from 'vue'
 import { useI18n } from 'vue-i18n'
-import AppIcon from '../../structure/AppIcon.vue'
 import NavigationState from '@/util/NavigationState'
 import Bot from '@/services/Bot'
 import Location from '@/services/enum/Location'
@@ -16,9 +18,6 @@ export default defineComponent({
   setup() {
     const { t } = useI18n()
     return { t }
-  },
-  components: {
-    AppIcon
   },
   props: {
     location: {

@@ -1,7 +1,13 @@
 <template>
-  <p class="mt-4">{{ cardDeck.currentCard?.id }} {{ validLocations }}</p>
+  <h3>{{t(`location.${currentLocation}.title`)}}</h3>
+  <p>{{t(`location.${currentLocation}.ruleSummary`)}}</p>
 
-  <component :is="`location-${currentLocation}`" :location="currentLocation" :bot="bot" :navigationState="navigationState"/>
+  <div>
+    <button class="btn btn-sm btn-secondary mb-3" data-bs-toggle="collapse" data-bs-target="#locationFullRules">Show Rules</button>
+    <div class="collapse" id="locationFullRules">
+      <component :is="`location-${currentLocation}`" :location="currentLocation" :bot="bot" :navigationState="navigationState"/>
+    </div>
+  </div>  
 
   <button class="btn btn-success btn-lg mt-4" @click="executed()">
     {{t('turnBot.executed')}}

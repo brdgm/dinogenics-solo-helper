@@ -98,63 +98,79 @@
   "location": {
     "site-a": {
       "title": "Site A",
-      "shortDescription": "Only if less than 2 complete DNA sets."
+      "ruleSummary": "Only if less than 2 complete DNA sets."
     },
     "site-b": {
       "title": "Site B",
-      "shortDescription": "Only if less than 2 complete DNA sets."
+      "ruleSummary": "Only if less than 2 complete DNA sets."
     },
     "boneyard": {
       "title": "The Boneyard",
-      "shortDescription": "If contains card for one of the 4 preferred species."
+      "ruleSummary": "If contains card for one of the 4 preferred species.",
+      "locationUse": "Used if DINO can use at least one card for one of the 4 preferred species, that is not completed yet.",
+      "severalMatches": "If several exist, DINO takes the card that matches of the rightmost stack.",
+      "scandalToken": "DINO gains a Scandal token."
     },
     "agency": {
       "title": "The Agency",
-      "shortDescription": "If available."
+      "ruleSummary": "If available.",
+      "drawManipulation": "Draw 2 Manipulation cards to DINO’s reserve.",
+      "discardScandalToken": "DINO discards a Scandal if it has any."
     },
     "uplink": {
       "title": "The Uplink",
-      "shortDescription": "Manipulation stack not empty."
+      "ruleSummary": "Manipulation stack not empty.",
+      "locationUse": "Used if DINO’s Manipulation Card deck is not empty.",
+      "playManipulation": "Draw the topmost card from DINO’s Manipulation stack and follow the instructions."
     },
     "farm": {
       "title": "The Farm",
-      "shortDescription": "If no/not enough goats for this season and next."
+      "ruleSummary": "If no/not enough goats for this season and next.",
+      "locationUse": "DINO uses the farm if it has zero goats or it lacks enough goats to feed its built carnivores, and any carnivore in the right most preferred DNA stack, for the next 2 feeding phases."
     },
     "ferry": {
       "title": "The Ferry",
-      "shortDescription": "If available."
+      "ruleSummary": "If available.",
+      "collectMoney": "DINO collects $3."
     },
     "time-share": {
       "title": "Time Share",
-      "shortDescription": "Only if uneven number of visitors."
+      "ruleSummary": "Only if uneven number of visitors.",
+      "locationUse": "Only used if DINO has a Hotel with an empty space and an odd number of visitors."
     },
     "outsource": {
       "title": "Outsource",
-      "shortDescription": "Draw another card to determine action."
+      "ruleSummary": "Draw another card to determine action."
     },
     "city-center": {
       "title": "The City Center",
-      "shortDescription": "3 fences, repair/hotel/slot, market buy/sell."
+      "ruleSummary": "3 fences, repair/hotel/slot, market buy/sell."
     },
     "dinogenics-iom": {
       "title": "DinoGenics IOM",
-      "shortDescription": "If complete set, suitable habitat and goats."
+      "ruleSummary": "If complete set, suitable habitat and goats."
     },
     "special-action": {
       "title": "Special Action",
-      "shortDescription": "If 5/8/12/14/15/16/20/28/D3 Breaking News is active."
+      "ruleSummary": "If 5/8/12/14/15/16/20/28/D3 Breaking News is active."
     },
     "site-d": {
       "title": "Site D",
-      "shortDescription": "Only if less than 2 complete DNA sets."
+      "ruleSummary": "Only if less than 2 complete DNA sets."
     },
     "refinement": {
       "title": "Refinement",
-      "shortDescription": "If less than 2 refined DNA tokens."
+      "ruleSummary": "If less than 2 refined DNA tokens."
     },
     "intelligen-designs-hq": {
       "title": "IntelliGen Designs HQ",
-      "shortDescription": "Draw two more cards to determine slots."
+      "ruleSummary": "Draw two more cards to determine slots."
+    },
+    "site-common": {
+      "locationUse": "Only used if DINO has less than two complete DNA sets.",
+      "noResources": "DINO spends no resources and keeps all drawn cards.",
+      "cardAssignment": "Assign cards to preferred matching DNA sets or place them on the bottom of the Spare Stack.",
+      "newStack": "If there are less than 4 stacks next to the Spare Stack, create a new stack on the rightmost empty space."
     }
   },
   "notfound": {

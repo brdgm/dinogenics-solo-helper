@@ -1,12 +1,10 @@
 <template>
-  <h3>City Center</h3>
   <p>TBD</p>
 </template>
 
 <script lang="ts">
 import { defineComponent, PropType } from 'vue'
 import { useI18n } from 'vue-i18n'
-import AppIcon from '../../structure/AppIcon.vue'
 import NavigationState from '@/util/NavigationState'
 import Bot from '@/services/Bot'
 import Location from '@/services/enum/Location'
@@ -16,9 +14,6 @@ export default defineComponent({
   setup() {
     const { t } = useI18n()
     return { t }
-  },
-  components: {
-    AppIcon
   },
   props: {
     location: {
