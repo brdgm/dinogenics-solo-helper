@@ -5,13 +5,9 @@
     {{t('roundTurn.title', {worker})}}
   </h1>
 
-  <TurnPlayer v-if="navigationState.isPlayerTurn" :navigationState="navigationState"/>
+  <TurnPlayer v-if="navigationState.isPlayerTurn" :navigationState="navigationState" @next="next()"/>
   <TurnBot v-if="navigationState.isBotTurn && navigationState.currentBot"
-      :navigationState="navigationState" :bot="navigationState.currentBot"/>
-
-  <button class="btn btn-primary btn-lg mt-4" @click="next()">
-    {{t('action.next')}}
-  </button>
+      :navigationState="navigationState" :bot="navigationState.currentBot" @next="next()"/>
 
   <FooterButtons :backButtonRouteTo="backButtonRouteTo" endGameButtonType="abortGame"/>
 </template>
