@@ -144,7 +144,7 @@ describe('util/NavigationState', () => {
     expect(navigationState.turn).to.eq(3)
     expect(navigationState.currentCorporation).to.eq(Corporation.NTEK)
     expect(navigationState.currentBot).to.not.undefined
-    expect(navigationState.currentBot?.cardDeck.toPersistence().pile).to.eql([12,13])
+    expect(navigationState.currentBot?.cardDeck.toPersistence()).to.eql({pile:[12,13],discard:[11]})
   })
 
   it('bot-round2-turn2-previousround-lastturn', () => {
@@ -180,7 +180,7 @@ describe('util/NavigationState', () => {
     expect(navigationState.turn).to.eq(2)
     expect(navigationState.currentCorporation).to.eq(Corporation.DINO_LIBRE)
     expect(navigationState.currentBot).to.not.undefined
-    expect(navigationState.currentBot?.cardDeck.toPersistence().pile).to.eql([3])
+    expect(navigationState.currentBot?.cardDeck.toPersistence()).to.eql({pile:[3],discard:[1,2]})
   })
 
 })

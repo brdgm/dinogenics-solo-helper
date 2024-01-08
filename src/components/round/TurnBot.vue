@@ -1,13 +1,13 @@
 <template>
-  <p class="mt-4">{{ cardDeck.currentCard.id }} {{ validLocations }}</p>
+  <p class="mt-4">{{ cardDeck.currentCard?.id }} {{ validLocations }}</p>
 
   <component :is="`location-${currentLocation}`" :location="currentLocation" :bot="bot" :navigationState="navigationState"/>
 
   <button class="btn btn-success btn-lg mt-4" @click="executed()">
-    {{t('action.executed')}}
+    {{t('turnBot.executed')}}
   </button>
   <button class="btn btn-danger btn-lg mt-4 ms-2" @click="notPossible()">
-    {{t('action.notPossible')}}
+    {{t('turnBot.notPossible')}}
   </button>
 </template>
 
@@ -17,7 +17,7 @@ import CardDeck from '@/services/CardDeck'
 import Location from '@/services/enum/Location'
 import NavigationState from '@/util/NavigationState'
 import isLocationAvailable from '@/util/isLocationAvailable'
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import LocationAgency from './location/LocationAgency.vue'
 import LocationBoneyard from './location/LocationBoneyard.vue'
@@ -55,9 +55,12 @@ export default defineComponent({
     LocationUplink
   },
   emits: ['next'],
-  setup() {
+  setup(props) {
     const { t } = useI18n()
-    return { t }
+    // draw next card for bot
+    const currentCard = props.bot.cardDeck.draw()
+    const cardId = ref(currentCard.id)
+    return { t, cardId }
   },
   props: {
     navigationState: {
@@ -79,7 +82,8 @@ export default defineComponent({
       return this.bot.cardDeck
     },
     validLocations(): Location[] {
-      return this.cardDeck.currentCard.locations
+      this.cardId  // ensure re-computation when current card changes
+      return (this.cardDeck.currentCard?.locations ?? [])
           .filter(item => isLocationAvailable(item, this.navigationState.modules))
     },
     currentLocation() : Location {
@@ -95,7 +99,9 @@ export default defineComponent({
         this.currentLocationIndex++
       }
       else {
-        this.bot.cardDeck.draw()
+        // no valid location on current card? draw next card
+        const currentCard = this.cardDeck.draw()
+        this.cardId = currentCard.id
         this.currentLocationIndex = 0
       }
     }

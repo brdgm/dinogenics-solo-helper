@@ -3,6 +3,12 @@ import Card from './Card'
 import Cards from './Cards'
 import { CardDeckPersistence } from '@/store/state'
 
+/**
+ * Simple card deck with draw and discard pile.
+ * Current card is last card put on discard pile.
+ * Initially after creating a new deck, there is no current card..
+ * Deck is automatically reshuffled when draw pile is empty.
+ */
 export default class CardDeck {
 
   private _pile : Card[]
@@ -13,8 +19,8 @@ export default class CardDeck {
     this._discard = discard
   }
 
-  public get currentCard() : Card {
-    return this._pile[0]
+  public get currentCard() : Card|undefined {
+    return this._discard[this._discard.length - 1]
   }
 
   public get pile() : readonly Card[] {
@@ -31,15 +37,16 @@ export default class CardDeck {
    * @returns Next card
    */
   public draw() : Card {
-    const discardCard = this._pile.shift()
-    if (discardCard) {
-      this._discard.push(discardCard)
-    }
     if (this._pile.length == 0) {
       this._pile = _.shuffle(this._discard)
       this._discard = []
     }
-    return this.currentCard
+    const currentCard = this._pile.shift()
+    if (!currentCard) {
+      throw new Error('Card deck is empty')
+    }
+    this._discard.push(currentCard)
+    return currentCard
   }
 
   /**

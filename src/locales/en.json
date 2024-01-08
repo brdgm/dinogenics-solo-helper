@@ -62,7 +62,8 @@
     "takeYourTurn": "Take your turn."
   },
   "turnBot": {
-
+    "executed": "Worker Placed",
+    "notPossible": "Not Possible"
   },
   "roundUpkeepPhase": {
     "title": "Upkeep Phase",
