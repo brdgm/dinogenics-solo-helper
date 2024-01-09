@@ -50,6 +50,7 @@ export interface Setup {
   playerSetup: PlayerSetup
   difficultyLevel: DifficultyLevel
   modules: Module[]
+  debugMode?: boolean
 }
 export interface PlayerSetup {
   playerCount: number

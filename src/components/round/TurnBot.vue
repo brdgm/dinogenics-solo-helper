@@ -1,20 +1,28 @@
 <template>
-  <h3>{{t(`location.${currentLocation}.title`)}}</h3>
-  <p>{{t(`location.${currentLocation}.ruleSummary`)}}</p>
+  <template v-if="currentLocation">
+    <h3>{{t(`location.${currentLocation}.title`)}}</h3>
+    <p>{{t(`location.${currentLocation}.ruleSummary`)}}</p>
 
-  <div>
-    <button class="btn btn-sm btn-secondary mb-3" data-bs-toggle="collapse" data-bs-target="#locationFullRules">Show Rules</button>
-    <div class="collapse" id="locationFullRules">
-      <component :is="`location-${currentLocation}`" :location="currentLocation" :bot="bot" :navigationState="navigationState"/>
-    </div>
-  </div>  
+    <div>
+      <button class="btn btn-sm btn-secondary mb-3" data-bs-toggle="collapse" data-bs-target="#locationFullRules">Show Rules</button>
+      <div class="collapse" id="locationFullRules">
+        <component :is="`location-${currentLocation}`" :location="currentLocation" :bot="bot" :navigationState="navigationState"/>
+      </div>
+    </div>  
 
-  <button class="btn btn-success btn-lg mt-4" @click="executed()">
-    {{t('turnBot.executed')}}
-  </button>
-  <button class="btn btn-danger btn-lg mt-4 ms-2" @click="notPossible()">
-    {{t('turnBot.notPossible')}}
-  </button>
+    <button class="btn btn-success btn-lg mt-4" @click="executed()">
+      {{t('turnBot.executed')}}
+    </button>
+    <button class="btn btn-danger btn-lg mt-4 ms-2" @click="notPossible()">
+      {{t('turnBot.notPossible')}}
+    </button>
+  </template>
+  <template v-else>
+    <p class="mt-4" v-html="t('turnBot.outOfLocations')"></p>
+    <button class="btn btn-warning btn-lg mt-3" @click="back()">
+      {{t('turnBot.back')}}
+    </button>
+  </template>
 </template>
 
 <script lang="ts">
@@ -87,6 +95,9 @@ export default defineComponent({
     },
     notPossible() {
       this.$router.push(`/round/${this.round}/turn/${this.turn}/location/${this.location + 1}`)
+    },
+    back() {
+      this.$router.push(`/round/${this.round}/turn/${this.turn}/location/${this.location - 1}`)
     }
   }
 })

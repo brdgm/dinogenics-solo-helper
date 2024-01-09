@@ -63,7 +63,9 @@
   },
   "turnBot": {
     "executed": "Worker Placed",
-    "notPossible": "Not Possible"
+    "notPossible": "Not Possible",
+    "outOfLocations": "Out of further locations, go back.",
+    "back": "Back"
   },
   "roundUpkeepPhase": {
     "title": "Upkeep Phase",

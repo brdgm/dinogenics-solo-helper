@@ -21,6 +21,8 @@
     {{t('action.next')}}
   </button>
 
+  <DebugInfo :navigationState="navigationState"/>
+
   <FooterButtons :backButtonRouteTo="backButtonRouteTo" endGameButtonType="abortGame"/>
 </template>
 
@@ -34,13 +36,15 @@ import NavigationState from '@/util/NavigationState'
 import DeterminePlayerOrder from '@/components/round/DeterminePlayerOrder.vue'
 import Corporation from '@/services/enum/Corporation'
 import SideBar from '@/components/round/SideBar.vue'
+import DebugInfo from '@/components/round/DebugInfo.vue'
 
 export default defineComponent({
   name: 'RoundOpenSeason',
   components: {
     FooterButtons,
     DeterminePlayerOrder,
-    SideBar
+    SideBar,
+    DebugInfo
   },
   setup() {
     const { t } = useI18n()

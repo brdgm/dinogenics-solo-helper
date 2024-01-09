@@ -9,6 +9,8 @@
   <TurnBot v-if="navigationState.isBotTurn && navigationState.currentBot"
       :navigationState="navigationState" :bot="navigationState.currentBot" @next="next()"/>
 
+  <DebugInfo :navigationState="navigationState"/>
+
   <FooterButtons :backButtonRouteTo="backButtonRouteTo" endGameButtonType="abortGame"/>
 </template>
 
@@ -23,6 +25,7 @@ import SideBar from '@/components/round/SideBar.vue'
 import TurnPlayer from '@/components/round/TurnPlayer.vue'
 import TurnBot from '@/components/round/TurnBot.vue'
 import AppIcon from '@/components/structure/AppIcon.vue'
+import DebugInfo from '@/components/round/DebugInfo.vue'
 
 export default defineComponent({
   name: 'RoundTurn',
@@ -31,18 +34,22 @@ export default defineComponent({
     SideBar,
     TurnPlayer,
     TurnBot,
-    AppIcon
+    AppIcon,
+    DebugInfo
   },
   setup() {
     const { t } = useI18n()
     const route = useRoute()
     const state = useStateStore()
     const navigationState = new NavigationState(route, state)
-    const { round, turn, worker, turnCount } = navigationState
-    return { t, state, navigationState, round, turn, worker, turnCount }
+    const { round, turn, location, worker, turnCount } = navigationState
+    return { t, state, navigationState, round, turn, location, worker, turnCount }
   },
   computed: {
     backButtonRouteTo() : string {
+      if (this.location > 0) {
+        return `/round/${this.round}/turn/${this.turn}/location/${this.location - 1}`
+      }
       if (this.turn > 1) {
         return `/round/${this.round}/turn/${this.turn - 1}`
       }
