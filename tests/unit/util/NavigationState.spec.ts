@@ -100,7 +100,11 @@ describe('util/NavigationState', () => {
       mockState({
         playerCount: 1,
         botCount: 2,
-        playerCorporations :[Corporation.BIOTHESAURI,Corporation.DINO_LIBRE,Corporation.NTEK]
+        playerCorporations :[Corporation.BIOTHESAURI,Corporation.DINO_LIBRE,Corporation.NTEK],
+        initialBotTurns: [
+          mockBotTurn({corporation:Corporation.DINO_LIBRE,cardDeckPile:[1,2]}),
+          mockBotTurn({corporation:Corporation.NTEK,cardDeckPile:[11,12]})
+        ]
       })
     )
     expect(navigationState.round).to.eq(1)
@@ -108,7 +112,7 @@ describe('util/NavigationState', () => {
     expect(navigationState.currentCorporation).to.eq(Corporation.DINO_LIBRE)
     expect(navigationState.bots.length).to.eq(2)
     expect(navigationState.currentBot).to.not.undefined
-    expect(navigationState.currentBot?.cardDeck.pile.length).to.eq(22)
+    expect(navigationState.currentBot?.cardDeck.toPersistence()).to.eql({pile:[1,2],discard:[]})
   })
 
   it('bot-round1-turn3', () => {

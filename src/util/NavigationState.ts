@@ -1,5 +1,4 @@
 import Bot from '@/services/Bot'
-import CardDeck from '@/services/CardDeck'
 import Corporation from '@/services/enum/Corporation'
 import Module from '@/services/enum/Module'
 import { BotTurn, Round, State } from '@/store/state'
@@ -114,14 +113,6 @@ function getBotTurnsFromPreviousTurn(round : number, turn : number, state : Stat
   if (round > 1) {
     return getBotTurnsFromPreviousTurn(round - 1, 0, state)
   }
-  // no previous turn found - create new bot turns with new card decks
-  const botTurns = []
-  const { playerCorporations, playerCount, botCount } = state.setup.playerSetup
-  for (let playerIndex = playerCount; playerIndex < playerCount + botCount; playerIndex++) {
-    botTurns.push({
-      corporation: playerCorporations[playerIndex],
-      cardDeck: CardDeck.new().toPersistence()
-    })
-  }
-  return botTurns
+  // no previous turn found - use initial bot decks
+  return state.setup.initialBotTurns ?? []
 }

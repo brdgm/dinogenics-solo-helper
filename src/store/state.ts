@@ -23,6 +23,7 @@ export const useStateStore = defineStore(`${name}.state`, {
   },
   actions: {
     resetGame() {
+      this.setup.initialBotTurns = undefined
       this.rounds = []
     },
     storeRound(round : Round) {
@@ -50,6 +51,7 @@ export interface Setup {
   playerSetup: PlayerSetup
   difficultyLevel: DifficultyLevel
   modules: Module[]
+  initialBotTurns?: BotTurn[]
   debugMode?: boolean
 }
 export interface PlayerSetup {

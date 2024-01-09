@@ -9,7 +9,7 @@ import isLocationAvailable from '@/util/isLocationAvailable'
  */
 export default class BotLocationResolver {
 
-  private readonly MAX_RECURSION_DEPTH = 25
+  private readonly MAX_RECURSION_DEPTH = Object.values(Location).length
 
   private _cardDeck : CardDeck
   private _modules : Module[]

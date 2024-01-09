@@ -13,9 +13,10 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { useStateStore } from '@/store/state'
+import { BotTurn, useStateStore } from '@/store/state'
 import FooterButtons from '@/components/structure/FooterButtons.vue'
 import SetupBotInstructions from '@/components/setup/SetupBotInstructions.vue'
+import CardDeck from '@/services/CardDeck'
 
 export default defineComponent({
   name: 'SetupBot',
@@ -31,6 +32,18 @@ export default defineComponent({
   methods: {
     startGame() : void {
       this.state.resetGame()
+
+      // create initial bock decks
+      const { playerCorporations, playerCount, botCount } = this.state.setup.playerSetup
+      const initialBotTurns : BotTurn[] = []
+      for (let playerIndex = playerCount; playerIndex < playerCount + botCount; playerIndex++) {
+        initialBotTurns.push({
+          corporation: playerCorporations[playerIndex],
+          cardDeck: CardDeck.new().toPersistence()
+        })
+      }
+      this.state.setup.initialBotTurns = initialBotTurns
+
       this.$router.push('/round/1/openSeason')
     }
   }
