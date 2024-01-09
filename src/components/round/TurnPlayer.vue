@@ -1,4 +1,6 @@
 <template>
+  <p v-if="advancedRuleChange" class="mt-4 alert alert-warning fst-italic" v-html="t(`ruleChange.${advancedRuleChange}`)"></p>
+
   <p class="mt-4" v-html="t('turnPlayer.takeYourTurn')"></p>
 
   <button class="btn btn-primary btn-lg mt-4" @click="$emit('next')">
@@ -7,6 +9,8 @@
 </template>
 
 <script lang="ts">
+import Module from '@/services/enum/Module'
+import RuleChange from '@/services/enum/RuleChange'
 import NavigationState from '@/util/NavigationState'
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
@@ -22,6 +26,15 @@ export default defineComponent({
     navigationState: {
       type: NavigationState,
       required: true
+    }
+  },
+  computed: {
+    advancedRuleChange() : RuleChange|undefined {
+      if (!this.navigationState.modules.includes(Module.DINO_ADVANCED)) {
+        return undefined
+      }
+      // use rule change only from first bot
+      return this.navigationState.bots[0]?.cardDeck.currentCard?.ruleChange ?? RuleChange.NONE
     }
   }
 })
