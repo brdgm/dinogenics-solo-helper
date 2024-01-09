@@ -1,0 +1,249 @@
+{
+  "gameTitle": "DinoGenics",
+  "home": {
+    "title": "DinoGenics Solo Helper",
+    "play1": "Play <a href='https://boardgamegeek.com/boardgame/210296/dinogenics' target='_blank' rel='noopener'><b>DinoGenics</b></a> against a DiNO, the Solo Opponent.",
+    "play2": "DiNO can be used for any 1-4 player game including the DinoGenics base game and Controlled Chaos expansion.",
+    "feedback": "Discussion and Feedback:"
+  },
+  "setup": {
+    "title": "Setup Game",
+    "players": {
+      "title": "Player",
+      "playerCount": "Human Players",
+      "playerCountItem": "{count} Player | {count} Players",
+      "playerColor": "Player Color | Player {index} Color",
+      "botCount": "DiNO",
+      "botCountItem": "{count} DiNO | {count} DiNOs",
+      "botColor": "DiNO Color"
+    },
+    "difficultyLevel": {
+      "title": "Difficulty Level",
+      "easy": "Easy",
+      "hard": "Hard"
+    },
+    "modules": {
+      "title": "Modules and Expansions",
+      "controlled-chaos": "Controlled Chaos Expansion",
+      "controlled-chaos-chaos-theory": "Controlled Chaos Expansion: Chaos Theory Module",
+      "controlled-chaos-dinosaur-elites": "Controlled Chaos Expansion: Dinosaur Elites Module",
+      "new-arrivals-mini-expansion": "New Arrivals Mini Expansion",
+      "dino-advanced": "DiNO Advanced Mode"
+    }
+  },
+  "setupBot": {
+    "title": "Setup DiNO",
+    "prepareGame": "Prepare the game as usual for {totalPlayerCount} players.",
+    "botPlayerPieces": "DiNO receives all player pieces of a color, the starting money, 4 fences and a Personal Island Board.",
+    "botDNACards": "DiNO receives 5 DNA cards, 1 Mutant reference card, and 3 Manipulation cards",
+    "botDNACardsControlledChaos": "DiNO receives 4 DNA cards, 1 eDNA card, 1 Mutant reference card, and 3 Manipulation cards.",
+    "botDNACardArrangement": "Place DiNO’s DNA cards face up and all Manipulation Cards face down on stacks next to DiNO’s Island Board as indicated.",
+    "botTurnOrder": "DiNO always starts last in turn order on the first round of the game."
+  },
+  "roundOpenSeason": {
+    "title": "Open Season",
+    "playerOrder": "Determine player order based on reputation",
+    "determinePlayerOrder": {
+      "currentItems": "Current Player Order",
+      "newItems": "New Player Order",
+      "newItemsSelect": "Please determine the new player order."
+    },
+    "assignVisitors": "Assign visitors based on player order",
+    "assignBonusVisitors": "Assign bonus visitors",
+    "receiveIncome": "Each player receives 1 credit for each visitor in their park",
+    "breakingNews": "Resolve the next Breaking News card, and draw a new upcoming one",
+    "drawFacilityTiles": "Draw one random tile to each of the 2nd/3rd/4th facility stacks in the City Center",
+    "drawSpecialists": "Draw two new specialists to the specialist display spaces."
+  },
+  "roundTurn": {
+    "title": "Worker {worker}"
+  },
+  "turnPlayer": {
+    "takeYourTurn": "Take your turn."
+  },
+  "turnBot": {
+    "executed": "Worker Placed",
+    "notPossible": "Not Possible",
+    "outOfLocations": "Out of further locations, go back.",
+    "back": "Back"
+  },
+  "roundUpkeepPhase": {
+    "title": "Upkeep Phase",
+    "feedCarnivores": "Feed all carnivores (must feed carnivores as much as possible)",
+    "checkRampage": "Check for rampage, and roll if necessary",
+    "gainVisitorVPs": "Gain 3 VPs for every two visitors leaving the park alive",
+    "gainDinosaurFacilityVPs": "Gain Victory Points from dinosaurs and facilities",
+    "gainDinosaurFacilityResources": "Gain resources from dinosaurs and facilities",
+    "returnWorkers": "Return workers from the Mainland board to each owner’s park",
+    "advanceVisitorOverlay": "Advance the Visitor Overlay one column to the left"
+  },
+  "sideBar": {
+    "round": "Round"
+  },
+  "dnaCollectionArrangement": {
+    "title": "DINO DNA Collection and Arrangement",
+    "setCollection": "During the game DINO will focus on collecting DNA sets of up to 4 different species. As part of DINO’s setup, create the preferred species’ stacks beside DINO’s Island Board. Unique species will form their own column while duplicates will be stacked as they are drawn.",
+    "cardOrder": "Start with the first two DNA cards/species (1st & 2nd species) on the right, proceed to the left with the eDNA card/species (3rd species) and a possible 4th species to the left. On the leftmost column, place the Mutant reference card. The Preferred Species 3 column is only specific to eDNA during setup.",
+    "noDuplicates": "If there were no duplicates the 5th card will be placed below the Mutant reference card to form a stack of spare DNA.",
+    "example": {
+      "title": "Example",
+      "description": "DINO received five random cards plus the Mutant reference card during setup. Because DINO received two Ankylosaurus, they are grouped together. The DNA-species are placed in the order of reception from right to left. Place the Mutant reference card in the far left space. The Megalodon is placed on the 3rd spot from the right, because it was drawn from the eDNA deck."
+    }
+  },
+  "difficultyLevel": {
+    "1": "Very Easy",
+    "2": "Easy", 
+    "3": "Normal",
+    "4": "Hard",
+    "5": "Very Hard"
+  },
+  "location": {
+    "site-a": {
+      "title": "Site A",
+      "ruleSummary": "Only if less than 2 complete DNA sets."
+    },
+    "site-b": {
+      "title": "Site B",
+      "ruleSummary": "Only if less than 2 complete DNA sets."
+    },
+    "boneyard": {
+      "title": "The Boneyard",
+      "ruleSummary": "If contains card for one of the 4 preferred species.",
+      "locationUse": "Used if DINO can use at least one card for one of the 4 preferred species, that is not completed yet.",
+      "severalMatches": "If several exist, DINO takes the card that matches of the rightmost stack.",
+      "scandalToken": "DINO gains a Scandal token."
+    },
+    "agency": {
+      "title": "The Agency",
+      "ruleSummary": "If available.",
+      "drawManipulation": "Draw 2 Manipulation cards to DINO’s reserve.",
+      "discardScandalToken": "DINO discards a Scandal if it has any."
+    },
+    "uplink": {
+      "title": "The Uplink",
+      "ruleSummary": "Manipulation stack not empty.",
+      "locationUse": "Used if DINO’s Manipulation Card deck is not empty.",
+      "playManipulation": "Draw the topmost card from DINO’s Manipulation stack and follow the instructions."
+    },
+    "farm": {
+      "title": "The Farm",
+      "ruleSummary": "If no/not enough goats for this season and next.",
+      "locationUse": "DINO uses the farm if it has zero goats or it lacks enough goats to feed its built carnivores, and any carnivore in the right most preferred DNA stack, for the next 2 feeding phases."
+    },
+    "ferry": {
+      "title": "The Ferry",
+      "ruleSummary": "If available.",
+      "collectMoney": "DINO collects $3."
+    },
+    "time-share": {
+      "title": "Time Share",
+      "ruleSummary": "Only if uneven number of visitors.",
+      "locationUse": "Only used if DINO has a Hotel with an empty space and an odd number of visitors."
+    },
+    "outsource": {
+      "title": "Outsource",
+      "ruleSummary": "Draw another card to determine action.",
+      "drawAnotherCard": "Draw another card and carry out the action without placing another worker.",
+      "actions": "DINO is not limited to taking actions occupied existing workers and prefers the board space even if he has built a Private Airport."
+    },
+    "city-center": {
+      "title": "The City Center",
+      "ruleSummary": "3 fences, repair/hotel/slot, market buy/sell.",
+      "actionSelection": "DINO performs 1-3 actions:",
+      "receiveFences": "DINO receives three new fences to its reserve and may replace damaged habitats.",
+      "facilityBuildRepair": "DINO repairs one facility or builds a new facility based on the following criteria:",
+      "facilityBuildRepairBiodome": "If DINO has a preferred set of Pterodactyl DNA and a Biodomeis available, DINO builds the Biodome.",
+      "facilityBuildRepairHotel": "DINO builds a Basic hotel if he has less than two hotels.",
+      "facilityBuildRepairOtherwise": "Otherwise, draw another Action Card and choose the building depending on the highlighted slot 1-4. If a 5 or 6 is mentioned, no building is placed.",
+      "buyMarket": "If DINO can buy a DNA card from the market that matches one of its incomplete preferred species sets, DINO buys it without paying. If there are several options, the rightmost card is preferred. Otherwise DINO sells a DNA card, if the Spare Stack has at least two cards. In this case DINO sells the card from the bottom of this stack and receives the sale price. If none applies, the Market is not used."
+    },
+    "dinogenics-iom": {
+      "title": "DinoGenics IOM",
+      "ruleSummary": "If complete set, suitable habitat and goats.",
+      "locationUse": "DinoGenics is used in two cases:",
+      "locationUseDNASet": "DINO has at least one complete prefered DNA set – Polymorphic DNA cards and/or Refined DNA Tokens are considered.",
+      "locationUseMutant": "DINO has not created a mutant yet and it has at least 2 DNA or eDNA cards that are not part of a complete preferred set.",
+      "enoughFences": "In either case, DINO must also have enough fences to create a suitable habitat, and in the case of a carnivore, must have enough goats to feed it for the current season.",
+      "creatingDinosaur": "When creating a preferred dinosaur, empty a stack to the DNA discard pile and any remaining DNA is placed into the Spare pile. Choose right to left if there are multiple options. When creating a mutant, discard the Mutant reference card and 2 DNA cards. Prioritize DNA taken from the spare stack, then incomplete preferred stacks in order of preference left to right. DINO will only create additional mutants by using the mutant trait provided it has enough spare fences and additional goats for all carnivores and the rightmost (complete) preferred DNA set.",
+      "createHabitat": "Create a suitable habitat for the new dinosaur using the minimal number of fences required. Dinosaurs of the same species as existing dinosaurs (or Ankylosaurus) must be consolidated into a larger pen. An empty Bio dome is only used if a Pterodactyl was created or if DINO is unable to create a viable habitat with fences.",
+      "moveStacks": "Finally, move all preferred stacks to the right to fill the empty space and refresh the empty stack space on the left with cards from the spare pile."
+    },
+    "special-action": {
+      "title": "Special Action",
+      "ruleSummary": "If 5/8/12/14/15/16/20/28/D3 Breaking News is active.",
+      "locationUse": "Special Actions are carried out if specific Breaking News cards are in play.",
+      "resolveAction": "Resolve the action by placing DINO’s worker on the specific card action space or the enhanced regular action space referenced by the card.",
+      "breakingNewsApply": "Special Actions apply the following Breaking News Cards: 5, 8, 12, 14, 15, 16, 20, 28, D3."
+    },
+    "site-d": {
+      "title": "Site D",
+      "ruleSummary": "Only if less than 2 complete DNA sets."
+    },
+    "refinement": {
+      "title": "Refinement",
+      "ruleSummary": "If less than 2 refined DNA tokens.",
+      "locationUse": "Only used if DINO has less than two Refined DNA tokens.",
+      "noMoney": "DINO does not have to spend a DNA card or money.",
+      "tokenPlacement": "The token is kept near DINO’s board until it is required to complete a set."
+    },
+    "intelligen-designs-hq": {
+      "title": "IntelliGen Designs HQ",
+      "ruleSummary": "Draw two more cards to determine slots.",
+      "openOceanRoll": "Draw an Action Card to determine if DINO resolves an Open Ocean Roll (1) or which specialist he hires from the Underground Job Network (2-4). If the rightmost space is selected (4), DINO acquires the Independent Contractor from the top without spending a Manipulation card. If a 5 or 6 is listed, DINO skips this part of the action.",
+      "aquaticHabitat": "DINO builds an Aquatic Habitat if he has a complete set of aquatic dinosaur DNA, or a Plesiosaurus was gained from a successful Open Ocean Roll. Otherwise draw the next Action Card to determine a large facility (1-6) to add to DINO’s park."
+    },
+    "site-common": {
+      "locationUse": "Only used if DINO has less than two complete DNA sets.",
+      "noResources": "DINO spends no resources and keeps all drawn cards.",
+      "cardAssignment": "Assign cards to preferred matching DNA sets or place them on the bottom of the Spare Stack.",
+      "newStack": "If there are less than 4 stacks next to the Spare Stack, create a new stack on the rightmost empty space."
+    }
+  },
+  "ruleChange": {
+    "none": "No Rule Change.",
+    "only-land-dinosaurs": "You may only create land dinosaurs.",
+    "no-large-facilities": "You may not build large facilities.",
+    "no-action-repeat": "You may not repeat actions this round.",
+    "no-uplink-action": "You may not use the Uplink Action.",
+    "no-ferry-action": "You may not use the Ferry Action.",
+    "specialists-inactive": "Specialists are not active this round.",
+    "no-boneyard-action": "You may not use the Boneyard Action.",
+    "no-market-dna-buy": "You may not buy from the DNA Market.",
+    "no-farm-action": "You may not take the Farm Action.",
+    "no-water-dinosaurs": "You may not create water dinosaurs.",
+    "no-refined-polymorphic-dna": "You may not use refined/polymorphic DNA.",
+    "no-basic-hotels": "You may not build basic hotels.",
+    "no-dinosaurs-in-other-player-parks": "You may not create dinosaurs that are in other players parks.",
+    "land-dinosaurs-habitat-one-size-larger": "Land dinos require habitats 1 size larger than normal.",
+    "no-visitors-vp": "Do not receive VP for visitors in the Upkeep Phase.",
+    "turn-order-last": "You start last in turn order.",
+    "dinosaurs-paired-before-new-species": "Your dinos must be paired before you can create a new species.",
+    "no-small-facilities": "You may not build small facilities.",
+    "no-visitors-money": "Do not receive money from visitors.",
+    "dinosaur-dna-one-more": "Dinosaur DNA requirement is +1."
+  },
+  "notfound": {
+    "title": "Not Found"
+  },
+  "action": {
+    "playGame": "Play Game",
+    "startGame": "Start Game",
+    "next": "Next",
+    "nextRound": "Next Round",
+    "abortGame": "Abort Game",
+    "abortGameConfirm": "Aborting the running game - are you sure?",
+    "endGame": "End Game",
+    "endGameConfirm": "End this game and return to home screen - are you sure?",
+    "cancel": "Cancel",
+    "backToHome": "Back to Home",
+    "back": "Back",
+    "close": "Close"
+  },
+  "footer": {
+    "credits": "Credits"
+  },
+  "serviceWorkerUpdatedRefresh": {
+    "title": "Refresh Application",
+    "notice": "The application was updated - do you want to refresh to use the latest version?"
+  }
+}
