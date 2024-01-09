@@ -1,5 +1,9 @@
 <template>
-  <p>TBD</p>
+  <ul>
+    <li v-html="t('location.special-action.locationUse')"></li>
+    <li v-html="t('location.special-action.resolveAction')"></li>
+    <li v-html="t('location.special-action.breakingNewsApply')"></li>
+  </ul>
 </template>
 
 <script lang="ts">

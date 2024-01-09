@@ -1,5 +1,17 @@
 <template>
-  <p>TBD</p>
+  <p v-html="t('location.city-center.actionSelection')"></p>
+  <ol>
+    <li v-html="t('location.city-center.receiveFences')"></li>
+    <li>
+      <span v-html="t('location.city-center.facilityBuildRepair')"></span>
+      <ol type="a">
+        <li v-html="t('location.city-center.facilityBuildRepairBiodome')"></li>
+        <li v-html="t('location.city-center.facilityBuildRepairHotel')"></li>
+        <li v-html="t('location.city-center.facilityBuildRepairOtherwise')"></li>
+      </ol>
+    </li>
+    <li v-html="t('location.city-center.buyMarket')"></li>
+  </ol>
 </template>
 
 <script lang="ts">
@@ -31,3 +43,12 @@ export default defineComponent({
   }
 })
 </script>
+
+<style lang="scss" scoped>
+li {
+  margin-bottom: 0.5rem;
+}
+li li {
+  margin-bottom: 0;
+}
+</style>

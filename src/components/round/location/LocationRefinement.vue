@@ -1,5 +1,9 @@
 <template>
-  <p>TBD</p>
+  <ul>
+    <li v-html="t('location.refinement.locationUse')"></li>
+    <li v-html="t('location.refinement.noMoney')"></li>
+    <li v-html="t('location.refinement.tokenPlacement')"></li>
+  </ul>
 </template>
 
 <script lang="ts">

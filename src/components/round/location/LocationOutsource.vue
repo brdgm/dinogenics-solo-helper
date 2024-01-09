@@ -1,5 +1,8 @@
 <template>
-  <p>TBD</p>
+  <ul>
+    <li v-html="t('location.outsource.drawAnotherCard')"></li>
+    <li v-html="t('location.outsource.actions')"></li>
+  </ul>
 </template>
 
 <script lang="ts">

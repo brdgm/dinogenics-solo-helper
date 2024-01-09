@@ -1,5 +1,6 @@
 <template>
-  <p>TBD</p>
+  <p v-html="t('location.intelligen-designs-hq.openOceanRoll')"></p>
+  <p v-html="t('location.intelligen-designs-hq.aquaticHabitat')"></p>
 </template>
 
 <script lang="ts">

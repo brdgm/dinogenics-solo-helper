@@ -1,6 +1,6 @@
 <template>
   <ul>
-    <li v-html="t(`location.time-share.locationUse`)"></li>
+    <li v-html="t('location.time-share.locationUse')"></li>
   </ul>
 </template>
 

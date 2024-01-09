@@ -1,6 +1,6 @@
 <template>
   <ul>
-    <li v-html="t(`location.farm.locationUse`)"></li>
+    <li v-html="t('location.farm.locationUse')"></li>
   </ul>
 </template>
 

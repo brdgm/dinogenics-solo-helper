@@ -1,7 +1,7 @@
 <template>
   <ul>
-    <li v-html="t(`location.uplink.locationUse`)"></li>
-    <li v-html="t(`location.uplink.playManipulation`)"></li>
+    <li v-html="t('location.uplink.locationUse')"></li>
+    <li v-html="t('location.uplink.playManipulation')"></li>
   </ul>
 </template>
 

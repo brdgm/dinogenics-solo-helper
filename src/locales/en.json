@@ -140,19 +140,38 @@
     },
     "outsource": {
       "title": "Outsource",
-      "ruleSummary": "Draw another card to determine action."
+      "ruleSummary": "Draw another card to determine action.",
+      "drawAnotherCard": "Draw another card and carry out the action without placing another worker.",
+      "actions": "DINO is not limited to taking actions occupied existing workers and prefers the board space even if he has built a Private Airport."
     },
     "city-center": {
       "title": "The City Center",
-      "ruleSummary": "3 fences, repair/hotel/slot, market buy/sell."
+      "ruleSummary": "3 fences, repair/hotel/slot, market buy/sell.",
+      "actionSelection": "DINO performs 1-3 actions:",
+      "receiveFences": "DINO receives three new fences to its reserve and may replace damaged habitats.",
+      "facilityBuildRepair": "DINO repairs one facility or builds a new facility based on the following criteria:",
+      "facilityBuildRepairBiodome": "If DINO has a preferred set of Pterodactyl DNA and a Biodomeis available, DINO builds the Biodome.",
+      "facilityBuildRepairHotel": "DINO builds a Basic hotel if he has less than two hotels.",
+      "facilityBuildRepairOtherwise": "Otherwise, draw another Action Card and choose the building depending on the highlighted slot 1-4. If a 5 or 6 is mentioned, no building is placed.",
+      "buyMarket": "If DINO can buy a DNA card from the market that matches one of its incomplete preferred species sets, DINO buys it without paying. If there are several options, the rightmost card is preferred. Otherwise DINO sells a DNA card, if the Spare Stack has at least two cards. In this case DINO sells the card from the bottom of this stack and receives the sale price. If none applies, the Market is not used."
     },
     "dinogenics-iom": {
       "title": "DinoGenics IOM",
-      "ruleSummary": "If complete set, suitable habitat and goats."
+      "ruleSummary": "If complete set, suitable habitat and goats.",
+      "locationUse": "DinoGenics is used in two cases:",
+      "locationUseDNASet": "DINO has at least one complete prefered DNA set – Polymorphic DNA cards and/or Refined DNA Tokens are considered.",
+      "locationUseMutant": "DINO has not created a mutant yet and it has at least 2 DNA or eDNA cards that are not part of a complete preferred set.",
+      "enoughFences": "In either case, DINO must also have enough fences to create a suitable habitat, and in the case of a carnivore, must have enough goats to feed it for the current season.",
+      "creatingDinosaur": "When creating a preferred dinosaur, empty a stack to the DNA discard pile and any remaining DNA is placed into the Spare pile. Choose right to left if there are multiple options. When creating a mutant, discard the Mutant reference card and 2 DNA cards. Prioritize DNA taken from the spare stack, then incomplete preferred stacks in order of preference left to right. DINO will only create additional mutants by using the mutant trait provided it has enough spare fences and additional goats for all carnivores and the rightmost (complete) preferred DNA set.",
+      "createHabitat": "Create a suitable habitat for the new dinosaur using the minimal number of fences required. Dinosaurs of the same species as existing dinosaurs (or Ankylosaurus) must be consolidated into a larger pen. An empty Bio dome is only used if a Pterodactyl was created or if DINO is unable to create a viable habitat with fences.",
+      "moveStacks": "Finally, move all preferred stacks to the right to fill the empty space and refresh the empty stack space on the left with cards from the spare pile."
     },
     "special-action": {
       "title": "Special Action",
-      "ruleSummary": "If 5/8/12/14/15/16/20/28/D3 Breaking News is active."
+      "ruleSummary": "If 5/8/12/14/15/16/20/28/D3 Breaking News is active.",
+      "locationUse": "Special Actions are carried out if specific Breaking News cards are in play.",
+      "resolveAction": "Resolve the action by placing DINO’s worker on the specific card action space or the enhanced regular action space referenced by the card.",
+      "breakingNewsApply": "Special Actions apply the following Breaking News Cards: 5, 8, 12, 14, 15, 16, 20, 28, D3."
     },
     "site-d": {
       "title": "Site D",
@@ -160,11 +179,16 @@
     },
     "refinement": {
       "title": "Refinement",
-      "ruleSummary": "If less than 2 refined DNA tokens."
+      "ruleSummary": "If less than 2 refined DNA tokens.",
+      "locationUse": "Only used if DINO has less than two Refined DNA tokens.",
+      "noMoney": "DINO does not have to spend a DNA card or money.",
+      "tokenPlacement": "The token is kept near DINO’s board until it is required to complete a set."
     },
     "intelligen-designs-hq": {
       "title": "IntelliGen Designs HQ",
-      "ruleSummary": "Draw two more cards to determine slots."
+      "ruleSummary": "Draw two more cards to determine slots.",
+      "openOceanRoll": "Draw an Action Card to determine if DINO resolves an Open Ocean Roll (1) or which specialist he hires from the Underground Job Network (2-4). If the rightmost space is selected (4), DINO acquires the Independent Contractor from the top without spending a Manipulation card. If a 5 or 6 is listed, DINO skips this part of the action.",
+      "aquaticHabitat": "DINO builds an Aquatic Habitat if he has a complete set of aquatic dinosaur DNA, or a Plesiosaurus was gained from a successful Open Ocean Roll. Otherwise draw the next Action Card to determine a large facility (1-6) to add to DINO’s park."
     },
     "site-common": {
       "locationUse": "Only used if DINO has less than two complete DNA sets.",

@@ -1,6 +1,6 @@
 <template>
   <ul>
-    <li v-html="t(`location.ferry.collectMoney`)"></li>
+    <li v-html="t('location.ferry.collectMoney')"></li>
   </ul>
 </template>
 

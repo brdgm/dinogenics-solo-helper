@@ -1,7 +1,7 @@
 <template>
   <ul>
-    <li v-html="t(`location.agency.drawManipulation`)"></li>
-    <li v-html="t(`location.agency.discardScandalToken`)"></li>
+    <li v-html="t('location.agency.drawManipulation')"></li>
+    <li v-html="t('location.agency.discardScandalToken')"></li>
   </ul>
 </template>
 

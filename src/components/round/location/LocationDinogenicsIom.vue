@@ -1,5 +1,13 @@
 <template>
-  <p>TBD</p>
+  <p v-html="t('location.dinogenics-iom.locationUse')"></p>
+  <ol>
+    <li v-html="t('location.dinogenics-iom.locationUseDNASet')"></li>
+    <li v-html="t('location.dinogenics-iom.locationUseMutant')"></li>
+  </ol>
+  <p v-html="t('location.dinogenics-iom.enoughFences')"></p>
+  <p v-html="t('location.dinogenics-iom.creatingDinosaur')"></p>
+  <p v-html="t('location.dinogenics-iom.createHabitat')"></p>
+  <p v-html="t('location.dinogenics-iom.moveStacks')"></p>
 </template>
 
 <script lang="ts">

@@ -1,8 +1,8 @@
 <template>
   <ul>
-    <li v-html="t(`location.boneyard.locationUse`)"></li>
-    <li v-html="t(`location.boneyard.severalMatches`)"></li>
-    <li v-html="t(`location.boneyard.scandalToken`)"></li>
+    <li v-html="t('location.boneyard.locationUse')"></li>
+    <li v-html="t('location.boneyard.severalMatches')"></li>
+    <li v-html="t('location.boneyard.scandalToken')"></li>
   </ul>
 </template>
 
