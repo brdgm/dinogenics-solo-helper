@@ -9,6 +9,7 @@ export default class NavigationState {
 
   readonly round : number
   readonly turn : number
+  readonly location : number
   readonly workerCount : number
   readonly worker : number
   readonly playerOrder : Corporation[]
@@ -20,13 +21,9 @@ export default class NavigationState {
   readonly currentBot? : Bot
 
   public constructor(route : RouteLocation, state : State) {    
-    this.round = parseInt(route.params['round'] as string)
-    if (route.name == 'RoundTurn') {
-      this.turn = parseInt(route.params['turn'] as string)
-    }
-    else {
-      this.turn = 0
-    }
+    this.round = getIntRouteParam(route, 'round')
+    this.turn = getIntRouteParam(route, 'turn')
+    this.location = getIntRouteParam(route, 'location')
     this.workerCount = determineWorkerCount(this.round, state)
     const roundData = state.rounds.find(item => item.round == this.round)
 
@@ -61,6 +58,14 @@ export default class NavigationState {
     return !this.isPlayerTurn
   }
 
+}
+
+function getIntRouteParam(route : RouteLocation, param : string) {
+  const value = parseInt(route.params[param] as string)
+  if (isNaN(value)) {
+    return 0
+  }
+  return value
 }
 
 function determineWorkerCount(round : number, state : State) {

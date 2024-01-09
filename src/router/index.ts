@@ -38,6 +38,11 @@ const routes: Array<RouteRecordRaw> = [
     component: RoundTurn
   },
   {
+    path: '/round/:round/turn/:turn/location/:location',
+    name: 'RoundTurnLocation',
+    component: RoundTurn
+  },
+  {
     path: '/round/:round/upkeepPhase',
     name: 'RoundUpkeepPhase',
     component: RoundUpkeepPhase
