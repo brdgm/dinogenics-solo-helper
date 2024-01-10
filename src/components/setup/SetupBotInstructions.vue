@@ -6,7 +6,7 @@
     <li v-else v-html="t('setupBot.botDNACards')"></li>
     <li>
       <span v-html="t('setupBot.botDNACardArrangement')"></span><br/>
-      <button class="btn btn-secondary mt-1 mb-2" data-bs-toggle="modal" data-bs-target="#dnaCollectionModal">
+      <button class="btn btn-secondary btn-sm mt-1 mb-2" data-bs-toggle="modal" data-bs-target="#dnaCollectionModal">
         {{t('rules.dnaCollection.title')}}
       </button>
     </li>

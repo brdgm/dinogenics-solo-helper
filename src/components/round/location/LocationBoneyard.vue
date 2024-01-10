@@ -1,5 +1,5 @@
 <template>
-  <LocationRulesCollapse>
+  <LocationRulesCollapse :dnaCollection="true">
     <ul>
       <li v-html="t('location.boneyard.locationUse')"></li>
       <li v-html="t('location.boneyard.severalMatches')"></li>

@@ -1,5 +1,5 @@
 <template>
-  <LocationRulesCollapse>
+  <LocationRulesCollapse :dnaCollection="true">
     <ul>
       <li v-html="t('location.site-common.locationUse')"></li>
       <li v-html="t('location.site-common.noResources')"></li>

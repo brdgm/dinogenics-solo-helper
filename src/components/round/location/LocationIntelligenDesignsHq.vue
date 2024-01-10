@@ -10,7 +10,7 @@
       <img src="@/assets/rules/intelligen-designs-hq-selection.jpg" alt="" class="rules-image"/>
     </template>
     <template v-else>
-      <button class="btn btn-primary btn-lg" @click="determineAction()">{{t('location.intelligen-designs-hq.determineAction')}}</button>
+      <button class="btn btn-primary btn-sm" @click="determineAction()">{{t('location.intelligen-designs-hq.determineAction')}}</button>
     </template>
   </div>
 </template>

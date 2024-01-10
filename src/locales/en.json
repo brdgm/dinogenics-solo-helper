@@ -42,17 +42,17 @@
   },
   "roundOpenSeason": {
     "title": "Open Season",
-    "playerOrder": "Determine player order based on reputation",
+    "playerOrder": "Determine player order based on reputation.",
     "determinePlayerOrder": {
       "currentItems": "Current Player Order",
       "newItems": "New Player Order",
       "newItemsSelect": "Please determine the new player order."
     },
-    "assignVisitors": "Assign visitors based on player order",
-    "assignBonusVisitors": "Assign bonus visitors",
-    "receiveIncome": "Each player receives 1 credit for each visitor in their park",
-    "breakingNews": "Resolve the next Breaking News card, and draw a new upcoming one",
-    "drawFacilityTiles": "Draw one random tile to each of the 2nd/3rd/4th facility stacks in the City Center",
+    "assignVisitors": "Assign visitors based on player order.",
+    "assignBonusVisitors": "Assign bonus visitors.",
+    "receiveIncome": "Each player receives 1 credit for each visitor in their park.",
+    "breakingNews": "Resolve the next Breaking News card, and draw a new upcoming one.",
+    "drawFacilityTiles": "Draw one random tile to each of the 2nd/3rd/4th facility stacks in the City Center.",
     "drawSpecialists": "Draw two new specialists to the specialist display spaces."
   },
   "roundTurn": {
@@ -73,13 +73,13 @@
   },
   "roundUpkeepPhase": {
     "title": "Upkeep Phase",
-    "feedCarnivores": "Feed all carnivores (must feed carnivores as much as possible)",
-    "checkRampage": "Check for rampage, and roll if necessary",
-    "gainVisitorVPs": "Gain 3 VPs for every two visitors leaving the park alive",
-    "gainDinosaurFacilityVPs": "Gain Victory Points from dinosaurs and facilities",
-    "gainDinosaurFacilityResources": "Gain resources from dinosaurs and facilities",
-    "returnWorkers": "Return workers from the Mainland board to each owner’s park",
-    "advanceVisitorOverlay": "Advance the Visitor Overlay one column to the left"
+    "feedCarnivores": "Feed all carnivores (must feed carnivores as much as possible).",
+    "checkRampage": "Check for rampage, and roll if necessary.",
+    "gainVisitorVPs": "Gain 3 VPs for every two visitors leaving the park alive.",
+    "gainDinosaurFacilityVPs": "Gain Victory Points from dinosaurs and facilities.",
+    "gainDinosaurFacilityResources": "Gain resources from dinosaurs and facilities.",
+    "returnWorkers": "Return workers from the Mainland board to each owner’s park.",
+    "advanceVisitorOverlay": "Advance the Visitor Overlay one column to the left."
   },
   "sideBar": {
     "round": "Round"

@@ -11,7 +11,10 @@
       <li v-html="t('roundOpenSeason.assignVisitors')"></li>
       <li v-html="t('roundOpenSeason.assignBonusVisitors')"></li>
       <li v-html="t('roundOpenSeason.receiveIncome')"></li>
-      <li v-html="t('roundOpenSeason.breakingNews')"></li>
+      <li>
+        <span v-html="t('roundOpenSeason.breakingNews')"></span><br/>
+        <button class="btn btn-secondary btn-sm" data-bs-toggle="modal" href="#breakingNewsModal">{{t('rules.breakingNews.title')}}</button>
+      </li>
     </template>
     <li v-html="t('roundOpenSeason.drawFacilityTiles')"></li>
     <li v-if="hasControlledChaos" v-html="t('roundOpenSeason.drawSpecialists')"></li>

@@ -9,9 +9,12 @@
         <li v-html="t('location.city-center.facilityBuildRepairHotel')"></li>
         <li>
           <span v-html="t('location.city-center.facilityBuildRepairOtherwise')"></span><br/>
-          <div v-if="facilityNumber" class="facility-result" v-html="t('location.city-center.buildFacility', {number:facilityNumber})"></div>
+          <div v-if="facilityNumber" class="facility-result d-flex align-items-center">
+            <span v-html="t('location.city-center.buildFacility', {number:facilityNumber})"></span>
+            <button class="btn btn-secondary btn-sm ms-2" data-bs-toggle="modal" href="#facilitiesHabitatsModal">{{t('rules.facilitiesHabitats.title')}}</button>
+          </div>
           <div v-else-if="noFacility" class="facility-result" v-html="t('location.city-center.noFacility')"></div>
-          <button v-else class="btn btn-primary btn-lg mt-1" @click="determineFacility()">{{t('location.city-center.determineFacility')}}</button>
+          <button v-else class="btn btn-primary btn-sm mt-1" @click="determineFacility()">{{t('location.city-center.determineFacility')}}</button>          
        </li>
       </ol>
     </li>
@@ -76,7 +79,6 @@ li li {
 .facility-result {
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
-  border-left: 2px solid var(--bs-primary);
   padding-left: 0.5rem;
 }
 </style>
