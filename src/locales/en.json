@@ -84,14 +84,110 @@
   "sideBar": {
     "round": "Round"
   },
-  "dnaCollectionArrangement": {
-    "title": "DINO DNA Collection and Arrangement",
-    "setCollection": "During the game DINO will focus on collecting DNA sets of up to 4 different species. As part of DINO’s setup, create the preferred species’ stacks beside DINO’s Island Board. Unique species will form their own column while duplicates will be stacked as they are drawn.",
-    "cardOrder": "Start with the first two DNA cards/species (1st & 2nd species) on the right, proceed to the left with the eDNA card/species (3rd species) and a possible 4th species to the left. On the leftmost column, place the Mutant reference card. The Preferred Species 3 column is only specific to eDNA during setup.",
-    "noDuplicates": "If there were no duplicates the 5th card will be placed below the Mutant reference card to form a stack of spare DNA.",
-    "example": {
-      "title": "Example",
-      "description": "DINO received five random cards plus the Mutant reference card during setup. Because DINO received two Ankylosaurus, they are grouped together. The DNA-species are placed in the order of reception from right to left. Place the Mutant reference card in the far left space. The Megalodon is placed on the 3rd spot from the right, because it was drawn from the eDNA deck."
+  "rules": {
+    "dnaCollectionArrangement": {
+      "title": "DINO DNA Collection and Arrangement",
+      "setCollection": "During the game DINO will focus on collecting DNA sets of up to 4 different species. As part of DINO’s setup, create the preferred species’ stacks beside DINO’s Island Board. Unique species will form their own column while duplicates will be stacked as they are drawn.",
+      "cardOrder": "Start with the first two DNA cards/species (1st & 2nd species) on the right, proceed to the left with the eDNA card/species (3rd species) and a possible 4th species to the left. On the leftmost column, place the Mutant reference card. The Preferred Species 3 column is only specific to eDNA during setup.",
+      "noDuplicates": "If there were no duplicates the 5th card will be placed below the Mutant reference card to form a stack of spare DNA.",
+      "example": {
+        "title": "Example",
+        "description": "DINO received five random cards plus the Mutant reference card during setup. Because DINO received two Ankylosaurus, they are grouped together. The DNA-species are placed in the order of reception from right to left. Place the Mutant reference card in the far left space. The Megalodon is placed on the 3rd spot from the right, because it was drawn from the eDNA deck."
+      }
+    },
+    "breakingNews": {
+      "title": "Breaking News",
+      "26": "DINO takes two scandals.",
+      "27": "Specialist that scores the most victory points.", 
+      "29": "Discard 1 DNA card from spare if present.",
+      "D1": "DINO decides not to roll an Upkeep Die.",
+      "C01": "Draw the next action card to determine the species.",
+      "C02": "If DINO has a scandal token and/or a damaged building, he picks this option. Otherwise he takes a scandal and destroys the building with the most end game VPs.",
+      "C03": "DINO is last in bid order and will always bid actual DINO value (without paying) and doesn’t take a scandal.",
+      "C04": "DINO draws 2 eDNA-cards.",
+      "C05": "Draw the next action card and count empty spaces starting from the upper left corner depending on which of the six slots is highlighted. That’s where the token is placed."
+    },
+    "manipulationCard": {
+      "title": "Manipulation Cards",
+      "blackMarket": {
+        "title": "Black Market",
+        "description": "DINO buys all cards that would complete a preferred DNA set. If none fits, three new cards are drawn first."
+      },
+      "controlTheNewsCycle": {
+        "title": "Control the News Cycle",
+        "description": "DINO takes the Breaking news-cards and randomly redistributes them. DINO receives 3 victory points."
+      },
+      "dnaSplice": {
+        "title": "DNA Splice",
+        "description": "DINO creates a dinosaur based on its first incomplete preferred set (right to left). Discard cards first from the preferred set, then from Spare and finally from stacks left to right until DINO has discarded cards equal to the DNA requirement of the preferred set +1."
+      },
+      "geneticDeconstruction": {
+        "title": "Genetic Deconstruction",
+        "description": "DINO chooses option B if he has one spare DNA, otherwise option A."
+      },
+      "goatRustling": {
+        "title": "Goat Rustling",
+        "description": "DINO uses as many goats as available to collect victory points. DINO spends the remaining goats for option B if necessary."
+      },
+      "infiltrator": {
+        "title": "Infiltrator",
+        "description": "DINO chooses the next two actions on this (or the next) Action Card(s) that already have a human player’s worker on them."
+      },
+      "misdirection": {
+        "title": "Misdirection",
+        "description": "The next Action Card starting with the bottom action and going up is determining the spaces for the human’s workers."
+      },
+      "nonZeroSumGame": {
+        "title": "Non-Zero-Sum-Game",
+        "description": "DINO gives two cards from his Spare Stack, if there are at least three cards in it."
+      },
+      "offshoreContractors": {
+        "title": "Offshore Contractors",
+        "description": "Determine the stack with the next Action Card and DINO builds the most expensive building in this stack. Redraw if a 5 or 6 is mentioned."
+      },
+      "researchPact": {
+        "title": "Research Pact",
+        "description": "DINO keeps two cards, if possible from the preferred species. Give each human player one card in player order."
+      },
+      "shareholderMeeting": {
+        "title": "Shareholder Meeting",
+        "description": "DINO scores a maximum of 5 victory points for his current money. DINO builds two basic Hotels if he has less than 3. Otherwise DINO draws a DNA and eDNA card."
+      },
+      "strongArmTheMarket": {
+        "title": "Strong Arm the Market",
+        "description": "Draw two buildings, place them as usual determined by the next action card and perform City Center-actions as usual. Redraw if a 5 or 6 is mentioned."
+      },
+      "unleashContagion": {
+        "title": "Unleash Contagion",
+        "description": "If possible, DINO draws cards until a dinosaur is drawn who doesn’t have a reputation value of one of DINO’s dinosaurs. Otherwise the first mentioned determines the value."
+      },
+      "whistleBlower": {
+        "title": "Whistle Blower",
+        "description": "DINO gives a card from the Spare Stack or incomplete preferred species stack, if possible. DINO takes a preferred card if he can complete one of his DNA sets."
+      }
+    },
+    "specialist": {
+      "title": "Specialists",
+      "chaotician": {
+        "title": "Chaotician",
+        "description": "Repeat the Rampage rolls if no Naïve Visitor has been rolled. Repeat the Open Ocean Roll if both dice show a Drowning symbol."
+      },
+      "financialAdvisor": {
+        "title": "Financial Advisor",
+        "description": "DINO scores a maximum of 5 victory points with this Specialist."
+      },
+      "masterArchitect": {
+        "title": "Master Architect",
+        "description": "No building is discarded."
+      },
+      "securityOfficer": {
+        "title": "Security Officer",
+        "description": "Only used to prevent DINO deaths. No money is spent."
+      },
+      "seismologist": {
+        "title": "Seismologist",
+        "description": "If DINO has at least two cards in his Spare Stack, the bottom card is sold."
+      }
     }
   },
   "difficultyLevel": {

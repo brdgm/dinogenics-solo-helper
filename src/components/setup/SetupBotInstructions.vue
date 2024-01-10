@@ -7,13 +7,13 @@
     <li>
       <span v-html="t('setupBot.botDNACardArrangement')"></span><br/>
       <button class="btn btn-secondary mt-1 mb-2" data-bs-toggle="modal" data-bs-target="#dnaCollectionArrangementModal">
-        {{t('dnaCollectionArrangement.title')}}
+        {{t('rules.dnaCollectionArrangement.title')}}
       </button>
     </li>
     <li v-html="t('setupBot.botTurnOrder')"></li>
   </ul>
 
-  <DNACollectionArrangement/>
+  <DNACollectionArrangementModal/>
 </template>
 
 <script lang="ts">
@@ -21,12 +21,12 @@ import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useStateStore } from '@/store/state'
 import Module from '@/services/enum/Module'
-import DNACollectionArrangement from '../round/DNACollectionArrangement.vue'
+import DNACollectionArrangementModal from '../rules/DNACollectionArrangementModal.vue'
 
 export default defineComponent({
   name: 'SetupBotInstructions',
   components: {
-    DNACollectionArrangement
+    DNACollectionArrangementModal
   },
   setup() {
     const { t } = useI18n()
