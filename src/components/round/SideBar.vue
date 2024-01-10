@@ -2,6 +2,8 @@
   <div class="sidebar">
     <p>{{t('sideBar.round')}} <strong>{{navigationState.round}}</strong> / 7</p>
     <ul class="rules">
+      <li><a data-bs-toggle="modal" href="#generalRulesModal">{{t('rules.general.title')}}</a></li>
+      <li><a data-bs-toggle="modal" href="#facilitiesHabitatsModal">{{t('rules.facilitiesHabitats.title')}}</a></li>
       <li><a data-bs-toggle="modal" href="#dnaCollectionArrangementModal">{{t('rules.dnaCollectionArrangement.title')}}</a></li>
       <li><a data-bs-toggle="modal" href="#breakingNewsModal">{{t('rules.breakingNews.title')}}</a></li>
       <li><a data-bs-toggle="modal" href="#manipulationCardsModal">{{t('rules.manipulationCard.title')}}</a></li>
@@ -9,6 +11,8 @@
     </ul>
   </div>
 
+  <GeneralRulesModal/>
+  <FacilitiesHabitatsModal/>
   <DNACollectionArrangementModal/>
   <BreakingNewsModal/>
   <ManipulationCardsModal/>
@@ -23,10 +27,14 @@ import DNACollectionArrangementModal from '../rules/DNACollectionArrangementModa
 import BreakingNewsModal from '../rules/BreakingNewsModal.vue'
 import ManipulationCardsModal from '../rules/ManipulationCardsModal.vue'
 import SpecialistsModal from '../rules/SpecialistsModal.vue'
+import GeneralRulesModal from '../rules/GeneralRulesModal.vue'
+import FacilitiesHabitatsModal from '../rules/FacilitiesHabitatsModal.vue'
 
 export default defineComponent({
   name: 'SideBar',
   components: {
+    GeneralRulesModal,
+    FacilitiesHabitatsModal,
     DNACollectionArrangementModal,
     BreakingNewsModal,
     ManipulationCardsModal,

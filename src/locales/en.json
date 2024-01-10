@@ -85,6 +85,48 @@
     "round": "Round"
   },
   "rules": {
+    "general": {
+      "title": "General Rules",
+      "intro": "DINO is treated as a human player unless otherwise mentioned and benefits from all cards and facilities as well as suffering penalties from rampage checks and Breaking News Events.",
+      "noMoney": "DINO receives all income but never spends Credits. All expenses are considered to be covered immediately. This includes buying facilities, performing Open Ocean Rolls, Aquatic Rampage Checks, DNA market purchases or Actions spaces costs etc.",
+      "noKilling": "DINO never voluntarily kills any of his dinosaurs (exception: genetic deconstruction-card).",
+      "noHandLimit": "DINO has no hand limit and can collect more than 10 (e)DNA cards.",
+      "collectFences": "DINO collects fences to a personal reserve next to his board. DINO uses fences when creating new dinosaurs or replacing broken fences. Dinosaurs of the same species are placed in the same habitat, if possible. In those cases, DINO extends the fence-habitat by using as few fences as necessary to hold the new dinosaur. Broken fences are replaced immediately if DINO has spare ones.",
+      "upkeepPhase": "During the Upkeep Phase DINO must feed carnivores and check for rampage conditions. If DINO has remaining goats after all carnivores were fed and a Mutant in his park, one set of goats is spent per Mutant. Normal mutant creations rules apply and DINO only creates new mutants if it can provide them with a habitat. Any Biodomes are only used if another mutant is already occupying one of the 2 spaces.",
+      "resolvingChoices": {
+        "title": "Resolving Choices",
+        "intro": "When resolving choices DINO Prefers to gain the most of each reward possible that does not give a benefit to an opponent. Choice preference:",
+        "vp": "Victory Points",
+        "removeScandal": "Remove Scandal",
+        "credits": "Credits",
+        "dnaCards": "DNA Cards",
+        "manipulationCards": "Manipulation Cards",
+        "refinedDNAToken": "Refined DNA Token",
+        "gainScandal": "Gain Scandal to avoid losing any of the above",
+        "rampageCheck": "Resolve Rampage Check to avoid losing any of the above"
+      },
+      "rampageChoice": {
+        "title": "Rampage Choice and Assigning Damage",
+        "affectedDino": {
+          "intro": "If DINO has to perform Rampage Checks and can choose the affected Dinosaur, the checks are performed for the Dinosaur(s) with:",
+          "lowestSeasonalVP": "Lowest seasonal Victory Point value",
+          "lowestReputation": "Lowest Reputation",
+          "drawCards": "*** Draw DINO Action cards until a dinosaur written on a card matches one in DINO’s park."
+        },
+        "parkStructure": {
+          "intro": "When Park Structures are destroyed due to Rampages or other effects, the priority is:",
+          "lowestSeasonalVP": "Fences of habitat with lowest seasonal Victory Point dinosaur",
+          "emptyHotels": "Empty Hotels",
+          "otherCommercialFacilities": "Other Commercial Facilities",
+          "parkFacilities": "Park Facilities",
+          "occupiedHotels": "Occupied Hotels",
+          "prioritize": "Commercial and Park Facilities are prioritized in ascending costs."
+        }
+      }
+    },
+    "facilitiesHabitats": {
+      "title": "Facilities and Habitats"
+    },
     "dnaCollectionArrangement": {
       "title": "DINO DNA Collection and Arrangement",
       "setCollection": "During the game DINO will focus on collecting DNA sets of up to 4 different species. As part of DINO’s setup, create the preferred species’ stacks beside DINO’s Island Board. Unique species will form their own column while duplicates will be stacked as they are drawn.",
