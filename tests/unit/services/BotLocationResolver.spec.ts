@@ -53,4 +53,14 @@ describe('services/BotLocationResolver', () => {
     )
     expect(resolver.getLocation(99)).to.undefined
   })
+
+  it('outsourceFiltering', () => {
+    const resolver = new BotLocationResolver(
+      CardDeck.fromPersistence({pile:[5,6], discard:[4]}),
+      [Module.CONTROLLED_CHAOS],
+      true
+    )
+    // OUTSOURCE is skipped when outsource mode is active
+    expect(resolver.getLocation(3)).to.eq(Location.DINOGENICS_IOM)
+  })
 })

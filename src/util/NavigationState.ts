@@ -9,6 +9,7 @@ export default class NavigationState {
   readonly round : number
   readonly turn : number
   readonly location : number
+  readonly outsource : number
   readonly workerCount : number
   readonly worker : number
   readonly playerOrder : Corporation[]
@@ -23,6 +24,7 @@ export default class NavigationState {
     this.round = getIntRouteParam(route, 'round')
     this.turn = getIntRouteParam(route, 'turn')
     this.location = getIntRouteParam(route, 'location')
+    this.outsource = getIntRouteParam(route, 'outsource')
     this.workerCount = determineWorkerCount(this.round, state)
     const roundData = state.rounds.find(item => item.round == this.round)
 

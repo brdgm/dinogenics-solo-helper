@@ -28,6 +28,13 @@ export default class Bot {
     return resolver.getLocation(index)
   }
 
+  public getOutsourceLocation(index : number, modules : Module[]) : Location|undefined {
+    // draw new card for looking for outsource locations
+    this._cardDeck.draw()
+    const resolver = new BotLocationResolver(this._cardDeck, modules, true)
+    return resolver.getLocation(index)
+  }
+
   public toPersistence() : BotTurn {
     return {
       corporation: this._corporation,

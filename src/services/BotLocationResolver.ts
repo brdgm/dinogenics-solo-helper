@@ -13,12 +13,14 @@ export default class BotLocationResolver {
 
   private _cardDeck : CardDeck
   private _modules : Module[]
+  private _outsource : boolean
   private _visitedLocations = new Set<Location>()
   private _recursionDepth = 0
 
-  public constructor(cardDeck : CardDeck, modules : Module[]) {
+  public constructor(cardDeck : CardDeck, modules : Module[], outsource? : boolean) {
     this._cardDeck = cardDeck
     this._modules = modules
+    this._outsource = outsource ?? false
   }
 
   public getLocation(index : number) : Location|undefined {
@@ -47,6 +49,7 @@ export default class BotLocationResolver {
     return (this._cardDeck.currentCard?.locations ?? [])
         .filter(item => isLocationAvailable(item, this._modules))
         .filter(item => !this._visitedLocations.has(item))
+        .filter(item => item != Location.OUTSOURCE || !this._outsource)
   }
 
 }

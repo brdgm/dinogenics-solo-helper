@@ -15,10 +15,12 @@ describe('services/Bot', () => {
     expect(bot.cardDeck.pile.length).to.eq(2)
     expect(bot.cardDeck.discard.length).to.eq(1)
     expect(bot.getLocation(1, [])).to.eq(Location.SITE_A)
-    
+    // this draws a new card and returns 1st location from it
+    expect(bot.getOutsourceLocation(0, [])).to.eq(Location.FARM)
+
     expect(bot.toPersistence()).to.eql({
       corporation: Corporation.NTEK,
-      cardDeck: {pile:[2,3], discard:[1]}
+      cardDeck: {pile:[3], discard:[1,2]}
     })
   })
 })

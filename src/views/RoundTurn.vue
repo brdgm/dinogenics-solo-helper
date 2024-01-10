@@ -7,7 +7,7 @@
 
   <TurnPlayer v-if="navigationState.isPlayerTurn" :navigationState="navigationState" @next="next()"/>
   <TurnBot v-if="navigationState.isBotTurn && navigationState.currentBot"
-      :navigationState="navigationState" :bot="navigationState.currentBot" @next="next()"/>
+      :navigationState="navigationState" :bot="navigationState.currentBot" @next="next()" @back="back()"/>
 
   <DebugInfo :navigationState="navigationState"/>
 
@@ -42,11 +42,14 @@ export default defineComponent({
     const route = useRoute()
     const state = useStateStore()
     const navigationState = new NavigationState(route, state)
-    const { round, turn, location, worker, turnCount } = navigationState
-    return { t, state, navigationState, round, turn, location, worker, turnCount }
+    const { round, turn, location, outsource, worker, turnCount } = navigationState
+    return { t, state, navigationState, round, turn, location, outsource, worker, turnCount }
   },
   computed: {
     backButtonRouteTo() : string {
+      if (this.outsource > 0) {
+        return `/round/${this.round}/turn/${this.turn}/location/${this.location}/outsource/${this.outsource - 1}`
+      }
       if (this.location > 0) {
         return `/round/${this.round}/turn/${this.turn}/location/${this.location - 1}`
       }
@@ -72,6 +75,9 @@ export default defineComponent({
       else {
         this.$router.push(`/round/${this.round}/upkeepPhase`)
       }
+    },
+    back() : void {
+      this.$router.push(this.backButtonRouteTo)
     }
   }
 })

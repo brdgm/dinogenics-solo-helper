@@ -43,6 +43,11 @@ const routes: Array<RouteRecordRaw> = [
     component: RoundTurn
   },
   {
+    path: '/round/:round/turn/:turn/location/:location/outsource/:outsource',
+    name: 'RoundTurnLocationOutsource',
+    component: RoundTurn
+  },
+  {
     path: '/round/:round/upkeepPhase',
     name: 'RoundUpkeepPhase',
     component: RoundUpkeepPhase

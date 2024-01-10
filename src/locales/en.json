@@ -313,8 +313,8 @@
     },
     "outsource": {
       "title": "Outsource",
-      "ruleSummary": "Draw another card to determine action.",
-      "drawAnotherCard": "Draw another card and carry out the action without placing another worker.",
+      "ruleSummary": "Use any other action space.",
+      "useOtherLocation": "DINO carries out the action of this location without placing another worker:",
       "actions": "DINO is not limited to taking actions occupied existing workers and prefers the board space even if he has built a Private Airport."
     },
     "city-center": {
