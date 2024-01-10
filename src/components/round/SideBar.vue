@@ -3,17 +3,17 @@
     <p>{{t('sideBar.round')}} <strong>{{navigationState.round}}</strong> / 7</p>
     <ul class="rules">
       <li><a data-bs-toggle="modal" href="#generalRulesModal">{{t('rules.general.title')}}</a></li>
+      <li><a data-bs-toggle="modal" href="#dnaCollectionModal">{{t('rules.dnaCollection.title')}}</a></li>
       <li><a data-bs-toggle="modal" href="#facilitiesHabitatsModal">{{t('rules.facilitiesHabitats.title')}}</a></li>
-      <li><a data-bs-toggle="modal" href="#dnaCollectionArrangementModal">{{t('rules.dnaCollectionArrangement.title')}}</a></li>
       <li><a data-bs-toggle="modal" href="#breakingNewsModal">{{t('rules.breakingNews.title')}}</a></li>
       <li><a data-bs-toggle="modal" href="#manipulationCardsModal">{{t('rules.manipulationCard.title')}}</a></li>
       <li><a data-bs-toggle="modal" href="#specialistsModal">{{t('rules.specialist.title')}}</a></li>
     </ul>
   </div>
 
-  <GeneralRulesModal/>
+  <GeneralRulesModal :navigationState="navigationState"/>
+  <DNACollectionModal/>
   <FacilitiesHabitatsModal/>
-  <DNACollectionArrangementModal/>
   <BreakingNewsModal/>
   <ManipulationCardsModal/>
   <SpecialistsModal/>
@@ -23,19 +23,19 @@
 import NavigationState from '@/util/NavigationState'
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
-import DNACollectionArrangementModal from '../rules/DNACollectionArrangementModal.vue'
+import GeneralRulesModal from '../rules/GeneralRulesModal.vue'
+import DNACollectionModal from '../rules/DNACollectionModal.vue'
+import FacilitiesHabitatsModal from '../rules/FacilitiesHabitatsModal.vue'
 import BreakingNewsModal from '../rules/BreakingNewsModal.vue'
 import ManipulationCardsModal from '../rules/ManipulationCardsModal.vue'
 import SpecialistsModal from '../rules/SpecialistsModal.vue'
-import GeneralRulesModal from '../rules/GeneralRulesModal.vue'
-import FacilitiesHabitatsModal from '../rules/FacilitiesHabitatsModal.vue'
 
 export default defineComponent({
   name: 'SideBar',
   components: {
     GeneralRulesModal,
+    DNACollectionModal,
     FacilitiesHabitatsModal,
-    DNACollectionArrangementModal,
     BreakingNewsModal,
     ManipulationCardsModal,
     SpecialistsModal

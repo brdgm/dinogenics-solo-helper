@@ -46,6 +46,7 @@
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import ModalDialog from 'brdgm-commons/src/components/structure/ModalDialog.vue'
+import NavigationState from '@/util/NavigationState'
 
 export default defineComponent({
   name: 'GeneralRulesModal',
@@ -55,6 +56,12 @@ export default defineComponent({
   setup() {
     const { t } = useI18n()
     return { t }
+  },
+  props: {
+    navigationState: {
+      type: NavigationState,
+      required: true
+    }
   }
 })
 </script>

@@ -2,7 +2,15 @@
   <ModalDialog id="facilitiesHabitatsModal" :size-xl="true" :fullscreen-lg-down="true" :scrollable="true"
       :title="t('rules.facilitiesHabitats.title')">
     <template #body>
-      <p v-html="t('rules.facilitiesHabitats.1')"></p>
+      <img src="@/assets/rules/facilities-habitats.jpg" alt="" class="rules-image mb-2"/>
+      <p v-html="t('rules.facilitiesHabitats.intro')"></p>
+      <ul>
+        <li v-html="t('rules.facilitiesHabitats.newDinosaurs')"></li>
+        <li v-html="t('rules.facilitiesHabitats.facilities')"></li>
+        <li v-html="t('rules.facilitiesHabitats.largeFacilities')"></li>
+        <li v-html="t('rules.facilitiesHabitats.commercialFacilities')"></li>
+        <li v-html="t('rules.facilitiesHabitats.largeCommercialFacilities')"></li>
+      </ul>
     </template>
   </ModalDialog>
 </template>
@@ -27,6 +35,6 @@ export default defineComponent({
 <style lang="scss" scoped>
 .rules-image {
   width: 100%;
-  max-width: 700px;
+  max-width: 650px;
 }
 </style>
