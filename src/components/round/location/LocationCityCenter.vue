@@ -7,7 +7,12 @@
       <ol type="a">
         <li v-html="t('location.city-center.facilityBuildRepairBiodome')"></li>
         <li v-html="t('location.city-center.facilityBuildRepairHotel')"></li>
-        <li v-html="t('location.city-center.facilityBuildRepairOtherwise')"></li>
+        <li>
+          <span v-html="t('location.city-center.facilityBuildRepairOtherwise')"></span><br/>
+          <div v-if="facilityNumber" class="facility-result" v-html="t('location.city-center.buildFacility', {number:facilityNumber})"></div>
+          <div v-else-if="noFacility" class="facility-result" v-html="t('location.city-center.noFacility')"></div>
+          <button v-else class="btn btn-primary btn-lg mt-1" @click="determineFacility()">{{t('location.city-center.determineFacility')}}</button>
+       </li>
       </ol>
     </li>
     <li v-html="t('location.city-center.buyMarket')"></li>
@@ -40,6 +45,23 @@ export default defineComponent({
       type: NavigationState,
       required: true
     }
+  },
+  data() {
+    return {
+      facilityNumber: undefined as number|undefined,
+      noFacility: false
+    }
+  },
+  methods: {
+    determineFacility() {
+      const nextCard = this.bot.cardDeck.draw()
+      if (nextCard.slot > 4) {
+        this.noFacility = true
+      }
+      else {
+        this.facilityNumber = nextCard.slot
+      }
+    }
   }
 })
 </script>
@@ -50,5 +72,11 @@ li {
 }
 li li {
   margin-bottom: 0;
+}
+.facility-result {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  border-left: 2px solid var(--bs-primary);
+  padding-left: 0.5rem;
 }
 </style>

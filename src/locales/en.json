@@ -65,11 +65,11 @@
     "executed": "Worker Placed",
     "notPossible": "Not Possible",
     "outOfLocations": "Out of further locations, go back.",
-    "back": "Back",
-    "determineAction": "Determine Action"
+    "back": "Back"
   },
   "locationRulesCollapse": {
-    "showRules": "Show Rules"
+    "showRules": "Show Rules",
+    "hideRules": "Hide Rules"
   },
   "roundUpkeepPhase": {
     "title": "Upkeep Phase",
@@ -156,16 +156,19 @@
       "actionSelection": "DINO performs 1-3 actions:",
       "receiveFences": "DINO receives three new fences to its reserve and may replace damaged habitats.",
       "facilityBuildRepair": "DINO repairs one facility or builds a new facility based on the following criteria:",
-      "facilityBuildRepairBiodome": "If DINO has a preferred set of Pterodactyl DNA and a Biodomeis available, DINO builds the Biodome.",
+      "facilityBuildRepairBiodome": "If DINO has a preferred set of Pterodactyl DNA and a Biodome is available, DINO builds the Biodome.",
       "facilityBuildRepairHotel": "DINO builds a Basic hotel if he has less than two hotels.",
-      "facilityBuildRepairOtherwise": "Otherwise, draw another Action Card and choose the building depending on the highlighted slot 1-4. If a 5 or 6 is mentioned, no building is placed.",
-      "buyMarket": "If DINO can buy a DNA card from the market that matches one of its incomplete preferred species sets, DINO buys it without paying. If there are several options, the rightmost card is preferred. Otherwise DINO sells a DNA card, if the Spare Stack has at least two cards. In this case DINO sells the card from the bottom of this stack and receives the sale price. If none applies, the Market is not used."
+      "facilityBuildRepairOtherwise": "Otherwise, DINO chooses a new facility:",
+      "buyMarket": "If DINO can buy a DNA card from the market that matches one of its incomplete preferred species sets, DINO buys it without paying. If there are several options, the rightmost card is preferred. Otherwise DINO sells a DNA card, if the Spare Stack has at least two cards. In this case DINO sells the card from the bottom of this stack and receives the sale price. If none applies, the Market is not used.",
+      "determineFacility": "Determine Facility",
+      "buildFacility": "DINO builds <b>Facility #{number}</b>.",
+      "noFacility": "DINO builds <b>no facility</b>."
     },
     "dinogenics-iom": {
       "title": "DinoGenics IOM",
       "ruleSummary": "If complete set, suitable habitat and goats.",
       "locationUse": "DinoGenics is used in two cases:",
-      "locationUseDNASet": "DINO has at least one complete prefered DNA set – Polymorphic DNA cards and/or Refined DNA Tokens are considered.",
+      "locationUseDNASet": "DINO has at least one complete preferred DNA set – Polymorphic DNA cards and/or Refined DNA Tokens are considered.",
       "locationUseMutant": "DINO has not created a mutant yet and it has at least 2 DNA or eDNA cards that are not part of a complete preferred set.",
       "enoughFences": "In either case, DINO must also have enough fences to create a suitable habitat, and in the case of a carnivore, must have enough goats to feed it for the current season.",
       "creatingDinosaur": "When creating a preferred dinosaur, empty a stack to the DNA discard pile and any remaining DNA is placed into the Spare pile. Choose right to left if there are multiple options. When creating a mutant, discard the Mutant reference card and 2 DNA cards. Prioritize DNA taken from the spare stack, then incomplete preferred stacks in order of preference left to right. DINO will only create additional mutants by using the mutant trait provided it has enough spare fences and additional goats for all carnivores and the rightmost (complete) preferred DNA set.",
@@ -196,7 +199,8 @@
       "openOceanRoll": "Resolve an <b>Open Ocean Roll</b> (1a) for DINO",
       "hireSpecialist": "DINO hires <b>Specialist {number}a</b> from the Underground Job Network without spending a manipulation card or money.",
       "buildAquaticHabitat": "DINO builds an <b>Aquatic Habitat</b> if he has a complete set of aquatic dinosaur DNA, or a Plesiosaurus was gained from a successful Open Ocean Roll.",
-      "buildLargeFacility": "Otherwise <b>Large Facility {number}b</b> is added to DINO’s park."
+      "buildLargeFacility": "Otherwise <b>Large Facility {number}b</b> is added to DINO’s park.",
+      "determineAction": "Determine Action"
     },
     "site-common": {
       "locationUse": "Only used if DINO has less than two complete DNA sets.",
