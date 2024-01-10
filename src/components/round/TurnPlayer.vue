@@ -1,5 +1,9 @@
 <template>
-  <p v-if="advancedRuleChange" class="mt-4 alert alert-warning fst-italic" v-html="t(`ruleChange.${advancedRuleChange}`)"></p>
+  <div class="row mt-4">
+    <div class="col-12">
+      <p v-if="advancedRuleChange" class="alert alert-warning fst-italic" v-html="t(`ruleChange.${advancedRuleChange}`)"></p>
+    </div>
+  </div>
 
   <p class="mt-4" v-html="t('turnPlayer.takeYourTurn')"></p>
 
