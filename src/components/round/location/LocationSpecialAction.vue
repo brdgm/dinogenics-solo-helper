@@ -1,9 +1,11 @@
 <template>
-  <ul>
-    <li v-html="t('location.special-action.locationUse')"></li>
-    <li v-html="t('location.special-action.resolveAction')"></li>
-    <li v-html="t('location.special-action.breakingNewsApply')"></li>
-  </ul>
+  <LocationRulesCollapse>
+    <ul>
+      <li v-html="t('location.special-action.locationUse')"></li>
+      <li v-html="t('location.special-action.resolveAction')"></li>
+      <li v-html="t('location.special-action.breakingNewsApply')"></li>
+    </ul>
+  </LocationRulesCollapse>
 </template>
 
 <script lang="ts">
@@ -12,9 +14,13 @@ import { useI18n } from 'vue-i18n'
 import NavigationState from '@/util/NavigationState'
 import Bot from '@/services/Bot'
 import Location from '@/services/enum/Location'
+import LocationRulesCollapse from '../LocationRulesCollapse.vue'
 
 export default defineComponent({
   name: 'LocationSpecialAction',
+  components: {
+    LocationRulesCollapse
+  },
   setup() {
     const { t } = useI18n()
     return { t }

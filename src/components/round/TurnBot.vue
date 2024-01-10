@@ -3,12 +3,7 @@
     <h3>{{t(`location.${currentLocation}.title`)}}</h3>
     <p>{{t(`location.${currentLocation}.ruleSummary`)}}</p>
 
-    <div>
-      <button class="btn btn-sm btn-secondary mb-3" data-bs-toggle="collapse" data-bs-target="#locationFullRules">Show Rules</button>
-      <div class="collapse" id="locationFullRules">
-        <component :is="`location-${currentLocation}`" :location="currentLocation" :bot="bot" :navigationState="navigationState"/>
-      </div>
-    </div>  
+    <component :is="`location-${currentLocation}`" :location="currentLocation" :bot="bot" :navigationState="navigationState"/>
 
     <button class="btn btn-success btn-lg mt-4" @click="executed()">
       {{t('turnBot.executed')}}

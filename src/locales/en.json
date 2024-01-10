@@ -67,6 +67,9 @@
     "outOfLocations": "Out of further locations, go back.",
     "back": "Back"
   },
+  "locationRulesCollapse": {
+    "showRules": "Show Rules"
+  },
   "roundUpkeepPhase": {
     "title": "Upkeep Phase",
     "feedCarnivores": "Feed all carnivores (must feed carnivores as much as possible)",

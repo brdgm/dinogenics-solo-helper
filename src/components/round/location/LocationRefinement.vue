@@ -1,9 +1,11 @@
 <template>
-  <ul>
-    <li v-html="t('location.refinement.locationUse')"></li>
-    <li v-html="t('location.refinement.noMoney')"></li>
-    <li v-html="t('location.refinement.tokenPlacement')"></li>
-  </ul>
+  <LocationRulesCollapse>
+    <ul>
+      <li v-html="t('location.refinement.locationUse')"></li>
+      <li v-html="t('location.refinement.noMoney')"></li>
+      <li v-html="t('location.refinement.tokenPlacement')"></li>
+    </ul>
+  </LocationRulesCollapse>
 </template>
 
 <script lang="ts">
@@ -12,9 +14,13 @@ import { useI18n } from 'vue-i18n'
 import NavigationState from '@/util/NavigationState'
 import Bot from '@/services/Bot'
 import Location from '@/services/enum/Location'
+import LocationRulesCollapse from '../LocationRulesCollapse.vue'
 
 export default defineComponent({
   name: 'LocationRefinement',
+  components: {
+    LocationRulesCollapse
+  },
   setup() {
     const { t } = useI18n()
     return { t }
