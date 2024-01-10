@@ -111,7 +111,8 @@
           "intro": "If DINO has to perform Rampage Checks and can choose the affected Dinosaur, the checks are performed for the Dinosaur(s) with:",
           "lowestSeasonalVP": "Lowest seasonal Victory Point value",
           "lowestReputation": "Lowest Reputation",
-          "drawCards": "*** Draw DINO Action cards until a dinosaur written on a card matches one in DINO’s park."
+          "drawCards": "Get hints from DINO card deck until a dinosaur matches one in DINO’s park:",
+          "getDinoHints": "Dinosaur hints for"
         },
         "parkStructure": {
           "intro": "When Park Structures are destroyed due to Rampages or other effects, the priority is:",

@@ -27,7 +27,18 @@
       <ol>
         <li v-html="t('rules.general.rampageChoice.affectedDino.lowestSeasonalVP')"></li>
         <li v-html="t('rules.general.rampageChoice.affectedDino.lowestReputation')"></li>
-        <li v-html="t('rules.general.rampageChoice.affectedDino.drawCards')"></li>
+        <li>
+          <span v-html="t('rules.general.rampageChoice.affectedDino.drawCards')"></span>
+          <div class="mt-1">
+            <button class="btn btn-secondary btn-sm me-1 d-inline-flex align-items-center" v-for="bot of bots" :key="bot.corporation" @click="getDinoHints(bot)">
+              {{t('rules.general.rampageChoice.affectedDino.getDinoHints')}}
+              <AppIcon type="corporation" :name="bot.corporation" class="corporation"/>
+            </button>
+          </div>
+          <ul class="mt-1" v-if="dinosaurs">
+            <li v-for="dinosaur of dinosaurs" :key="dinosaur" class="dinosaur">{{dinosaur}}</li>
+          </ul>
+        </li>
       </ol>
       <p v-html="t('rules.general.rampageChoice.parkStructure.intro')"></p>
       <ol>
@@ -47,11 +58,15 @@ import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import ModalDialog from 'brdgm-commons/src/components/structure/ModalDialog.vue'
 import NavigationState from '@/util/NavigationState'
+import Bot from '@/services/Bot'
+import AppIcon from '../structure/AppIcon.vue'
+import isDinosaurAvailable from '@/util/isDinosaurAvailable'
 
 export default defineComponent({
   name: 'GeneralRulesModal',
   components: {
-    ModalDialog
+    ModalDialog,
+    AppIcon
   },
   setup() {
     const { t } = useI18n()
@@ -62,6 +77,32 @@ export default defineComponent({
       type: NavigationState,
       required: true
     }
-  }
+  },
+  data() {
+    return {
+      dinosaurs: undefined as string[]|undefined
+    }
+  },
+  computed: {
+    bots() : Bot[] {
+      return this.navigationState.bots
+    }
+  },
+  methods: {
+    getDinoHints(bot : Bot) : void {
+      const nextCard = bot.cardDeck.draw()
+      this.dinosaurs = nextCard.dinosaurs.filter(item => isDinosaurAvailable(item, this.navigationState.modules))
+    }
+  },
 })
 </script>
+
+<style lang="scss" scoped>
+.corporation {
+  height: 2rem;
+  margin-left: 0.5rem;
+}
+.dinosaur {
+  text-transform: capitalize;
+}
+</style>
