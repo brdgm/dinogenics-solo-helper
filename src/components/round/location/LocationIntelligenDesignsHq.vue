@@ -1,6 +1,18 @@
 <template>
-  <p v-html="t('location.intelligen-designs-hq.openOceanRoll')"></p>
-  <p v-html="t('location.intelligen-designs-hq.aquaticHabitat')"></p>
+  <div class="mb-3">
+    <template v-if="actionDetermined">
+      <ul>
+        <li v-if="openOceanRoll" v-html="t('location.intelligen-designs-hq.openOceanRoll')"></li>
+        <li v-if="hireSpecialistNumber" v-html="t('location.intelligen-designs-hq.hireSpecialist', {number:hireSpecialistNumber})"></li>
+        <li v-html="t('location.intelligen-designs-hq.buildAquaticHabitat')"></li>
+        <li v-html="t('location.intelligen-designs-hq.buildLargeFacility', {number:buildLargeFacilityNumber})"></li>
+      </ul>
+      <img src="@/assets/rules/intelligen-designs-hq-selection.jpg" alt="" class="rules-image"/>
+    </template>
+    <template v-else>
+      <button class="btn btn-primary btn-lg" @click="determineAction()">{{t('turnBot.determineAction')}}</button>
+    </template>
+  </div>
 </template>
 
 <script lang="ts">
@@ -29,6 +41,37 @@ export default defineComponent({
       type: NavigationState,
       required: true
     }
+  },
+  data() {
+    return {
+      actionDetermined: false,
+      openOceanRoll: false,
+      hireSpecialistNumber: undefined as number|undefined,
+      buildLargeFacilityNumber: undefined as number|undefined
+    }
+  },
+  methods: {
+    determineAction() {
+      // check open ocean roll or specialist hiring
+      const firstCard = this.bot.cardDeck.draw()
+      if (firstCard.slot == 1) {
+        this.openOceanRoll = true
+      }
+      else if (firstCard.slot >= 2 && firstCard.slot <= 4) {
+        this.hireSpecialistNumber = firstCard.slot
+      }
+      // check build large facility
+      const secondCard = this.bot.cardDeck.draw()
+      this.buildLargeFacilityNumber = secondCard.slot
+      this.actionDetermined = true
+    }
   }
 })
 </script>
+
+<style lang="scss" scoped>
+.rules-image {
+  width: 100%;
+  max-width: 350px;
+}
+</style>

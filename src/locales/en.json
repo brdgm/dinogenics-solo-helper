@@ -65,7 +65,8 @@
     "executed": "Worker Placed",
     "notPossible": "Not Possible",
     "outOfLocations": "Out of further locations, go back.",
-    "back": "Back"
+    "back": "Back",
+    "determineAction": "Determine Action"
   },
   "locationRulesCollapse": {
     "showRules": "Show Rules"
@@ -191,9 +192,11 @@
     },
     "intelligen-designs-hq": {
       "title": "IntelliGen Designs HQ",
-      "ruleSummary": "Draw two more cards to determine slots.",
-      "openOceanRoll": "Draw an Action Card to determine if DINO resolves an Open Ocean Roll (1) or which specialist he hires from the Underground Job Network (2-4). If the rightmost space is selected (4), DINO acquires the Independent Contractor from the top without spending a Manipulation card. If a 5 or 6 is listed, DINO skips this part of the action.",
-      "aquaticHabitat": "DINO builds an Aquatic Habitat if he has a complete set of aquatic dinosaur DNA, or a Plesiosaurus was gained from a successful Open Ocean Roll. Otherwise draw the next Action Card to determine a large facility (1-6) to add to DINO’s park."
+      "ruleSummary": "Open Ocean Roll or hire specialist, Large Facility.",
+      "openOceanRoll": "Resolve an <b>Open Ocean Roll</b> (1a) for DINO",
+      "hireSpecialist": "DINO hires <b>Specialist {number}a</b> from the Underground Job Network without spending a manipulation card or money.",
+      "buildAquaticHabitat": "DINO builds an <b>Aquatic Habitat</b> if he has a complete set of aquatic dinosaur DNA, or a Plesiosaurus was gained from a successful Open Ocean Roll.",
+      "buildLargeFacility": "Otherwise <b>Large Facility {number}b</b> is added to DINO’s park."
     },
     "site-common": {
       "locationUse": "Only used if DINO has less than two complete DNA sets.",
