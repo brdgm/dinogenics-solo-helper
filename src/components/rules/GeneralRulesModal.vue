@@ -92,6 +92,10 @@ export default defineComponent({
     getDinoHints(bot : Bot) : void {
       const nextCard = bot.cardDeck.draw()
       this.dinosaurs = nextCard.dinosaurs.filter(item => isDinosaurAvailable(item, this.navigationState.modules))
+      if (this.dinosaurs.length === 0) {
+        // may happen if several expansions/modules are not in play
+        this.getDinoHints(bot)
+      }
     }
   },
 })
