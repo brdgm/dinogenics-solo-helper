@@ -430,7 +430,7 @@ export default defineComponent({
 }
 table {
   width: 100%;
-  max-width: 40rem;
+  max-width: 50rem;
 }
 th, td {
   text-align: center;
