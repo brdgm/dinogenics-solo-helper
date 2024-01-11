@@ -1,7 +1,7 @@
 <template>
-  <div class="row mt-4">
+  <div class="row mt-4" v-if="advancedRuleChange">
     <div class="col-12">
-      <p v-if="advancedRuleChange" class="alert alert-warning fst-italic" v-html="t(`ruleChange.${advancedRuleChange}`)"></p>
+      <p class="alert alert-warning fst-italic" v-html="t(`ruleChange.${advancedRuleChange}`)"></p>
     </div>
   </div>
 

@@ -73,3 +73,9 @@ export default defineComponent({
   }
 })
 </script>
+
+<style lang="scss" scoped>
+ol li {
+  margin-bottom: 0.5rem;
+}
+</style>
