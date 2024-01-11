@@ -1,6 +1,7 @@
 <template>
   <div class="mb-3">
     <template v-if="actionDetermined">
+      <button class="btn btn-secondary btn-sm mb-3 me-1" data-bs-toggle="modal" href="#facilitiesHabitatsModal">{{t('rules.facilitiesHabitats.title')}}</button>
       <ul>
         <li v-if="openOceanRoll" v-html="t('location.intelligen-designs-hq.openOceanRoll')"></li>
         <li v-if="hireSpecialistNumber" v-html="t('location.intelligen-designs-hq.hireSpecialist', {number:hireSpecialistNumber})"></li>
