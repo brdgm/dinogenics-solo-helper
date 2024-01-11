@@ -13,8 +13,10 @@
     <li v-html="t('roundUpkeepPhase.gainVisitorVPs')"></li>
     <li v-html="t('roundUpkeepPhase.gainDinosaurFacilityVPs')"></li>
     <li v-html="t('roundUpkeepPhase.gainDinosaurFacilityResources')"></li>
-    <li v-html="t('roundUpkeepPhase.returnWorkers')"></li>
-    <li v-html="t('roundUpkeepPhase.advanceVisitorOverlay')"></li>
+    <template v-if="!lastRound">
+      <li v-html="t('roundUpkeepPhase.returnWorkers')"></li>
+      <li v-html="t('roundUpkeepPhase.advanceVisitorOverlay')"></li>
+    </template>
   </ol>
 
   <button class="btn btn-primary btn-lg mt-4" @click="next()">
@@ -54,11 +56,14 @@ export default defineComponent({
   computed: {
     backButtonRouteTo() : string {
       return `/round/${this.round}/turn/${this.turnCount}`
+    },
+    lastRound() : boolean {
+      return this.round == 7
     }
   },
   methods: {
     next() : void {
-      if (this.round == 7) {
+      if (this.lastRound) {
         this.$router.push('/endOfGame')
       }
       else {
