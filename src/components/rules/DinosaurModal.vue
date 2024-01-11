@@ -381,10 +381,18 @@ td:nth-child(1) {
 th:nth-child(1), th:nth-child(2), td:nth-child(1), td:nth-child(3) {
   text-align: start;
 }
-tbody tr:nth-child(odd) {
+tbody tr:nth-child(4n+1) {
   background-color: #f2f2f2;
 }
 tr.total, tbody tr:nth-child(1) {
   border-top: 1px solid #666;
+}
+th a {
+  color: #000;
+}
+td.trait {
+  padding: 0.5rem;
+  font-style: italic;
+  padding-left: 4.5rem;
 }
 </style>
