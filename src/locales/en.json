@@ -84,30 +84,41 @@
   },
   "endOfGame": {
     "title": "End of Game",
+    "resources": {
+      "title": "Remaining Resources",
+      "credits": "Credits",
+      "dnaCards": "DNA cards",
+      "remainingStuff": "Manipulation cards, goats and unused fences",
+      "dinosaurSpecies": "Dinosaur Species",
+      "dinosaurCreated": "Dinosaurs created",
+      "scandalTokens": "Scandal Tokens",
+      "financialAdvisor": "Financial Advisor Specialist"
+    },
     "scoring": {
       "title": "Final Scoring",
+      "vpGameBoard": "Game Board",
+      "vpGameBoardDescription": "Current VP from game board",
       "vpFacilities": "Facilities",
       "vpFacilitiesDescription": "VP for undamaged facilities",
       "vpSpecialists": "Specialists",
-      "vpSpecialistsDescription": "Endgame scoring conditions (most not awarded for ties)",
+      "vpSpecialistsDescription": "Specialist Endgame VP (most not awarded for ties)",
+      "vpSpecialistsIgnoreFinancialAdvisor": "Ignore Financial Advisor!",
       "vpDinosaurVariety": "Dinosaur Variety",
-      "vpDinosaurVarietyDescription": "3 VP for every unique species in valid habitat.",
+      "vpDinosaurVarietyDescription": "3 VP for every unique species in valid habitat",
+      "vpDinosaurCreated": "Dinosaurs created",
+      "vpDinosaurCreatedDescription": "2 VP for every dinosaur created",
       "vpCredits": "Credits",
       "vpCreditsDescription": "1 VP for every 3 credits (round down)",
+      "vpCreditsFinancialAdvisorPlayer": "Financial Advisor: 1 VP for every 2 credits (round down)",
+      "vpCreditsFinancialAdvisorBot": "Financial Advisor: 5 VP for the first 10 credits and 1 VP for each remaining 3 credits",
       "vpDNACards": "DNA cards",
       "vpDNACardsDescription": "1 VP for every 2 DNA cards (round down)",
+      "vpRemainingStuff": "Manipulation cards, goats and unused fences",
+      "vpRemainingStuffDescription": "1 VP for every 3 remaining manipulation cards, goats and unused fences",
       "vpScandals": "Deduct Scandals",
       "vpScandalsDescription": "-6 VP for each Scandal token",
-      "vpExtra": "Extra VP for DINO",
-      "vpExtraDescription": "See below",
       "vpTotal": "Total",
-      "determineWinner": "The player with the most victory points is deemed the winner and acquires enough market shares to buy out their competitors! In the event of a tie, the player with the highest reputation of the tied players at the end of the game wins.",
-      "extraVP": {
-        "title": "Extra VP for DINO:",
-        "financialAdvisor": "If DINO has hired the Financial Advisor, he first receives 5 VP for the first 10 credits and 1 VP for each remaining 3 credits.",
-        "remainingStuff": "DINO receives 1 VP for each remaining manipulation card, goat and unused fence.",
-        "dinosaursCreated": "DINO receives 2 VP for each Dinosaur created."
-      }
+      "determineWinner": "The player with the most victory points is deemed the winner and acquires enough market shares to buy out their competitors! In the event of a tie, the player with the highest reputation of the tied players at the end of the game wins."
     }
   },
   "sideBar": {
