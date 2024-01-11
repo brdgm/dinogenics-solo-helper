@@ -299,6 +299,20 @@
         "title": "Seismologist",
         "description": "If DINO has at least two cards in his Spare Stack, the bottom card is sold."
       }
+    },
+    "dinosaur": {
+      "title": "Dinosaurs",
+      "landDinosaur": "Land Dinosaur",
+      "aquaticDinosaur": "Aquatic Dinosaur",
+      "type": "Type",
+      "vp": "VP",
+      "reputation": "Rep.",
+      "minPenSize": "Min. Pen Size",
+      "aquaticSpaces": "Aquatic Spaces",
+      "dnaRequirement": "# DNA",
+      "carnivore": "Carnivore",
+      "herbivore": "Herbivore",
+      "omnivore": "Omnivore"
     }
   },
   "difficultyLevel": {
