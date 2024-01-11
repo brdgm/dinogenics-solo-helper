@@ -3,7 +3,12 @@
   <h1>{{t('roundUpkeepPhase.title')}}</h1>
 
   <ol>
-    <li v-html="t('roundUpkeepPhase.feedCarnivores')"></li>
+    <li>
+      <span v-html="t('roundUpkeepPhase.feedCarnivores')"></span>
+      <ul>
+        <li v-html="t('roundUpkeepPhase.spawnMutant')"></li>
+      </ul>
+    </li>
     <li v-html="t('roundUpkeepPhase.checkRampage')"></li>
     <li v-html="t('roundUpkeepPhase.gainVisitorVPs')"></li>
     <li v-html="t('roundUpkeepPhase.gainDinosaurFacilityVPs')"></li>

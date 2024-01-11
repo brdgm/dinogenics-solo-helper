@@ -74,6 +74,7 @@
   "roundUpkeepPhase": {
     "title": "Upkeep Phase",
     "feedCarnivores": "Feed all carnivores (must feed carnivores as much as possible).",
+    "spawnMutant": "DINO will create an additional mutant if it has already a mutant and has enough spare fences and additional goats for all carnivores and the rightmost (complete) preferred DNA set.",
     "checkRampage": "Check for rampage, and roll if necessary.",
     "gainVisitorVPs": "Gain 3 VPs for every two visitors leaving the park alive.",
     "gainDinosaurFacilityVPs": "Gain Victory Points from dinosaurs and facilities.",
@@ -366,7 +367,7 @@
       "locationUseDNASet": "DINO has at least one complete preferred DNA set – Polymorphic DNA cards and/or Refined DNA Tokens are considered.",
       "locationUseMutant": "DINO has not created a mutant yet and it has at least 2 DNA or eDNA cards that are not part of a complete preferred set.",
       "enoughFences": "In either case, DINO must also have enough fences to create a suitable habitat, and in the case of a carnivore, must have enough goats to feed it for the current season.",
-      "creatingDinosaur": "When creating a preferred dinosaur, empty a stack to the DNA discard pile and any remaining DNA is placed into the Spare pile. Choose right to left if there are multiple options. When creating a mutant, discard the Mutant reference card and 2 DNA cards. Prioritize DNA taken from the spare stack, then incomplete preferred stacks in order of preference left to right. DINO will only create additional mutants by using the mutant trait provided it has enough spare fences and additional goats for all carnivores and the rightmost (complete) preferred DNA set.",
+      "creatingDinosaur": "When creating a preferred dinosaur, empty a stack to the DNA discard pile and any remaining DNA is placed into the Spare pile. Choose right to left if there are multiple options. When creating a mutant, discard the Mutant reference card and 2 DNA cards. Prioritize DNA taken from the spare stack, then incomplete preferred stacks in order of preference left to right.",
       "createHabitat": "Create a suitable habitat for the new dinosaur using the minimal number of fences required. Dinosaurs of the same species as existing dinosaurs (or Ankylosaurus) must be consolidated into a larger pen. An empty Bio dome is only used if a Pterodactyl was created or if DINO is unable to create a viable habitat with fences.",
       "moveStacks": "Finally, move all preferred stacks to the right to fill the empty space and refresh the empty stack space on the left with cards from the spare pile."
     },

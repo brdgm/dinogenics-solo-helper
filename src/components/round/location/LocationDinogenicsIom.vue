@@ -1,5 +1,5 @@
 <template>
-  <LocationRulesCollapse :facilitiesHabitats="true">
+  <LocationRulesCollapse :dnaCollection="true" :facilitiesHabitats="true">
     <p v-html="t('location.dinogenics-iom.locationUse')"></p>
     <ol>
       <li v-html="t('location.dinogenics-iom.locationUseDNASet')"></li>
