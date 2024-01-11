@@ -1,5 +1,5 @@
 <template>
-  <ModalDialog id="generalRulesModal" :size-lg="true" :scrollable="true"
+  <ModalDialog id="generalRulesModal" :size-lg="true" :fullscreen-lg-down="true" :scrollable="true"
       :title="t('rules.general.title')">
     <template #body>
       <p v-html="t('rules.general.intro')"></p>
@@ -29,8 +29,8 @@
         <li v-html="t('rules.general.rampageChoice.affectedDino.lowestReputation')"></li>
         <li>
           <span v-html="t('rules.general.rampageChoice.affectedDino.drawCards')"></span>
-          <div class="mt-1">
-            <button class="btn btn-secondary btn-sm me-1 d-inline-flex align-items-center" v-for="bot of bots" :key="bot.corporation" @click="getDinoHints(bot)">
+          <div>
+            <button class="btn btn-secondary btn-sm me-1 mt-1 d-inline-flex align-items-center" v-for="bot of bots" :key="bot.corporation" @click="getDinoHints(bot)">
               {{t('rules.general.rampageChoice.affectedDino.getDinoHints')}}
               <AppIcon type="corporation" :name="bot.corporation" class="corporation"/>
             </button>

@@ -62,7 +62,7 @@ export default defineComponent({
   margin-bottom: 10px;
   padding-right: 10px;
   @media (max-width: 600px) {
-    width: 130px;
+    width: 110px;
   }
 }
 .rules {
@@ -71,12 +71,15 @@ export default defineComponent({
   margin-top: 0;
   margin-bottom: 0;
   li {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     a {
       text-decoration-line: underline;
       text-decoration-style: dotted;
       color: #333;
       font-size: 0.9rem;
+      @media (max-width: 600px) {
+        font-size: 0.8rem;
+      }
     }
   }
 }

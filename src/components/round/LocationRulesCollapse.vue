@@ -1,11 +1,11 @@
 <template>
   <div>
-    <button class="btn btn-sm btn-secondary mb-3" data-bs-toggle="collapse" :data-bs-target="`#rules-${id}`" @click="showRules = !showRules">
+    <button class="btn btn-sm btn-secondary mb-3 me-1" data-bs-toggle="collapse" :data-bs-target="`#rules-${id}`" @click="showRules = !showRules">
       {{t(`locationRulesCollapse.${showRules ? 'hideRules' : 'showRules'}`)}}
     </button>
-    <button v-if="dnaCollection" class="btn btn-secondary btn-sm mb-3 ms-1" data-bs-toggle="modal" href="#dnaCollectionModal">{{t('rules.dnaCollection.title')}}</button>
-    <button v-if="facilitiesHabitats" class="btn btn-secondary btn-sm mb-3 ms-1" data-bs-toggle="modal" href="#facilitiesHabitatsModal">{{t('rules.facilitiesHabitats.title')}}</button>
-    <button v-if="manipulationCards" class="btn btn-secondary btn-sm mb-3 ms-1" data-bs-toggle="modal" href="#manipulationCardsModal">{{t('rules.manipulationCard.title')}}</button>
+    <button v-if="dnaCollection" class="btn btn-secondary btn-sm mb-3 me-1" data-bs-toggle="modal" href="#dnaCollectionModal">{{t('rules.dnaCollection.title')}}</button>
+    <button v-if="facilitiesHabitats" class="btn btn-secondary btn-sm mb-3 me-1" data-bs-toggle="modal" href="#facilitiesHabitatsModal">{{t('rules.facilitiesHabitats.title')}}</button>
+    <button v-if="manipulationCards" class="btn btn-secondary btn-sm mb-3 me-1" data-bs-toggle="modal" href="#manipulationCardsModal">{{t('rules.manipulationCard.title')}}</button>
     <div class="collapse" :id="`rules-${id}`">
       <slot></slot>
     </div>

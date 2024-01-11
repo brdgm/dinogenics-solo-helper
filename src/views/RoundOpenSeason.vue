@@ -6,7 +6,7 @@
     <template v-if="round > 1">
       <li>
         <span v-html="t('roundOpenSeason.playerOrder')"></span><br/>
-        <DeterminePlayerOrder :playerOrder="playerOrder" @newPlayerOrder="setNewPlayerOrder" class="ms-3" />
+        <DeterminePlayerOrder :playerOrder="playerOrder" @newPlayerOrder="setNewPlayerOrder" class="ms-0 ms-md-3 mt-2" />
       </li>
       <li v-html="t('roundOpenSeason.assignVisitors')"></li>
       <li v-html="t('roundOpenSeason.assignBonusVisitors')"></li>

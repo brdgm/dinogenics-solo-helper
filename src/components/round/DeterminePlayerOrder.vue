@@ -10,7 +10,11 @@
     <h6>{{t('roundOpenSeason.determinePlayerOrder.newItems')}}</h6>
     <div class="player-order">
       <template v-if="newItems.length === 0">
-        <p class="fst-italic alert alert-primary">{{t('roundOpenSeason.determinePlayerOrder.newItemsSelect')}}</p>
+        <div class="row">
+          <div class="col">
+            <div class="fst-italic alert alert-primary">{{t('roundOpenSeason.determinePlayerOrder.newItemsSelect')}}</div>
+          </div>
+        </div>
       </template>
       <div v-else v-for="corporation in newItems" :key="corporation" @click="deselectItem(corporation)">
         <AppIcon type="corporation" :name="corporation" class="icon"/>
@@ -67,10 +71,16 @@ export default defineComponent({
   display: flex;
   gap: 10px;
   height: 4.5rem;
+  @media (max-width: 600px) {
+    height: 3rem;
+  }
 }
 .icon {
   height: 4rem;
   filter: drop-shadow(0.15rem 0.15rem 0.15rem #aaa);
   cursor: pointer;
+  @media (max-width: 600px) {
+    height: 2.5rem;
+  }
 }
 </style>

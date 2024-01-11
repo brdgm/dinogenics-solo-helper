@@ -24,10 +24,10 @@
       <component :is="`location-${currentLocation}`" :location="currentLocation" :bot="bot" :navigationState="navigationState"/>
     </template>
 
-    <button class="btn btn-success btn-lg mt-4" @click="executed()">
+    <button class="btn btn-success btn-lg mt-4 me-2" @click="executed()">
       {{t('turnBot.executed')}}
     </button>
-    <button class="btn btn-danger btn-lg mt-4 ms-2" @click="notPossible()">
+    <button class="btn btn-danger btn-lg mt-4" @click="notPossible()">
       {{t('turnBot.notPossible')}}
     </button>
 
