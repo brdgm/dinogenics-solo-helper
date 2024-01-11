@@ -2,8 +2,8 @@
   "gameTitle": "DinoGenics",
   "home": {
     "title": "DinoGenics Solo Helper",
-    "play1": "Play <a href='https://boardgamegeek.com/boardgame/210296/dinogenics' target='_blank' rel='noopener'><b>DinoGenics</b></a> against a DiNO, the Solo Opponent.",
-    "play2": "DiNO can be used for any 1-4 player game including the DinoGenics base game and Controlled Chaos expansion.",
+    "play1": "Play <a href='https://boardgamegeek.com/boardgame/210296/dinogenics' target='_blank' rel='noopener'><b>DinoGenics</b></a> against a DINO, the Solo Opponent.",
+    "play2": "DINO can be used for any 1-4 player game including the DinoGenics base game and Controlled Chaos expansion.",
     "feedback": "Discussion and Feedback:"
   },
   "setup": {
@@ -13,9 +13,9 @@
       "playerCount": "Human Players",
       "playerCountItem": "{count} Player | {count} Players",
       "playerColor": "Player Color | Player {index} Color",
-      "botCount": "DiNO",
-      "botCountItem": "{count} DiNO | {count} DiNOs",
-      "botColor": "DiNO Color"
+      "botCount": "DINO",
+      "botCountItem": "{count} DINO | {count} DINOs",
+      "botColor": "DINO Color"
     },
     "difficultyLevel": {
       "title": "Difficulty Level",
@@ -28,17 +28,17 @@
       "controlled-chaos-chaos-theory": "Controlled Chaos Expansion: Chaos Theory Module",
       "controlled-chaos-dinosaur-elites": "Controlled Chaos Expansion: Dinosaur Elites Module",
       "new-arrivals-mini-expansion": "New Arrivals Mini Expansion",
-      "dino-advanced": "DiNO Advanced Mode"
+      "dino-advanced": "DINO Advanced Mode"
     }
   },
   "setupBot": {
-    "title": "Setup DiNO",
+    "title": "Setup DINO",
     "prepareGame": "Prepare the game as usual for {totalPlayerCount} players.",
-    "botPlayerPieces": "DiNO receives all player pieces of a color, the starting money, 4 fences and a Personal Island Board.",
-    "botDNACards": "DiNO receives 5 DNA cards, 1 Mutant reference card, and 3 Manipulation cards",
-    "botDNACardsControlledChaos": "DiNO receives 4 DNA cards, 1 eDNA card, 1 Mutant reference card, and 3 Manipulation cards.",
-    "botDNACardArrangement": "Place DiNO’s DNA cards face up and all Manipulation Cards face down on stacks next to DiNO’s Island Board as indicated.",
-    "botTurnOrder": "DiNO always starts last in turn order on the first round of the game."
+    "botPlayerPieces": "DINO receives all player pieces of a color, the starting money, 4 fences and a Personal Island Board.",
+    "botDNACards": "DINO receives 5 DNA cards, 1 Mutant reference card, and 3 Manipulation cards",
+    "botDNACardsControlledChaos": "DINO receives 4 DNA cards, 1 eDNA card, 1 Mutant reference card, and 3 Manipulation cards.",
+    "botDNACardArrangement": "Place DINO’s DNA cards face up and all Manipulation Cards face down on stacks next to DINO’s Island Board as indicated.",
+    "botTurnOrder": "DINO always starts last in turn order on the first round of the game."
   },
   "roundOpenSeason": {
     "title": "Open Season",
@@ -80,6 +80,34 @@
     "gainDinosaurFacilityResources": "Gain resources from dinosaurs and facilities.",
     "returnWorkers": "Return workers from the Mainland board to each owner’s park.",
     "advanceVisitorOverlay": "Advance the Visitor Overlay one column to the left."
+  },
+  "endOfGame": {
+    "title": "End of Game",
+    "scoring": {
+      "title": "Final Scoring",
+      "vpFacilities": "Facilities",
+      "vpFacilitiesDescription": "VP for undamaged facilities",
+      "vpSpecialists": "Specialists",
+      "vpSpecialistsDescription": "Endgame scoring conditions (most not awarded for ties)",
+      "vpDinosaurVariety": "Dinosaur Variety",
+      "vpDinosaurVarietyDescription": "3 VP for every unique species in valid habitat.",
+      "vpCredits": "Credits",
+      "vpCreditsDescription": "1 VP for every 3 credits (round down)",
+      "vpDNACards": "DNA cards",
+      "vpDNACardsDescription": "1 VP for every 2 DNA cards (round down)",
+      "vpScandals": "Deduct Scandals",
+      "vpScandalsDescription": "-6 VP for each Scandal token",
+      "vpExtra": "Extra VP for DINO",
+      "vpExtraDescription": "See below",
+      "vpTotal": "Total",
+      "determineWinner": "The player with the most victory points is deemed the winner and acquires enough market shares to buy out their competitors! In the event of a tie, the player with the highest reputation of the tied players at the end of the game wins.",
+      "extraVP": {
+        "title": "Extra VP for DINO:",
+        "financialAdvisor": "If DINO has hired the Financial Advisor, he first receives 5 VP for the first 10 credits and 1 VP for each remaining 3 credits.",
+        "remainingStuff": "DINO receives 1 VP for each remaining manipulation card, goat and unused fence.",
+        "dinosaursCreated": "DINO receives 2 VP for each Dinosaur created."
+      }
+    }
   },
   "sideBar": {
     "round": "Round"

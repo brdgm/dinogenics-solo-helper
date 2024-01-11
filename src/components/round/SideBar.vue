@@ -7,7 +7,7 @@
       <li><a data-bs-toggle="modal" href="#facilitiesHabitatsModal">{{t('rules.facilitiesHabitats.title')}}</a></li>
       <li><a data-bs-toggle="modal" href="#breakingNewsModal">{{t('rules.breakingNews.title')}}</a></li>
       <li><a data-bs-toggle="modal" href="#manipulationCardsModal">{{t('rules.manipulationCard.title')}}</a></li>
-      <li><a data-bs-toggle="modal" href="#specialistsModal">{{t('rules.specialist.title')}}</a></li>
+      <li v-if="hasControlledChaos"><a data-bs-toggle="modal" href="#specialistsModal">{{t('rules.specialist.title')}}</a></li>
     </ul>
   </div>
 
@@ -48,6 +48,11 @@ export default defineComponent({
     navigationState: {
       type: NavigationState,
       required: true
+    }
+  },
+  computed: {
+    hasControlledChaos() : boolean {
+      return this.navigationState.hasControlledChaos
     }
   }
 })

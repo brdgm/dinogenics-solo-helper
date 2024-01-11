@@ -53,7 +53,12 @@ export default defineComponent({
   },
   methods: {
     next() : void {
-      this.$router.push(`/round/${this.round + 1}/openSeason`)
+      if (this.round == 7) {
+        this.$router.push('/endOfGame')
+      }
+      else {
+        this.$router.push(`/round/${this.round + 1}/openSeason`)
+      }
     }
   }
 })

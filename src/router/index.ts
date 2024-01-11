@@ -8,6 +8,7 @@ import SetupBot from '@/views/SetupBot.vue'
 import RoundOpenSeason from '@/views/RoundOpenSeason.vue'
 import RoundTurn from '@/views/RoundTurn.vue'
 import RoundUpkeepPhase from '@/views/RoundUpkeepPhase.vue'
+import EndOfGame from '@/views/EndOfGame.vue'
 
 const LOCALSTORAGE_KEY = `${name}.route`
 
@@ -51,6 +52,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/round/:round/upkeepPhase',
     name: 'RoundUpkeepPhase',
     component: RoundUpkeepPhase
+  },
+  {
+    path: '/endOfGame',
+    name: 'EndOfGame',
+    component: EndOfGame
   },
   {
     path: '/:pathMatch(.*)*',
