@@ -84,8 +84,22 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/utilities";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/grid";
+
 .corporation {
   height: 4rem;
   filter: drop-shadow(0.15rem 0.15rem 0.15rem #aaa);
+}
+@include media-breakpoint-down(sm) {
+  .corporation {
+    height: 2.5rem;
+    margin-top: -0.5rem;
+  }
 }
 </style>

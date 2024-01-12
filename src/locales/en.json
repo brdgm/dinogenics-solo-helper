@@ -92,7 +92,8 @@
       "dinosaurSpecies": "Dinosaur Species",
       "dinosaurCreated": "Dinosaurs created",
       "scandalTokens": "Scandal Tokens",
-      "financialAdvisor": "Financial Advisor Specialist"
+      "financialAdvisor": "Financial Advisor Specialist",
+      "financialAdvisorNone": "none"
     },
     "scoring": {
       "title": "Final Scoring",
