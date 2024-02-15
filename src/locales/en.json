@@ -133,7 +133,12 @@
       "noKilling": "DiNO never voluntarily kills any of his dinosaurs (exception: genetic deconstruction-card).",
       "noHandLimit": "DiNO has no hand limit and can collect more than 10 (e)DNA cards.",
       "collectFences": "DiNO collects fences to a personal reserve next to his board. DiNO uses fences when creating new dinosaurs or replacing broken fences. Dinosaurs of the same species are placed in the same habitat, if possible. In those cases, DiNO extends the fence-habitat by using as few fences as necessary to hold the new dinosaur. Broken fences are replaced immediately if DiNO has spare ones.",
-      "upkeepPhase": "During the Upkeep Phase DiNO must feed carnivores and check for rampage conditions. If DiNO has remaining goats after all carnivores were fed and a Mutant in his park, one set of goats is spent per Mutant. Normal mutant creations rules apply and DiNO only creates new mutants if it can provide them with a habitat. Any Biodomes are only used if another mutant is already occupying one of the 2 spaces.",
+      "upkeepPhase": "During the Upkeep Phase DiNO must feed carnivores and check for rampage conditions. If DiNO has remaining goats after all carnivores were fed for the current and following season, and a Mutant in his park, one set of goats is spent per Mutant. Normal mutant creations rules apply and DiNO only creates new mutants if it can provide them with a habitat. Any Biodomes are only used if another mutant is already occupying one of the 2 spaces.",
+      "feedingPriority": {
+        "title": "Feeding Priority",
+        "vp": "Highest seasonal Victory Point value dinosaur",
+        "reputation": "Highest reputation Dinosaur"
+      },
       "resolvingChoices": {
         "title": "Resolving Choices",
         "intro": "When resolving choices DiNO Prefers to gain the most of each reward possible that does not give a benefit to an opponent. Choice preference:",
@@ -419,7 +424,7 @@
       "locationUseMutant": "DiNO has not created a mutant yet and it has at least 2 DNA or eDNA cards that are not part of a complete preferred set.",
       "enoughFences": "In either case, DiNO must also have enough fences to create a suitable habitat, and in the case of a carnivore, must have enough goats to feed it for the current season.",
       "creatingDinosaur": "When creating a preferred dinosaur, empty a stack to the DNA discard pile and any remaining DNA is placed into the Spare pile. Choose right to left if there are multiple options. When creating a mutant, discard the Mutant reference card and 2 DNA cards. Prioritize DNA taken from the spare stack, then incomplete preferred stacks in order of preference left to right.",
-      "createHabitat": "Create a suitable habitat for the new dinosaur using the minimal number of fences required. Dinosaurs of the same species as existing dinosaurs (or Ankylosaurus) must be consolidated into a larger pen. An empty Bio dome is only used if a Pterodactyl was created or if DiNO is unable to create a viable habitat with fences.",
+      "createHabitat": "Create a suitable habitat for the new dinosaur using the minimal number of fences required. Dinosaurs of the same species as existing dinosaurs (or Ankylosaurus) must be consolidated into a larger pen. An empty Bio dome is only used if a dinosaur with the Flight Trait was created or if DiNO is unable to create a viable habitat with fences.",
       "moveStacks": "Finally, move all preferred stacks to the right to fill the empty space and refresh the empty stack space on the left with cards from the spare pile."
     },
     "special-action": {
@@ -444,7 +449,7 @@
       "title": "IntelliGen Designs HQ",
       "ruleSummary": "Open Ocean Roll or hire specialist, Large Facility.",
       "openOceanRoll": "Resolve an <b>Open Ocean Roll</b> (1a) for DiNO",
-      "hireSpecialist": "DiNO hires <b>Specialist {number}a</b> from the Underground Job Network without spending a manipulation card or money.",
+      "hireSpecialist": "DiNO hires <b>Specialist {number}a</b> from the Underground Job Network without spending a manipulation card or money (if available).",
       "buildAquaticHabitat": "DiNO builds an <b>Aquatic Habitat</b> if he has a complete set of aquatic dinosaur DNA, or a Plesiosaurus was gained from a successful Open Ocean Roll.",
       "buildLargeFacility": "Otherwise <b>Large Facility {number}b</b> is added to DiNO’s park.",
       "determineAction": "Determine Action"
