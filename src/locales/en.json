@@ -217,7 +217,10 @@
       "26": "DiNO takes two scandals.",
       "27": "Specialist that scores the most victory points.", 
       "29": "Discard 1 DNA card from spare if present.",
+      "30": "DiNO resolves a normal City Center buy action.",
+      "33": "DiNO receives VPs for all goats without spending money.",      
       "D1": "DiNO decides not to roll an Upkeep Die.",
+      "D3": "DiNO attempts the roll even if it does not have goats.",
       "C01": "Draw the next action card to determine the species.",
       "C02": "If DiNO has a scandal token and/or a damaged building, he picks this option. Otherwise he takes a scandal and destroys the building with the most end game VPs.",
       "C03": "DiNO is last in bid order and will always bid actual DiNO value (without paying) and doesn’t take a scandal.",
@@ -226,6 +229,10 @@
     },
     "manipulationCard": {
       "title": "Manipulation Cards",
+      "benefitsPackage": {
+        "title": "Benefits Package",
+        "description": "DiNO draws cards from its deck to determine which Specialists are acquired. Stop once it has reached the cost of 3 or no more cards are available."
+      },
       "blackMarket": {
         "title": "Black Market",
         "description": "DiNO buys all cards that would complete a preferred DNA set. If none fits, three new cards are drawn first."
@@ -236,7 +243,7 @@
       },
       "dnaSplice": {
         "title": "DNA Splice",
-        "description": "DiNO creates a dinosaur based on its first incomplete preferred set (right to left). Discard cards first from the preferred set, then from Spare and finally from stacks left to right until DiNO has discarded cards equal to the DNA requirement of the preferred set +1."
+        "description": "DiNO creates a dinosaur based on its first incomplete preferred set (right to left). Discard cards first from the preferred set, then from Spare and finally from stacks left to right until DiNO has discarded cards equal to the DNA requirement of the preferred set +1. This card is not played if DiNO lacks sufficient fences."
       },
       "geneticDeconstruction": {
         "title": "Genetic Deconstruction",
@@ -261,6 +268,10 @@
       "offshoreContractors": {
         "title": "Offshore Contractors",
         "description": "Determine the stack with the next Action Card and DiNO builds the most expensive building in this stack. Redraw if a 5 or 6 is mentioned."
+      },
+      "renovation": {
+        "title": "Renovation",
+        "description": "Remove the most expensive unoccupied facility, if tied the closest to the Visitor Center. Draw a card to choose new facility."
       },
       "researchPact": {
         "title": "Research Pact",
@@ -304,6 +315,10 @@
       "seismologist": {
         "title": "Seismologist",
         "description": "If DiNO has at least two cards in his Spare Stack, the bottom card is sold."
+      },
+      "pilot": {
+        "title": "Pilot",
+        "description": "DiNO draws another card to take 1 extra turn without paying."
       }
     },
     "dinosaur": {
@@ -379,7 +394,8 @@
       "title": "The Uplink",
       "ruleSummary": "Manipulation stack not empty.",
       "locationUse": "Used if DiNO’s Manipulation Card deck is not empty.",
-      "playManipulation": "Draw the topmost card from DiNO’s Manipulation stack and follow the instructions."
+      "playManipulation": "Draw the topmost card from DiNO’s Manipulation stack and follow the instructions.",
+      "playAlternative": "DiNO will not play a manipulation card if the result would be an immediate rampage check. In those cases, put the manipulation card on the bottom of the stack and draw the next one. If DiNO has no additional manipulation cards, he instead gains 3 VP and ends his turn."
     },
     "farm": {
       "title": "The Farm",
@@ -450,7 +466,7 @@
       "ruleSummary": "Open Ocean Roll or hire specialist, Large Facility.",
       "openOceanRoll": "Resolve an <b>Open Ocean Roll</b> (1a) for DiNO",
       "hireSpecialist": "DiNO hires <b>Specialist {number}a</b> from the Underground Job Network without spending a manipulation card or money (if available).",
-      "buildAquaticHabitat": "DiNO builds an <b>Aquatic Habitat</b> if he has a complete set of aquatic dinosaur DNA, or a Plesiosaurus was gained from a successful Open Ocean Roll.",
+      "buildAquaticHabitat": "DiNO builds an <b>Aquatic Habitat</b> if he has none, fewer empty ones than complete sets of aquatic dinosaur DNA, or if he just gained a Plesiosaurus from an Open Ocean roll.",
       "buildLargeFacility": "Otherwise <b>Large Facility {number}b</b> is added to DiNO’s park.",
       "determineAction": "Determine Action"
     },

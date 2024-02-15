@@ -33,7 +33,8 @@ export default defineComponent({
         'financialAdvisor',
         'masterArchitect',
         'securityOfficer',
-        'seismologist'
+        'seismologist',
+        'pilot'
       ]
     }
   }

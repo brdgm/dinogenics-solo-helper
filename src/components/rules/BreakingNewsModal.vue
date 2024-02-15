@@ -40,11 +40,14 @@ export default defineComponent({
       const cards = [
         '26',
         '27',
-        '29'        
+        '29',
+        '30',
+        '33'
       ]
       if (this.hasControlledChaosExpansion) {
         cards.push(
-          'D1'
+          'D1',
+          'D3'
         )
       }
       if (this.hasChaosTheoryModule) {
