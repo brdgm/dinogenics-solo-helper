@@ -90,7 +90,7 @@
       "dnaCards": "DNA cards",
       "remainingStuff": "Manipulation cards, goats and unused fences",
       "dinosaurSpecies": "Dinosaur Species",
-      "dinosaurCreated": "Dinosaurs created",
+      "dinosaurCreated": "Dinosaurs on the board",
       "scandalTokens": "Scandal Tokens",
       "financialAdvisor": "Financial Advisor Specialist",
       "financialAdvisorNone": "none"
@@ -106,8 +106,8 @@
       "vpSpecialistsIgnoreFinancialAdvisor": "Ignore Financial Advisor!",
       "vpDinosaurVariety": "Dinosaur Variety",
       "vpDinosaurVarietyDescription": "3 VP for every unique species in valid habitat",
-      "vpDinosaurCreated": "Dinosaurs created",
-      "vpDinosaurCreatedDescription": "2 VP for every dinosaur created",
+      "vpDinosaurCreated": "Dinosaurs on the board",
+      "vpDinosaurCreatedDescription": "2 VP for every dinosaur on the board",
       "vpCredits": "Credits",
       "vpCreditsDescription": "1 VP for every 3 credits (round down)",
       "vpCreditsFinancialAdvisorPlayer": "Financial Advisor: 1 VP for every 2 credits (round down)",
@@ -225,7 +225,14 @@
       "C02": "If DiNO has a scandal token and/or a damaged building, he picks this option. Otherwise he takes a scandal and destroys the building with the most end game VPs.",
       "C03": "DiNO is last in bid order and will always bid actual DiNO value (without paying) and doesn’t take a scandal.",
       "C04": "DiNO draws 2 eDNA-cards.",
-      "C05": "Draw the next action card and count empty spaces starting from the upper left corner depending on which of the six slots is highlighted. That’s where the token is placed."
+      "C05": "Draw the next action card and count empty spaces starting from the upper left corner depending on which of the six slots is highlighted. That’s where the token is placed.",
+      "corruptedTRex": {
+        "title": "Corrupted T-Rex Variant Clarifications",
+        "intro": "If the Corrupted T-Rex news card triggered, DiNO will adjust his actions:",
+        "dnaAction": "DiNO will only use a DNA-acquiring action if he has no complete DNA-set at all (including the mutant card) yet and the action provides a chance to complete a set. For example, if he is missing more than one card, he won’t use the refinement- or boneyard-actions.",
+        "cityCenter": "DiNO will still use the City Center, but only buy from the market in the above-mentioned case.",
+        "placeTRex": "If DiNO has to place a corrupted T-Rex, place it in a 1x1 fenced pen if possible."
+      }
     },
     "manipulationCard": {
       "title": "Manipulation Cards",
@@ -343,21 +350,22 @@
         "raptor": "Clever: During a rampage check, in addition to normal damage, suffer one visitor fatality on a /// result.",
         "triceratops": "Herd Animal: Gain an additional 1 VP in dinosaur value for every two triceratops in a shared pen.",
         "mutant": "Monstrous: Existing mutants may each be fed 🐐🐐 once per upkeep phase to place an additional mutant into your park.",
-        "gallimimus": "Simple Genome: DNA requirement is 1 while you have at least one gallimimus in your park.",
+        "gallimimus": "Simple Genome: DNA requirement is 1 while you have at least one Gallimimus in your park.",
         "ichthyosaur": "Swimming Partner: When placed, immediately gain 4 credits.",
-        "therizinosaurus": "Tree Harvester: Gain an additional 3 VP per season if the therizinosaurus is in a habitat of 4+ spaces.",
+        "therizinosaurus": "Tree Harvester: Gain an additional 3 VP per season if the Therizinosaurus is in a habitat of 4+ spaces.",
         "plesiosaurus": "Simple Feeder: Does not require feeding during the upkeep phase.",
         "megalodon": "Leviathan: When placed, immediately gain 6 VP.",
         "mosasaur": "Terror: During upkeep, you may destroy a dinosaur in your park to ignore feeding a mosasaur. If you do, immediately gain 5 VP.",
-        "spinosaurus": "Aquatic Hunter: Destroy one dinosaur in your park when placed or resolve an upkeep die check.",
+        "spinosaurus": "Aquatic Hunter: Destroy one dinosaur in your park when placed or resolve an upkeep die check.<br/>DiNO always resolves the upkeep die.",
         "parasaurolophus": "Pleasing Harmonics: During final scoring, gain an additional 1 VP for each species, including this one, that you have in your park.",
         "dimetrodon": "Beach Dweller: When placed, immediately gain 2 VP for each directly adjacent (not diagonal) aquatic habitat tile.",
         "dreadnoughtus": "Awe-Inspiring: Reputation is equal to the current season number. Requires at least two adjacent open spaces for a valid habitat and can never be penned.",
-        "pachycephalosaurus": "Destructive Entertainment: At start of upkeep, if its habitat borders another species’ habitat (except open space) resolve a rampage check and gain 3VP.",        "quetzalcoatlus": "",
-        "compsognathus": "",
-        "carnotaurus": "",
-        "dunkleosteus": "",
-        "dilophosaurus": ""      
+        "pachycephalosaurus": "Destructive Entertainment: At start of upkeep, if its habitat borders another species’ habitat (except open space) resolve a rampage check and gain 3VP.",
+        "quetzalcoatlus": "???",
+        "compsognathus": "???",
+        "carnotaurus": "???",
+        "dunkleosteus": "???<br/>DiNO spends 1 or 2 spare fences if available and not required for the rightmost complete DNA set.",
+        "dilophosaurus": "???"
       }
     }
   },
@@ -423,7 +431,7 @@
       "ruleSummary": "3 fences, repair/hotel/slot, market buy/sell.",
       "actionSelection": "DiNO performs 1-3 actions:",
       "receiveFences": "DiNO receives three new fences to its reserve and may replace damaged habitats.",
-      "facilityBuildRepair": "DiNO repairs one facility or builds a new facility based on the following criteria:",
+      "facilityBuildRepair": "DiNO repairs one facility or - if no facility is damaged - builds a new facility based on the following criteria:",
       "facilityBuildRepairBiodome": "If DiNO has a preferred set of Pterodactyl DNA and a Biodome is available, DiNO builds the Biodome.",
       "facilityBuildRepairHotel": "DiNO builds a Basic hotel if he has less than two hotels.",
       "facilityBuildRepairOtherwise": "Otherwise, DiNO chooses a new facility:",
