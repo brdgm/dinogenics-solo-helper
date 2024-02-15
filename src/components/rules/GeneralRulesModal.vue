@@ -10,6 +10,11 @@
         <li v-html="t('rules.general.collectFences')"></li>
         <li v-html="t('rules.general.upkeepPhase')"></li>
       </ul>
+      <h5 v-html="t('rules.general.feedingPriority.title')"></h5>
+      <ol>
+        <li v-html="t('rules.general.feedingPriority.vp')"></li>
+        <li v-html="t('rules.general.feedingPriority.reputation')"></li>
+      </ol>
       <h5 v-html="t('rules.general.resolvingChoices.title')"></h5>
       <p v-html="t('rules.general.resolvingChoices.intro')"></p>
       <ol>
