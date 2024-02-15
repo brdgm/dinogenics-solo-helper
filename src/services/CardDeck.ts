@@ -1,4 +1,4 @@
-import * as _ from 'lodash'
+import { shuffle } from 'lodash'
 import Card from './Card'
 import Cards from './Cards'
 import { CardDeckPersistence } from '@/store/state'
@@ -38,7 +38,7 @@ export default class CardDeck {
    */
   public draw() : Card {
     if (this._pile.length == 0) {
-      this._pile = _.shuffle(this._discard)
+      this._pile = shuffle(this._discard)
       this._discard = []
     }
     const currentCard = this._pile.shift()
@@ -63,7 +63,7 @@ export default class CardDeck {
    * Creates a shuffled new card deck.
    */
   public static new() : CardDeck {
-    const pile = _.shuffle(Cards.getAll())
+    const pile = shuffle(Cards.getAll())
     return new CardDeck(pile, [])
   }
 
