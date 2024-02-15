@@ -8,6 +8,13 @@
           <span v-html="t(`rules.breakingNews.${card}`)"></span>
         </li>
       </ul>
+      <h5 v-html="t('rules.breakingNews.corruptedTRex.title')"></h5>
+      <p v-html="t('rules.breakingNews.corruptedTRex.intro')"></p>
+      <ul>
+        <li v-html="t('rules.breakingNews.corruptedTRex.dnaAction')"></li>
+        <li v-html="t('rules.breakingNews.corruptedTRex.cityCenter')"></li>
+        <li v-html="t('rules.breakingNews.corruptedTRex.placeTRex')"></li>
+      </ul>
     </template>
   </ModalDialog>
 </template>
@@ -40,11 +47,14 @@ export default defineComponent({
       const cards = [
         '26',
         '27',
-        '29'        
+        '29',
+        '30',
+        '33'
       ]
       if (this.hasControlledChaosExpansion) {
         cards.push(
-          'D1'
+          'D1',
+          'D3'
         )
       }
       if (this.hasChaosTheoryModule) {

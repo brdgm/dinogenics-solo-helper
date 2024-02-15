@@ -29,6 +29,7 @@ export default defineComponent({
   data() {
     return {
       cards: [
+        'benefitsPackage',
         'blackMarket',
         'controlTheNewsCycle',
         'dnaSplice',
@@ -38,6 +39,7 @@ export default defineComponent({
         'misdirection',
         'nonZeroSumGame',
         'offshoreContractors',
+        'renovation',
         'researchPact',
         'shareholderMeeting',
         'strongArmTheMarket',

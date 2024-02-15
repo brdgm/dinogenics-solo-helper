@@ -22,7 +22,7 @@
   <router-link to="/setupGame" class="btn btn-primary btn-lg mt-3">{{t('action.playGame')}}</router-link>
 
   <p class="disclaimer">
-    This is not an official Quined Games product and has no affiliation with <a href="https://www.ninthhaven.com/" target="_blank" rel="noopener">Ninth Heaven Games</a>.
+    This is not an official Ninth Heaven Games product and has no affiliation with <a href="https://www.ninthhaven.com/" target="_blank" rel="noopener">Ninth Heaven Games</a>.
     All art in this app is from <a href="https://boardgamegeek.com/boardgame/210296/dinogenics" target="_blank" rel="noopener">DinoGenics</a>.
     See <a href="#" data-bs-toggle="modal" data-bs-target="#creditsModal">{{t('footer.credits')}}</a>.
     <a href="https://ko-fi.com/brdgm_me" target="_blank" rel="noopener"><img class="kofi-button" src="@/assets/kofi_button_dark.png" alt="Support me on Ko-fi"/></a>

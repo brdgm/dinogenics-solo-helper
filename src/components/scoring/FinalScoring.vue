@@ -76,7 +76,7 @@
       <tr v-if="hasControlledChaos">
         <th scope="row">
           {{t('endOfGame.resources.financialAdvisor')}}
-          <div class="d-inline-flex"><label><input type="radio" v-model="financialAdvisorPlayerIndex" :value="undefined"/>n/a</label></div>
+          <div class="d-inline-flex"><label><input type="radio" v-model="financialAdvisorPlayerIndex" :value="undefined"/>{{t('endOfGame.resources.financialAdvisorNone')}}</label></div>
         </th>
         <td v-for="player in playerCount" :key="player">
           <input type="radio" v-model="financialAdvisorPlayerIndex" :value="player-1"/>
@@ -454,6 +454,9 @@ tr.total, tbody tr:nth-child(1) {
 }
 tr.total td {
   font-weight: bold;
+}
+input[type=radio] {
+  width: 1.5rem;
 }
 
 @include media-breakpoint-down(sm) {
