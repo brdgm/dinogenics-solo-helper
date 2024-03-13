@@ -371,11 +371,11 @@
     }
   },
   "difficultyLevel": {
-    "1": "Very Easy",
-    "2": "Easy", 
-    "3": "Normal",
-    "4": "Hard",
-    "5": "Very Hard"
+    "1": "Introductory: Good for players new to Worker Placement board games.",
+    "2": "Easy: You are a casual enjoyer of Worker Placement games but prefer a lighter experience.", 
+    "3": "Normal: A good place to start for most gamers. A well-balanced experience.",
+    "4": "Hard: You have a strong understanding of DinoGenics mechanics and want a challenge.",
+    "5": "Very Hard: You have mastered DinoGenics and want to be pushed to the limit."
   },
   "location": {
     "site-a": {
