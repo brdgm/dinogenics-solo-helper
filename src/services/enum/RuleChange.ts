@@ -1,5 +1,5 @@
 /**
- * RuleChange
+ * Rule change for advanced mode.
  */
 enum RuleChange {
   NONE = 'none',

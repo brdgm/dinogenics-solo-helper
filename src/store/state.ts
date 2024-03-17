@@ -15,8 +15,8 @@ export const useStateStore = defineStore(`${name}.state`, {
           botCount: 1,
           playerCorporations: [Corporation.NTEK,Corporation.BLUESEA_GENETICS_PLC,Corporation.TRAPEZOHEDRON_INCORPORATED,Corporation.DINO_LIBRE,Corporation.BIOTHESAURI]
         },
-        difficultyLevel: DifficultyLevel.NORMAL,
-        modules: []
+        difficultyLevel: DifficultyLevel.L3_NORMAL,
+        modules: [Module.CONTROLLED_CHAOS]
       },
       rounds: []
     } as State

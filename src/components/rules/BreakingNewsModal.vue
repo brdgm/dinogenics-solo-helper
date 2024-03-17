@@ -12,7 +12,7 @@
       <p v-html="t('rules.breakingNews.corruptedTRex.intro')"></p>
       <ul>
         <li v-html="t('rules.breakingNews.corruptedTRex.dnaAction')"></li>
-        <li v-html="t('rules.breakingNews.corruptedTRex.cityCenter')"></li>
+        <li v-html="t('rules.breakingNews.corruptedTRex.market')"></li>
         <li v-html="t('rules.breakingNews.corruptedTRex.placeTRex')"></li>
       </ul>
     </template>

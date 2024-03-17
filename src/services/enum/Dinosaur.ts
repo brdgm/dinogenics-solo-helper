@@ -28,6 +28,8 @@ enum Dinosaur {
   COMPSOGNATHUS = 'compsognathus',
   CARNOTAURUS = 'carnotaurus',
   DUNKLEOSTEUS = 'dunkleosteus',
-  DILOPHOSAURUS = 'dilophosaurus'
+  DILOPHOSAURUS = 'dilophosaurus',
+  PERUCETUS = 'perucetus',  // found in 1.8 cards
+  BAJADASAURUS = 'bajadasaurus'  // found in 1.8 cards
 }
 export default Dinosaur

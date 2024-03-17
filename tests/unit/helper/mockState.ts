@@ -13,7 +13,7 @@ export default function (params?: MockStateParams) : State {
         botCount: params?.botCount ?? 1,
         playerCorporations: params?.playerCorporations ?? [Corporation.NTEK,Corporation.BLUESEA_GENETICS_PLC,Corporation.TRAPEZOHEDRON_INCORPORATED,Corporation.DINO_LIBRE,Corporation.BIOTHESAURI]
       },
-      difficultyLevel: params?.difficultyLevel ?? DifficultyLevel.NORMAL,
+      difficultyLevel: params?.difficultyLevel ?? DifficultyLevel.L3_NORMAL,
       modules: params?.modules ?? [],
       initialBotTurns: params?.initialBotTurns ?? []
     },
