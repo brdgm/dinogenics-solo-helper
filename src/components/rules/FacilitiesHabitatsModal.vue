@@ -11,6 +11,13 @@
         <li v-html="t('rules.facilitiesHabitats.commercialFacilities')"></li>
         <li v-html="t('rules.facilitiesHabitats.largeCommercialFacilities')"></li>
       </ul>
+      <h6>{{t(`rules.facilitiesHabitats.cards.title`)}}</h6>
+      <ul>
+        <li v-for="card of cards" :key="card">
+          <b><span v-html="t(`rules.facilitiesHabitats.cards.${card}.title`)"></span>: </b>
+          <span v-html="t(`rules.facilitiesHabitats.cards.${card}.description`)"></span>
+        </li>
+      </ul>
     </template>
   </ModalDialog>
 </template>
@@ -28,6 +35,14 @@ export default defineComponent({
   setup() {
     const { t } = useI18n()
     return { t }
+  },
+  data() {
+    return {
+      cards: [
+        'geneGraftingLab',
+        'geneticsFacility'
+      ]
+    }
   }
 })
 </script>
