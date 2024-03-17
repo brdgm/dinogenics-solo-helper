@@ -9,9 +9,11 @@
         <li v-html="t('rules.general.noHandLimit')"></li>
         <li v-html="t('rules.general.collectFences')"></li>
         <li v-html="t('rules.general.upkeepPhase')"></li>
+        <li v-html="t('rules.general.notEnoughGoats')"></li>
       </ul>
       <h5 v-html="t('rules.general.feedingPriority.title')"></h5>
       <ol>
+        <li v-html="t('rules.general.feedingPriority.fedCompletely')"></li>
         <li v-html="t('rules.general.feedingPriority.vp')"></li>
         <li v-html="t('rules.general.feedingPriority.reputation')"></li>
       </ol>

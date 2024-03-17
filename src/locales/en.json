@@ -134,9 +134,11 @@
       "noKilling": "DiNO never voluntarily kills any of his dinosaurs (exception: genetic deconstruction-card).",
       "noHandLimit": "DiNO has no hand limit and can collect more than 10 (e)DNA cards.",
       "collectFences": "DiNO collects fences to a personal reserve next to his board. DiNO uses fences when creating new dinosaurs or replacing broken fences. Dinosaurs of the same species are placed in the same habitat, if possible. In those cases, DiNO extends the fence-habitat by using as few fences as necessary to hold the new dinosaur. Broken fences are replaced immediately if DiNO has spare ones.",
-      "upkeepPhase": "During the Upkeep Phase DiNO must feed carnivores and check for rampage conditions. If DiNO has remaining goats after all carnivores were fed for the current and following season, and a Mutant in his park, one set of goats is spent per Mutant. Normal mutant creations rules apply and DiNO only creates new mutants if it can provide them with a habitat. Any Biodomes are only used if another mutant is already occupying one of the 2 spaces.",
+      "upkeepPhase": "During the Upkeep Phase DiNO must feed carnivores and check for rampage conditions.",
+      "notEnoughGoats": "If DiNO does not have enough goats to feed all carnivores, refer to the Rampage Choice and Assigning Damage section.",
       "feedingPriority": {
-        "title": "Feeding Priority",
+        "title": "Feeding Priority (feed in order of...)",
+        "fedCompletely": "Dinosaur that can be fed completely",
         "vp": "Highest seasonal Victory Point value dinosaur",
         "reputation": "Highest reputation Dinosaur"
       },
@@ -176,10 +178,10 @@
       "title": "Facilities & Habitats",
       "intro": "When DiNO takes actions to create new dinosaurs or place facilities it will do so based on the grid system displayed to the right and always start with the lowest position in a column.",
       "newDinosaurs": "New Dinosaurs are placed starting in the bottom right of DiNO’s player board. Habitats are immediately built as the new dinosaur is placed by placing the minimal number of fences required to satisfy the dinosaurs habitat requirement. If a dinosaur of an existing species is created, enlarge the existing habitat by exactly enough space to accommodate the new dinosaur. Habitats may expand into other columns of the grid once all space in the right most column is filled following the arrows listed in the diagram.",
-      "facilities": "Park Facilities are built starting in the bottom middle column. If there is no further room in the center column, DiNO gains the VP amount listed on the unplaceable facility and returns the tile to the box.",
-      "largeFacilities": "Large Park Facilities (including Aquatic Habitats) are built starting in the lower left column. Large Park Facilities are placed so that only half of the facility takes up a park space. If there is no further room in the left hand column, DiNO instead gains the VP amount listed on the unplaceable facility and returns the tile to the box.",
-      "commercialFacilities": "Commercial Facilities are built in the column to the left of the visitor center and may expand into the right most column by first expanding up. If there is no further room, DiNO instead gains the VP amount listed on the unplaceable facility and returns the tile to the box.",
-      "largeCommercialFacilities": "Large Commercial Facilities are built in the column above the Visitor Center. Large Park Facilities are placed so that only half of the facility takes up a commercial space. If there is no further room, DiNO instead gains the VP amount listed on the unplaceable facility and returns the tile to the box."
+      "facilities": "Park Facilities are built starting in the bottom middle column.",
+      "largeFacilities": "Large Park Facilities (including Aquatic Habitats) are built starting in the lower left column. Large Park Facilities are placed so that only half of the facility takes up a park space.",
+      "commercialFacilities": "Commercial Facilities are built in the column to the left of the visitor center and may expand into the right most column by first expanding up.",
+      "largeCommercialFacilities": "Large Commercial Facilities are built in the column above the Visitor Center. Large Park Facilities are placed so that only half of the facility takes up a commercial space."
     },
     "dnaCollection": {
       "title": "DNA Collection",
@@ -187,7 +189,7 @@
         "title": "Collection and Arrangement",
         "setCollection": "During the game DiNO will focus on collecting DNA sets of up to 4 different species. As part of DiNO’s setup, create the preferred species’ stacks beside DiNO’s Island Board. Unique species will form their own column while duplicates will be stacked as they are drawn.",
         "cardOrder": "Start with the first two DNA cards/species (1st & 2nd species) on the right, proceed to the left with the eDNA card/species (3rd species) and a possible 4th species to the left. On the leftmost column, place the Mutant reference card. The Preferred Species 3 column is only specific to eDNA during setup.",
-        "noDuplicates": "If there were no duplicates the 5th card will be placed below the Mutant reference card to form a stack of spare DNA.",
+        "noDuplicates": "If there were no duplicates the 5th card will be placed below the Mutant reference card to form a stack of spare DNA. Any Polymorphic DNA drawn during setup is added to DiNO’s reserve.",
         "example": {
           "title": "Example",
           "description": "DiNO received five random cards plus the Mutant reference card during setup. Because DiNO received two Ankylosaurus, they are grouped together. The DNA-species are placed in the order of reception from right to left. Place the Mutant reference card in the far left space. The Megalodon is placed on the 3rd spot from the right, because it was drawn from the eDNA deck."
@@ -195,20 +197,23 @@
       },
       "acquiring": {
         "title": "Acquiring New DNA",
-        "intro": "Whenever DiNO receives new (e)DNA 1 of 3 outcomes will occur based on if the card matches an existing species.",
+        "intro": "Whenever DiNO receives new (e)DNA 1 of 4 outcomes will occur based on if the card matches an existing species.",
         "matchExisting": "The newly drawn DNA card matches an existing preferred species.",
         "matchExistingResult": "Result: Add the card to the existing preferred species stack.",
         "emptyColumn": "The newly drawn DNA card does not match an existing preferred species but 1 of the 4 columns is empty.",
         "emptyColumnResult": "Result: Form a new preferred species by placing the card in the empty column.",
         "noEmptyColumn": "The newly drawn DNA card does not match an existing preferred species and there are no empty columns.",
         "noEmptyColumnResult": "Result: Place the card in the spare DNA stack.",
+        "polymorphicDNA": "The newly drawn card is Polymorphic DNA.",
+        "polymorphicDNAResult": "Result: Place the card in the DiNO Reserve; it may be used during a future action as part of any incomplete stack.",
         "noHandLimit": "The hand limit of 10 (e)DNA cards does not apply to DiNO and it may keep any number of cards in any of its stacks of cards."
       },
       "refresh": {
         "title": "Refresh Preferred Species After Dinosaur Creation",
-        "intro": "If DiNO created a dinosaur, check if the Spare Stack contains cards and use them to replenish an empty preferred species column. All cards of the Spare Stack are checked, and the species is picked where the least number of cards is missing to complete a set. Ties are broken in favor of:",
+        "intro": "If DiNO created a dinosaur, check if the Spare Stack contains cards and use them to replenish an empty preferred species column. All cards of the Spare Stack are checked and chosen in favor of:",
+        "notInPark": "Species that do not already exist in DiNO’s park.",
+        "fewestMissingDNA": "Species with the fewest missing DNA cards.",
         "hightestDNA": "Species with the highest DNA requirement.",
-        "notInPark": "Species that is not part of DiNO’s park.",
         "topmost": "Topmost species.",
         "newStack": "Pick all matching cards of the determined species and create the new stack."
       }

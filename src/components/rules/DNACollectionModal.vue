@@ -31,13 +31,20 @@
             <li v-html="t('rules.dnaCollection.acquiring.noEmptyColumnResult')"></li>
           </ul>
         </li>
+        <li>
+          <span v-html="t('rules.dnaCollection.acquiring.polymorphicDNA')"></span>
+          <ul>
+            <li v-html="t('rules.dnaCollection.acquiring.polymorphicDNAResult')"></li>
+          </ul>
+        </li>
       </ol>
       <p v-html="t('rules.dnaCollection.acquiring.noHandLimit')"></p>
       <h5 v-html="t('rules.dnaCollection.refresh.title')"></h5>
       <p v-html="t('rules.dnaCollection.refresh.intro')"></p>
       <ol>
-        <li v-html="t('rules.dnaCollection.refresh.hightestDNA')"></li>
         <li v-html="t('rules.dnaCollection.refresh.notInPark')"></li>
+        <li v-html="t('rules.dnaCollection.refresh.fewestMissingDNA')"></li>
+        <li v-html="t('rules.dnaCollection.refresh.hightestDNA')"></li>
         <li v-html="t('rules.dnaCollection.refresh.topmost')"></li>
       </ol>
       <p v-html="t('rules.dnaCollection.refresh.newStack')"></p>
