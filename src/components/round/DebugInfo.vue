@@ -21,9 +21,9 @@ import Card from '@/services/Card'
 export default defineComponent({
   name: 'DebugInfo',
   setup() {
-    const { t } = useI18n();
+    const { t } = useI18n()
     const state = useStateStore()
-    return { t, state };
+    return { t, state }
   },
   props: {
     navigationState: {
