@@ -7,6 +7,7 @@
         <li v-if="hireSpecialistNumber" v-html="t('location.intelligen-designs-hq.hireSpecialist', {number:hireSpecialistNumber})"></li>
         <li v-html="t('location.intelligen-designs-hq.buildAquaticHabitat')"></li>
         <li v-html="t('location.intelligen-designs-hq.buildLargeFacility', {number:buildLargeFacilityNumber})"></li>
+        <li v-if="bonusCardBenefit"><LackOfBuildingSpace :bonusCardBenefit="bonusCardBenefit" :navigation-state="navigationState"/></li>
       </ul>
       <img src="@/assets/rules/intelligen-designs-hq-selection.jpg" alt="" class="rules-image"/>
     </template>
@@ -22,9 +23,15 @@ import { useI18n } from 'vue-i18n'
 import NavigationState from '@/util/NavigationState'
 import Bot from '@/services/Bot'
 import Location from '@/services/enum/Location'
+import BonusCardBenefit from '@/services/enum/BonusCardBenefit'
+import getBonusCardBenefit from '@/util/getBonusCardBenefit'
+import LackOfBuildingSpace from '../LackOfBuildingSpace.vue'
 
 export default defineComponent({
   name: 'LocationIntelligenDesignsHq',
+  components: {
+    LackOfBuildingSpace
+  },
   setup() {
     const { t } = useI18n()
     return { t }
@@ -49,6 +56,15 @@ export default defineComponent({
       openOceanRoll: false,
       hireSpecialistNumber: undefined as number|undefined,
       buildLargeFacilityNumber: undefined as number|undefined
+    }
+  },
+  computed: {
+    bonusCardBenefit() : BonusCardBenefit|undefined {
+      const currentCard = this.bot.cardDeck.currentCard
+      if (currentCard) {
+        return getBonusCardBenefit(currentCard, this.navigationState.difficultyLevel)
+      }
+      return undefined
     }
   },
   methods: {

@@ -68,6 +68,9 @@
     "outOfLocations": "Out of further locations, go back.",
     "back": "Back"
   },
+  "lackOfBuildingSpace": {
+    "info": "<i>Lack of Building Space</i>: In case there is no further room for the new facility, DiNO gains instead:"
+  },
   "locationRulesCollapse": {
     "showRules": "Show Rules",
     "hideRules": "Hide Rules"
@@ -524,6 +527,17 @@
     "no-small-facilities": "You may not build small facilities.",
     "no-visitors-money": "Do not receive money from visitors.",
     "dinosaur-dna-one-more": "Dinosaur DNA requirement is +1."
+  },
+  "bonusCardBenefit": {
+    "gain-goat": "1 goat",
+    "gain-dna-card": "1 DNA card",
+    "gain-fence": "1 fence",
+    "discard-scandal": "Discard 1 scandal",
+    "gain-edna-card": "1 eDNA card",
+    "gain-vp": "{difficultyLevel} VP",
+    "gain-credits": "{difficultyLevel} credits",
+    "gain-mutant": "If DiNO has a Mutant and can provide a valid habitat for another, he gains another mutant",
+    "gain-refined-dna-token": "1 refined DNA token"
   },
   "notfound": {
     "title": "Not Found"
