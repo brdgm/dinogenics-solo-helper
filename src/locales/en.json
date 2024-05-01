@@ -410,7 +410,10 @@
     },
     "site-b": {
       "title": "Site B",
-      "ruleSummary": "Only if less than 2 complete DNA sets."
+      "ruleSummary": "Only if less than 2 complete DNA sets.",
+      "noMarketTokens": "DiNO does not receive or use Market Tokens.",
+      "gainBonus": "Gain Bonus:",
+      "drawDNA": "Draw 2 DNA cards to the DNA Market."
     },
     "boneyard": {
       "title": "The Boneyard",
@@ -487,7 +490,8 @@
     },
     "site-d": {
       "title": "Site D",
-      "ruleSummary": "Only if less than 2 complete DNA sets."
+      "ruleSummary": "Only if less than 2 complete DNA sets.",
+      "drawEDNA": "Draw 1 eDNA card to the DNA Market."
     },
     "refinement": {
       "title": "Refinement",
