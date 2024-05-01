@@ -60,6 +60,11 @@ export default defineComponent({
       const bonus = getBonusCardBenefit(card, this.navigationState.difficultyLevel)
       return `[${card.locations}], slot ${card.slot}, [${card.dinosaurs}], bonus: ${bonus}, advanced: ${card.ruleChange}`
     }
+  },
+  mounted() {
+    if (this.state.setup.debugMode) {
+      window.setInterval(() => this.$forceUpdate(), 500)
+    }
   }
 })
 </script>
