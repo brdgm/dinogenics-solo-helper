@@ -249,7 +249,7 @@
       "33": "DiNO receives VPs for all goats without spending money.",      
       "D1": "DiNO decides not to roll an Upkeep Die.",
       "D3": "DiNO attempts the roll even if it does not have goats.",
-      "C01": "Draw the next action card to determine the species.",
+      "C01": "Use <i>Species Selection</i> from the General Rules overview.",
       "C02": "If DiNO has a scandal token and/or a damaged facility, or his opponents only have hotels, he discards a Scandal and repairs up to 1 facility. Otherwise he takes a scandal and destroys the building with the most end game VPs.",
       "C03": "DiNO is last in bid order and will always bid actual DiNO value (without paying) and doesn’t take a scandal.",
       "C04": "DiNO draws 2 eDNA-cards.",
