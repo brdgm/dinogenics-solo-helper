@@ -22,6 +22,9 @@
           <h4 class="card-title">{{t(`location.${currentOutsourceLocation}.title`)}}</h4>
           <p class="card-subtitle mb-2">{{t(`location.${currentOutsourceLocation}.ruleSummary`)}}</p>
           <component :is="`location-${currentOutsourceLocation}`" :location="currentOutsourceLocation" :bot="bot" :navigationState="navigationState"/>
+          <button class="btn btn-danger mt-4" @click="notPossibleOutsource()">
+            {{t('turnBot.notPossible')}}
+          </button>
         </div>
       </div>
       <p v-html="t('location.outsource.actions')"></p>
@@ -129,12 +132,10 @@ export default defineComponent({
       this.$emit('next')
     },
     notPossible() {
-      if (this.isOutsource) {
-        this.$router.push(`/round/${this.round}/turn/${this.turn}/location/${this.location}/outsource/${this.outsource + 1}`)
-      }
-      else {
-        this.$router.push(`/round/${this.round}/turn/${this.turn}/location/${this.location + 1}`)
-      }
+      this.$router.push(`/round/${this.round}/turn/${this.turn}/location/${this.location + 1}`)
+    },
+    notPossibleOutsource() {
+      this.$router.push(`/round/${this.round}/turn/${this.turn}/location/${this.location}/outsource/${this.outsource + 1}`)
     },
     back() {
       this.$emit('back')
