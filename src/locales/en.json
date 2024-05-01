@@ -92,6 +92,7 @@
   },
   "endOfGame": {
     "title": "End of Game",
+    "difficultyLevel": "Difficulty Level:",
     "resources": {
       "title": "Remaining Resources",
       "credits": "Credits",

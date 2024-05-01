@@ -3,7 +3,10 @@
 
   <FinalScoring :navigationState="navigationState"/>
 
-  <DifficultyLevel :navigationState="navigationState"/>
+  <p>
+    <span v-html="t('endOfGame.difficultyLevel')"></span>
+    {{navigationState.difficultyLevel}}
+  </p>
 
   <DebugInfo :navigationState="navigationState"/>
 
@@ -19,16 +22,14 @@ import { useRoute } from 'vue-router'
 import NavigationState from '@/util/NavigationState'
 import DebugInfo from '@/components/round/DebugInfo.vue'
 import FinalScoring from '@/components/scoring/FinalScoring.vue'
-import DifficultyLevel from '@/components/setup/DifficultyLevel.vue'
 
 export default defineComponent({
   name: 'EndOfGame',
   components: {
     FooterButtons,
     DebugInfo,
-    FinalScoring,
-    DifficultyLevel
-},
+    FinalScoring
+  },
   setup() {
     const { t } = useI18n()
     const route = useRoute()
