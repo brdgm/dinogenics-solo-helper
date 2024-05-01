@@ -3,7 +3,7 @@ import Corporation from '@/services/enum/Corporation'
 import Module from '@/services/enum/Module'
 import { BotTurn, Round, State } from '@/store/state'
 import { RouteLocation } from 'vue-router'
-import getIntRouteParam from 'brdgm-commons/src/util/router/getIntRouteParam'
+import getIntRouteParam from '@brdgm/brdgm-commons/src/util/router/getIntRouteParam'
 
 export default class NavigationState {
 

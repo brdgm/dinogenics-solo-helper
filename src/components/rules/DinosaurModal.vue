@@ -332,7 +332,7 @@
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useStateStore } from '@/store/state'
-import ModalDialog from 'brdgm-commons/src/components/structure/ModalDialog.vue'
+import ModalDialog from '@brdgm/brdgm-commons/src/components/structure/ModalDialog.vue'
 import AppIcon from '../structure/AppIcon.vue'
 import DinosaurType from './DinosaurType.vue'
 import Module from '@/services/enum/Module'
