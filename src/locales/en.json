@@ -167,8 +167,7 @@
           "intro": "If DiNO has to perform Rampage Checks and can choose the affected Dinosaur, the checks are performed for the Dinosaur(s) with:",
           "lowestSeasonalVP": "Lowest seasonal Victory Point value",
           "lowestReputation": "Lowest Reputation",
-          "drawCards": "Get hints from DiNO card deck until a dinosaur matches one in DiNO’s park:",
-          "getDinoHints": "Dinosaur hints for"
+          "speciesSelection": "Species Selection (see below)"
         },
         "parkStructure": {
           "intro": "When Park Structures are destroyed due to Rampages or other effects, the priority is:",
@@ -179,6 +178,10 @@
           "occupiedHotels": "Occupied Hotels",
           "prioritize": "Commercial and Park Facilities are prioritized in ascending costs."
         }
+      },
+      "speciesSelection": {
+        "title": "Species Selection",
+        "getDinoHints": "Dinosaur hints for"
       }
     },
     "facilitiesHabitats": {
