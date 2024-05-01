@@ -4,6 +4,7 @@ import Module from '@/services/enum/Module'
 import { BotTurn, Round, State } from '@/store/state'
 import { RouteLocation } from 'vue-router'
 import getIntRouteParam from '@brdgm/brdgm-commons/src/util/router/getIntRouteParam'
+import DifficultyLevel from '@/services/enum/DifficultyLevel'
 
 export default class NavigationState {
 
@@ -13,6 +14,7 @@ export default class NavigationState {
   readonly outsource : number
   readonly workerCount : number
   readonly worker : number
+  readonly difficultyLevel : DifficultyLevel
   readonly playerOrder : Corporation[]
   readonly currentCorporation : Corporation
   readonly isPlayerTurn : boolean
@@ -27,6 +29,7 @@ export default class NavigationState {
     this.location = getIntRouteParam(route, 'location')
     this.outsource = getIntRouteParam(route, 'outsource')
     this.workerCount = determineWorkerCount(this.round, state)
+    this.difficultyLevel = state.setup.difficultyLevel
     const roundData = state.rounds.find(item => item.round == this.round)
 
     // determine player order

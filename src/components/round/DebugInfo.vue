@@ -2,7 +2,7 @@
   <div class="mt-4" v-if="state.setup.debugMode">
     <hr/>
     <p class="debug" v-for="bot in bots" :key="bot.corporation">
-      <b>[{{bot.corporation}}]</b> {{getCardDeckInfo(bot)}}
+      <b>[{{bot.corporation}}]</b> {{getCardDeckInfo(bot)}}, level: {{navigationState.difficultyLevel}}
       <ul>
         <li v-for="card of getNextThreeCards(bot)" :key="card.id">Card {{card.id}}: {{getCardInfo(card)}}</li>
       </ul>
@@ -17,6 +17,7 @@ import { useI18n } from 'vue-i18n'
 import { useStateStore } from '@/store/state'
 import Bot from '@/services/Bot'
 import Card from '@/services/Card'
+import getBonusCardBenefit from '@/util/getBonusCardBenefit'
 
 export default defineComponent({
   name: 'DebugInfo',
@@ -56,7 +57,8 @@ export default defineComponent({
       return cards
     },
     getCardInfo(card : Card) : string {
-      return `[${card.locations}], slot ${card.slot}, [${card.dinosaurs}], advanced: ${card.ruleChange}`
+      const bonus = getBonusCardBenefit(card, this.navigationState.difficultyLevel)
+      return `[${card.locations}], slot ${card.slot}, [${card.dinosaurs}], bonus: ${bonus}, advanced: ${card.ruleChange}`
     }
   }
 })

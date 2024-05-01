@@ -13,6 +13,10 @@ export default interface Card {
   bonus: Bonus[]
 }
 
+/**
+ * Bonus for card depending on difficulty level. The assigned difficulty level applies also to higher
+ * difficulty level, unless another mappings defines something different.
+ */
 export interface Bonus {
   difficultyLevel: DifficultyLevel
   bonusCardBenefit: BonusCardBenefit

@@ -15,7 +15,6 @@ const cards : Card[] = [
     ruleChange: RuleChange.NONE,
     bonus: [
       {difficultyLevel: DifficultyLevel.L3_NORMAL, bonusCardBenefit: BonusCardBenefit.GAIN_GOAT },
-      {difficultyLevel: DifficultyLevel.L4_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_GOAT },
       {difficultyLevel: DifficultyLevel.L5_VERY_HARD, bonusCardBenefit: BonusCardBenefit.DISCARD_SCANDAL }
     ]
   },
@@ -27,9 +26,7 @@ const cards : Card[] = [
     ruleChange: RuleChange.ONLY_LAND_DINOSAURS,
     bonus: [
       {difficultyLevel: DifficultyLevel.L2_EASY, bonusCardBenefit: BonusCardBenefit.GAIN_GOAT },
-      {difficultyLevel: DifficultyLevel.L3_NORMAL, bonusCardBenefit: BonusCardBenefit.GAIN_CREDITS },
-      {difficultyLevel: DifficultyLevel.L4_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_CREDITS },
-      {difficultyLevel: DifficultyLevel.L5_VERY_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_CREDITS }
+      {difficultyLevel: DifficultyLevel.L3_NORMAL, bonusCardBenefit: BonusCardBenefit.GAIN_CREDITS }
     ]
   },
   {
@@ -40,9 +37,7 @@ const cards : Card[] = [
     ruleChange: RuleChange.NO_LARGE_FACILITIES,
     bonus: [
       {difficultyLevel: DifficultyLevel.L2_EASY, bonusCardBenefit: BonusCardBenefit.GAIN_GOAT },
-      {difficultyLevel: DifficultyLevel.L3_NORMAL, bonusCardBenefit: BonusCardBenefit.GAIN_REFINED_DNA_TOKEN },
-      {difficultyLevel: DifficultyLevel.L4_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_REFINED_DNA_TOKEN },
-      {difficultyLevel: DifficultyLevel.L5_VERY_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_REFINED_DNA_TOKEN }
+      {difficultyLevel: DifficultyLevel.L3_NORMAL, bonusCardBenefit: BonusCardBenefit.GAIN_REFINED_DNA_TOKEN }
     ]
   },
   {
@@ -53,9 +48,7 @@ const cards : Card[] = [
     ruleChange: RuleChange.NO_ACTION_REPEAT,
     bonus: [
       {difficultyLevel: DifficultyLevel.L2_EASY, bonusCardBenefit: BonusCardBenefit.GAIN_DNA_CARD },
-      {difficultyLevel: DifficultyLevel.L3_NORMAL, bonusCardBenefit: BonusCardBenefit.GAIN_MUTANT },
-      {difficultyLevel: DifficultyLevel.L4_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_MUTANT },
-      {difficultyLevel: DifficultyLevel.L5_VERY_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_MUTANT }
+      {difficultyLevel: DifficultyLevel.L3_NORMAL, bonusCardBenefit: BonusCardBenefit.GAIN_MUTANT }
     ]
   },
   {
@@ -66,8 +59,7 @@ const cards : Card[] = [
     ruleChange: RuleChange.NO_UPLINK_ACTION,
     bonus: [
       {difficultyLevel: DifficultyLevel.L3_NORMAL, bonusCardBenefit: BonusCardBenefit.GAIN_DNA_CARD },
-      {difficultyLevel: DifficultyLevel.L4_HARD, bonusCardBenefit: BonusCardBenefit.DISCARD_SCANDAL },
-      {difficultyLevel: DifficultyLevel.L5_VERY_HARD, bonusCardBenefit: BonusCardBenefit.DISCARD_SCANDAL }
+      {difficultyLevel: DifficultyLevel.L4_HARD, bonusCardBenefit: BonusCardBenefit.DISCARD_SCANDAL }
     ]
   },
   {
@@ -78,9 +70,7 @@ const cards : Card[] = [
     ruleChange: RuleChange.NO_FERRY_ACTION,
     bonus: [
       {difficultyLevel: DifficultyLevel.L2_EASY, bonusCardBenefit: BonusCardBenefit.GAIN_FENCE },
-      {difficultyLevel: DifficultyLevel.L3_NORMAL, bonusCardBenefit: BonusCardBenefit.GAIN_FENCE },
-      {difficultyLevel: DifficultyLevel.L4_HARD, bonusCardBenefit: BonusCardBenefit.DISCARD_SCANDAL },
-      {difficultyLevel: DifficultyLevel.L5_VERY_HARD, bonusCardBenefit: BonusCardBenefit.DISCARD_SCANDAL }
+      {difficultyLevel: DifficultyLevel.L4_HARD, bonusCardBenefit: BonusCardBenefit.DISCARD_SCANDAL }
     ]
   },
   {
@@ -91,9 +81,7 @@ const cards : Card[] = [
     ruleChange: RuleChange.SPECIALISTS_INACTIVE,
     bonus: [
       {difficultyLevel: DifficultyLevel.L2_EASY, bonusCardBenefit: BonusCardBenefit.GAIN_FENCE },
-      {difficultyLevel: DifficultyLevel.L3_NORMAL, bonusCardBenefit: BonusCardBenefit.GAIN_FENCE },
-      {difficultyLevel: DifficultyLevel.L4_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_REFINED_DNA_TOKEN },
-      {difficultyLevel: DifficultyLevel.L5_VERY_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_REFINED_DNA_TOKEN }
+      {difficultyLevel: DifficultyLevel.L4_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_REFINED_DNA_TOKEN }
     ]
   },
   {
@@ -104,9 +92,7 @@ const cards : Card[] = [
     ruleChange: RuleChange.NO_BONEYARD_ACTION,
     bonus: [
       {difficultyLevel: DifficultyLevel.L2_EASY, bonusCardBenefit: BonusCardBenefit.DISCARD_SCANDAL },
-      {difficultyLevel: DifficultyLevel.L3_NORMAL, bonusCardBenefit: BonusCardBenefit.GAIN_MUTANT },
-      {difficultyLevel: DifficultyLevel.L4_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_MUTANT },
-      {difficultyLevel: DifficultyLevel.L5_VERY_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_MUTANT }
+      {difficultyLevel: DifficultyLevel.L3_NORMAL, bonusCardBenefit: BonusCardBenefit.GAIN_MUTANT }
     ]
   },
   {
@@ -117,9 +103,7 @@ const cards : Card[] = [
     ruleChange: RuleChange.NO_MARKET_DNA_BUY,
     bonus: [
       {difficultyLevel: DifficultyLevel.L2_EASY, bonusCardBenefit: BonusCardBenefit.GAIN_FENCE },
-      {difficultyLevel: DifficultyLevel.L3_NORMAL, bonusCardBenefit: BonusCardBenefit.GAIN_FENCE },
-      {difficultyLevel: DifficultyLevel.L4_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_MUTANT },
-      {difficultyLevel: DifficultyLevel.L5_VERY_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_MUTANT }
+      {difficultyLevel: DifficultyLevel.L4_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_MUTANT }
     ]
   },
   {
@@ -130,9 +114,7 @@ const cards : Card[] = [
     ruleChange: RuleChange.NO_FARM_ACTION,
     bonus: [
       {difficultyLevel: DifficultyLevel.L2_EASY, bonusCardBenefit: BonusCardBenefit.GAIN_FENCE },
-      {difficultyLevel: DifficultyLevel.L3_NORMAL, bonusCardBenefit: BonusCardBenefit.GAIN_FENCE },
-      {difficultyLevel: DifficultyLevel.L4_HARD, bonusCardBenefit: BonusCardBenefit.DISCARD_SCANDAL },
-      {difficultyLevel: DifficultyLevel.L5_VERY_HARD, bonusCardBenefit: BonusCardBenefit.DISCARD_SCANDAL }
+      {difficultyLevel: DifficultyLevel.L4_HARD, bonusCardBenefit: BonusCardBenefit.DISCARD_SCANDAL }
     ]
   },
   {
@@ -143,9 +125,7 @@ const cards : Card[] = [
     ruleChange: RuleChange.NO_WATER_DINOSAURS,
     bonus: [
       {difficultyLevel: DifficultyLevel.L2_EASY, bonusCardBenefit: BonusCardBenefit.GAIN_EDNA_CARD },
-      {difficultyLevel: DifficultyLevel.L3_NORMAL, bonusCardBenefit: BonusCardBenefit.GAIN_REFINED_DNA_TOKEN },
-      {difficultyLevel: DifficultyLevel.L4_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_REFINED_DNA_TOKEN },
-      {difficultyLevel: DifficultyLevel.L5_VERY_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_REFINED_DNA_TOKEN }
+      {difficultyLevel: DifficultyLevel.L3_NORMAL, bonusCardBenefit: BonusCardBenefit.GAIN_REFINED_DNA_TOKEN }
     ]
   },
   {
@@ -156,9 +136,7 @@ const cards : Card[] = [
     ruleChange: RuleChange.NO_REFINED_POLYMORPHIC_DNA,
     bonus: [
       {difficultyLevel: DifficultyLevel.L2_EASY, bonusCardBenefit: BonusCardBenefit.GAIN_DNA_CARD },
-      {difficultyLevel: DifficultyLevel.L3_NORMAL, bonusCardBenefit: BonusCardBenefit.GAIN_VP },
-      {difficultyLevel: DifficultyLevel.L4_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_VP },
-      {difficultyLevel: DifficultyLevel.L5_VERY_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_VP }
+      {difficultyLevel: DifficultyLevel.L3_NORMAL, bonusCardBenefit: BonusCardBenefit.GAIN_VP }
     ]
   },
   {
@@ -169,9 +147,7 @@ const cards : Card[] = [
     ruleChange: RuleChange.NO_BASIC_HOTELS,
     bonus: [
       {difficultyLevel: DifficultyLevel.L2_EASY, bonusCardBenefit: BonusCardBenefit.GAIN_VP },
-      {difficultyLevel: DifficultyLevel.L3_NORMAL, bonusCardBenefit: BonusCardBenefit.GAIN_CREDITS },
-      {difficultyLevel: DifficultyLevel.L4_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_CREDITS },
-      {difficultyLevel: DifficultyLevel.L5_VERY_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_CREDITS }
+      {difficultyLevel: DifficultyLevel.L3_NORMAL, bonusCardBenefit: BonusCardBenefit.GAIN_CREDITS }
     ]
   },
   {
@@ -182,9 +158,7 @@ const cards : Card[] = [
     ruleChange: RuleChange.NO_DINOSAURS_IN_OTHER_PLAYER_PARKS,
     bonus: [
       {difficultyLevel: DifficultyLevel.L2_EASY, bonusCardBenefit: BonusCardBenefit.GAIN_EDNA_CARD },
-      {difficultyLevel: DifficultyLevel.L3_NORMAL, bonusCardBenefit: BonusCardBenefit.GAIN_EDNA_CARD },
-      {difficultyLevel: DifficultyLevel.L4_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_GOAT },
-      {difficultyLevel: DifficultyLevel.L5_VERY_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_GOAT }
+      {difficultyLevel: DifficultyLevel.L4_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_GOAT }
     ]
   },
   {
@@ -195,9 +169,7 @@ const cards : Card[] = [
     ruleChange: RuleChange.LAND_DINOSAURS_HABITAT_ONE_SIZE_LARGER,
     bonus: [
       {difficultyLevel: DifficultyLevel.L2_EASY, bonusCardBenefit: BonusCardBenefit.GAIN_FENCE },
-      {difficultyLevel: DifficultyLevel.L3_NORMAL, bonusCardBenefit: BonusCardBenefit.GAIN_FENCE },
-      {difficultyLevel: DifficultyLevel.L4_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_CREDITS },
-      {difficultyLevel: DifficultyLevel.L5_VERY_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_CREDITS }
+      {difficultyLevel: DifficultyLevel.L4_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_CREDITS }
     ]
   },
   {
@@ -208,9 +180,7 @@ const cards : Card[] = [
     ruleChange: RuleChange.NO_VISITORS_VP,
     bonus: [
       {difficultyLevel: DifficultyLevel.L2_EASY, bonusCardBenefit: BonusCardBenefit.GAIN_VP },
-      {difficultyLevel: DifficultyLevel.L3_NORMAL, bonusCardBenefit: BonusCardBenefit.GAIN_VP },
-      {difficultyLevel: DifficultyLevel.L4_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_CREDITS },
-      {difficultyLevel: DifficultyLevel.L5_VERY_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_CREDITS }
+      {difficultyLevel: DifficultyLevel.L4_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_CREDITS }
     ]
   },
   {
@@ -221,9 +191,7 @@ const cards : Card[] = [
     ruleChange: RuleChange.TURN_ORDER_LAST,
     bonus: [
       {difficultyLevel: DifficultyLevel.L2_EASY, bonusCardBenefit: BonusCardBenefit.GAIN_DNA_CARD },
-      {difficultyLevel: DifficultyLevel.L3_NORMAL, bonusCardBenefit: BonusCardBenefit.GAIN_DNA_CARD },
-      {difficultyLevel: DifficultyLevel.L4_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_FENCE },
-      {difficultyLevel: DifficultyLevel.L5_VERY_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_FENCE }
+      {difficultyLevel: DifficultyLevel.L4_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_FENCE }
     ]
   },
   {
@@ -234,9 +202,7 @@ const cards : Card[] = [
     ruleChange: RuleChange.DINOSAURS_PAIRED_BEFORE_NEW_SPECIES,
     bonus: [
       {difficultyLevel: DifficultyLevel.L2_EASY, bonusCardBenefit: BonusCardBenefit.GAIN_EDNA_CARD },
-      {difficultyLevel: DifficultyLevel.L3_NORMAL, bonusCardBenefit: BonusCardBenefit.GAIN_EDNA_CARD },
-      {difficultyLevel: DifficultyLevel.L4_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_MUTANT },
-      {difficultyLevel: DifficultyLevel.L5_VERY_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_MUTANT }
+      {difficultyLevel: DifficultyLevel.L4_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_MUTANT }
     ]
   },
   {
@@ -247,9 +213,7 @@ const cards : Card[] = [
     ruleChange: RuleChange.NO_SMALL_FACILITIES,
     bonus: [
       {difficultyLevel: DifficultyLevel.L2_EASY, bonusCardBenefit: BonusCardBenefit.GAIN_DNA_CARD },
-      {difficultyLevel: DifficultyLevel.L3_NORMAL, bonusCardBenefit: BonusCardBenefit.GAIN_DNA_CARD },
-      {difficultyLevel: DifficultyLevel.L4_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_GOAT },
-      {difficultyLevel: DifficultyLevel.L5_VERY_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_GOAT }
+      {difficultyLevel: DifficultyLevel.L4_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_GOAT }
     ]
   },
   {
@@ -260,9 +224,7 @@ const cards : Card[] = [
     ruleChange: RuleChange.NO_VISITORS_MONEY,
     bonus: [
       {difficultyLevel: DifficultyLevel.L2_EASY, bonusCardBenefit: BonusCardBenefit.GAIN_CREDITS },
-      {difficultyLevel: DifficultyLevel.L3_NORMAL, bonusCardBenefit: BonusCardBenefit.GAIN_CREDITS },
-      {difficultyLevel: DifficultyLevel.L4_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_VP },
-      {difficultyLevel: DifficultyLevel.L5_VERY_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_VP }
+      {difficultyLevel: DifficultyLevel.L4_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_VP }
     ]
   },
   {
@@ -273,8 +235,7 @@ const cards : Card[] = [
     ruleChange: RuleChange.DINOSAUR_DNA_ONE_MORE,
     bonus: [
       {difficultyLevel: DifficultyLevel.L3_NORMAL, bonusCardBenefit: BonusCardBenefit.GAIN_EDNA_CARD },
-      {difficultyLevel: DifficultyLevel.L4_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_REFINED_DNA_TOKEN },
-      {difficultyLevel: DifficultyLevel.L5_VERY_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_REFINED_DNA_TOKEN }
+      {difficultyLevel: DifficultyLevel.L4_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_REFINED_DNA_TOKEN }
     ]
   },
   {
@@ -285,8 +246,7 @@ const cards : Card[] = [
     ruleChange: RuleChange.NONE,
     bonus: [
       {difficultyLevel: DifficultyLevel.L3_NORMAL, bonusCardBenefit: BonusCardBenefit.GAIN_EDNA_CARD },
-      {difficultyLevel: DifficultyLevel.L4_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_VP },
-      {difficultyLevel: DifficultyLevel.L5_VERY_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_VP }
+      {difficultyLevel: DifficultyLevel.L4_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_VP }
     ]
   }
 ]
