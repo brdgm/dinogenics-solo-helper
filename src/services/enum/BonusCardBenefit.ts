@@ -10,6 +10,7 @@ enum BonusCardBenefit {
   GAIN_VP = 'gain-vp',
   GAIN_CREDITS = 'gain-credits',
   GAIN_MUTANT = 'gain-mutant',
-  GAIN_REFINED_DNA_TOKEN = 'gain-refined-dna-token'
+  GAIN_REFINED_DNA_TOKEN = 'gain-refined-dna-token',
+  NONE = 'none'
 }
 export default BonusCardBenefit

@@ -66,7 +66,8 @@
     "executed": "Worker Placed",
     "notPossible": "Not Possible",
     "outOfLocations": "Out of further locations, go back.",
-    "back": "Back"
+    "back": "Back",
+    "bonusCardBenefit": "DiNO gains a bonus:"
   },
   "determineBonusCardBenefit": {
     "determineBonus": "Determine Bonus"
@@ -549,7 +550,8 @@
     "gain-vp": "{difficultyLevel} VP",
     "gain-credits": "{difficultyLevel} credits",
     "gain-mutant": "If DiNO has a Mutant and can provide a valid habitat for another, he gains another mutant.",
-    "gain-refined-dna-token": "1 refined DNA token"
+    "gain-refined-dna-token": "1 refined DNA token",
+    "none": "none"
   },
   "notfound": {
     "title": "Not Found"

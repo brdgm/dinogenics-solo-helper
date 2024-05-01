@@ -1,4 +1,10 @@
 <template>
+  <div v-if="bonusCardBenefit" class="row p-1">
+    <div class="col alert alert-warning">
+      <span v-html="t('turnBot.bonusCardBenefit')"></span><span>&nbsp;</span>
+      <span class="fw-bold" v-html="t(`bonusCardBenefit.${bonusCardBenefit}`,{difficultyLevel})"></span>
+    </div>
+  </div>
   <template v-if="isLocationInvalid">
     <p class="mt-4" v-html="t('turnBot.outOfLocations')"></p>
     <button class="btn btn-warning btn-lg mt-3" @click="back()">
@@ -54,6 +60,7 @@ import LocationSpecialAction from './location/LocationSpecialAction.vue'
 import LocationTimeShare from './location/LocationTimeShare.vue'
 import LocationUplink from './location/LocationUplink.vue'
 import Location from '@/services/enum/Location'
+import DifficultyLevel from '@/services/enum/DifficultyLevel'
 
 export default defineComponent({
   name: 'TurnBot',
@@ -83,16 +90,20 @@ export default defineComponent({
 
     // determine current location
     const { round, turn, location, outsource, modules } = navigationState
-    const currentLocation = bot.getLocation(location, modules)
+    const botLocation = bot.getLocation(location, modules, navigationState.difficultyLevel)
+    const currentLocation = botLocation?.location
+    let bonusCardBenefit = botLocation?.bonusCardBenefit
 
     // check for outsource location
     const isOutsource = (currentLocation == Location.OUTSOURCE)
     let currentOutsourceLocation
     if (isOutsource) {
-      currentOutsourceLocation = bot.getOutsourceLocation(outsource, modules)
+      const outsourceBotLocation = bot.getOutsourceLocation(outsource, modules, navigationState.difficultyLevel)
+      currentOutsourceLocation = outsourceBotLocation?.location
+      bonusCardBenefit = undefined
     }
 
-    return { t, currentLocation, round, turn, location, outsource, isOutsource, currentOutsourceLocation }
+    return { t, currentLocation, bonusCardBenefit, round, turn, location, outsource, isOutsource, currentOutsourceLocation }
   },
   props: {
     navigationState: {
@@ -108,6 +119,9 @@ export default defineComponent({
     isLocationInvalid() : boolean {
       return this.currentLocation == undefined
           || (this.isOutsource && this.currentOutsourceLocation == undefined)
+    },
+    difficultyLevel() : DifficultyLevel {
+      return this.navigationState.difficultyLevel
     }
   },
   methods: {

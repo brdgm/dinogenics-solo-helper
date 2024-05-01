@@ -1,5 +1,6 @@
 import Bot from '@/services/Bot'
 import Corporation from '@/services/enum/Corporation'
+import DifficultyLevel from '@/services/enum/DifficultyLevel'
 import Location from '@/services/enum/Location'
 import { expect } from 'chai'
 
@@ -14,9 +15,9 @@ describe('services/Bot', () => {
     expect(bot.cardDeck.currentCard?.id).to.eq
     expect(bot.cardDeck.pile.length).to.eq(2)
     expect(bot.cardDeck.discard.length).to.eq(1)
-    expect(bot.getLocation(1, [])).to.eq(Location.SITE_A)
+    expect(bot.getLocation(1, [], DifficultyLevel.L3_NORMAL)?.location).to.eq(Location.SITE_A)
     // this draws a new card and returns 1st location from it
-    expect(bot.getOutsourceLocation(0, [])).to.eq(Location.FARM)
+    expect(bot.getOutsourceLocation(0, [], DifficultyLevel.L3_NORMAL)?.location).to.eq(Location.FARM)
 
     expect(bot.toPersistence()).to.eql({
       corporation: Corporation.NTEK,
