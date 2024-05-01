@@ -322,7 +322,7 @@
       },
       "unleashContagion": {
         "title": "Unleash Contagion",
-        "description": "If possible, DiNO draws cards until a dinosaur is drawn who doesn’t have a reputation value of one of DiNO’s dinosaurs. Otherwise the first mentioned determines the value."
+        "description": "Use the <i>Species Selection</i> in the General Rules overview to get a hint for an affected dinosaur. If possible, get hints until a dinosaur is selected who doesn’t have a reputation value of one of DiNO’s dinosaurs. Otherwise the first mentioned determines the value."
       },
       "whistleBlower": {
         "title": "Whistle Blower",
