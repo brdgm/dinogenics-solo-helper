@@ -15,8 +15,8 @@
   <GeneralRulesModal :navigationState="navigationState"/>
   <DNACollectionModal/>
   <FacilitiesHabitatsModal/>
-  <BreakingNewsModal/>
-  <ManipulationCardsModal/>
+  <BreakingNewsModal :navigationState="navigationState"/>
+  <ManipulationCardsModal :navigationState="navigationState"/>
   <SpecialistsModal/>
   <DinosaurModal/>
 </template>

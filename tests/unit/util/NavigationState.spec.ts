@@ -8,6 +8,7 @@ import mockState from '../helper/mockState'
 import mockRound from '../helper/mockRound'
 import mockTurn from '../helper/mockTurn'
 import mockBotTurn from '../helper/mockBotTurn'
+import DifficultyLevel from '@/services/enum/DifficultyLevel'
 
 describe('util/NavigationState', () => {
   it('turnCount-workerCount-round1-3player', () => {
@@ -21,6 +22,7 @@ describe('util/NavigationState', () => {
     expect(navigationState.turnCount).to.eq(12)
     expect(navigationState.modules).to.eql([Module.CONTROLLED_CHAOS])
     expect(navigationState.hasControlledChaos).to.true
+    expect(navigationState.difficultyLevel).to.eq(DifficultyLevel.L3_NORMAL)
   })
 
   it('turnCount-workerCount-round4-3player', () => {

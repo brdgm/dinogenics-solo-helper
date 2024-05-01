@@ -14,9 +14,9 @@ export default function(corporation: Corporation) : string {
     case Corporation.DINO_LIBRE:
       return "#ed6c1a"
     case Corporation.NTEK:
-      return "#e1dddc";
+      return "#e1dddc"
     case Corporation.TRAPEZOHEDRON_INCORPORATED:
-      return "#ffeb00";
+      return "#ffeb00"
     default:
       throw new Error(`Invalid corporation: ${corporation}.`)
   }

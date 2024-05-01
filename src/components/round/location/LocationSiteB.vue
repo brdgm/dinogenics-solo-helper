@@ -5,8 +5,16 @@
       <li v-html="t('location.site-common.noResources')"></li>
       <li v-html="t('location.site-common.cardAssignment')"></li>
       <li v-html="t('location.site-common.newStack')"></li>
+      <li v-html="t('location.site-b.noMarketTokens')"></li>
     </ul>
   </LocationRulesCollapse>
+  <ul>
+    <li>
+      <span v-html="t('location.site-b.gainBonus')"></span><br/>
+      <DetermineBonusCardBenefit :bot="bot" :navigationState="navigationState"/>
+    </li>
+    <li v-html="t('location.site-b.drawDNA')"></li>
+  </ul>
 </template>
 
 <script lang="ts">
@@ -16,11 +24,13 @@ import NavigationState from '@/util/NavigationState'
 import Bot from '@/services/Bot'
 import Location from '@/services/enum/Location'
 import LocationRulesCollapse from '../LocationRulesCollapse.vue'
+import DetermineBonusCardBenefit from '../DetermineBonusCardBenefit.vue'
 
 export default defineComponent({
   name: 'LocationSiteB',
   components: {
-    LocationRulesCollapse
+    LocationRulesCollapse,
+    DetermineBonusCardBenefit
   },
   setup() {
     const { t } = useI18n()

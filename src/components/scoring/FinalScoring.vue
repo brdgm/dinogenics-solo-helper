@@ -271,29 +271,29 @@ export default defineComponent({
       return this.state.setup.difficultyLevel
     },
     botScoreFacilities() : boolean {
-      return this.difficultyLevel != DifficultyLevel.VERY_EASY && this.difficultyLevel != DifficultyLevel.EASY
+      return this.difficultyLevel != DifficultyLevel.L1_VERY_EASY && this.difficultyLevel != DifficultyLevel.L2_EASY
     },
     botScoreSpecialists() : boolean {
-      return this.difficultyLevel != DifficultyLevel.VERY_EASY && this.difficultyLevel != DifficultyLevel.EASY
+      return this.difficultyLevel != DifficultyLevel.L1_VERY_EASY && this.difficultyLevel != DifficultyLevel.L2_EASY
     },
     botScoreDinosaurVariety() : boolean {
-      return this.difficultyLevel != DifficultyLevel.VERY_EASY && this.difficultyLevel != DifficultyLevel.EASY
+      return this.difficultyLevel != DifficultyLevel.L1_VERY_EASY && this.difficultyLevel != DifficultyLevel.L2_EASY
     },
     botScoreCredits() : boolean {
-      return this.difficultyLevel != DifficultyLevel.VERY_EASY
+      return this.difficultyLevel != DifficultyLevel.L1_VERY_EASY
     },
     botScoreDNACards() : boolean {
-      return this.difficultyLevel != DifficultyLevel.VERY_EASY
+      return this.difficultyLevel != DifficultyLevel.L1_VERY_EASY
     },
     botScoreExtraFinancialAdvisor() : boolean {
       return this.hasControlledChaos &&
-        (this.difficultyLevel == DifficultyLevel.NORMAL || this.difficultyLevel == DifficultyLevel.HARD || this.difficultyLevel == DifficultyLevel.VERY_HARD)
+        (this.difficultyLevel == DifficultyLevel.L3_NORMAL || this.difficultyLevel == DifficultyLevel.L4_HARD || this.difficultyLevel == DifficultyLevel.L5_VERY_HARD)
     },
     botScoreExtraRemainingStuff() : boolean {
-      return this.difficultyLevel == DifficultyLevel.HARD || this.difficultyLevel == DifficultyLevel.VERY_HARD
+      return this.difficultyLevel == DifficultyLevel.L4_HARD || this.difficultyLevel == DifficultyLevel.L5_VERY_HARD
     },
     botScoreExtraDinosaursCreated() : boolean {
-      return this.difficultyLevel == DifficultyLevel.VERY_HARD
+      return this.difficultyLevel == DifficultyLevel.L5_VERY_HARD
     },
     hasFinancialAdvisorPlayer() : boolean {
       if (this.financialAdvisorPlayerIndex != undefined) {

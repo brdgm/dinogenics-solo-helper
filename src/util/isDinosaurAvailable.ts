@@ -1,5 +1,5 @@
-import Dinosaur from '@/services/enum/Dinosaur';
-import Module from '@/services/enum/Module';
+import Dinosaur from '@/services/enum/Dinosaur'
+import Module from '@/services/enum/Module'
 
 /**
  * Checks if the given dinosaur is available for the given set of modules.

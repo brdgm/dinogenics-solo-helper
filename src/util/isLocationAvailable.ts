@@ -1,5 +1,5 @@
-import Location from '@/services/enum/Location';
-import Module from '@/services/enum/Module';
+import Location from '@/services/enum/Location'
+import Module from '@/services/enum/Module'
 
 /**
  * Checks if the given location is available for the given set of modules.
