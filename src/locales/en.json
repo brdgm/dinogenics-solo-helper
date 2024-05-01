@@ -75,6 +75,9 @@
   "lackOfBuildingSpace": {
     "info": "<i>Lack of Building Space</i>: In case there is no further room for the new facility, DiNO gains instead:"    
   },
+  "drawNumber": {
+    "title": "Get Number"
+  },
   "locationRulesCollapse": {
     "showRules": "Show Rules",
     "hideRules": "Hide Rules"
@@ -253,7 +256,7 @@
       "C02": "If DiNO has a scandal token and/or a damaged facility, or his opponents only have hotels, he discards a Scandal and repairs up to 1 facility. Otherwise he takes a scandal and destroys the building with the most end game VPs.",
       "C03": "DiNO is last in bid order and will always bid actual DiNO value (without paying) and doesn’t take a scandal.",
       "C04": "DiNO draws 2 eDNA-cards.",
-      "C05": "Draw the next action card and count empty spaces starting from the upper left corner depending on the Advanced Selection Number. That’s where the token is placed.",
+      "C05": "Get a number and count empty spaces starting from the upper left corner depending on the Advanced Selection Number. That’s where the token is placed.",
       "corruptedTRex": {
         "title": "Corrupted T-Rex Variant Clarifications",
         "intro": "If the Corrupted T-Rex news card triggered, DiNO will adjust his actions:",
@@ -266,7 +269,7 @@
       "title": "Manipulation Cards",
       "benefitsPackage": {
         "title": "Benefits Package",
-        "description": "DiNO draws cards from its deck to determine which Specialists are aquired. Stop once it has reached the cost of 3 or no more cards are available."
+        "description": "Get a number to determine which Specialists are acquired. Stop once it has reached the cost of 3 or no more cards are available."
       },
       "blackMarket": {
         "title": "Black Market",
@@ -302,7 +305,7 @@
       },
       "offshoreContractors": {
         "title": "Offshore Contractors",
-        "description": "Determine the stack with the next Action Card and DiNO builds the most expensive building in this stack. Redraw if a 5 or 6 is mentioned."
+        "description": "Determine the stack by getting a number and DiNO builds the most expensive building in this stack. Redraw if a 5 or 6 is shown."
       },
       "renovation": {
         "title": "Renovation",

@@ -1,6 +1,6 @@
 <template>
   <span v-html="t('lackOfBuildingSpace.info')"></span><br/>
-  <DetermineBonusCardBenefit :bot="bot" :navigationState="navigationState"/>
+  <DetermineBonusCardBenefit class="mt-1" :bot="bot" :navigationState="navigationState"/>
 </template>
 
 <script lang="ts">

@@ -6,6 +6,9 @@
         <li v-for="card of cards" :key="card">
           <b>{{card}}: </b>
           <span v-html="t(`rules.breakingNews.${card}`)"></span>
+          <div v-if="card == 'C05'">
+            <DrawNumber :navigationState="navigationState"/>
+          </div>
         </li>
       </ul>
       <h5 v-html="t('rules.breakingNews.corruptedTRex.title')"></h5>
@@ -25,16 +28,25 @@ import { useI18n } from 'vue-i18n'
 import ModalDialog from '@brdgm/brdgm-commons/src/components/structure/ModalDialog.vue'
 import { useStateStore } from '@/store/state'
 import Module from '@/services/enum/Module'
+import DrawNumber from './DrawNumber.vue'
+import NavigationState from '@/util/NavigationState'
 
 export default defineComponent({
   name: 'BreakingNewsModal',
   components: {
-    ModalDialog
+    ModalDialog,
+    DrawNumber
   },
   setup() {
     const { t } = useI18n()
     const state = useStateStore()
     return { t, state }
+  },
+  props: {
+    navigationState: {
+      type: NavigationState,
+      required: true
+    }
   },
   computed: {
     hasControlledChaosExpansion() : boolean {

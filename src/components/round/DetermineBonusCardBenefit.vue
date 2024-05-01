@@ -1,5 +1,5 @@
 <template>
-  <button v-if="!bonusDetermined" class="btn btn-secondary btn-sm mt-1" @click="determineBonus()">{{t('determineBonusCardBenefit.determineBonus')}}</button>
+  <button v-if="!bonusDetermined" class="btn btn-secondary btn-sm" @click="determineBonus()">{{t('determineBonusCardBenefit.determineBonus')}}</button>
   <span v-else class="fw-bold" v-html="t(`bonusCardBenefit.${bonusCardBenefit}`, {difficultyLevel})"></span>
 </template>
 
