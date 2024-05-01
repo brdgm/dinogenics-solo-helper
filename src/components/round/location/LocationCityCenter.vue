@@ -14,8 +14,9 @@
             <button class="btn btn-secondary btn-sm ms-2" data-bs-toggle="modal" href="#facilitiesHabitatsModal">{{t('rules.facilitiesHabitats.title')}}</button>
           </div>
           <div v-else-if="noFacility" class="facility-result" v-html="t('location.city-center.noFacility')"></div>
-          <button v-else class="btn btn-primary btn-sm mt-1" @click="determineFacility()">{{t('location.city-center.determineFacility')}}</button>          
+          <button v-else class="btn btn-primary btn-sm mt-1" @click="determineFacility()">{{t('location.city-center.determineFacility')}}</button>
        </li>
+       <li><LackOfBuildingSpace :bot="bot" :navigationState="navigationState"/></li>
       </ol>
     </li>
     <li v-html="t('location.city-center.buyMarket')"></li>
@@ -28,9 +29,13 @@ import { useI18n } from 'vue-i18n'
 import NavigationState from '@/util/NavigationState'
 import Bot from '@/services/Bot'
 import Location from '@/services/enum/Location'
+import LackOfBuildingSpace from '../LackOfBuildingSpace.vue'
 
 export default defineComponent({
   name: 'LocationCityCenter',
+  components: {
+    LackOfBuildingSpace
+  },
   setup() {
     const { t } = useI18n()
     return { t }

@@ -19,7 +19,6 @@ import FooterButtons from '@/components/structure/FooterButtons.vue'
 import DifficultyLevel from '@/components/setup/DifficultyLevel.vue'
 import ModuleSetup from '@/components/setup/ModuleSetup.vue'
 import PlayersSetup from '@/components/setup/PlayersSetup.vue'
-import { RouterLink } from 'vue-router'
 
 export default defineComponent({
   name: 'SetupGame',
@@ -27,8 +26,7 @@ export default defineComponent({
     FooterButtons,
     PlayersSetup,
     DifficultyLevel,
-    ModuleSetup,
-    RouterLink
+    ModuleSetup
   },
   setup() {
     const { t } = useI18n()

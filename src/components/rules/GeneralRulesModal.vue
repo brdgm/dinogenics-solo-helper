@@ -9,9 +9,11 @@
         <li v-html="t('rules.general.noHandLimit')"></li>
         <li v-html="t('rules.general.collectFences')"></li>
         <li v-html="t('rules.general.upkeepPhase')"></li>
+        <li v-html="t('rules.general.notEnoughGoats')"></li>
       </ul>
       <h5 v-html="t('rules.general.feedingPriority.title')"></h5>
       <ol>
+        <li v-html="t('rules.general.feedingPriority.fedCompletely')"></li>
         <li v-html="t('rules.general.feedingPriority.vp')"></li>
         <li v-html="t('rules.general.feedingPriority.reputation')"></li>
       </ol>
@@ -32,18 +34,7 @@
       <ol>
         <li v-html="t('rules.general.rampageChoice.affectedDino.lowestSeasonalVP')"></li>
         <li v-html="t('rules.general.rampageChoice.affectedDino.lowestReputation')"></li>
-        <li>
-          <span v-html="t('rules.general.rampageChoice.affectedDino.drawCards')"></span>
-          <div>
-            <button class="btn btn-secondary btn-sm me-1 mt-1 d-inline-flex align-items-center" v-for="bot of bots" :key="bot.corporation" @click="getDinoHints(bot)">
-              {{t('rules.general.rampageChoice.affectedDino.getDinoHints')}}
-              <AppIcon type="corporation" :name="bot.corporation" class="corporation"/>
-            </button>
-          </div>
-          <ul class="mt-1" v-if="dinosaurs">
-            <li v-for="dinosaur of dinosaurs" :key="dinosaur" class="dinosaur">{{dinosaur}}</li>
-          </ul>
-        </li>
+        <li v-html="t('rules.general.rampageChoice.affectedDino.speciesSelection')"></li>
       </ol>
       <p v-html="t('rules.general.rampageChoice.parkStructure.intro')"></p>
       <ol>
@@ -54,6 +45,16 @@
         <li v-html="t('rules.general.rampageChoice.parkStructure.occupiedHotels')"></li>
       </ol>
       <p v-html="t('rules.general.rampageChoice.parkStructure.prioritize')"></p>
+      <h5 v-html="t('rules.general.speciesSelection.title')"></h5>
+      <div>
+        <button class="btn btn-secondary btn-sm me-1 mt-1 d-inline-flex align-items-center" v-for="bot of bots" :key="bot.corporation" @click="getDinoHints(bot)">
+          {{t('rules.general.speciesSelection.getDinoHints')}}
+          <AppIcon type="corporation" :name="bot.corporation" class="corporation"/>
+        </button>
+        <ul class="mt-1 speciesSelectionResult">
+          <li v-for="dinosaur of dinosaurs" :key="dinosaur" class="dinosaur">{{dinosaur}}</li>
+        </ul>
+      </div>
     </template>
   </ModalDialog>
 </template>
@@ -61,7 +62,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
-import ModalDialog from 'brdgm-commons/src/components/structure/ModalDialog.vue'
+import ModalDialog from '@brdgm/brdgm-commons/src/components/structure/ModalDialog.vue'
 import NavigationState from '@/util/NavigationState'
 import Bot from '@/services/Bot'
 import AppIcon from '../structure/AppIcon.vue'
@@ -113,5 +114,8 @@ export default defineComponent({
 }
 .dinosaur {
   text-transform: capitalize;
+}
+.speciesSelectionResult {
+  min-height: 3rem;
 }
 </style>

@@ -7,6 +7,9 @@
       <li v-html="t('location.site-common.newStack')"></li>
     </ul>
   </LocationRulesCollapse>
+  <ul>
+    <li v-html="t('location.site-d.drawEDNA')"></li>
+  </ul>
 </template>
 
 <script lang="ts">
