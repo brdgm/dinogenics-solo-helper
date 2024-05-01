@@ -69,7 +69,8 @@
     "back": "Back"
   },
   "lackOfBuildingSpace": {
-    "info": "<i>Lack of Building Space</i>: In case there is no further room for the new facility, DiNO gains instead:"
+    "info": "<i>Lack of Building Space</i>: In case there is no further room for the new facility, DiNO gains instead:",
+    "determineBonus": "Determine Bonus"
   },
   "locationRulesCollapse": {
     "showRules": "Show Rules",
@@ -536,7 +537,7 @@
     "gain-edna-card": "1 eDNA card",
     "gain-vp": "{difficultyLevel} VP",
     "gain-credits": "{difficultyLevel} credits",
-    "gain-mutant": "If DiNO has a Mutant and can provide a valid habitat for another, he gains another mutant",
+    "gain-mutant": "If DiNO has a Mutant and can provide a valid habitat for another, he gains another mutant.",
     "gain-refined-dna-token": "1 refined DNA token"
   },
   "notfound": {

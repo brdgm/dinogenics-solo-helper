@@ -16,7 +16,7 @@
           <div v-else-if="noFacility" class="facility-result" v-html="t('location.city-center.noFacility')"></div>
           <button v-else class="btn btn-primary btn-sm mt-1" @click="determineFacility()">{{t('location.city-center.determineFacility')}}</button>
        </li>
-       <li v-if="bonusCardBenefit"><LackOfBuildingSpace :bonusCardBenefit="bonusCardBenefit" :navigation-state="navigationState"/></li>
+       <li><LackOfBuildingSpace :bot="bot" :navigationState="navigationState"/></li>
       </ol>
     </li>
     <li v-html="t('location.city-center.buyMarket')"></li>
@@ -29,8 +29,6 @@ import { useI18n } from 'vue-i18n'
 import NavigationState from '@/util/NavigationState'
 import Bot from '@/services/Bot'
 import Location from '@/services/enum/Location'
-import BonusCardBenefit from '@/services/enum/BonusCardBenefit'
-import getBonusCardBenefit from '@/util/getBonusCardBenefit'
 import LackOfBuildingSpace from '../LackOfBuildingSpace.vue'
 
 export default defineComponent({
@@ -60,15 +58,6 @@ export default defineComponent({
     return {
       facilityNumber: undefined as number|undefined,
       noFacility: false
-    }
-  },
-  computed: {
-    bonusCardBenefit() : BonusCardBenefit|undefined {
-      const currentCard = this.bot.cardDeck.currentCard
-      if (currentCard) {
-        return getBonusCardBenefit(currentCard, this.navigationState.difficultyLevel)
-      }
-      return undefined
     }
   },
   methods: {
