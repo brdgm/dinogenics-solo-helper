@@ -393,9 +393,9 @@
         "dreadnoughtus": "Awe-Inspiring: Reputation is equal to the current season number. Requires at least two adjacent open spaces for a valid habitat and can never be penned.",
         "pachycephalosaurus": "Destructive Entertainment: At start of upkeep, if its habitat borders another species’ habitat (except open space) resolve a rampage check and gain 3VP.",
         "quetzalcoatlus": "???",
-        "compsognathus": "???",
-        "carnotaurus": "???",
-        "dunkleosteus": "???<br/>DiNO spends 1 or 2 spare fences if available and not required for the rightmost complete DNA set.",
+        "compsognathus": "Swarm: Discard 0/1/2 goats during the feeding phase to add 0/1/2 dino tiles onto the Swarm stack (6 max). A Swarm is a single dinosaur whose VP = dino tiles in the stack.",
+        "carnotaurus": "Swift Hunter: Gain 2 VP when you place an herbivore or omnivore into your park.",
+        "dunkleosteus": "Teeth Grinding: During the feeding phase, you may destroy 1 of your fences to gain 2 VP or 2 of your fences to gain 4 VP.<br/>DiNO spends 1 or 2 spare fences if available and not required for the rightmost complete DNA set.",
         "dilophosaurus": "???"
       }
     }
