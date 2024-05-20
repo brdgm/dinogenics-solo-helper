@@ -9,7 +9,7 @@
         </div>
         <ul v-else>
           <li v-if="action1OpenOceanRoll" v-html="t('location.intelligen-designs-hq.action1.openOceanRoll')"></li>
-          <template v-if="action1HireSpecialistNumber">
+          <template v-else-if="action1HireSpecialistNumber">
             <li v-html="t('location.intelligen-designs-hq.action1.hireSpecialist', {number:action1HireSpecialistNumber})"></li>
             <li>
               <span v-html="t('location.intelligen-designs-hq.action1.specialistNotAvailable')"></span><br/>
@@ -19,6 +19,7 @@
           <li v-else>
             <span v-html="t('location.intelligen-designs-hq.action1.gainBonus')"></span><span>&nbsp;</span>
             <span class="fw-bold" v-html="t(`bonusCardBenefit.${action1BonusCardBenefit}`, {difficultyLevel})"></span>
+            <span>.</span>
           </li>
         </ul>
       </li>

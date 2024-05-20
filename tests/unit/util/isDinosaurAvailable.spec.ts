@@ -3,7 +3,7 @@ import Module from '@/services/enum/Module'
 import isDinosaurAvailable from '@/util/isDinosaurAvailable'
 import { expect } from 'chai'
 
-describe('util/isDinosaurAvailable.spec', () => {
+describe('util/isDinosaurAvailable', () => {
   it('BRONTOSAURUS', () => {
     expect(isDinosaurAvailable(Dinosaur.BRONTOSAURUS, [])).to.true
     expect(isDinosaurAvailable(Dinosaur.BRONTOSAURUS, [Module.CONTROLLED_CHAOS])).to.true

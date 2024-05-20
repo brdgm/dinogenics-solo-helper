@@ -8,16 +8,21 @@
         <span v-html="t('roundOpenSeason.playerOrder')"></span><br/>
         <DeterminePlayerOrder :playerOrder="playerOrder" @newPlayerOrder="setNewPlayerOrder" class="ms-0 ms-md-3 mt-2" />
       </li>
-      <li v-html="t('roundOpenSeason.assignVisitors')"></li>
-      <li v-html="t('roundOpenSeason.assignBonusVisitors')"></li>
-      <li v-html="t('roundOpenSeason.receiveIncome')"></li>
-      <li>
-        <span v-html="t('roundOpenSeason.breakingNews')"></span><br/>
-        <button class="btn btn-secondary btn-sm" data-bs-toggle="modal" href="#breakingNewsModal">{{t('rules.breakingNews.title')}}</button>
-      </li>
+      <template v-if="hasValidPlayerOrder">
+        <li v-html="t('roundOpenSeason.assignVisitors')"></li>
+        <AssignVisitors :playerOrder="newPlayerOrder" :round="round" />
+        <li v-html="t('roundOpenSeason.receiveIncome')"></li>
+        <li v-if="round==4" v-html="t('roundOpenSeason.workerCount', {workerCount})"></li>
+        <li>
+          <span v-html="t('roundOpenSeason.breakingNews')"></span><br/>
+          <button class="btn btn-secondary btn-sm" data-bs-toggle="modal" href="#breakingNewsModal">{{t('rules.breakingNews.title')}}</button>
+        </li>
+      </template>
     </template>
-    <li v-html="t('roundOpenSeason.drawFacilityTiles')"></li>
-    <li v-if="hasControlledChaos" v-html="t('roundOpenSeason.drawSpecialists')"></li>
+    <template v-if="round == 1 || hasValidPlayerOrder">
+      <li v-html="t('roundOpenSeason.drawFacilityTiles')"></li>
+      <li v-if="hasControlledChaos" v-html="t('roundOpenSeason.drawSpecialists')"></li>
+    </template>
   </ol>
 
   <button class="btn btn-primary btn-lg mt-4" @click="next()" :disabled="!hasValidPlayerOrder">
@@ -40,12 +45,15 @@ import DeterminePlayerOrder from '@/components/round/DeterminePlayerOrder.vue'
 import Corporation from '@/services/enum/Corporation'
 import SideBar from '@/components/round/SideBar.vue'
 import DebugInfo from '@/components/round/DebugInfo.vue'
+import AssignVisitors from '@/components/round/AssignVisitors.vue'
+import getWorkerCount from '@/util/getWorkerCount'
 
 export default defineComponent({
   name: 'RoundOpenSeason',
   components: {
     FooterButtons,
     DeterminePlayerOrder,
+    AssignVisitors,
     SideBar,
     DebugInfo
   },
@@ -73,6 +81,9 @@ export default defineComponent({
     },
     hasValidPlayerOrder() : boolean {
       return this.newPlayerOrder.length == this.playerOrder.length
+    },
+    workerCount() : number {
+      return getWorkerCount(this.round, this.newPlayerOrder.length)
     }
   },
   methods: {

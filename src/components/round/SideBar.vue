@@ -8,16 +8,18 @@
       <li><a data-bs-toggle="modal" href="#breakingNewsModal">{{t('rules.breakingNews.title')}}</a></li>
       <li><a data-bs-toggle="modal" href="#manipulationCardsModal">{{t('rules.manipulationCard.title')}}</a></li>
       <li v-if="hasControlledChaos"><a data-bs-toggle="modal" href="#specialistsModal">{{t('rules.specialist.title')}}</a></li>
+      <li><a data-bs-toggle="modal" href="#speciesSelectionModal">{{t('rules.speciesSelection.title')}}</a></li>
       <li><a data-bs-toggle="modal" href="#dinosaurModal">{{t('rules.dinosaur.title')}}</a></li>
     </ul>
   </div>
 
-  <GeneralRulesModal :navigationState="navigationState"/>
+  <GeneralRulesModal/>
   <DNACollectionModal/>
   <FacilitiesHabitatsModal/>
   <BreakingNewsModal :navigationState="navigationState"/>
   <ManipulationCardsModal :navigationState="navigationState"/>
   <SpecialistsModal/>
+  <SpeciesSelectionModal :navigationState="navigationState"/>
   <DinosaurModal/>
 </template>
 
@@ -31,6 +33,7 @@ import FacilitiesHabitatsModal from '../rules/FacilitiesHabitatsModal.vue'
 import BreakingNewsModal from '../rules/BreakingNewsModal.vue'
 import ManipulationCardsModal from '../rules/ManipulationCardsModal.vue'
 import SpecialistsModal from '../rules/SpecialistsModal.vue'
+import SpeciesSelectionModal from '../rules/SpeciesSelectionModal.vue'
 import DinosaurModal from '../rules/DinosaurModal.vue'
 
 export default defineComponent({
@@ -42,6 +45,7 @@ export default defineComponent({
     BreakingNewsModal,
     ManipulationCardsModal,
     SpecialistsModal,
+    SpeciesSelectionModal,
     DinosaurModal
   },
   setup() {
