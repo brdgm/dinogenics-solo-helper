@@ -19,8 +19,8 @@
   <BreakingNewsModal :navigationState="navigationState"/>
   <ManipulationCardsModal :navigationState="navigationState"/>
   <SpecialistsModal/>
-  <DinosaurModal/>
   <SpeciesSelectionModal :navigationState="navigationState"/>
+  <DinosaurModal/>
 </template>
 
 <script lang="ts">
@@ -33,8 +33,8 @@ import FacilitiesHabitatsModal from '../rules/FacilitiesHabitatsModal.vue'
 import BreakingNewsModal from '../rules/BreakingNewsModal.vue'
 import ManipulationCardsModal from '../rules/ManipulationCardsModal.vue'
 import SpecialistsModal from '../rules/SpecialistsModal.vue'
-import DinosaurModal from '../rules/DinosaurModal.vue'
 import SpeciesSelectionModal from '../rules/SpeciesSelectionModal.vue'
+import DinosaurModal from '../rules/DinosaurModal.vue'
 
 export default defineComponent({
   name: 'SideBar',
@@ -45,8 +45,8 @@ export default defineComponent({
     BreakingNewsModal,
     ManipulationCardsModal,
     SpecialistsModal,
-    DinosaurModal,
-    SpeciesSelectionModal
+    SpeciesSelectionModal,
+    DinosaurModal
   },
   setup() {
     const { t } = useI18n()
