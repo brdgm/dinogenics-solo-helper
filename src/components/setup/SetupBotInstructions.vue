@@ -1,6 +1,7 @@
 <template>
   <ul>
     <li v-html="t('setupBot.prepareGame', {totalPlayerCount})"></li>
+    <li v-html="t('setupBot.workerCount', {workerCount})"></li>
     <li v-html="t('setupBot.botPlayerPieces')"></li>
     <li v-if="hasControlledChaos" v-html="t('setupBot.botDNACardsControlledChaos')"></li>
     <li v-else v-html="t('setupBot.botDNACards')"></li>
@@ -22,6 +23,7 @@ import { useI18n } from 'vue-i18n'
 import { useStateStore } from '@/store/state'
 import Module from '@/services/enum/Module'
 import DNACollectionModal from '../rules/DNACollectionModal.vue'
+import getWorkerCount from '@/util/getWorkerCount'
 
 export default defineComponent({
   name: 'SetupBotInstructions',
@@ -39,6 +41,9 @@ export default defineComponent({
     },
     hasControlledChaos(): boolean {
       return this.state.setup.modules.includes(Module.CONTROLLED_CHAOS)
+    },
+    workerCount() {
+      return getWorkerCount(1, this.totalPlayerCount)
     }
   }
 })

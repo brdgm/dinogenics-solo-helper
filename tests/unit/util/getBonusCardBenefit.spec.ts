@@ -4,7 +4,7 @@ import DifficultyLevel from '@/services/enum/DifficultyLevel'
 import getBonusCardBenefit from '@/util/getBonusCardBenefit'
 import { expect } from 'chai'
 
-describe('util/getBonusCardBenefit.spec', () => {
+describe('util/getBonusCardBenefit', () => {
   it('card-1', () => {
     const card = Cards.get(1)
     expect(getBonusCardBenefit(card, DifficultyLevel.L1_VERY_EASY)).to.eq(BonusCardBenefit.NONE)

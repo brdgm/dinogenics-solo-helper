@@ -35,6 +35,7 @@
   "setupBot": {
     "title": "Setup DiNO",
     "prepareGame": "Prepare the game as usual for {totalPlayerCount} players.",
+    "workerCount": "Each player starts with {workerCount} workers.",
     "botPlayerPieces": "DiNO receives all player pieces of a color, the starting money, 4 fences and a Personal Island Board.",
     "botDNACards": "DiNO receives 5 DNA cards, 1 Mutant reference card, and 3 Manipulation cards",
     "botDNACardsControlledChaos": "DiNO receives 4 DNA cards, 1 eDNA card, 1 Mutant reference card, and 3 Manipulation cards.",
@@ -49,9 +50,10 @@
       "newItems": "New Player Order",
       "newItemsSelect": "Please determine the new player order."
     },
-    "assignVisitors": "Assign visitors based on player order.",
-    "assignBonusVisitors": "Assign bonus visitors.",
+    "assignVisitors": "Assign visitors:",
+    "assignVisitorCount": "{visitorCount} visitors + up to {bonusVisitorTakeCount} of {bonusVisitorCount} bonus visitors",
     "receiveIncome": "Each player receives 1 credit for each visitor in their park.",
+    "workerCount": "Each player now has {workerCount} workers.",
     "breakingNews": "Resolve the next Breaking News card, and draw a new upcoming one.",
     "drawFacilityTiles": "Draw one random tile to each of the 2nd/3rd/4th facility stacks in the City Center.",
     "drawSpecialists": "Draw two new specialists to the specialist display spaces."
