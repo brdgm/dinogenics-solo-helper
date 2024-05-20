@@ -515,7 +515,7 @@
         "openOceanRoll": "Resolve an <b>Open Ocean Roll</b> (1a) for DiNO",
         "hireSpecialist": "DiNO hires <b>Specialist {number}a</b> from the Underground Job Network without spending a manipulation card or money.",
         "specialistNotAvailable": "If no specialist is available at the given position DiNO gains:",
-        "gainBonus": "Gain bonus:"
+        "gainBonus": "Instead of resolving an Open Ocean Roll or hiring a specialist, DiNO <b>gains a bonus</b>:"
       },
       "action2": {
         "addLargeFacility": "DiNO adds a large facility to it's park:",
