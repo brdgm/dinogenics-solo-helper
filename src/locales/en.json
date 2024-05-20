@@ -171,7 +171,7 @@
           "intro": "If DiNO has to perform Rampage Checks and can choose the affected Dinosaur, the checks are performed for the Dinosaur(s) with:",
           "lowestSeasonalVP": "Lowest seasonal Victory Point value",
           "lowestReputation": "Lowest Reputation",
-          "speciesSelection": "Species Selection (see below)"
+          "speciesSelection": "<a data-bs-toggle='modal' href='#speciesSelectionModal'>Species Selection</a>"
         },
         "parkStructure": {
           "intro": "When Park Structures are destroyed due to Rampages or other effects, the priority is:",
@@ -182,11 +182,12 @@
           "occupiedHotels": "Occupied Hotels",
           "prioritize": "Commercial and Park Facilities are prioritized in ascending costs."
         }
-      },
-      "speciesSelection": {
-        "title": "Species Selection",
-        "getDinoHints": "Dinosaur hints for"
       }
+    },
+    "speciesSelection": {
+      "title": "Species Selection",
+      "intro": "Use this to get hints for DiNO’s choices of a dinosaur species. DiNO will always choose first option that applies. If none applies use the button again to get more hints.",
+      "getDinoHints": "Dinosaur hints for"
     },
     "facilitiesHabitats": {
       "title": "Facilities & Habitats",
@@ -252,7 +253,7 @@
       "33": "DiNO receives VPs for all goats without spending money.",      
       "D1": "DiNO decides not to roll an Upkeep Die.",
       "D3": "DiNO attempts the roll even if it does not have goats.",
-      "C01": "Use <i>Species Selection</i> from the <a data-bs-toggle='modal' href='#generalRulesModal'>General Rules</a> overview.",
+      "C01": "Use the <a data-bs-toggle='modal' href='#speciesSelectionModal'>Species Selection</a>.",
       "C02": "If DiNO has a scandal token and/or a damaged facility, or his opponents only have hotels, he discards a Scandal and repairs up to 1 facility. Otherwise he takes a scandal and destroys the building with the most end game VPs.",
       "C03": "DiNO is last in bid order and will always bid actual DiNO value (without paying) and doesn’t take a scandal.",
       "C04": "DiNO draws 2 eDNA-cards.",
@@ -325,7 +326,7 @@
       },
       "unleashContagion": {
         "title": "Unleash Contagion",
-        "description": "Use the <i>Species Selection</i> in the <a data-bs-toggle='modal' href='#generalRulesModal'>General Rules</a> overview to get a hint for an affected dinosaur. If possible, get hints until a dinosaur is selected who doesn’t have a reputation value of one of DiNO’s dinosaurs. Otherwise the first mentioned determines the value."
+        "description": "Use the <a data-bs-toggle='modal' href='#speciesSelectionModal'>Species Selection</a> to get a hint for an affected dinosaur. If possible, get hints until a dinosaur is selected who doesn’t have a reputation value of one of DiNO’s dinosaurs. Otherwise the first mentioned determines the value."
       },
       "whistleBlower": {
         "title": "Whistle Blower",
