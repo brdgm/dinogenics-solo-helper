@@ -12,6 +12,7 @@
         <li v-html="t('roundOpenSeason.assignVisitors')"></li>
         <AssignVisitors :playerOrder="newPlayerOrder" :round="round" />
         <li v-html="t('roundOpenSeason.receiveIncome')"></li>
+        <li v-if="round==4" v-html="t('roundOpenSeason.workerCount', {workerCount})"></li>
         <li>
           <span v-html="t('roundOpenSeason.breakingNews')"></span><br/>
           <button class="btn btn-secondary btn-sm" data-bs-toggle="modal" href="#breakingNewsModal">{{t('rules.breakingNews.title')}}</button>
@@ -45,6 +46,7 @@ import Corporation from '@/services/enum/Corporation'
 import SideBar from '@/components/round/SideBar.vue'
 import DebugInfo from '@/components/round/DebugInfo.vue'
 import AssignVisitors from '@/components/round/AssignVisitors.vue'
+import getWorkerCount from '@/util/getWorkerCount'
 
 export default defineComponent({
   name: 'RoundOpenSeason',
@@ -79,6 +81,9 @@ export default defineComponent({
     },
     hasValidPlayerOrder() : boolean {
       return this.newPlayerOrder.length == this.playerOrder.length
+    },
+    workerCount() : number {
+      return getWorkerCount(this.round, this.newPlayerOrder.length)
     }
   },
   methods: {

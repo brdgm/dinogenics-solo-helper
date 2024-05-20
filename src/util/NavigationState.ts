@@ -5,6 +5,7 @@ import { BotTurn, Round, State } from '@/store/state'
 import { RouteLocation } from 'vue-router'
 import getIntRouteParam from '@brdgm/brdgm-commons/src/util/router/getIntRouteParam'
 import DifficultyLevel from '@/services/enum/DifficultyLevel'
+import getWorkerCount from './getWorkerCount'
 
 export default class NavigationState {
 
@@ -23,12 +24,14 @@ export default class NavigationState {
   readonly bots : Bot[]
   readonly currentBot? : Bot
 
-  public constructor(route : RouteLocation, state : State) {    
+  public constructor(route : RouteLocation, state : State) {
+    const { playerCorporations, playerCount, botCount } = state.setup.playerSetup
+
     this.round = getIntRouteParam(route, 'round')
     this.turn = getIntRouteParam(route, 'turn')
     this.location = getIntRouteParam(route, 'location')
     this.outsource = getIntRouteParam(route, 'outsource')
-    this.workerCount = determineWorkerCount(this.round, state)
+    this.workerCount = getWorkerCount(this.round, playerCount + botCount)
     this.difficultyLevel = state.setup.difficultyLevel
     const roundData = state.rounds.find(item => item.round == this.round)
 
@@ -36,7 +39,6 @@ export default class NavigationState {
     this.playerOrder = determinePlayerOrder(this.round, roundData, state)
 
     // check if current player is a human player
-    const { playerCorporations, playerCount, botCount } = state.setup.playerSetup
     const playerTotalCount = playerCount + botCount
     const playerIndex = (this.turn - 1) % playerTotalCount
     this.currentCorporation = this.playerOrder[playerIndex]
@@ -63,20 +65,6 @@ export default class NavigationState {
     return !this.isPlayerTurn
   }
 
-}
-
-function determineWorkerCount(round : number, state : State) {
-  // determine starting worker count based on player count
-  let workerCount = 4
-  const { playerCount, botCount } = state.setup.playerSetup
-  if (playerCount + botCount > 3) {
-    workerCount = 3
-  }
-  // one more worker per round after round 3
-  if (round > 3) {
-    workerCount++
-  }
-  return workerCount
 }
 
 function determinePlayerOrder(round : number, roundData : Round|undefined, state : State) : Corporation[] {

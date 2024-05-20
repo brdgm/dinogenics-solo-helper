@@ -2,7 +2,7 @@
  * Get number of visitors available for each player in the given season.
  * @param round Round/Season
  * @param playerIndex Player index
- * @param playerCount Number of players
+ * @param playerCount Total number of players
  * @returns Number of visitors
  */
 export default function(round : number, playerIndex : number, playerCount : number) : number {
