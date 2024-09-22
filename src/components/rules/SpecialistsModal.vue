@@ -34,9 +34,17 @@ export default defineComponent({
         'masterArchitect',
         'securityOfficer',
         'seismologist',
-        'pilot'
+        'technician',
+        'tourGuide',
+        'allCost3'
       ]
     }
   }
 })
 </script>
+
+<style lang="scss" scoped>
+ul > li {
+  margin-top: 0.5rem;
+}
+</style>

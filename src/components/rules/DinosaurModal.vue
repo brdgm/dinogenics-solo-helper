@@ -206,7 +206,7 @@
               <td>*</td>
               <td>1</td>
               <td>1</td>
-              <td></td>
+              <td>2</td>
             </tr>
             <tr class="collapse" id="compsognathusTrait">
               <td colspan="8" v-html="t('rules.dinosaur.trait.compsognathus')" class="trait"></td>
@@ -218,7 +218,7 @@
               <td>3</td>
               <td>3</td>
               <td>2</td>
-              <td></td>
+              <td>3</td>
             </tr>
             <tr class="collapse" id="carnotaurusTrait">
               <td colspan="8" v-html="t('rules.dinosaur.trait.carnotaurus')" class="trait"></td>
@@ -317,10 +317,22 @@
                 <td>2</td>
                 <td>3</td>
                 <td>1</td>
-                <td></td>
+                <td>3</td>
               </tr>
               <tr class="collapse" id="dunkleosteusTrait">
                 <td colspan="8" v-html="t('rules.dinosaur.trait.dunkleosteus')" class="trait"></td>
+              </tr>
+              <tr>
+                <td><AppIcon type="dinosaur" name="depth-dragon" class="dino"/></td>
+                <th scope="row"><a data-bs-toggle="collapse" href="#depthDragonTrait">Depth Dragon</a></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr class="collapse" id="depthDragonTrait">
+                <td colspan="8" v-html="t('rules.dinosaur.trait.depthDragon')" class="trait"></td>
               </tr>
             </template>
           </tbody>
@@ -352,7 +364,7 @@ export default defineComponent({
     const modules = state.setup.modules
     const hasControlledChaos = modules.includes(Module.CONTROLLED_CHAOS)
     const hasDinosaurElites = modules.includes(Module.CONTROLLED_CHAOS_DINOSAUR_ELITES)
-    const hasNewArrivals = modules.includes(Module.NEW_ARRIVALS_MINI_EXPANSION)
+    const hasNewArrivals = modules.includes(Module.NEW_ARRIVALS)
     return { t, hasControlledChaos, hasDinosaurElites, hasNewArrivals }
   }
 })

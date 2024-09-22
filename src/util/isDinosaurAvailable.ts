@@ -27,7 +27,7 @@ export default function(dinosaur: Dinosaur, modules: Module[]) : boolean {
     case Dinosaur.CARNOTAURUS:
     case Dinosaur.DUNKLEOSTEUS:
     case Dinosaur.DILOPHOSAURUS:
-      return modules.includes(Module.NEW_ARRIVALS_MINI_EXPANSION)
+      return modules.includes(Module.NEW_ARRIVALS)
     default:
       return true
   }

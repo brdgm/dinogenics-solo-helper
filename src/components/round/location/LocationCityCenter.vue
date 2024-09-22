@@ -9,12 +9,12 @@
         <li v-html="t('location.city-center.facilityBuildRepairHotel')"></li>
         <li>
           <span v-html="t('location.city-center.facilityBuildRepairOtherwise')"></span><br/>
+          <button v-if="(!facilityNumber && !noFacility) || determineFacilityRepeatable" class="btn btn-primary btn-sm mt-1" @click="determineFacility()">{{t('location.city-center.determineFacility')}}</button>
           <div v-if="facilityNumber" class="facility-result d-flex align-items-center">
             <span v-html="t('location.city-center.buildFacility', {number:facilityNumber})"></span>
             <button class="btn btn-secondary btn-sm ms-2" data-bs-toggle="modal" href="#facilitiesHabitatsModal">{{t('rules.facilitiesHabitats.title')}}</button>
           </div>
           <div v-else-if="noFacility" class="facility-result" v-html="t('location.city-center.noFacility')"></div>
-          <button v-else class="btn btn-primary btn-sm mt-1" @click="determineFacility()">{{t('location.city-center.determineFacility')}}</button>
        </li>
        <li><LackOfBuildingSpace :bot="bot" :navigationState="navigationState"/></li>
       </ol>
@@ -43,7 +43,7 @@ export default defineComponent({
   props: {
     location: {
       type: String as PropType<Location>,
-      required: true
+      required: false
     },
     bot: {
       type: Bot,
@@ -52,6 +52,10 @@ export default defineComponent({
     navigationState: {
       type: NavigationState,
       required: true
+    },
+    determineFacilityRepeatable: {
+      type: Boolean,
+      required: false
     }
   },
   data() {
@@ -64,10 +68,12 @@ export default defineComponent({
     determineFacility() {
       const nextCard = this.bot.cardDeck.draw()
       if (nextCard.slot > 4) {
+        this.facilityNumber = undefined
         this.noFacility = true
       }
       else {
         this.facilityNumber = nextCard.slot
+        this.noFacility = false
       }
     }
   }
