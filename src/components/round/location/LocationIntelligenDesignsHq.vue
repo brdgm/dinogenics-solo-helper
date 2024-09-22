@@ -10,7 +10,7 @@
         </ul>
       </template>
       <li v-if="action1HireSpecialistNumber" v-html="t('location.intelligen-designs-hq.action1.hireSpecialist', {number:action1HireSpecialistNumber})"></li>
-      <li v-if="action1RemoveTrainingToken" v-html="t('location.intelligen-designs-hq.action1.removeTrainingToken', {number:action1RemoveTrainingToken})"></li>
+      <li v-if="action1RemoveTrainingToken && hasNewArrivalsExpansion" v-html="t('location.intelligen-designs-hq.action1.removeTrainingToken', {number:action1RemoveTrainingToken})"></li>
       <li v-if="action1BonusCardBenefit">
         <span v-html="t('location.intelligen-designs-hq.gainBonus')"></span><span>&nbsp;</span>
         <span class="fw-bold" v-html="t(`bonusCardBenefit.${action1BonusCardBenefit}`, {difficultyLevel})"></span>
@@ -48,6 +48,8 @@ import LackOfBuildingSpace from '../LackOfBuildingSpace.vue'
 import BonusCardBenefit from '@/services/enum/BonusCardBenefit'
 import getBonusCardBenefit from '@/util/getBonusCardBenefit'
 import DifficultyLevel from '@/services/enum/DifficultyLevel'
+import Module from '@/services/enum/Module'
+import { useStateStore } from '@/store/state'
 
 export default defineComponent({
   name: 'LocationIntelligenDesignsHq',
@@ -56,7 +58,8 @@ export default defineComponent({
   },
   setup() {
     const { t } = useI18n()
-    return { t }
+    const state = useStateStore()
+    return { t, state }
   },
   props: {
     location: {
@@ -87,6 +90,9 @@ export default defineComponent({
   computed: {
     difficultyLevel() : DifficultyLevel {
       return this.navigationState.difficultyLevel
+    },
+    hasNewArrivalsExpansion() : boolean {
+      return this.state.setup.modules.includes(Module.NEW_ARRIVALS)
     }
   },
   methods: {
