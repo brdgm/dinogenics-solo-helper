@@ -359,11 +359,11 @@
       },
       "offSiteLocation": {
         "title": "Off-site Location",
-        "description": "*** DiNO moves 1 Large Facility and 1 Regular facility, each with the highest end game VP amount to this card. Draw Action Card to determine free facility."
+        "description": "DiNO moves 1 Large Facility and 1 Regular facility, each with the highest end game VP amount to this card. Get a number to determine free facility."
       },
       "pullingTheStrings": {
         "title": "Pulling the Strings",
-        "description": "*** DiNO gains a Scandal, draws an Action Card chooses the first location mentioned on the card that is closest to being filled but has an open space."
+        "description": "DiNO gains a Scandal and chooses the first location that is closest to being filled but has an open space."
       },
       "rapidGestation": {
         "title": "Rapid Gestation",
@@ -371,7 +371,7 @@
       },
       "renovation": {
         "title": "Renovation",
-        "description": "*** Remove the most expensive unoccupied facility. If tied, choose the closest to the Visitor Center. Draw a card to choose new facility."
+        "description": "Remove the most expensive unoccupied facility. If tied, choose the closest to the Visitor Center. Get a number to choose new facility."
       },
       "researchPact": {
         "title": "Research Pact",

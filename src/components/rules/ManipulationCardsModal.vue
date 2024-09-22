@@ -9,10 +9,10 @@
           <div v-if="['blackAlleyConnections'].includes(card)">
             <DetermineBonusCardBenefit :navigationState="navigationState" :bot="bot" :multiple="true"/>
           </div>
-          <div v-if="['floodWaterCleanup','misdirection'].includes(card)">
+          <div v-if="['floodWaterCleanup','misdirection','pullingTheStrings'].includes(card)">
             <Determine4ActionLocations :navigationState="navigationState" :bot="bot"/>
           </div>
-          <div v-if="['benefitsPackage','offshoreContractors'].includes(card)">
+          <div v-if="['benefitsPackage','offshoreContractors','offSiteLocation','renovation'].includes(card)">
             <DrawNumber :navigationState="navigationState"/>
           </div>
         </li>
