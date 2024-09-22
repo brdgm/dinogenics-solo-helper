@@ -1,38 +1,40 @@
 <template>
   <div class="mb-3">
     <ol>
-      <li>
-        <span v-html="t('location.intelligen-designs-hq.action1.aquaticHabitat')"></span><br/>
-        <span v-html="t('location.intelligen-designs-hq.action1.otherwise')"></span><br/>
-        <div class="mt-2" v-if="!action1Determined">
-          <button class="btn btn-primary btn-sm" @click="determineAction1()">{{t('location.intelligen-designs-hq.action1.determineAction')}}</button>
-        </div>
-        <ul v-else>
-          <li v-if="action1OpenOceanRoll" v-html="t('location.intelligen-designs-hq.action1.openOceanRoll')"></li>
-          <template v-else-if="action1HireSpecialistNumber">
-            <li v-html="t('location.intelligen-designs-hq.action1.hireSpecialist', {number:action1HireSpecialistNumber})"></li>
-            <li>
-              <span v-html="t('location.intelligen-designs-hq.action1.specialistNotAvailable')"></span><br/>
-              <DetermineBonusCardBenefit :bot="bot" :navigationState="navigationState"/>
-            </li>
-          </template>
-          <li v-else>
-            <span v-html="t('location.intelligen-designs-hq.action1.gainBonus')"></span><span>&nbsp;</span>
-            <span class="fw-bold" v-html="t(`bonusCardBenefit.${action1BonusCardBenefit}`, {difficultyLevel})"></span>
-            <span>.</span>
-          </li>
-        </ul>
-      </li>
-      <li v-if="action2Determined">
-        <span v-html="t('location.intelligen-designs-hq.action2.addLargeFacility')"></span>
+      <template v-if="action1OpenOceanRoll">
+        <li v-html="t('location.intelligen-designs-hq.action1.openOceanRoll.title')"></li>
         <ul>
-          <li class="fw-bold" v-html="t('location.intelligen-designs-hq.action2.selectFacility', {number:action2BuildLargeFacilityNumber})"></li>
-          <li v-html="t('location.intelligen-designs-hq.action2.facilityHint')"></li>
+          <li v-html="t('location.intelligen-designs-hq.action1.openOceanRoll.aquaticHabitat')"></li>
+          <li v-html="t('location.intelligen-designs-hq.action1.openOceanRoll.rollDice')"></li>
+          <li v-html="t('location.intelligen-designs-hq.action1.openOceanRoll.creditsVP')"></li>
         </ul>
+      </template>
+      <li v-if="action1HireSpecialistNumber" v-html="t('location.intelligen-designs-hq.action1.hireSpecialist', {number:action1HireSpecialistNumber})"></li>
+      <li v-if="action1RemoveTrainingToken && hasNewArrivalsExpansion" v-html="t('location.intelligen-designs-hq.action1.removeTrainingToken', {number:action1RemoveTrainingToken})"></li>
+      <li v-if="action1BonusCardBenefit">
+        <span v-html="t('location.intelligen-designs-hq.gainBonus')"></span><span>&nbsp;</span>
+        <span class="fw-bold" v-html="t(`bonusCardBenefit.${action1BonusCardBenefit}`, {difficultyLevel})"></span>
+        <span>.</span>
+      </li>
+      <li v-if="!action1OpenOceanRoll">
+        <span v-html="t('location.intelligen-designs-hq.action2.aquaticHabitat')"></span><br/>
+        <span v-html="t('location.intelligen-designs-hq.action2.otherwise')" class="fst-italic"></span><br/>
+        <div class="mt-2" v-if="!action2Determined">
+          <button class="btn btn-primary btn-sm" @click="determineAction2()">{{t('location.intelligen-designs-hq.action2.determineAction')}}</button>
+        </div>
+        <template v-if="action2BuildLargeFacilityNumber">
+          <span v-html="t('location.intelligen-designs-hq.action2.addLargeFacility')"></span><span>&nbsp;</span>
+          <span class="fw-bold" v-html="t('location.intelligen-designs-hq.action2.selectFacility', {number:action2BuildLargeFacilityNumber})"></span>
+        </template>
+        <template v-if="action2BonusCardBenefit">
+          <span v-html="t('location.intelligen-designs-hq.gainBonus')"></span><span>&nbsp;</span>
+        <span class="fw-bold" v-html="t(`bonusCardBenefit.${action2BonusCardBenefit}`, {difficultyLevel})"></span>
+        <span>.</span>
+        </template>
       </li>
       <li><LackOfBuildingSpace :bot="bot" :navigationState="navigationState"/></li>      
     </ol>
-    <img v-if="action1Determined || action2Determined" src="@/assets/rules/intelligen-designs-hq-selection.jpg" alt="" class="rules-image"/>
+    <img v-if="action1OpenOceanRoll || action1HireSpecialistNumber || action2BuildLargeFacilityNumber" src="@/assets/rules/intelligen-designs-hq-selection.webp" alt="" class="rules-image mt-2"/>
   </div>
 </template>
 
@@ -46,22 +48,23 @@ import LackOfBuildingSpace from '../LackOfBuildingSpace.vue'
 import BonusCardBenefit from '@/services/enum/BonusCardBenefit'
 import getBonusCardBenefit from '@/util/getBonusCardBenefit'
 import DifficultyLevel from '@/services/enum/DifficultyLevel'
-import DetermineBonusCardBenefit from '../DetermineBonusCardBenefit.vue'
+import Module from '@/services/enum/Module'
+import { useStateStore } from '@/store/state'
 
 export default defineComponent({
   name: 'LocationIntelligenDesignsHq',
   components: {
-    DetermineBonusCardBenefit,
     LackOfBuildingSpace
   },
   setup() {
     const { t } = useI18n()
-    return { t }
+    const state = useStateStore()
+    return { t, state }
   },
   props: {
     location: {
       type: String as PropType<Location>,
-      required: true
+      required: false
     },
     bot: {
       type: Bot,
@@ -77,14 +80,19 @@ export default defineComponent({
       action1Determined: false,
       action1OpenOceanRoll: false,
       action1HireSpecialistNumber: undefined as number|undefined,
+      action1RemoveTrainingToken: undefined as number|undefined,
       action1BonusCardBenefit: undefined as BonusCardBenefit|undefined,
       action2Determined: false,
-      action2BuildLargeFacilityNumber: undefined as number|undefined
+      action2BuildLargeFacilityNumber: undefined as number|undefined,
+      action2BonusCardBenefit: undefined as BonusCardBenefit|undefined
     }
   },
   computed: {
     difficultyLevel() : DifficultyLevel {
       return this.navigationState.difficultyLevel
+    },
+    hasNewArrivalsExpansion() : boolean {
+      return this.state.setup.modules.includes(Module.NEW_ARRIVALS)
     }
   },
   methods: {
@@ -99,6 +107,7 @@ export default defineComponent({
       }
       else {
         const bonusCard = this.bot.cardDeck.draw()
+        this.action1RemoveTrainingToken = bonusCard.slot
         this.action1BonusCardBenefit = getBonusCardBenefit(bonusCard, this.navigationState.difficultyLevel)
       }
       this.action1Determined = true
@@ -106,19 +115,24 @@ export default defineComponent({
     determineAction2() {
       // check build large facility
       const buildingCard = this.bot.cardDeck.draw()
-      this.action2BuildLargeFacilityNumber = buildingCard.slot
+      if (buildingCard.slot == 1) {
+        this.action2BonusCardBenefit = getBonusCardBenefit(buildingCard, this.navigationState.difficultyLevel)
+      }
+      else {
+        this.action2BuildLargeFacilityNumber = buildingCard.slot
+      }
       this.action2Determined = true
     },
   },
   mounted() {
-    this.determineAction2()
+    this.determineAction1()
   }
 })
 </script>
 
 <style lang="scss" scoped>
 ol > li {
-  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 .rules-image {
   width: 100%;

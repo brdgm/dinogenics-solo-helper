@@ -2,10 +2,9 @@
   <LocationRulesCollapse :dnaCollection="true">
     <ul>
       <li v-html="t('location.site-common.locationUse')"></li>
-      <li v-html="t('location.site-common.noResources')"></li>
       <li v-html="t('location.site-common.cardAssignment')"></li>
       <li v-html="t('location.site-common.newStack')"></li>
-      <li v-html="t('location.site-b.noMarketTokens')"></li>
+      <li v-if="hasNewArrivalsExpansion" v-html="t('location.site-b.noMarketTokens')"></li>
     </ul>
   </LocationRulesCollapse>
   <ul>
@@ -25,6 +24,8 @@ import Bot from '@/services/Bot'
 import Location from '@/services/enum/Location'
 import LocationRulesCollapse from '../LocationRulesCollapse.vue'
 import DetermineBonusCardBenefit from '../DetermineBonusCardBenefit.vue'
+import Module from '@/services/enum/Module'
+import { useStateStore } from '@/store/state'
 
 export default defineComponent({
   name: 'LocationSiteB',
@@ -34,7 +35,8 @@ export default defineComponent({
   },
   setup() {
     const { t } = useI18n()
-    return { t }
+    const state = useStateStore()
+    return { t, state }
   },
   props: {
     location: {
@@ -48,6 +50,11 @@ export default defineComponent({
     navigationState: {
       type: NavigationState,
       required: true
+    }
+  },
+  computed: {
+    hasNewArrivalsExpansion() : boolean {
+      return this.state.setup.modules.includes(Module.NEW_ARRIVALS)
     }
   }
 })

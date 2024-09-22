@@ -1,12 +1,12 @@
 <template>
   <div class="mt-4" v-if="state.setup.debugMode">
     <hr/>
-    <p class="debug" v-for="bot in bots" :key="bot.corporation">
+    <div class="debug" v-for="bot in bots" :key="bot.corporation">
       <b>[{{bot.corporation}}]</b> {{getCardDeckInfo(bot)}}, level: {{navigationState.difficultyLevel}}
       <ul>
         <li v-for="card of getNextThreeCards(bot)" :key="card.id">Card {{card.id}}: {{getCardInfo(card)}}</li>
       </ul>
-    </p>
+    </div>
   </div>
 </template>
 
@@ -58,7 +58,7 @@ export default defineComponent({
     },
     getCardInfo(card : Card) : string {
       const bonus = getBonusCardBenefit(card, this.navigationState.difficultyLevel)
-      return `[${card.locations}], slot ${card.slot}, [${card.dinosaurs}], bonus: ${bonus}, advanced: ${card.ruleChange}`
+      return `[${card.locations}], slot ${card.slot}, [${card.dinosaurs}], bonus: ${bonus}`
     }
   },
   mounted() {

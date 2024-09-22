@@ -2,7 +2,6 @@
   <LocationRulesCollapse :dnaCollection="true">
     <ul>
       <li v-html="t('location.site-common.locationUse')"></li>
-      <li v-html="t('location.site-common.noResources')"></li>
       <li v-html="t('location.site-common.cardAssignment')"></li>
       <li v-html="t('location.site-common.newStack')"></li>
     </ul>

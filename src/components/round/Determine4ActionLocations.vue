@@ -1,19 +1,23 @@
 <template>
-  <button v-if="!bonusDetermined || multiple" class="btn btn-secondary btn-sm me-2" @click="determineBonus()">{{t('determineBonusCardBenefit.determineBonus')}}</button>
-  <span v-if="bonusDetermined" class="fw-bold" v-html="t(`bonusCardBenefit.${bonusCardBenefit}`, {difficultyLevel})"></span>
+  <button v-if="!locationsDetermined" class="btn btn-secondary btn-sm" @click="determineBonus()">{{t('determine4ActionLocations.determineLocations')}}</button>
+  <span v-else class="fw-bold">
+    <template v-for="(location,index) of locations" :key="location">
+      <span v-if="index > 0">, </span>
+      <span v-html="t(`location.${location}.title`)"></span>
+    </template>
+  </span>
 </template>
 
 <script lang="ts">
 import NavigationState from '@/util/NavigationState'
-import BonusCardBenefit from '@/services/enum/BonusCardBenefit'
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import DifficultyLevel from '@/services/enum/DifficultyLevel'
 import Bot from '@/services/Bot'
-import getBonusCardBenefit from '@/util/getBonusCardBenefit'
+import Location from '@/services/enum/Location'
 
 export default defineComponent({
-  name: 'DetermineBonusCardBenefit',
+  name: 'Determine4ActionLocations',
   setup() {
     const { t } = useI18n()
     return { t }
@@ -26,16 +30,12 @@ export default defineComponent({
     navigationState: {
       type: NavigationState,
       required: true
-    },
-    multiple: {
-      type: Boolean,
-      default: false
     }
   },
   data() {
     return {
-      bonusDetermined: false,
-      bonusCardBenefit: undefined as BonusCardBenefit|undefined
+      locationsDetermined: false,
+      locations: undefined as (Location[])|undefined
     }
   },
   computed: {
@@ -46,8 +46,8 @@ export default defineComponent({
   methods: {
     determineBonus() : void {
       const nextCard = this.bot.cardDeck.draw()
-      this.bonusCardBenefit = getBonusCardBenefit(nextCard, this.difficultyLevel)
-      this.bonusDetermined = true
+      this.locations = nextCard.locations
+      this.locationsDetermined = true
     }
   }
 })

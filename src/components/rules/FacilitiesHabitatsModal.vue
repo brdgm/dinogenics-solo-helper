@@ -2,7 +2,7 @@
   <ModalDialog id="facilitiesHabitatsModal" :size-xl="true" :fullscreen-lg-down="true" :scrollable="true"
       :title="t('rules.facilitiesHabitats.title')">
     <template #body>
-      <img src="@/assets/rules/facilities-habitats.jpg" alt="" class="rules-image mb-2"/>
+      <img src="@/assets/rules/facilities-habitats.webp" alt="" class="rules-image mb-2"/>
       <p v-html="t('rules.facilitiesHabitats.intro')"></p>
       <ul>
         <li v-html="t('rules.facilitiesHabitats.newDinosaurs')"></li>
@@ -39,8 +39,10 @@ export default defineComponent({
   data() {
     return {
       cards: [
+        'digSite',
         'geneGraftingLab',
-        'geneticsFacility'
+        'geneticsFacility',
+        'vipSuite'
       ]
     }
   }
