@@ -32,7 +32,7 @@
       </li>
       <li><LackOfBuildingSpace :bot="bot" :navigationState="navigationState"/></li>      
     </ol>
-    <img v-if="action1Determined || action2Determined" src="@/assets/rules/intelligen-designs-hq-selection.jpg" alt="" class="rules-image"/>
+    <img v-if="action1Determined || action2Determined" src="@/assets/rules/intelligen-designs-hq-selection.webp" alt="" class="rules-image"/>
   </div>
 </template>
 

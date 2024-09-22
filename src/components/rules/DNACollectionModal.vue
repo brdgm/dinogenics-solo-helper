@@ -3,12 +3,12 @@
       :title="t('rules.dnaCollection.title')">
     <template #body>
       <h5 v-html="t('rules.dnaCollection.arrangement.title')"></h5>
-      <img src="@/assets/rules/dna-collection-arrangement.png" alt="" class="rules-image mb-2"/>
+      <img src="@/assets/rules/dna-collection-arrangement.webp" alt="" class="rules-image mb-2"/>
       <p v-html="t('rules.dnaCollection.arrangement.setCollection')"></p>
       <p v-html="t('rules.dnaCollection.arrangement.cardOrder')"></p>
       <p v-html="t('rules.dnaCollection.arrangement.noDuplicates')"></p>
       <h6 class="fst-italic">{{t('rules.dnaCollection.arrangement.example.title')}}</h6>
-      <img src="@/assets/rules/dna-collection-arrangement-example.jpg" alt="" class="rules-image mb-2"/>
+      <img src="@/assets/rules/dna-collection-arrangement-example.webp" alt="" class="rules-image mb-2"/>
       <p class="fst-italic" v-html="t('rules.dnaCollection.arrangement.example.description')"></p>
       <h5 v-html="t('rules.dnaCollection.acquiring.title')"></h5>
       <p v-html="t('rules.dnaCollection.acquiring.intro')"></p>
