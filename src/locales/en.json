@@ -512,19 +512,23 @@
     "intelligen-designs-hq": {
       "title": "IntelliGen Designs HQ",
       "ruleSummary": "Open Ocean Roll or hire specialist, Large Facility.",
+      "gainBonus": "DiNO gains a bonus:",
       "action1": {
-        "aquaticHabitat": "Determine if DiNO has a complete set of eDNA for a size-2 aquatic species without an empty aquatic habitat. If so, DiNO immediately builds an aquatic habitat.",
-        "otherwise": "Otherwise:",
-        "determineAction": "Determine Action",
-        "openOceanRoll": "Resolve an <b>Open Ocean Roll</b> (1a) for DiNO",
-        "hireSpecialist": "DiNO hires <b>Specialist A{number}</b> from the Underground Job Network without spending a manipulation card or money.",
-        "specialistNotAvailable": "If no specialist is available at the given position DiNO gains:",
-        "gainBonus": "Instead of resolving an Open Ocean Roll or hiring a specialist, DiNO <b>gains a bonus</b>:"
+        "openOceanRoll": {
+          "title": "Resolve an <b>Open Ocean Roll</b> (A1):",
+          "aquaticHabitat": "DiNO immediately gains an Aquatic Habitat.",
+          "rollDice": "DiNO rolls two Upkeep Dice to resolve placing a Plesiosaurus.",
+          "creditsVP": "DiNO pays no Credits but will lose VP if the related symbol is rolled."
+        },
+        "hireSpecialist": "DiNO gains <b>Specialist A{number}</b> from the from the display. No money or Manipulation cards are spent.",
+        "removeTrainingToken": "Remove <b>Training Token #{number}.</b>"
       },
       "action2": {
+        "aquaticHabitat": "If DiNO has 1 or more Aquatic Species in its Preferred Stacks and no empty Aquatic Habitats, it builds an Aquatic Habitat.",
+        "otherwise": "Otherwise:",
+        "determineAction": "Determine Action",
         "addLargeFacility": "DiNO adds a large facility to it's park:",
-        "selectFacility": "Large Facility B{number}",
-        "facilityHint": "DiNO should only build Aquatic Habitats if he has none, fewer empty ones than complete DNA sets, or if he just gained a Plesiosaurus from an Open Ocean roll."
+        "selectFacility": "Large Facility B{number}"
       }
     },
     "site-common": {
