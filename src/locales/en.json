@@ -75,6 +75,9 @@
   "determineBonusCardBenefit": {
     "determineBonus": "Determine Bonus"
   },
+  "determine4ActionLocations": {
+    "determineLocations": "Determine Action Locations"
+  },
   "lackOfBuildingSpace": {
     "info": "<i>Lack of Building Space</i>: In case there is no further room for the new facility, DiNO gains instead:"    
   },
@@ -324,7 +327,7 @@
       },
       "floodWaterCleanup": {
         "title": "Flood Water Cleanup",
-        "description": "*** DiNO draws an Action Card and places fences on the first 4 action locations. DiNO then gains 4 eDNA."
+        "description": "DiNO places fences on 4 action locations. DiNO then gains 4 eDNA."
       },
       "foreignMarket": {
         "title": "Foreign Market",

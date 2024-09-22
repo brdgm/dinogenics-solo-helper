@@ -7,7 +7,10 @@
           <b><span v-html="t(`rules.manipulationCard.${card}.title`)"></span>: </b>
           <span v-html="t(`rules.manipulationCard.${card}.description`)"></span>
           <div v-if="['blackAlleyConnections'].includes(card)">
-            <DetermineBonusCardBenefit :navigationState="navigationState" :bot="navigationState.currentBot ?? navigationState.bots[0]" :multiple="true"/>
+            <DetermineBonusCardBenefit :navigationState="navigationState" :bot="bot" :multiple="true"/>
+          </div>
+          <div v-if="['floodWaterCleanup'].includes(card)">
+            <Determine4ActionLocations :navigationState="navigationState" :bot="bot"/>
           </div>
           <div v-if="['benefitsPackage','offshoreContractors'].includes(card)">
             <DrawNumber :navigationState="navigationState"/>
@@ -23,14 +26,17 @@ import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import ModalDialog from '@brdgm/brdgm-commons/src/components/structure/ModalDialog.vue'
 import NavigationState from '@/util/NavigationState'
-import DrawNumber from './DrawNumber.vue'
 import DetermineBonusCardBenefit from '../round/DetermineBonusCardBenefit.vue'
+import Determine4ActionLocations from '../round/Determine4ActionLocations.vue'
+import DrawNumber from './DrawNumber.vue'
+import Bot from '@/services/Bot'
 
 export default defineComponent({
   name: 'ManipulationCardsModal',
   components: {
     ModalDialog,
     DetermineBonusCardBenefit,
+    Determine4ActionLocations,
     DrawNumber
   },
   setup() {
@@ -41,6 +47,11 @@ export default defineComponent({
     navigationState: {
       type: NavigationState,
       required: true
+    }
+  },
+  computed: {
+    bot() : Bot {
+      return this.navigationState.currentBot ?? this.navigationState.bots[0] 
     }
   },
   data() {
