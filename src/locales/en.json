@@ -347,7 +347,7 @@
       },
       "misdirection": {
         "title": "Misdirection",
-        "description": "*** DiNO draws another action card and chooses the first valid option on the card ignoring blocked action spaces. If there are workers present in that location move them to DiNO’s next unoccupied action location (on the same card). DiNO then resolves the action of the first option chosen."
+        "description": "DiNO chooses the first location valid option ignoring blocked action spaces. If there are workers present in that location move them to DiNO’s next unoccupied action location (on the same card). DiNO then resolves the action of the first option chosen."
       },
       "nonZeroSumGame": {
         "title": "Non-Zero-Sum-Game",

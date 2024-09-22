@@ -9,7 +9,7 @@
           <div v-if="['blackAlleyConnections'].includes(card)">
             <DetermineBonusCardBenefit :navigationState="navigationState" :bot="bot" :multiple="true"/>
           </div>
-          <div v-if="['floodWaterCleanup'].includes(card)">
+          <div v-if="['floodWaterCleanup','misdirection'].includes(card)">
             <Determine4ActionLocations :navigationState="navigationState" :bot="bot"/>
           </div>
           <div v-if="['benefitsPackage','offshoreContractors'].includes(card)">
@@ -85,3 +85,9 @@ export default defineComponent({
   }
 })
 </script>
+
+<style lang="scss" scoped>
+ul > li {
+  margin-top: 0.5rem;
+}
+</style>

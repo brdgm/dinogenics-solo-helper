@@ -99,3 +99,9 @@ export default defineComponent({
   }
 })
 </script>
+
+<style lang="scss" scoped>
+ul > li {
+  margin-top: 0.5rem;
+}
+</style>
