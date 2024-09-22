@@ -143,8 +143,8 @@
     "general": {
       "title": "General Rules",
       "intro": "DiNO is treated as a human player unless otherwise mentioned and benefits from all cards and facilities as well as suffering penalties from rampage checks and Breaking News Events.",
-      "noMoney": "DiNO receives all income but never spends Credits. All expenses are considered to be covered immediately. This includes buying facilities, performing Open Ocean Rolls, Aquatic Rampage Checks, DNA market purchases or Actions spaces costs etc.",
-      "noKilling": "DiNO never voluntarily kills any of his dinosaurs (exception: genetic deconstruction-card).",
+      "noMoney": "DiNO receives all income but never spends Credits. All expenses are considered to be covered immediately. This includes buying facilities, performing Open Ocean Rolls, Aquatic Rampage Checks, DNA market purchases or Actions spaces costs.",
+      "noKilling": "DiNO never voluntarily kills any of his dinosaurs. (Exception: specific Manipulation cards, Perucetus)",
       "noHandLimit": "DiNO has no hand limit and can collect more than 10 (e)DNA cards.",
       "collectFences": "DiNO collects fences to a personal reserve next to his board. DiNO uses fences when creating new dinosaurs or replacing broken fences. Dinosaurs of the same species are placed in the same habitat, if possible. In those cases, DiNO extends the fence-habitat by using as few fences as necessary to hold the new dinosaur. Broken fences are replaced immediately if DiNO has spare ones.",
       "upkeepPhase": "During the Upkeep Phase DiNO must feed carnivores and check for rampage conditions.",
@@ -225,14 +225,14 @@
       },
       "acquiring": {
         "title": "Acquiring New DNA",
-        "intro": "Whenever DiNO receives new (e)DNA 1 of 4 outcomes will occur based on if the card matches an existing species.",
-        "matchExisting": "The newly drawn DNA card matches an existing preferred species.",
+        "intro": "Whenever DiNO receives (e)DNA 1 of 4 outcomes will occur.",
+        "matchExisting": "The DNA card matches an existing preferred species.",
         "matchExistingResult": "Result: Add the card to the existing preferred species stack.",
-        "emptyColumn": "The newly drawn DNA card does not match an existing preferred species but 1 of the 4 columns is empty.",
+        "emptyColumn": "The DNA card does not match an existing preferred species but 1 of the 4 columns is empty.",
         "emptyColumnResult": "Result: Form a new preferred species by placing the card in the empty column.",
-        "noEmptyColumn": "The newly drawn DNA card does not match an existing preferred species and there are no empty columns.",
-        "noEmptyColumnResult": "Result: Place the card in the spare DNA stack.",
-        "polymorphicDNA": "The newly drawn card is Polymorphic DNA.",
+        "noEmptyColumn": "The DNA card does not match an existing preferred species and there are no empty columns.",
+        "noEmptyColumnResult": "Result: Place the card on the bottom of the spare DNA stack.",
+        "polymorphicDNA": "The DNA card is Polymorphic DNA.",
         "polymorphicDNAResult": "Result: Place the card in the DiNO Reserve; it may be used during a future action as part of any incomplete stack.",
         "noHandLimit": "The hand limit of 10 (e)DNA cards does not apply to DiNO and it may keep any number of cards in any of its stacks of cards."
       },
@@ -421,7 +421,7 @@
       "ruleSummary": "Only if less than 2 complete DNA sets.",
       "noMarketTokens": "DiNO does not receive or use Market Tokens.",
       "gainBonus": "Gain Bonus:",
-      "drawDNA": "Draw 2 DNA cards to the DNA Market."
+      "drawDNA": "Draw 3 DNA cards; DiNO keeps the first that matches a right most preferred stack, or a card in its spare stack, or the first card drawn, in that order. Add the remaining 2 to the DNA Market."
     },
     "boneyard": {
       "title": "The Boneyard",
@@ -451,12 +451,13 @@
     "ferry": {
       "title": "The Ferry",
       "ruleSummary": "If available.",
-      "collectMoney": "DiNO collects $3."
+      "collectMoney": "DiNO collects $4."
     },
     "time-share": {
       "title": "Time Share",
       "ruleSummary": "Only if uneven number of visitors.",
-      "locationUse": "Only used if DiNO has a Hotel with an empty space and an odd number of visitors."
+      "locationUse": "Only used if DiNO has a Hotel with an empty space and an odd number of visitors.",
+      "promotionToken": "If DiNO must take a Promotion Token from a player it always chooses the player with the highest reputation, if tied, the player ahead in turn order."
     },
     "outsource": {
       "title": "Outsource",
@@ -469,7 +470,7 @@
       "ruleSummary": "Gain 3 fences | repair/hotel/gain facility | market buy/sell.",
       "actionSelection": "DiNO performs 1-3 actions:",
       "receiveFences": "DiNO receives three new fences to its reserve and may replace damaged habitats.",
-      "facilityBuildRepair": "DiNO repairs one facility or - if no facility is damaged - builds a new facility based on the following criteria:",
+      "facilityBuildRepair": "DiNO repairs one facility if one is damaged (highest cost); otherwise DiNO builds a new facility based on the following criteria:",
       "facilityBuildRepairBiodome": "If DiNO has a preferred set of Pterodactyl DNA and a Biodome is available, DiNO builds the Biodome.",
       "facilityBuildRepairHotel": "DiNO builds a Basic Hotel if he has less than two Basic Hotels.",
       "facilityBuildRepairOtherwise": "Otherwise, DiNO chooses a new facility:",
@@ -499,7 +500,7 @@
     "site-d": {
       "title": "Site D",
       "ruleSummary": "Only if less than 2 complete DNA sets.",
-      "drawEDNA": "Draw 1 eDNA card to the DNA Market."
+      "drawEDNA": "DiNO draws 3 eDNA without paying $1. DiNO keeps 2 cards that match a preferred stack, or a card in its spare stack, or the first card drawn, in that order. Add the remaining card to the DNA Market."
     },
     "refinement": {
       "title": "Refinement",
@@ -516,13 +517,13 @@
         "otherwise": "Otherwise:",
         "determineAction": "Determine Action",
         "openOceanRoll": "Resolve an <b>Open Ocean Roll</b> (1a) for DiNO",
-        "hireSpecialist": "DiNO hires <b>Specialist {number}a</b> from the Underground Job Network without spending a manipulation card or money.",
+        "hireSpecialist": "DiNO hires <b>Specialist A{number}</b> from the Underground Job Network without spending a manipulation card or money.",
         "specialistNotAvailable": "If no specialist is available at the given position DiNO gains:",
         "gainBonus": "Instead of resolving an Open Ocean Roll or hiring a specialist, DiNO <b>gains a bonus</b>:"
       },
       "action2": {
         "addLargeFacility": "DiNO adds a large facility to it's park:",
-        "selectFacility": "Large Facility {number}b",
+        "selectFacility": "Large Facility B{number}",
         "facilityHint": "DiNO should only build Aquatic Habitats if he has none, fewer empty ones than complete DNA sets, or if he just gained a Plesiosaurus from an Open Ocean roll."
       }
     },
