@@ -331,7 +331,7 @@
       },
       "foreignMarket": {
         "title": "Foreign Market",
-        "description": "*** DiNO discards the first Large Facility and the first Specialist then determines 3 Intelligen actions as normal."
+        "description": "DiNO discards the first Large Facility and the first Specialist then determines 3 Intelligen actions as normal."
       },
       "geneticDeconstruction": {
         "title": "Genetic Deconstruction",

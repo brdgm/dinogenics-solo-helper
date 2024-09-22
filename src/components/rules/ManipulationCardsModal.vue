@@ -16,7 +16,12 @@
             <DrawNumber :navigationState="navigationState"/>
           </div>
           <div v-if="['foreignMarket'].includes(card)">
-            <button class="btn btn-secondary btn-sm">Intelligen actions</button>
+            <button v-if="!showIntelligen" class="btn btn-secondary btn-sm" @click="showIntelligen=true">{{t('location.intelligen-designs-hq.title')}}</button>
+            <div v-else class="card text-bg-light mb-3">
+              <div class="card-body">
+                <LocationIntelligenDesignsHq :navigationState="navigationState" :bot="bot"/>
+              </div>
+            </div>
           </div>
           <div v-if="['strongArmTheMarket'].includes(card)">
             <button v-if="!showCityCenter" class="btn btn-secondary btn-sm" @click="showCityCenter=true">{{t('location.city-center.title')}}</button>
@@ -41,6 +46,7 @@ import DetermineBonusCardBenefit from '../round/DetermineBonusCardBenefit.vue'
 import Determine4ActionLocations from '../round/Determine4ActionLocations.vue'
 import DrawNumber from './DrawNumber.vue'
 import Bot from '@/services/Bot'
+import LocationIntelligenDesignsHq from '../round/location/LocationIntelligenDesignsHq.vue'
 import LocationCityCenter from '../round/location/LocationCityCenter.vue'
 
 export default defineComponent({
@@ -50,6 +56,7 @@ export default defineComponent({
     DetermineBonusCardBenefit,
     Determine4ActionLocations,
     DrawNumber,
+    LocationIntelligenDesignsHq,
     LocationCityCenter
   },
   setup() {

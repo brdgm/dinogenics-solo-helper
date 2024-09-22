@@ -34,7 +34,7 @@
       </li>
       <li><LackOfBuildingSpace :bot="bot" :navigationState="navigationState"/></li>      
     </ol>
-    <img v-if="action1OpenOceanRoll || action1HireSpecialistNumber || action2BuildLargeFacilityNumber" src="@/assets/rules/intelligen-designs-hq-selection.webp" alt="" class="rules-image"/>
+    <img v-if="action1OpenOceanRoll || action1HireSpecialistNumber || action2BuildLargeFacilityNumber" src="@/assets/rules/intelligen-designs-hq-selection.webp" alt="" class="rules-image mt-2"/>
   </div>
 </template>
 
@@ -61,7 +61,7 @@ export default defineComponent({
   props: {
     location: {
       type: String as PropType<Location>,
-      required: true
+      required: false
     },
     bot: {
       type: Bot,
