@@ -58,7 +58,7 @@ export default defineComponent({
     },
     getCardInfo(card : Card) : string {
       const bonus = getBonusCardBenefit(card, this.navigationState.difficultyLevel)
-      return `[${card.locations}], slot ${card.slot}, [${card.dinosaurs}], bonus: ${bonus}, advanced: ${card.ruleChange}`
+      return `[${card.locations}], slot ${card.slot}, [${card.dinosaurs}], bonus: ${bonus}`
     }
   },
   mounted() {

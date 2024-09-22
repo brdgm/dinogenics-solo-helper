@@ -532,29 +532,6 @@
       "newStack": "Refresh preferred stacks if empty."
     }
   },
-  "ruleChange": {
-    "none": "No Rule Change.",
-    "only-land-dinosaurs": "You may only create land dinosaurs.",
-    "no-large-facilities": "You may not build large facilities.",
-    "no-action-repeat": "You may not repeat actions this round.",
-    "no-uplink-action": "You may not use the Uplink Action.",
-    "no-ferry-action": "You may not use the Ferry Action.",
-    "specialists-inactive": "Specialists are not active this round.",
-    "no-boneyard-action": "You may not use the Boneyard Action.",
-    "no-market-dna-buy": "You may not buy from the DNA Market.",
-    "no-farm-action": "You may not take the Farm Action.",
-    "no-water-dinosaurs": "You may not create water dinosaurs.",
-    "no-refined-polymorphic-dna": "You may not use refined/polymorphic DNA.",
-    "no-basic-hotels": "You may not build basic hotels.",
-    "no-dinosaurs-in-other-player-parks": "You may not create dinosaurs that are in other players parks.",
-    "land-dinosaurs-habitat-one-size-larger": "Land dinos require habitats 1 size larger than normal.",
-    "no-visitors-vp": "Do not receive VP for visitors in the Upkeep Phase.",
-    "turn-order-last": "You start last in turn order.",
-    "dinosaurs-paired-before-new-species": "Your dinos must be paired before you can create a new species.",
-    "no-small-facilities": "You may not build small facilities.",
-    "no-visitors-money": "Do not receive money from visitors.",
-    "dinosaur-dna-one-more": "Dinosaur DNA requirement is +1."
-  },
   "bonusCardBenefit": {
     "gain-goat": "1 goat",
     "gain-dna-card": "1 DNA card",
