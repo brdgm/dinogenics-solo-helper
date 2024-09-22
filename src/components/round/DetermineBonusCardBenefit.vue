@@ -1,6 +1,6 @@
 <template>
-  <button v-if="!bonusDetermined" class="btn btn-secondary btn-sm" @click="determineBonus()">{{t('determineBonusCardBenefit.determineBonus')}}</button>
-  <span v-else class="fw-bold" v-html="t(`bonusCardBenefit.${bonusCardBenefit}`, {difficultyLevel})"></span>
+  <button v-if="!bonusDetermined || multiple" class="btn btn-secondary btn-sm me-2" @click="determineBonus()">{{t('determineBonusCardBenefit.determineBonus')}}</button>
+  <span v-if="bonusDetermined" class="fw-bold" v-html="t(`bonusCardBenefit.${bonusCardBenefit}`, {difficultyLevel})"></span>
 </template>
 
 <script lang="ts">
@@ -26,6 +26,10 @@ export default defineComponent({
     navigationState: {
       type: NavigationState,
       required: true
+    },
+    multiple: {
+      type: Boolean,
+      default: false
     }
   },
   data() {

@@ -6,7 +6,10 @@
         <li v-for="card of cards" :key="card">
           <b><span v-html="t(`rules.manipulationCard.${card}.title`)"></span>: </b>
           <span v-html="t(`rules.manipulationCard.${card}.description`)"></span>
-          <div v-if="card == 'benefitsPackage' || card == 'offshoreContractors'">
+          <div v-if="['blackAlleyConnections'].includes(card)">
+            <DetermineBonusCardBenefit :navigationState="navigationState" :bot="navigationState.currentBot ?? navigationState.bots[0]" :multiple="true"/>
+          </div>
+          <div v-if="['benefitsPackage','offshoreContractors'].includes(card)">
             <DrawNumber :navigationState="navigationState"/>
           </div>
         </li>
@@ -21,11 +24,13 @@ import { useI18n } from 'vue-i18n'
 import ModalDialog from '@brdgm/brdgm-commons/src/components/structure/ModalDialog.vue'
 import NavigationState from '@/util/NavigationState'
 import DrawNumber from './DrawNumber.vue'
+import DetermineBonusCardBenefit from '../round/DetermineBonusCardBenefit.vue'
 
 export default defineComponent({
   name: 'ManipulationCardsModal',
   components: {
     ModalDialog,
+    DetermineBonusCardBenefit,
     DrawNumber
   },
   setup() {

@@ -286,7 +286,7 @@
       "N3": "If tied, DiNO takes the VP.",
       "N4": "DiNO will take the first option if it could be used to create a dinosaur but not the second.",
       "N5": "DiNO gains both rewards.",
-      "N9": "DiNO gains 1 card from the Boneyard if a prefered species is present but spends nothing.",
+      "N9": "DiNO gains 1 card from the Boneyard if a preferred species is present but spends nothing.",
       "N10": "DiNO refuses.",
       "corruptedTRex": {
         "title": "Corrupted T-Rex Variant Clarifications",
@@ -300,7 +300,7 @@
       "title": "Manipulation Cards",
       "blackAlleyConnections": {
         "title": "Back Alley Connections",
-        "description": "*** DiNO draws 3 cards from its deck and receives the Bonus Card Benefit from each."
+        "description": "DiNO receives 3 times a bonus."
       },
       "benefitsPackage": {
         "title": "Benefits Package",
