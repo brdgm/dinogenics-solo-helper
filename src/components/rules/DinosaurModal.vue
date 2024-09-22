@@ -352,7 +352,7 @@ export default defineComponent({
     const modules = state.setup.modules
     const hasControlledChaos = modules.includes(Module.CONTROLLED_CHAOS)
     const hasDinosaurElites = modules.includes(Module.CONTROLLED_CHAOS_DINOSAUR_ELITES)
-    const hasNewArrivals = modules.includes(Module.NEW_ARRIVALS_MINI_EXPANSION)
+    const hasNewArrivals = modules.includes(Module.NEW_ARRIVALS)
     return { t, hasControlledChaos, hasDinosaurElites, hasNewArrivals }
   }
 })
