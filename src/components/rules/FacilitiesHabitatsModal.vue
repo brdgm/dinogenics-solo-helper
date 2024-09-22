@@ -39,8 +39,10 @@ export default defineComponent({
   data() {
     return {
       cards: [
+        'digSite',
         'geneGraftingLab',
-        'geneticsFacility'
+        'geneticsFacility',
+        'vipSuite'
       ]
     }
   }

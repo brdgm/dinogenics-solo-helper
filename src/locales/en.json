@@ -3,7 +3,8 @@
   "home": {
     "title": "DinoGenics Solo Helper",
     "play1": "Play <a href='https://boardgamegeek.com/boardgame/210296/dinogenics' target='_blank' rel='noopener'><b>DinoGenics</b></a> against a DiNO, the Solo Opponent.",
-    "play2": "DiNO can be used for any 1-4 player-game that includes Controlled Chaos and supports most modules.",
+    "play2": "You can play against up to 3 DiNOs. The application replaces the card deck and guides you trough the rules.",
+    "play3": "The expansion <i>Controlled Chaos</i> and <i>New Arrivals</i> are supported, and most of the modules.",
     "feedback": "Discussion and Feedback:"
   },
   "setup": {
@@ -201,6 +202,10 @@
       "largeCommercialFacilities": "Large Commercial Facilities are built in the column above the Visitor Center. Large Park Facilities are placed so that only half of the facility takes up a commercial space.",
       "cards": {
         "title": "Card Clarifications",
+        "digSite": {
+          "title": "Dig Site",
+          "description": "DiNO chooses DNA/eDNA based on the first incomplete preferred species stack."
+        },
         "geneGraftingLab": {
           "title": "Gene Grafting Lab",
           "description": "DiNO draws 1 additional (e)DNA without spending goats."
@@ -208,6 +213,10 @@
         "geneticsFacility": {
           "title": "Genetics Facility",
           "description": "DiNO is allowed to use his spare stack to complete sets, but prefers to use complete sets and tokens/polymorphic cards first."
+        },
+        "vipSuite": {
+          "title": "VIP Suite",
+          "description": "DiNO builds on the side with the fewest Large Facilities. If tied, build in the Commercial Sector."
         }
       }
     },
@@ -248,6 +257,9 @@
     },
     "breakingNews": {
       "title": "Breaking News",
+      "7": "DiNO discards 4 unused fences if possible; if not, damages an un-occupied facility worth the least end game points; if none, remove 4 fences from dinosaur habitats.",
+      "14": "DiNO only uses this option if at least 2 cards in the Bonyard are prefered species.",
+      "15": "DiNO keeps all manipulation cards.",
       "26": "DiNO takes two scandals.",
       "27": "Specialist that scores the most victory points.", 
       "29": "Discard 1 DNA card to the Boneyard from spare if present.",
@@ -255,11 +267,17 @@
       "33": "DiNO receives VPs for all goats without spending money.",      
       "D1": "DiNO decides not to roll an Upkeep Die.",
       "D3": "DiNO attempts the roll even if it does not have goats.",
-      "C01": "Use the <a data-bs-toggle='modal' href='#speciesSelectionModal'>Species Selection</a>.",
+      "C01": "DiNO removes a fence from a pen of the highest VP species. If tied: highest reputation.",
       "C02": "If DiNO has a scandal token and/or a damaged facility, or his opponents only have hotels, he discards a Scandal and repairs up to 1 facility. Otherwise he takes a scandal and destroys the building with the most end game VPs.",
-      "C03": "DiNO is last in bid order and will always bid actual DiNO value (without paying) and doesn’t take a scandal.",
+      "C03": "DiNO bids after the card is revealed in an amount equal to the dinosaurs seasonal VP amount and doesn’t take a scandal.",
       "C04": "DiNO draws 2 eDNA-cards.",
       "C05": "Get a number and count empty spaces starting from the upper left corner depending on the Advanced Selection Number. That’s where the token is placed.",
+      "N1": "DiNO gains 1 Promotion Token if given the option.",
+      "N3": "If tied, DiNO takes the VP.",
+      "N4": "DiNO will take the first option if it could be used to create a dinosaur but not the second.",
+      "N5": "DiNO gains both rewards.",
+      "N9": "DiNO gains 1 card from the Boneyard if a prefered species is present but spends nothing.",
+      "N10": "DiNO refuses.",
       "corruptedTRex": {
         "title": "Corrupted T-Rex Variant Clarifications",
         "intro": "If the Corrupted T-Rex news card triggered, DiNO will adjust his actions:",
@@ -270,13 +288,21 @@
     },
     "manipulationCard": {
       "title": "Manipulation Cards",
+      "blackAlleyConnections": {
+        "title": "Back Alley Connections",
+        "description": "*** DiNO draws 3 cards from its deck and receives the Bonus Card Benefit from each."
+      },
       "benefitsPackage": {
         "title": "Benefits Package",
-        "description": "Get a number to determine which Specialists are acquired. Stop once it has reached the cost of 3 or no more cards are available."
+        "description": "Get a number multiple times to determine which Specialists are acquired. Stop once it has reached the cost of 3 or no more cards are available."
       },
       "blackMarket": {
         "title": "Black Market",
-        "description": "DiNO buys all cards that would complete a preferred DNA set. If none fits, three new cards are drawn first."
+        "description": "DiNO buys all cards that would complete a preferred DNA set. If none fits, four new cards are drawn first."
+      },
+      "charitableDonation": {
+        "title": "Charitable Donation",
+        "description": "DiNO gains 5VP and 2 eDNA cards."
       },
       "controlTheNewsCycle": {
         "title": "Control the News Cycle",
@@ -286,13 +312,21 @@
         "title": "DNA Splice",
         "description": "DiNO creates a dinosaur based on its first incomplete preferred set (right to left). Discard cards first from the preferred set, then from Spare and finally from stacks left to right until DiNO has discarded cards equal to the DNA requirement of the preferred set +1. This card is not played if DiNO lacks sufficient fences."
       },
+      "floodWaterCleanup": {
+        "title": "Flood Water Cleanup",
+        "description": "*** DiNO draws an Action Card and places fences on the first 4 action locations. DiNO then gains 4 eDNA."
+      },
+      "foreignMarket": {
+        "title": "Foreign Market",
+        "description": "*** DiNO discards the first Large Facility and the first Specialist then determines 3 Intelligen actions as normal."
+      },
       "geneticDeconstruction": {
         "title": "Genetic Deconstruction",
         "description": "DiNO chooses option B if he has one spare DNA, otherwise option A."
       },
       "goatRustling": {
         "title": "Goat Rustling",
-        "description": "DiNO uses as many goats as available to collect victory points. DiNO spends the remaining goats for option B if necessary."
+        "description": "DiNO only spends goats gained from other players for points. If no goats are gained, DiNO receives 1 goat from supply. DiNO spends as many goats as needed to move into first place."
       },
       "infiltrator": {
         "title": "Infiltrator",
@@ -300,7 +334,7 @@
       },
       "misdirection": {
         "title": "Misdirection",
-        "description": "The next Action Card starting with the bottom action and going up is determining the spaces for the human’s workers."
+        "description": "*** DiNO draws another action card and chooses the first valid option on the card ignoring blocked action spaces. If there are workers present in that location move them to DiNO’s next unoccupied action location (on the same card). DiNO then resolves the action of the first option chosen."
       },
       "nonZeroSumGame": {
         "title": "Non-Zero-Sum-Game",
@@ -310,9 +344,21 @@
         "title": "Offshore Contractors",
         "description": "Determine the stack by getting a number and DiNO builds the most expensive building in this stack. Redraw if a 5 or 6 is shown."
       },
+      "offSiteLocation": {
+        "title": "Off-site Location",
+        "description": "*** DiNO moves 1 Large Facility and 1 Regular facility, each with the highest end game VP amount to this card. Draw Action Card to determine free facility."
+      },
+      "pullingTheStrings": {
+        "title": "Pulling the Strings",
+        "description": "*** DiNO gains a Scandal, draws an Action Card chooses the first location mentioned on the card that is closest to being filled but has an open space."
+      },
+      "rapidGestation": {
+        "title": "Rapid Gestation",
+        "description": "DiNO chooses the species with the highest DNA requirement with the lowest seasonal victory point amount. DiNO then chooses a card from the Boneyard only if it will complete a preferred stack."
+      },
       "renovation": {
         "title": "Renovation",
-        "description": "Remove the most expensive unoccupied facility, if tied the closest to the Visitor Center. Draw a card to choose new facility."
+        "description": "*** Remove the most expensive unoccupied facility. If tied, choose the closest to the Visitor Center. Draw a card to choose new facility."
       },
       "researchPact": {
         "title": "Research Pact",
@@ -320,11 +366,11 @@
       },
       "shareholderMeeting": {
         "title": "Shareholder Meeting",
-        "description": "DiNO scores a maximum of 5 victory points for his current money. DiNO builds two Basic Hotels if he has less than 3. Otherwise DiNO draws a DNA and eDNA card."
+        "description": "DiNO scores a maximum of 5 victory points for his current money. DiNO builds basic Hotels until he has at least 3 and gains 3 fences."
       },
       "strongArmTheMarket": {
         "title": "Strong Arm the Market",
-        "description": "Draw two buildings, place them as usual determined by the next action card and perform City Center-actions as usual. Redraw if a 5 or 6 is mentioned."
+        "description": "*** DiNO draws no new facilities then performs all three standard DiNO City Center steps. DiNO carries out step 2 once for each worker at the City Center. Redraw if a 1, 5 or 6 is mentioned."
       },
       "unleashContagion": {
         "title": "Unleash Contagion",
@@ -332,7 +378,7 @@
       },
       "whistleBlower": {
         "title": "Whistle Blower",
-        "description": "DiNO gives a card from the Spare Stack or incomplete preferred species stack, if possible. DiNO takes a preferred card if he can complete one of his DNA sets."
+        "description": "DiNO gives a card from the Spare Stack or incomplete preferred species stack, if possible. DiNO takes one preferred card if he can complete one of his DNA sets."
       }
     },
     "specialist": {
@@ -351,15 +397,23 @@
       },
       "securityOfficer": {
         "title": "Security Officer",
-        "description": "Only used to prevent DiNO deaths. No money is spent."
+        "description": "Only used to prevent DiNO deaths."
       },
       "seismologist": {
         "title": "Seismologist",
-        "description": "If DiNO has at least two cards in his Spare Stack, the bottom card is sold."
+        "description": "Exchange if a card in Spare Stack can be exchanged for a preferred species card."
       },
-      "pilot": {
-        "title": "Pilot",
-        "description": "DiNO draws another card to take 1 extra turn without paying."
+      "technician": {
+        "title": "Technician:",
+        "description": "Repair the highest cost facility when acquired and at the start of each round."
+      },
+      "tourGuide": {
+        "title": "Tour Guide",
+        "description": "Largest fenced pen."
+      },
+      "allCost3": {
+        "title": "All 3 Cost Specialists (Pilot, Biogeneticist, Market Analyst)",
+        "description": "When acquired DiNO immediately gains victory points equal to 1VP per round remaining in the game, including the current round (1-7VP), plus VP equal to double its difficulty level (2-10VP). 3 Cost Specialists have no further effect."
       }
     },
     "dinosaur": {
@@ -396,11 +450,11 @@
         "dreadnoughtus": "Awe-Inspiring: Reputation is equal to the current season number. Requires at least two adjacent open spaces for a valid habitat and can never be penned.",
         "pachycephalosaurus": "Destructive Entertainment: At start of upkeep, if its habitat borders another species’ habitat (except open space) resolve a rampage check and gain 3VP.",
         "quetzalcoatlus": "???",
-        "compsognathus": "Swarm: Discard 0/1/2 goats during the feeding phase to add 0/1/2 dinos onto the Swarm stack (6 max). A Swarm is a single dinosaur whose VP = dino tiles in the stack.",
+        "compsognathus": "Swarm: Discard 0/1/2 goats during the feeding phase to add 0/1/2 dinos onto the Swarm stack (6 max). A Swarm is a single dinosaur whose VP = dino tiles in the stack.<br/>DiNO only feeds if it has enough Goats for all other carnivores in its park for the current season and next.",
         "carnotaurus": "Swift Hunter: Gain 2 VP when you place an herbivore or omnivore into your park.",
         "dunkleosteus": "Teeth Grinding: During the feeding phase, you may destroy 1 of your fences to gain 2 VP; or 2 of your fences to gain 4 VP.<br/>DiNO spends 1 or 2 spare fences if available and not required for the rightmost complete DNA set.",
         "dilophosaurus": "???",
-        "depthDragon": "???"
+        "depthDragon": "???<br/>If DiNO has spare goats additionally to the next upkeep phase and the rightmost complete DNA set, he spends a goat and gains 1 refined DNA token."
       }
     }
   },

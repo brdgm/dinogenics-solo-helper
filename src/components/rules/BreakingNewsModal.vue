@@ -52,11 +52,17 @@ export default defineComponent({
     hasControlledChaosExpansion() : boolean {
       return this.state.setup.modules.includes(Module.CONTROLLED_CHAOS)
     },
+    hasNewArrivalsExpansion() : boolean {
+      return this.state.setup.modules.includes(Module.NEW_ARRIVALS)
+    },
     hasChaosTheoryModule() : boolean {
       return this.state.setup.modules.includes(Module.CONTROLLED_CHAOS_CHAOS_THEORY)
     },
     cards() : string[] {
       const cards = [
+        '7',
+        '14',
+        '15',
         '26',
         '27',
         '29',
@@ -76,6 +82,16 @@ export default defineComponent({
           'C03',
           'C04',
           'C05'
+        )
+      }
+      if (this.hasNewArrivalsExpansion) {
+        cards.push(
+          'N1',
+          'N3',
+          'N4',
+          'N5',
+          'N9',
+          'N10'
         )
       }
       return cards

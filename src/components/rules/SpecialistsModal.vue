@@ -34,7 +34,9 @@ export default defineComponent({
         'masterArchitect',
         'securityOfficer',
         'seismologist',
-        'pilot'
+        'technician',
+        'tourGuide',
+        'allCost3'
       ]
     }
   }

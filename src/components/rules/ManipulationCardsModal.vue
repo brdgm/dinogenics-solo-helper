@@ -41,16 +41,23 @@ export default defineComponent({
   data() {
     return {
       cards: [
+        'blackAlleyConnections',
         'benefitsPackage',
         'blackMarket',
+        'charitableDonation',
         'controlTheNewsCycle',
         'dnaSplice',
+        'floodWaterCleanup',
+        'foreignMarket',
         'geneticDeconstruction',
         'goatRustling',
         'infiltrator',
         'misdirection',
         'nonZeroSumGame',
         'offshoreContractors',
+        'offSiteLocation',
+        'pullingTheStrings',
+        'rapidGestation',
         'renovation',
         'researchPact',
         'shareholderMeeting',
