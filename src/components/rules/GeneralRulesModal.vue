@@ -45,6 +45,16 @@
         <li v-html="t('rules.general.rampageChoice.parkStructure.occupiedHotels')"></li>
       </ol>
       <p v-html="t('rules.general.rampageChoice.parkStructure.prioritize')"></p>
+      <template v-if="is3PlusPlayer">
+        <h5 v-html="t('rules.general.3plusPlayer.title')"></h5>
+        <p v-html="t('rules.general.3plusPlayer.priority.intro')"></p>
+        <ol>
+          <li v-html="t('rules.general.3plusPlayer.priority.mostVP')"></li>
+          <li v-html="t('rules.general.3plusPlayer.priority.highestReputation')"></li>
+          <li v-html="t('rules.general.3plusPlayer.priority.mostFacilities')"></li>
+        </ol>
+        <p v-html="t('rules.general.3plusPlayer.targetOtherDino')"></p>
+      </template>
     </template>
   </ModalDialog>
 </template>
@@ -53,6 +63,7 @@
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import ModalDialog from '@brdgm/brdgm-commons/src/components/structure/ModalDialog.vue'
+import { useStateStore } from '@/store/state'
 
 export default defineComponent({
   name: 'GeneralRulesModal',
@@ -61,7 +72,14 @@ export default defineComponent({
   },
   setup() {
     const { t } = useI18n()
-    return { t }
+    const state = useStateStore()
+    return { t, state }
+  },
+  computed: {
+    is3PlusPlayer() : boolean {
+      const { playerCount, botCount } = this.state.setup.playerSetup
+      return (playerCount + botCount) >= 3
+    }
   }
 })
 </script>

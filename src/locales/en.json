@@ -185,6 +185,16 @@
           "occupiedHotels": "Occupied Hotels",
           "prioritize": "Commercial and Park Facilities are prioritized in ascending costs."
         }
+      },
+      "3plusPlayer": {
+        "title": "3+ Player Game",
+        "priority": {
+          "intro": "DiNOs have a preference for interacting with players who are currently in the lead. If they resolve a Manipulation card or Chaos Theory Event that targets a specific person, they will choose the player who:",
+          "mostVP": "Has the most VP.",
+          "highestReputation": "Has the highest reputation.",
+          "mostFacilities": "Has the most undamaged facilities."
+        },
+        "targetOtherDino": "DiNOs can target other DiNOs."
       }
     },
     "speciesSelection": {
