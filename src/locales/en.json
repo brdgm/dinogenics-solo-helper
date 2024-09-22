@@ -383,7 +383,7 @@
       },
       "strongArmTheMarket": {
         "title": "Strong Arm the Market",
-        "description": "*** DiNO draws no new facilities then performs all three standard DiNO City Center steps. DiNO carries out step 2 once for each worker at the City Center. Redraw if a 1, 5 or 6 is mentioned."
+        "description": "DiNO draws no new facilities then performs all three standard DiNO City Center steps. DiNO carries out step 2 once for each worker at the City Center. Determine facility again if #1 or no facility is displayed."
       },
       "unleashContagion": {
         "title": "Unleash Contagion",

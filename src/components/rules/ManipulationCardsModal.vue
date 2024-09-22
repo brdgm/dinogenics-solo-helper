@@ -1,5 +1,5 @@
 <template>
-  <ModalDialog id="manipulationCardsModal" :size-lg="true" :scrollable="true"
+  <ModalDialog id="manipulationCardsModal" :size-lg="true" :fullscreen-lg-down="true" :scrollable="true"
       :title="t('rules.manipulationCard.title')">
     <template #body>
       <ul>
@@ -14,6 +14,17 @@
           </div>
           <div v-if="['benefitsPackage','offshoreContractors','offSiteLocation','renovation'].includes(card)">
             <DrawNumber :navigationState="navigationState"/>
+          </div>
+          <div v-if="['foreignMarket'].includes(card)">
+            <button class="btn btn-secondary btn-sm">Intelligen actions</button>
+          </div>
+          <div v-if="['strongArmTheMarket'].includes(card)">
+            <button v-if="!showCityCenter" class="btn btn-secondary btn-sm" @click="showCityCenter=true">{{t('location.city-center.title')}}</button>
+            <div v-else class="card text-bg-light mb-3">
+              <div class="card-body">
+                <LocationCityCenter :navigationState="navigationState" :bot="bot" :determineFacilityRepeatable="true"/>
+              </div>
+            </div>
           </div>
         </li>
       </ul>
@@ -30,6 +41,7 @@ import DetermineBonusCardBenefit from '../round/DetermineBonusCardBenefit.vue'
 import Determine4ActionLocations from '../round/Determine4ActionLocations.vue'
 import DrawNumber from './DrawNumber.vue'
 import Bot from '@/services/Bot'
+import LocationCityCenter from '../round/location/LocationCityCenter.vue'
 
 export default defineComponent({
   name: 'ManipulationCardsModal',
@@ -37,7 +49,8 @@ export default defineComponent({
     ModalDialog,
     DetermineBonusCardBenefit,
     Determine4ActionLocations,
-    DrawNumber
+    DrawNumber,
+    LocationCityCenter
   },
   setup() {
     const { t } = useI18n()
@@ -80,7 +93,9 @@ export default defineComponent({
         'strongArmTheMarket',
         'unleashContagion',
         'whistleBlower'
-      ]
+      ],
+      showIntelligen: false,
+      showCityCenter: false
     }
   }
 })
