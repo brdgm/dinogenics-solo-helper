@@ -29,7 +29,8 @@ enum Dinosaur {
   CARNOTAURUS = 'carnotaurus',
   DUNKLEOSTEUS = 'dunkleosteus',
   DILOPHOSAURUS = 'dilophosaurus',
-  PERUCETUS = 'perucetus',  // found in 1.8 cards
-  BAJADASAURUS = 'bajadasaurus'  // found in 1.8 cards
+  PERUCETUS = 'perucetus',       // found in 1.8 cards
+  BAJADASAURUS = 'bajadasaurus', // found in 1.8 cards
+  DEPTH_DRAGON = 'depth-dragon'  // found in 09'24 cards
 }
 export default Dinosaur

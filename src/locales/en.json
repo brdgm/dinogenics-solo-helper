@@ -424,7 +424,7 @@
     },
     "boneyard": {
       "title": "The Boneyard",
-      "ruleSummary": "If contains card for one of the 4 preferred species.",
+      "ruleSummary": "If card for preferred species and less than 2 complete sets.",
       "locationUse": "Used if DiNO can use at least one card for one of the 4 preferred species, that is not completed yet.",
       "severalMatches": "If several exist, DiNO takes the card that matches of the rightmost stack.",
       "scandalToken": "DiNO gains a Scandal token."
@@ -437,7 +437,7 @@
     },
     "uplink": {
       "title": "The Uplink",
-      "ruleSummary": "Manipulation stack not empty.",
+      "ruleSummary": "If available and manipulation stack not empty.",
       "locationUse": "Used if DiNO’s Manipulation Card deck is not empty.",
       "playManipulation": "Draw the topmost card from DiNO’s Manipulation stack and follow the instructions.",
       "playAlternative": "DiNO will not play a manipulation card if the result would be an immediate rampage check. In those cases, put the manipulation card on the bottom of the stack and draw the next one. If DiNO has no additional manipulation cards, he instead gains 3 VP and ends his turn."
@@ -465,7 +465,7 @@
     },
     "city-center": {
       "title": "The City Center",
-      "ruleSummary": "3 fences, repair/hotel/slot, market buy/sell.",
+      "ruleSummary": "Gain 3 fences | repair/hotel/gain facility | market buy/sell.",
       "actionSelection": "DiNO performs 1-3 actions:",
       "receiveFences": "DiNO receives three new fences to its reserve and may replace damaged habitats.",
       "facilityBuildRepair": "DiNO repairs one facility or - if no facility is damaged - builds a new facility based on the following criteria:",

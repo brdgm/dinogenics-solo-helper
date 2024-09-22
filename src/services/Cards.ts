@@ -54,7 +54,7 @@ const cards : Card[] = [
   {
     id: 5,
     locations: [Location.DINOGENICS_IOM,Location.SITE_A,Location.AGENCY,Location.FERRY],
-    slot: 5,
+    slot: 3,
     dinosaurs: [Dinosaur.ICHTHYOSAUR,Dinosaur.ANKYLOSAURUS,Dinosaur.COMPSOGNATHUS],
     ruleChange: RuleChange.NO_UPLINK_ACTION,
     bonus: [
@@ -114,7 +114,7 @@ const cards : Card[] = [
     ruleChange: RuleChange.NO_FARM_ACTION,
     bonus: [
       {difficultyLevel: DifficultyLevel.L2_EASY, bonusCardBenefit: BonusCardBenefit.GAIN_FENCE },
-      {difficultyLevel: DifficultyLevel.L4_HARD, bonusCardBenefit: BonusCardBenefit.DISCARD_SCANDAL }
+      {difficultyLevel: DifficultyLevel.L5_VERY_HARD, bonusCardBenefit: BonusCardBenefit.DISCARD_SCANDAL }
     ]
   },
   {
@@ -196,7 +196,7 @@ const cards : Card[] = [
   },
   {
     id: 18,
-    locations: [Location.SITE_D,Location.INTELLIGEN_DESIGNS_HQ,Location.UPLINK,Location.TIME_SHARE],
+    locations: [Location.SITE_A,Location.INTELLIGEN_DESIGNS_HQ,Location.UPLINK,Location.TIME_SHARE],
     slot: 4,
     dinosaurs: [Dinosaur.DUNKLEOSTEUS,Dinosaur.PERUCETUS,Dinosaur.ANKYLOSAURUS],
     ruleChange: RuleChange.DINOSAURS_PAIRED_BEFORE_NEW_SPECIES,
@@ -218,13 +218,13 @@ const cards : Card[] = [
   },
   {
     id: 20,
-    locations: [Location.INTELLIGEN_DESIGNS_HQ,Location.OUTSOURCE,Location.TIME_SHARE,Location.FERRY],
+    locations: [Location.SPECIAL_ACTION,Location.FARM,Location.INTELLIGEN_DESIGNS_HQ,Location.OUTSOURCE],
     slot: 6,
     dinosaurs: [Dinosaur.MUTANT,Dinosaur.DREADNOUGHTUS,Dinosaur.TRICERATOPS],
     ruleChange: RuleChange.NO_VISITORS_MONEY,
     bonus: [
-      {difficultyLevel: DifficultyLevel.L2_EASY, bonusCardBenefit: BonusCardBenefit.GAIN_CREDITS },
-      {difficultyLevel: DifficultyLevel.L4_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_VP }
+      {difficultyLevel: DifficultyLevel.L3_NORMAL, bonusCardBenefit: BonusCardBenefit.GAIN_CREDITS },
+      {difficultyLevel: DifficultyLevel.L5_VERY_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_VP }
     ]
   },
   {
@@ -234,15 +234,15 @@ const cards : Card[] = [
     dinosaurs: [Dinosaur.GALLIMIMUS,Dinosaur.MUTANT,Dinosaur.DILOPHOSAURUS],
     ruleChange: RuleChange.DINOSAUR_DNA_ONE_MORE,
     bonus: [
-      {difficultyLevel: DifficultyLevel.L3_NORMAL, bonusCardBenefit: BonusCardBenefit.GAIN_EDNA_CARD },
+      {difficultyLevel: DifficultyLevel.L2_EASY, bonusCardBenefit: BonusCardBenefit.GAIN_EDNA_CARD },
       {difficultyLevel: DifficultyLevel.L4_HARD, bonusCardBenefit: BonusCardBenefit.GAIN_REFINED_DNA_TOKEN }
     ]
   },
   {
     id: 22,
-    locations: [Location.SPECIAL_ACTION,Location.UPLINK,Location.SITE_D,Location.CITY_CENTER],
-    slot: 6,
-    dinosaurs: [Dinosaur.DREADNOUGHTUS,Dinosaur.PACHYCEPHALOSAURUS,Dinosaur.MUTANT],
+    locations: [Location.SPECIAL_ACTION,Location.UPLINK,Location.CITY_CENTER,Location.SITE_D],
+    slot: 4,
+    dinosaurs: [Dinosaur.DREADNOUGHTUS,Dinosaur.DEPTH_DRAGON,Dinosaur.MUTANT],
     ruleChange: RuleChange.NONE,
     bonus: [
       {difficultyLevel: DifficultyLevel.L3_NORMAL, bonusCardBenefit: BonusCardBenefit.GAIN_EDNA_CARD },
