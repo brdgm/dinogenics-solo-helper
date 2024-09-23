@@ -21,7 +21,7 @@
         <div class="card-body">
           <h4 class="card-title">{{t(`location.${currentOutsourceLocation}.title`)}}</h4>
           <p class="card-subtitle mb-2">{{t(`location.${currentOutsourceLocation}.ruleSummary`)}}</p>
-          <component :is="`location-${currentOutsourceLocation}`" :location="currentOutsourceLocation" :bot="bot" :navigationState="navigationState"/>
+          <component :is="`location-${currentOutsourceLocation}`" :bot="bot" :navigationState="navigationState"/>
           <button class="btn btn-danger mt-4" @click="notPossibleOutsource()">
             {{t('turnBot.notPossible')}}
           </button>
@@ -30,7 +30,7 @@
       <p v-html="t('location.outsource.actions')"></p>
     </template>
     <template v-else>
-      <component :is="`location-${currentLocation}`" :location="currentLocation" :bot="bot" :navigationState="navigationState"/>
+      <component :is="`location-${currentLocation}`" :bot="bot" :navigationState="navigationState"/>
     </template>
 
     <button class="btn btn-success btn-lg mt-4 me-2" @click="executed()">
