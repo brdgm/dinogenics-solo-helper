@@ -3,7 +3,7 @@
   "home": {
     "title": "DinoGenics Solo Helper",
     "play1": "Play <a href='https://boardgamegeek.com/boardgame/210296/dinogenics' target='_blank' rel='noopener'><b>DinoGenics</b></a> against a DiNO, the Solo Opponent.",
-    "play2": "You can play against up to 4 DiNOs. The application replaces the card deck and guides you trough the rules.",
+    "play2": "You can play against up to 4 DiNOs. The application replaces the action card deck, manages the difficulty levels and guides you trough the DiNO rules.",
     "play3": "The expansion <i>Controlled Chaos</i> and <i>New Arrivals</i> are supported, and most of the modules.",
     "feedback": "Discussion and Feedback:"
   },
