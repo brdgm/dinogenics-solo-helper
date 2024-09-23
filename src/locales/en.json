@@ -343,7 +343,8 @@
       },
       "infiltrator": {
         "title": "Infiltrator",
-        "description": "DiNO chooses the next two actions on this (or the next) Action Card(s) that already have a human player’s worker on them."
+        "description": "DiNO chooses the next two locations that already have a human player’s worker on them.",
+        "chooseLocation": "Choose Location {number}"
       },
       "misdirection": {
         "title": "Misdirection",

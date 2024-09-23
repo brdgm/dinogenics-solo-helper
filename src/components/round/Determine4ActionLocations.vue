@@ -1,5 +1,5 @@
 <template>
-  <button v-if="!locationsDetermined" class="btn btn-secondary btn-sm" @click="determineBonus()">{{t('determine4ActionLocations.determineLocations')}}</button>
+  <button v-if="!locationsDetermined" class="btn btn-secondary btn-sm" @click="determineLocations()">{{t('determine4ActionLocations.determineLocations')}}</button>
   <span v-else class="fw-bold">
     <template v-for="(location,index) of locations" :key="location">
       <span v-if="index > 0">, </span>
@@ -12,7 +12,6 @@
 import NavigationState from '@/util/NavigationState'
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
-import DifficultyLevel from '@/services/enum/DifficultyLevel'
 import Bot from '@/services/Bot'
 import Location from '@/services/enum/Location'
 
@@ -38,13 +37,8 @@ export default defineComponent({
       locations: undefined as (Location[])|undefined
     }
   },
-  computed: {
-    difficultyLevel() : DifficultyLevel {
-      return this.navigationState.difficultyLevel
-    }
-  },
   methods: {
-    determineBonus() : void {
+    determineLocations() : void {
       const nextCard = this.bot.cardDeck.draw()
       this.locations = nextCard.locations
       this.locationsDetermined = true
