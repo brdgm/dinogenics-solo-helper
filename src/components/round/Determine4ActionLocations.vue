@@ -1,5 +1,5 @@
 <template>
-  <button v-if="!locationsDetermined" class="btn btn-secondary btn-sm" @click="determineBonus()">{{t('determine4ActionLocations.determineLocations')}}</button>
+  <button v-if="!locationsDetermined" class="btn btn-secondary btn-sm" @click="determineLocations()">{{t('determine4ActionLocations.determineLocations')}}</button>
   <span v-else class="fw-bold">
     <template v-for="(location,index) of locations" :key="location">
       <span v-if="index > 0">, </span>
@@ -44,7 +44,7 @@ export default defineComponent({
     }
   },
   methods: {
-    determineBonus() : void {
+    determineLocations() : void {
       const nextCard = this.bot.cardDeck.draw()
       this.locations = nextCard.locations
       this.locationsDetermined = true
