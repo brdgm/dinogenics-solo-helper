@@ -24,11 +24,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from 'vue'
+import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import NavigationState from '@/util/NavigationState'
 import Bot from '@/services/Bot'
-import Location from '@/services/enum/Location'
 import LackOfBuildingSpace from '../LackOfBuildingSpace.vue'
 
 export default defineComponent({
@@ -41,10 +40,6 @@ export default defineComponent({
     return { t }
   },
   props: {
-    location: {
-      type: String as PropType<Location>,
-      required: false
-    },
     bot: {
       type: Bot,
       required: true

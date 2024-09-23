@@ -23,6 +23,14 @@
               </div>
             </div>
           </div>
+          <div v-if="['infiltrator'].includes(card)">
+            <button v-if="!showInfiltratorActions" class="btn btn-secondary btn-sm" @click="showInfiltratorActions=true">{{t(`rules.manipulationCard.${card}.title`)}}</button>
+            <div v-else class="card text-bg-light mb-3">
+              <div class="card-body">
+                <ManipulationCardInfiltratorActions :navigationState="navigationState" :bot="bot"/>
+              </div>
+            </div>
+          </div>
           <div v-if="['strongArmTheMarket'].includes(card)">
             <button v-if="!showCityCenter" class="btn btn-secondary btn-sm" @click="showCityCenter=true">{{t('location.city-center.title')}}</button>
             <div v-else class="card text-bg-light mb-3">
@@ -48,6 +56,7 @@ import DrawNumber from './DrawNumber.vue'
 import Bot from '@/services/Bot'
 import LocationIntelligenDesignsHq from '../round/location/LocationIntelligenDesignsHq.vue'
 import LocationCityCenter from '../round/location/LocationCityCenter.vue'
+import ManipulationCardInfiltratorActions from '../round/ManipulationCardInfiltratorActions.vue'
 
 export default defineComponent({
   name: 'ManipulationCardsModal',
@@ -57,7 +66,8 @@ export default defineComponent({
     Determine4ActionLocations,
     DrawNumber,
     LocationIntelligenDesignsHq,
-    LocationCityCenter
+    LocationCityCenter,
+    ManipulationCardInfiltratorActions
   },
   setup() {
     const { t } = useI18n()
@@ -102,7 +112,8 @@ export default defineComponent({
         'whistleBlower'
       ],
       showIntelligen: false,
-      showCityCenter: false
+      showCityCenter: false,
+      showInfiltratorActions: false
     }
   }
 })

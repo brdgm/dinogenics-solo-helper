@@ -21,7 +21,7 @@
         <div class="card-body">
           <h4 class="card-title">{{t(`location.${currentOutsourceLocation}.title`)}}</h4>
           <p class="card-subtitle mb-2">{{t(`location.${currentOutsourceLocation}.ruleSummary`)}}</p>
-          <component :is="`location-${currentOutsourceLocation}`" :location="currentOutsourceLocation" :bot="bot" :navigationState="navigationState"/>
+          <LocationAction v-if="currentOutsourceLocation" :location="currentOutsourceLocation" :bot="bot" :navigationState="navigationState"/>
           <button class="btn btn-danger mt-4" @click="notPossibleOutsource()">
             {{t('turnBot.notPossible')}}
           </button>
@@ -30,7 +30,7 @@
       <p v-html="t('location.outsource.actions')"></p>
     </template>
     <template v-else>
-      <component :is="`location-${currentLocation}`" :location="currentLocation" :bot="bot" :navigationState="navigationState"/>
+      <LocationAction v-if="currentLocation" :location="currentLocation" :bot="bot" :navigationState="navigationState"/>
     </template>
 
     <button class="btn btn-success btn-lg mt-4 me-2" @click="executed()">
@@ -48,40 +48,14 @@ import Bot from '@/services/Bot'
 import NavigationState from '@/util/NavigationState'
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
-import LocationAgency from './location/LocationAgency.vue'
-import LocationBoneyard from './location/LocationBoneyard.vue'
-import LocationCityCenter from './location/LocationCityCenter.vue'
-import LocationDinogenicsIom from './location/LocationDinogenicsIom.vue'
-import LocationFarm from './location/LocationFarm.vue'
-import LocationFerry from './location/LocationFerry.vue'
-import LocationIntelligenDesignsHq from './location/LocationIntelligenDesignsHq.vue'
-import LocationRefinement from './location/LocationRefinement.vue'
-import LocationSiteA from './location/LocationSiteA.vue'
-import LocationSiteB from './location/LocationSiteB.vue'
-import LocationSiteD from './location/LocationSiteD.vue'
-import LocationSpecialAction from './location/LocationSpecialAction.vue'
-import LocationTimeShare from './location/LocationTimeShare.vue'
-import LocationUplink from './location/LocationUplink.vue'
 import Location from '@/services/enum/Location'
 import DifficultyLevel from '@/services/enum/DifficultyLevel'
+import LocationAction from './LocationAction.vue'
 
 export default defineComponent({
   name: 'TurnBot',
   components: {
-    LocationAgency,
-    LocationBoneyard,
-    LocationCityCenter,
-    LocationDinogenicsIom,
-    LocationFarm,
-    LocationFerry,
-    LocationIntelligenDesignsHq,
-    LocationRefinement,
-    LocationSiteA,
-    LocationSiteB,
-    LocationSiteD,
-    LocationSpecialAction,
-    LocationTimeShare,
-    LocationUplink
+    LocationAction
   },
   emits: ['next','back'],
   setup(props) {
