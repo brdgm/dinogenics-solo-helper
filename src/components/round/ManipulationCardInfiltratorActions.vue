@@ -24,7 +24,6 @@
 import NavigationState from '@/util/NavigationState'
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
-import DifficultyLevel from '@/services/enum/DifficultyLevel'
 import Bot from '@/services/Bot'
 import Location from '@/services/enum/Location'
 import LocationAction from './LocationAction.vue'
@@ -62,11 +61,6 @@ export default defineComponent({
     return {
       actionIndexes: [0, 1],
       selectedLocation: [] as (Location|undefined)[]
-    }
-  },
-  computed: {
-    difficultyLevel() : DifficultyLevel {
-      return this.navigationState.difficultyLevel
     }
   }
 })

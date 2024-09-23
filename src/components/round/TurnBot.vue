@@ -21,7 +21,7 @@
         <div class="card-body">
           <h4 class="card-title">{{t(`location.${currentOutsourceLocation}.title`)}}</h4>
           <p class="card-subtitle mb-2">{{t(`location.${currentOutsourceLocation}.ruleSummary`)}}</p>
-          <LocationAction v-if="currentLocation" :location="currentLocation" :bot="bot" :navigationState="navigationState"/>
+          <LocationAction v-if="currentOutsourceLocation" :location="currentOutsourceLocation" :bot="bot" :navigationState="navigationState"/>
           <button class="btn btn-danger mt-4" @click="notPossibleOutsource()">
             {{t('turnBot.notPossible')}}
           </button>
