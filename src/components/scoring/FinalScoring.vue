@@ -16,10 +16,10 @@
           {{t('endOfGame.resources.credits')}}
         </th>
         <td v-for="player in playerCount" :key="player">
-          <ScoringTextInput v-model="resourcesCredits[player-1]"/>
+          <NumberInput v-model="resourcesCredits[player-1]"/>
         </td>
         <td v-for="bot in botCount" :key="bot">
-          <ScoringTextInput v-if="botScoreCredits" v-model="resourcesCredits[playerCount+bot-1]"/>
+          <NumberInput v-if="botScoreCredits" v-model="resourcesCredits[playerCount+bot-1]"/>
         </td>
       </tr>
       <tr>
@@ -27,10 +27,10 @@
           {{t('endOfGame.resources.dnaCards')}}
         </th>
         <td v-for="player in playerCount" :key="player">
-          <ScoringTextInput v-model="resourcesDNACards[player-1]"/>
+          <NumberInput v-model="resourcesDNACards[player-1]"/>
         </td>
         <td v-for="bot in botCount" :key="bot">
-          <ScoringTextInput v-if="botScoreDNACards" v-model="resourcesDNACards[playerCount+bot-1]"/>
+          <NumberInput v-if="botScoreDNACards" v-model="resourcesDNACards[playerCount+bot-1]"/>
         </td>
       </tr>
       <tr v-if="botScoreExtraRemainingStuff">
@@ -39,7 +39,7 @@
         </th>
         <td v-for="player in playerCount" :key="player"></td>
         <td v-for="bot in botCount" :key="bot">
-          <ScoringTextInput v-model="resourcesRemainingStuff[playerCount+bot-1]"/>
+          <NumberInput v-model="resourcesRemainingStuff[playerCount+bot-1]"/>
         </td>
       </tr>
       <tr>
@@ -47,10 +47,10 @@
           {{t('endOfGame.resources.dinosaurSpecies')}}
         </th>
         <td v-for="player in playerCount" :key="player">
-          <ScoringTextInput v-model="dinosaurSpecies[player-1]"/>
+          <NumberInput v-model="dinosaurSpecies[player-1]"/>
         </td>
         <td v-for="bot in botCount" :key="bot">
-          <ScoringTextInput v-if="botScoreDinosaurVariety" v-model="dinosaurSpecies[playerCount+bot-1]"/>
+          <NumberInput v-if="botScoreDinosaurVariety" v-model="dinosaurSpecies[playerCount+bot-1]"/>
         </td>
       </tr>
       <tr v-if="botScoreExtraDinosaursCreated">
@@ -59,7 +59,7 @@
         </th>
         <td v-for="player in playerCount" :key="player"></td>
         <td v-for="bot in botCount" :key="bot">
-          <ScoringTextInput v-model="dinosaurCreated[playerCount+bot-1]"/>
+          <NumberInput v-model="dinosaurCreated[playerCount+bot-1]"/>
         </td>
       </tr>
       <tr>
@@ -67,10 +67,10 @@
           {{t('endOfGame.resources.scandalTokens')}}
         </th>
         <td v-for="player in playerCount" :key="player">
-          <ScoringTextInput v-model="scandalTokens[player-1]"/>
+          <NumberInput v-model="scandalTokens[player-1]"/>
         </td>
         <td v-for="bot in botCount" :key="bot">
-          <ScoringTextInput v-model="scandalTokens[playerCount+bot-1]"/>
+          <NumberInput v-model="scandalTokens[playerCount+bot-1]"/>
         </td>
       </tr>
       <tr v-if="hasControlledChaos">
@@ -103,10 +103,10 @@
           <div class="description">{{t('endOfGame.scoring.vpGameBoardDescription')}}</div>
         </th>
         <td v-for="player in playerCount" :key="player">
-          <ScoringTextInput v-model="vpGameBoard[player-1]"/>
+          <NumberInput v-model="vpGameBoard[player-1]"/>
         </td>
         <td v-for="bot in botCount" :key="bot">
-          <ScoringTextInput v-model="vpGameBoard[playerCount+bot-1]"/>
+          <NumberInput v-model="vpGameBoard[playerCount+bot-1]"/>
         </td>
       </tr>
       <tr>
@@ -115,10 +115,10 @@
           <div class="description">{{t('endOfGame.scoring.vpFacilitiesDescription')}}</div>
         </th>
         <td v-for="player in playerCount" :key="player">
-          <ScoringTextInput v-model="vpFacilities[player-1]"/>
+          <NumberInput v-model="vpFacilities[player-1]"/>
         </td>
         <td v-for="bot in botCount" :key="bot">
-          <ScoringTextInput v-if="botScoreFacilities" v-model="vpFacilities[playerCount+bot-1]"/>
+          <NumberInput v-if="botScoreFacilities" v-model="vpFacilities[playerCount+bot-1]"/>
         </td>
       </tr>
       <tr v-if="hasControlledChaos">
@@ -128,10 +128,10 @@
           <div class="description text-danger" v-if="financialAdvisorPlayerIndex != undefined">{{t('endOfGame.scoring.vpSpecialistsIgnoreFinancialAdvisor')}}</div>
         </th>
         <td v-for="player in playerCount" :key="player">
-          <ScoringTextInput v-model="vpSpecialists[player-1]"/>
+          <NumberInput v-model="vpSpecialists[player-1]"/>
         </td>
         <td v-for="bot in botCount" :key="bot">
-          <ScoringTextInput v-if="botScoreSpecialists" v-model="vpSpecialists[playerCount+bot-1]"/>
+          <NumberInput v-if="botScoreSpecialists" v-model="vpSpecialists[playerCount+bot-1]"/>
         </td>
       </tr>
       <tr>
@@ -228,13 +228,13 @@ import { useI18n } from 'vue-i18n'
 import AppIcon from '../structure/AppIcon.vue'
 import NavigationState from '@/util/NavigationState'
 import DifficultyLevel from '@/services/enum/DifficultyLevel'
-import ScoringTextInput from '@brdgm/brdgm-commons/src/components/form/ScoringTextInput.vue'
+import NumberInput from '@brdgm/brdgm-commons/src/components/form/NumberInput.vue'
 
 export default defineComponent({
   name: 'FinalScoring',
   components: {
     AppIcon,
-    ScoringTextInput
+    NumberInput
   },
   setup() {
     const { t } = useI18n()
