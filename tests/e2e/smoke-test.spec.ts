@@ -5,7 +5,7 @@ test('smoke test', async ({ page }) => {
 
   // app home
   await expect(page.locator('h1')).toHaveText('DinoGenics Solo Helper')
-  await page.getByRole('link', { name: 'Play Game' }).click();
+  await page.getByRole('link', { name: 'Play Game' }).click()
 
   // setup game
   await page.getByRole('link', { name: 'Next' }).click()
