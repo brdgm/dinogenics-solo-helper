@@ -14,7 +14,15 @@
             <span v-html="t('location.city-center.buildFacility', {number:facilityNumber})"></span>
             <button class="btn btn-secondary btn-sm ms-2" data-bs-toggle="modal" href="#facilitiesHabitatsModal">{{t('rules.facilitiesHabitats.title')}}</button>
           </div>
-          <div v-else-if="noFacility" class="facility-result" v-html="t('location.city-center.noFacility')"></div>
+          <div v-else-if="noFacility" class="facility-result">
+            <ul>
+              <li v-html="t('location.city-center.noFacility')"></li>
+              <li>
+                <span v-html="t('turnBot.bonusCardBenefit')"></span><span>&nbsp;</span>
+                <span class="fw-bold" v-html="t(`bonusCardBenefit.${bonusCardBenefit}`,{difficultyLevel})"></span>
+              </li>
+            </ul>
+          </div>
        </li>
        <li><LackOfBuildingSpace :bot="bot" :navigationState="navigationState"/></li>
       </ol>
@@ -29,6 +37,9 @@ import { useI18n } from 'vue-i18n'
 import NavigationState from '@/util/NavigationState'
 import Bot from '@/services/Bot'
 import LackOfBuildingSpace from '../LackOfBuildingSpace.vue'
+import BonusCardBenefit from '@/services/enum/BonusCardBenefit'
+import getBonusCardBenefit from '@/util/getBonusCardBenefit'
+import DifficultyLevel from '@/services/enum/DifficultyLevel'
 
 export default defineComponent({
   name: 'LocationCityCenter',
@@ -56,7 +67,13 @@ export default defineComponent({
   data() {
     return {
       facilityNumber: undefined as number|undefined,
-      noFacility: false
+      noFacility: false,
+      bonusCardBenefit: undefined as BonusCardBenefit|undefined
+    }
+  },
+  computed: {
+    difficultyLevel(): DifficultyLevel {
+      return this.navigationState.difficultyLevel
     }
   },
   methods: {
@@ -65,10 +82,12 @@ export default defineComponent({
       if (nextCard.slot > 4) {
         this.facilityNumber = undefined
         this.noFacility = true
+        this.bonusCardBenefit = getBonusCardBenefit(nextCard, this.difficultyLevel)
       }
       else {
         this.facilityNumber = nextCard.slot
         this.noFacility = false
+        this.bonusCardBenefit = undefined
       }
     }
   }
