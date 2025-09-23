@@ -7,6 +7,7 @@
       <span v-html="t('roundUpkeepPhase.feedCarnivores')"></span>
       <ul>
         <li v-html="t('roundUpkeepPhase.spawnMutant')"></li>
+        <li v-if="hasNewArrivalsExpansion" v-html="t('roundUpkeepPhase.compsognathusSwarm')"></li>
       </ul>
     </li>
     <li v-html="t('roundUpkeepPhase.checkRampage')"></li>
@@ -37,6 +38,7 @@ import { useRoute } from 'vue-router'
 import NavigationState from '@/util/NavigationState'
 import SideBar from '@/components/round/SideBar.vue'
 import DebugInfo from '@/components/round/DebugInfo.vue'
+import Module from '@/services/enum/Module'
 
 export default defineComponent({
   name: 'RoundUpkeepPhase',
@@ -59,6 +61,9 @@ export default defineComponent({
     },
     lastRound() : boolean {
       return this.round == 7
+    },
+    hasNewArrivalsExpansion() : boolean {
+      return this.state.setup.modules.includes(Module.NEW_ARRIVALS)
     }
   },
   methods: {

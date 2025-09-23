@@ -92,6 +92,7 @@
     "title": "Upkeep Phase",
     "feedCarnivores": "Feed all carnivores (must feed carnivores as much as possible).",
     "spawnMutant": "DiNO will create an additional mutant if it has already a mutant and has enough spare fences and additional goats for all carnivores and the rightmost (complete) preferred DNA set.",
+    "compsognathusSwarm": "Compsognathus: DiNO only feeds if it has enough Goats for all other carnivores in its park for the current season and next.",
     "checkRampage": "Check for rampage, and roll if necessary.",
     "gainVisitorVPs": "Gain 3 VPs for every two visitors leaving the park alive.",
     "gainDinosaurFacilityVPs": "Gain Victory Points from dinosaurs and facilities.",
