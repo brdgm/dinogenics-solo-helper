@@ -32,7 +32,7 @@
             <td><DinosaurType/></td>
             <td>5</td>
             <td>2</td>
-            <td>0</td>
+            <td>1</td>
             <td>4</td>
           </tr>
           <tr class="collapse" id="brontosaurusTrait">
@@ -51,8 +51,6 @@
             <tr class="collapse" id="carnotaurusTrait">
               <td colspan="8" v-html="t('rules.dinosaur.trait.carnotaurus')" class="trait"></td>
             </tr>
-          </template>
-          <template v-if="hasNewArrivals">
             <tr>
               <td><AppIcon type="dinosaur" name="compsognathus" class="dino"/></td>
               <th scope="row"><a data-bs-toggle="collapse" href="#compsognathusTrait">Compsognathus</a></th>
@@ -195,11 +193,11 @@
               <tr>
                 <td><AppIcon type="dinosaur" name="dilophosaurus" class="dino"/></td>
                 <th scope="row"><a data-bs-toggle="collapse" href="#dilophosaurusTrait">Dilophosaurus</a></th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td><DinosaurType :carnivore-goats="1"/></td>
+                <td>*2</td>
+                <td>*2</td>
+                <td>2</td>
+                <td>2</td>
               </tr>
               <tr class="collapse" id="dilophosaurusTrait">
                 <td colspan="8" v-html="t('rules.dinosaur.trait.dilophosaurus')" class="trait"></td>
@@ -209,7 +207,7 @@
               <td><AppIcon type="dinosaur" name="dimetrodon" class="dino"/></td>
               <th scope="row"><a data-bs-toggle="collapse" href="#dimetrodonTrait">Dimetrodon</a></th>
               <td><DinosaurType :carnivore-goats="1"/></td>
-              <td>1</td>
+              <td>2</td>
               <td>3</td>
               <td>1</td>
               <td>2</td>
@@ -223,7 +221,7 @@
               <td><DinosaurType/></td>
               <td>5</td>
               <td>*</td>
-              <td>0</td>
+              <td>2</td>
               <td>4</td>
             </tr>
             <tr class="collapse" id="dreadnoughtusTrait">
@@ -234,8 +232,8 @@
               <th scope="row"><a data-bs-toggle="collapse" href="#pachycephalosaurusTrait">Pachycephalosaurus</a></th>
               <td><DinosaurType/></td>
               <td>2</td>
+              <td>3</td>
               <td>2</td>
-              <td>1</td>
               <td>2</td>
             </tr>
             <tr class="collapse" id="pachycephalosaurusTrait">
@@ -257,11 +255,11 @@
               <tr>
                 <td><AppIcon type="dinosaur" name="quetzalcoatlus" class="dino"/></td>
                 <th scope="row"><a data-bs-toggle="collapse" href="#quetzalcoatlusTrait">Quetzalcoatlus</a></th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td><DinosaurType :carnivore-goats="2"/></td>
+                <td>1</td>
+                <td>4</td>
+                <td>1</td>
+                <td>2</td>
               </tr>
               <tr class="collapse" id="quetzalcoatlusTrait">
                 <td colspan="8" v-html="t('rules.dinosaur.trait.quetzalcoatlus')" class="trait"></td>
@@ -371,11 +369,11 @@
               <tr>
                 <td><AppIcon type="dinosaur" name="depth-dragon" class="dino"/></td>
                 <th scope="row"><a data-bs-toggle="collapse" href="#depthDragonTrait">Depth Dragon</a></th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td><DinosaurType :carnivore-goats="2"/></td>
+                <td>4</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
               </tr>
               <tr class="collapse" id="depthDragonTrait">
                 <td colspan="8" v-html="t('rules.dinosaur.trait.depthDragon')" class="trait"></td>
@@ -383,11 +381,11 @@
               <tr>
                 <td><AppIcon type="dinosaur" name="perucetus" class="dino"/></td>
                 <th scope="row"><a data-bs-toggle="collapse" href="#perucetusTrait">Perucetus</a></th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td><DinosaurType/></td>
+                <td>1</td>
+                <td>3</td>
+                <td>2</td>
+                <td>2</td>
               </tr>
               <tr class="collapse" id="perucetusTrait">
                 <td colspan="8" v-html="t('rules.dinosaur.trait.perucetus')" class="trait"></td>
