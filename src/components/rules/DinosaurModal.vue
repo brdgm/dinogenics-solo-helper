@@ -356,18 +356,18 @@
               <td colspan="8" v-html="t('rules.dinosaur.trait.spinosaurus')" class="trait"></td>
             </tr>
           </tbody>
-          <thead>
-            <tr>
-              <th scope="col" colspan="2">{{t('rules.dinosaur.aquaticDinosaurElites')}}</th>
-              <th scope="col">{{t('rules.dinosaur.type')}}</th>
-              <th scope="col">{{t('rules.dinosaur.vp')}}</th>
-              <th scope="col">{{t('rules.dinosaur.reputation')}}</th>
-              <th scope="col">{{t('rules.dinosaur.aquaticSpaces')}}</th>
-              <th scope="col">{{t('rules.dinosaur.dnaRequirement')}}</th>
-            </tr>
-          </thead>
-          <tbody>
-            <template v-if="hasNewArrivals">
+          <template v-if="hasDinosaurElites && hasNewArrivals">
+            <thead>
+              <tr>
+                <th scope="col" colspan="2">{{t('rules.dinosaur.aquaticDinosaurElites')}}</th>
+                <th scope="col">{{t('rules.dinosaur.type')}}</th>
+                <th scope="col">{{t('rules.dinosaur.vp')}}</th>
+                <th scope="col">{{t('rules.dinosaur.reputation')}}</th>
+                <th scope="col">{{t('rules.dinosaur.aquaticSpaces')}}</th>
+                <th scope="col">{{t('rules.dinosaur.dnaRequirement')}}</th>
+              </tr>
+            </thead>
+            <tbody>
               <tr>
                 <td><AppIcon type="dinosaur" name="depth-dragon" class="dino"/></td>
                 <th scope="row"><a data-bs-toggle="collapse" href="#depthDragonTrait">Depth Dragon</a></th>
@@ -392,8 +392,8 @@
               <tr class="collapse" id="perucetusTrait">
                 <td colspan="8" v-html="t('rules.dinosaur.trait.perucetus')" class="trait"></td>
               </tr>
-            </template>
-          </tbody>
+            </tbody>
+          </template>
         </template>
       </table>
     </template>
