@@ -435,6 +435,8 @@
       "title": "Dinosaurs",
       "landDinosaur": "Land Dinosaur",
       "aquaticDinosaur": "Aquatic Dinosaur",
+      "landDinosaurElites": "Land Dinosaur Elites",
+      "aquaticDinosaurElites": "Aquatic Dinosaur Elites",
       "type": "Type",
       "vp": "VP",
       "reputation": "Rep.",
@@ -469,6 +471,8 @@
         "carnotaurus": "Swift Hunter: Gain 2 VP when you place an herbivore or omnivore into your park.",
         "dunkleosteus": "Teeth Grinding: During the feeding phase, you may destroy 1 of your fences to gain 2 VP; or 2 of your fences to gain 4 VP.<br/>DiNO spends 1 or 2 spare fences if available and not required for the rightmost complete DNA set.",
         "dilophosaurus": "???",
+        "perucetus": "???",
+        "bajadasaurus": "???",
         "depthDragon": "???<br/>If DiNO has spare goats additionally to the next upkeep phase and the rightmost complete DNA set, he spends a goat and gains 1 refined DNA token."
       }
     }
