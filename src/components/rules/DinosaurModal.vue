@@ -289,7 +289,7 @@
                 <td>2</td>
                 <td>3</td>
                 <td>1</td>
-                <td>3</td>
+                <td>2</td>
               </tr>
               <tr class="collapse" id="dunkleosteusTrait">
                 <td colspan="8" v-html="t('rules.dinosaur.trait.dunkleosteus')" class="trait"></td>
@@ -299,7 +299,7 @@
               <td><AppIcon type="dinosaur" name="ichthyosaur" class="dino"/></td>
               <th scope="row"><a data-bs-toggle="collapse" href="#ichthyosaurTrait">Ichthyosaur</a></th>
               <td><DinosaurType :carnivore-goats="1"/></td>
-              <td>5</td>
+              <td>4</td>
               <td>1</td>
               <td>1</td>
               <td>3</td>
@@ -350,7 +350,7 @@
               <td>6</td>
               <td>2</td>
               <td>2</td>
-              <td>2</td>
+              <td>3</td>
             </tr>
             <tr class="collapse" id="spinosaurusTrait">
               <td colspan="8" v-html="t('rules.dinosaur.trait.spinosaurus')" class="trait"></td>
