@@ -39,11 +39,11 @@ export default defineComponent({
     const cardDeck = props.bot.cardDeck
     const locations : Location[] = cardDeck.currentCard?.locations ?? []
     const nextCard = cardDeck.draw()
-    nextCard.locations.forEach(location => {
+    for (const location of nextCard.locations) {
       if (!locations.includes(location)) {
         locations.push(location)
       }
-    })
+    }
 
     return { t, locations }
   },
