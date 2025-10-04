@@ -34,14 +34,18 @@ export default class BotLocationResolver {
     const validLocations = this.getCurrentValidLocations()
     if (index < validLocations.length) {
       // mark previous locations as visited
-      validLocations.slice(0, index).forEach(item => this._visitedLocations.add(item))
+      for (const item of validLocations.slice(0, index)) {
+        this._visitedLocations.add(item)
+      }
       // get location from current card
       this._currentCardIndex = index
       return validLocations[index]
     }
     else {
       // mark all current card locations as visited
-      validLocations.forEach(item => this._visitedLocations.add(item))
+      for (const item of validLocations) {
+        this._visitedLocations.add(item)
+      }
       // draw a card to collect bonus from because all 4 locations of previous card could not be used
       if (!this._outsource) {
         const bonusCard = this._cardDeck.draw()

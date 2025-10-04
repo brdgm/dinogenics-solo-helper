@@ -7,7 +7,7 @@ import Module from '@/services/enum/Module'
  * @param modules Modules
  * @returns true if location is available
  */
-export default function(dinosaur: Dinosaur, modules: Module[]) : boolean {
+export default function isDinosaurAvailable(dinosaur: Dinosaur, modules: Module[]) : boolean {
   switch (dinosaur) {
     case Dinosaur.GALLIMIMUS:
     case Dinosaur.ICHTHYOSAUR:

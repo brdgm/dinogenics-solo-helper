@@ -5,7 +5,7 @@
  * @param playerCount Total number of players
  * @returns Number of visitors
  */
-export default function(round : number, playerIndex : number, playerCount : number) : number {
+export default function getVisitorCount(round : number, playerIndex : number, playerCount : number) : number {
   if (round < 2 || round > 7) {
     throw new Error(`Invalid season: ${round}`)
   }
