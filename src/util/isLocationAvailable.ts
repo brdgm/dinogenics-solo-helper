@@ -7,7 +7,7 @@ import Module from '@/services/enum/Module'
  * @param modules Modules
  * @returns true if location is available
  */
-export default function(location: Location, modules: Module[]) : boolean {
+export default function isLocationAvailable(location: Location, modules: Module[]) : boolean {
   switch (location) {
     case Location.SITE_D:
     case Location.REFINEMENT:

@@ -4,7 +4,7 @@
  * @param playerCount Total number of players
  * @returns Number of workers
  */
-export default function (round : number, playerCount : number) : number {
+export default function getWorkerCount(round : number, playerCount : number) : number {
   // determine starting worker count based on player count
   let workerCount = 4
   if (playerCount > 3) {

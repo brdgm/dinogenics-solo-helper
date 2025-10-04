@@ -8,7 +8,7 @@ import DifficultyLevel from '@/services/enum/DifficultyLevel'
  * @param difficultyLevel Difficulty level
  * @returns Bonus card benefit or NONE if not found
  */
-export default function(card: Card, difficultyLevel: DifficultyLevel) : BonusCardBenefit {
+export default function getBonusCardBenefit(card: Card, difficultyLevel: DifficultyLevel) : BonusCardBenefit {
   for (let levelNumber = difficultyLevel as number; levelNumber >= 1; levelNumber--) {
     const benefit = card.bonus.find(bonus => bonus.difficultyLevel == levelNumber)?.bonusCardBenefit
     if (benefit) {
