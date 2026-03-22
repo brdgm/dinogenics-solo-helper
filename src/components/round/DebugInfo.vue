@@ -49,11 +49,11 @@ export default defineComponent({
       if (bot.cardDeck.currentCard) {
         cards.push(bot.cardDeck.currentCard)
       }
-      bot.cardDeck.pile.forEach(card => {
+      for (const card of bot.cardDeck.pile) {
         if (cards.length < 3) {
           cards.push(card)
         }
-      })
+      }
       return cards
     },
     getCardInfo(card : Card) : string {

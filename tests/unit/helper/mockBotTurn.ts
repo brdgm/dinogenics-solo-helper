@@ -1,7 +1,7 @@
 import Corporation from '@/services/enum/Corporation'
 import { BotTurn } from '@/store/state'
 
-export default function (params?: MockBotTurnParams) : BotTurn {
+export default function mockBotTurn(params?: MockBotTurnParams) : BotTurn {
   return {
     corporation: params?.corporation ?? Corporation.NTEK,
     cardDeck: {

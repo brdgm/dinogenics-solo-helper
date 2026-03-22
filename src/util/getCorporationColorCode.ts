@@ -5,7 +5,7 @@ import Corporation from '@/services/enum/Corporation'
  * @param playerColor Player color
  * @returns Color code
  */
-export default function(corporation: Corporation) : string {
+export default function getCorporationColorCode(corporation: Corporation) : string {
   switch (corporation) {
     case Corporation.BIOTHESAURI:
       return "#12100b"

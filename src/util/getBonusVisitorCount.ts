@@ -3,7 +3,7 @@
  * @param round Round/Season
  * @returns Number of bonus visitors
  */
-export default function(round : number) : number {
+export default function getBonusVisitorCount(round : number) : number {
   if (round < 2 || round > 7) {
     throw new Error(`Invalid season: ${round}`)
   }
