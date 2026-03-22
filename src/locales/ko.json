@@ -1,0 +1,649 @@
+{
+  "gameTitle": "다이노제닉스",
+  "home": {
+    "title": "다이노제닉스 솔로 헬퍼",
+    "play1": "솔로 상대인 DiNO를 상대로 <a href='https://boardgamegeek.com/boardgame/210296/dinogenics' target='_blank' rel='noopener'><b>다이노제닉스</b></a>를 플레이하세요.",
+    "play2": "최대 4개의 DiNO를 상대로 플레이할 수 있습니다. 이 앱은 행동 카드 덱을 대체하고, 난이도를 관리하며, DiNO 규칙을 안내합니다.",
+    "play3": "<i>컨트롤드 카오스</i>와 <i>뉴 어라이벌</i> 확장판과 대부분의 모듈이 지원됩니다.",
+    "feedback": "토론 및 피드백:"
+  },
+  "setup": {
+    "title": "게임 설정",
+    "players": {
+      "title": "플레이어",
+      "playerCount": "인간 플레이어",
+      "playerCountItem": "{count}명 플레이어 | {count}명 플레이어",
+      "playerColor": "플레이어 색깔 | {index}번 플레이어 색깔",
+      "botCount": "DiNO",
+      "botCountItem": "DiNO {count}개 | DiNO {count}개",
+      "botColor": "DiNO 색깔"
+    },
+    "difficultyLevel": {
+      "title": "난이도",
+      "easy": "쉬움",
+      "hard": "어려움"
+    },
+    "modules": {
+      "title": "모듈 및 확장판",
+      "noControlledChaosWarning": "DiNO는 컨트롤드 카오스 확장판과 함께 플레이하는 것을 권장합니다.",
+      "controlled-chaos": "컨트롤드 카오스 확장판",
+      "controlled-chaos-chaos-theory": "컨트롤드 카오스 확장판: 카오스 이론 모듈",
+      "controlled-chaos-dinosaur-elites": "컨트롤드 카오스 확장판: 공룡 엘리트 모듈",
+      "new-arrivals": "뉴 어라이벌",
+      "dino-advanced": "DiNO 고급 모드"
+    }
+  },
+  "setupBot": {
+    "title": "DiNO 설정",
+    "prepareGame": "{totalPlayerCount}명 플레이어용으로 게임을 평소처럼 준비하세요.",
+    "workerCount": "각 플레이어는 일꾼 {workerCount}개로 시작합니다.",
+    "botPlayerPieces": "DiNO는 한 색깔의 모든 플레이어 말, 시작 자금, 울타리 4개, 개인 섬 공원 보드를 받습니다.",
+    "botDNACards": "DiNO는 DNA 카드 5장, 돌연변이 참조 카드 1장, 조작 카드 3장을 받습니다.",
+    "botDNACardsControlledChaos": "DiNO는 DNA 카드 4장, eDNA 카드 1장, 돌연변이 참조 카드 1장, 조작 카드 3장을 받습니다.",
+    "botDNACardArrangement": "DiNO의 DNA 카드를 앞면으로, 모든 조작 카드를 뒷면으로 하여 DiNO의 섬 공원 보드 옆에 표시된 대로 배치하세요.",
+    "botTurnOrder": "DiNO는 게임 첫 라운드에서 항상 턴 순서의 마지막에 시작합니다."
+  },
+  "roundOpenSeason": {
+    "title": "오픈 시즌",
+    "playerOrder": "평판에 따라 플레이어 순서를 결정하세요.",
+    "determinePlayerOrder": {
+      "currentItems": "현재 플레이어 순서",
+      "newItems": "새 플레이어 순서",
+      "newItemsSelect": "새로운 플레이어 순서를 결정해 주세요."
+    },
+    "assignVisitors": "관광객을 배정하세요:",
+    "assignVisitorCount": "관광객 {visitorCount}명 + 보너스 관광객 {bonusVisitorCount}명 중 최대 {bonusVisitorTakeCount}명",
+    "receiveIncome": "각 플레이어는 자신의 공원에 있는 관광객 1명당 크레딧 1개를 받습니다.",
+    "workerCount": "이제 각 플레이어는 일꾼 {workerCount}개를 가집니다.",
+    "breakingNews": "다음 속보 카드를 해결하고, 새로운 예정 카드를 뽑으세요.",
+    "drawFacilityTiles": "도심의 2번째/3번째/4번째 시설 더미에 각각 무작위 타일 1개를 뽑으세요.",
+    "drawSpecialists": "전문가 진열 공간에 새로운 전문가 2명을 뽑으세요."
+  },
+  "roundTurn": {
+    "title": "일꾼 {worker}"
+  },
+  "turnPlayer": {
+    "takeYourTurn": "당신의 턴을 가져가세요."
+  },
+  "turnBot": {
+    "executed": "일꾼 배치됨",
+    "notPossible": "불가능함",
+    "outOfLocations": "더 이상 가능한 위치가 없으므로 되돌아갑니다.",
+    "back": "뒤로",
+    "bonusCardBenefit": "DiNO가 보너스를 얻습니다:"
+  },
+  "determineBonusCardBenefit": {
+    "determineBonus": "보너스 결정"
+  },
+  "determine4ActionLocations": {
+    "determineLocations": "행동 위치 결정"
+  },
+  "lackOfBuildingSpace": {
+    "info": "<i>건설 공간 부족</i>: 새로운 시설을 위한 추가 공간이 없는 경우, DiNO는 대신 다음을 얻습니다:"
+  },
+  "drawNumber": {
+    "title": "숫자 얻기"
+  },
+  "locationRulesCollapse": {
+    "showRules": "규칙 보기",
+    "hideRules": "규칙 숨기기"
+  },
+  "roundUpkeepPhase": {
+    "title": "유지 보수 페이즈",
+    "feedCarnivores": "모든 육식공룡에게 먹이를 주세요 (육식공룡에게 가능한 한 많이 먹이를 줘야 합니다).",
+    "spawnMutant": "DiNO는 이미 돌연변이를 가지고 있고, 여분의 울타리와 모든 육식공룡과 가장 오른쪽 (완성된) 선호 DNA 세트를 위한 추가 염소가 충분하다면 추가 돌연변이를 생성합니다.",
+    "compsognathusSwarm": "콤프소그나투스: DiNO는 현재 시즌과 다음 시즌에 공원의 다른 모든 육식공룡을 위한 충분한 염소가 있을 때만 먹이를 줍니다.",
+    "checkRampage": "광란을 확인하고, 필요하면 주사위를 굴리세요.",
+    "gainVisitorVPs": "공원에서 살아서 나가는 관광객 2명마다 승점 3점을 얻습니다.",
+    "gainDinosaurFacilityVPs": "공룡과 시설에서 승점을 얻습니다.",
+    "gainDinosaurFacilityResources": "공룡과 시설에서 자원을 얻습니다.",
+    "returnWorkers": "본토 보드에서 일꾼들을 각 소유자의 공원으로 되돌립니다.",
+    "advanceVisitorOverlay": "관광객 오버레이를 왼쪽으로 한 칸 이동시킵니다."
+  },
+  "endOfGame": {
+    "title": "게임 종료",
+    "difficultyLevel": "난이도:",
+    "resources": {
+      "title": "남은 자원",
+      "credits": "크레딧",
+      "dnaCards": "DNA 카드",
+      "remainingStuff": "조작 카드, 염소, 사용하지 않은 울타리",
+      "dinosaurSpecies": "공룡 종",
+      "dinosaurCreated": "보드 위의 공룡",
+      "scandalTokens": "스캔들 토큰",
+      "financialAdvisor": "재정 고문 전문가",
+      "financialAdvisorNone": "없음"
+    },
+    "scoring": {
+      "title": "최종 점수",
+      "vpGameBoard": "게임 보드",
+      "vpGameBoardDescription": "게임 보드에서 현재 승점",
+      "vpFacilities": "시설",
+      "vpFacilitiesDescription": "손상되지 않은 시설의 승점",
+      "vpSpecialists": "전문가",
+      "vpSpecialistsDescription": "전문가 게임 종료 승점 (동점 시 대부분 수여되지 않음)",
+      "vpSpecialistsIgnoreFinancialAdvisor": "재정 고문은 무시하세요!",
+      "vpDinosaurVariety": "공룡 다양성",
+      "vpDinosaurVarietyDescription": "유효한 서식지에 있는 고유 종마다 승점 3점",
+      "vpDinosaurCreated": "보드 위의 공룡",
+      "vpDinosaurCreatedDescription": "보드 위의 공룡마다 승점 2점",
+      "vpCredits": "크레딧",
+      "vpCreditsDescription": "크레딧 3개마다 승점 1점 (버림)",
+      "vpCreditsFinancialAdvisorPlayer": "재정 고문: 크레딧 2개마다 승점 1점 (버림)",
+      "vpCreditsFinancialAdvisorBot": "재정 고문: 첫 10 크레딧에 승점 5점, 나머지 3 크레딧마다 승점 1점",
+      "vpDNACards": "DNA 카드",
+      "vpDNACardsDescription": "DNA 카드 2장마다 승점 1점 (버림)",
+      "vpRemainingStuff": "조작 카드, 염소, 사용하지 않은 울타리",
+      "vpRemainingStuffDescription": "남은 조작 카드, 염소, 사용하지 않은 울타리 3개마다 승점 1점",
+      "vpScandals": "스캔들 차감",
+      "vpScandalsDescription": "스캔들 토큰마다 -6 승점",
+      "vpTotal": "총합",
+      "determineWinner": "가장 많은 승점을 얻은 플레이어가 승자로 인정되어 경쟁자들을 매수할 충분한 시장 지분을 획득합니다! 동점인 경우, 게임 종료 시 동점자 중 가장 높은 평판을 가진 플레이어가 승리합니다."
+    }
+  },
+  "sideBar": {
+    "round": "라운드"
+  },
+  "rules": {
+    "general": {
+      "title": "일반 규칙",
+      "intro": "DiNO는 별도로 언급되지 않는 한 인간 플레이어로 취급되며, 모든 카드와 시설의 혜택을 받고 광란 체크와 속보 이벤트의 페널티도 받습니다.",
+      "noMoney": "DiNO는 모든 수입을 받지만 크레딧을 사용하지 않습니다. 모든 비용은 즉시 지불된 것으로 간주됩니다. 여기에는 시설 구매, 공해 굴림 수행, 수생 광란 체크, DNA 마켓 구매, 행동 공간 비용이 포함됩니다.",
+      "noKilling": "DiNO는 자발적으로 자신의 공룡을 죽이지 않습니다. (예외: 특정 조작 카드, 페루세투스)",
+      "noHandLimit": "DiNO는 핸드 제한이 없으며 10장을 초과한 (e)DNA 카드를 모을 수 있습니다.",
+      "collectFences": "DiNO는 울타리를 자신의 보드 옆 개인 보관소에 모아둡니다. DiNO는 새 공룡을 만들거나 부서진 울타리를 교체할 때 울타리를 사용합니다. 같은 종의 공룡들은 가능하면 같은 서식지에 배치됩니다. 이 경우 DiNO는 새 공룡을 수용하는 데 필요한 최소한의 울타리를 사용하여 울타리 서식지를 확장합니다. 부서진 울타리는 DiNO가 여분이 있으면 즉시 교체됩니다.",
+      "upkeepPhase": "유지 보수 페이즈 동안 DiNO는 육식공룡에게 먹이를 주고 광란 조건을 확인해야 합니다.",
+      "notEnoughGoats": "DiNO가 모든 육식공룡을 먹일 만큼 충분한 염소가 없으면, 광란 선택 및 피해 할당 섹션을 참조하세요.",
+      "feedingPriority": {
+        "title": "먹이 우선순위 (다음 순서로 먹이 제공...)",
+        "fedCompletely": "완전히 먹일 수 있는 공룡",
+        "vp": "가장 높은 시즌 승점 가치 공룡",
+        "reputation": "가장 높은 평판 공룡"
+      },
+      "resolvingChoices": {
+        "title": "선택 해결",
+        "intro": "선택을 해결할 때 DiNO는 상대방에게 혜택을 주지 않으면서 각 보상을 최대한 많이 얻는 것을 선호합니다. 선택 우선순위:",
+        "vp": "승점",
+        "removeScandal": "스캔들 제거",
+        "credits": "크레딧",
+        "dnaCards": "DNA 카드",
+        "manipulationCards": "조작 카드",
+        "refinedDNAToken": "정제 DNA 토큰",
+        "gainScandal": "위의 모든 것을 잃는 것을 피하기 위해 스캔들 획득",
+        "rampageCheck": "위의 모든 것을 잃는 것을 피하기 위해 광란 체크 해결"
+      },
+      "rampageChoice": {
+        "title": "광란 선택 및 피해 할당",
+        "affectedDino": {
+          "intro": "DiNO가 광란 체크를 수행해야 하고 영향받을 공룡을 선택할 수 있다면, 다음 조건의 공룡에 대해 체크를 수행합니다:",
+          "lowestSeasonalVP": "가장 낮은 시즌 승점 가치",
+          "lowestReputation": "가장 낮은 평판",
+          "speciesSelection": "<a data-bs-toggle='modal' href='#speciesSelectionModal'>종 선택</a>"
+        },
+        "parkStructure": {
+          "intro": "광란이나 기타 효과로 공원 구조물이 파괴될 때의 우선순위:",
+          "lowestSeasonalVP": "가장 낮은 시즌 승점 공룡이 있는 서식지의 울타리",
+          "emptyHotels": "빈 호텔",
+          "otherCommercialFacilities": "기타 상업 시설",
+          "parkFacilities": "공원 시설",
+          "occupiedHotels": "운영 중인 호텔",
+          "prioritize": "상업 시설과 공원 시설은 비용이 낮은 순으로 우선순위가 정해집니다."
+        }
+      },
+      "3plusPlayer": {
+        "title": "3인 이상 게임",
+        "priority": {
+          "intro": "DiNO는 현재 선두인 플레이어와 상호작용하는 것을 선호합니다. 특정 플레이어를 대상으로 하는 조작 카드나 카오스 이론 이벤트를 해결할 때, 다음 조건의 플레이어를 선택합니다:",
+          "mostVP": "가장 많은 승점을 가진 플레이어",
+          "highestReputation": "가장 높은 평판을 가진 플레이어",
+          "mostFacilities": "가장 많은 손상되지 않은 시설을 가진 플레이어"
+        },
+        "targetOtherDino": "DiNO는 다른 DiNO를 대상으로 할 수 있습니다."
+      }
+    },
+    "speciesSelection": {
+      "title": "종 선택",
+      "intro": "DiNO의 공룡 종 선택에 대한 힌트를 얻으려면 이것을 사용하세요. DiNO는 항상 적용되는 첫 번째 옵션을 선택합니다. 해당하는 것이 없으면 버튼을 다시 눌러 더 많은 힌트를 얻으세요.",
+      "getDinoHints": "공룡 힌트:"
+    },
+    "facilitiesHabitats": {
+      "title": "시설 및 서식지",
+      "intro": "DiNO가 새 공룡을 만들거나 시설을 배치하는 행동을 할 때, 오른쪽에 표시된 격자 시스템을 기반으로 하며 항상 열의 가장 낮은 위치부터 시작합니다.",
+      "newDinosaurs": "새 공룡은 DiNO의 플레이어 보드 오른쪽 아래부터 배치됩니다. 공룡의 서식지 요구사항을 만족하는 데 필요한 최소한의 울타리를 배치하여 새 공룡이 배치되는 즉시 서식지가 건설됩니다. 기존 종의 공룡이 생성되면, 새 공룡을 수용할 수 있을 만큼 기존 서식지를 확장합니다. 서식지는 가장 오른쪽 열의 모든 공간이 채워지면 도표에 나열된 화살표를 따라 다른 격자 열로 확장될 수 있습니다.",
+      "facilities": "공원 시설은 아래쪽 가운데 열부터 건설됩니다.",
+      "largeFacilities": "대형 공원 시설(수생 서식지 포함)은 왼쪽 아래 열부터 건설됩니다. 대형 공원 시설은 시설의 절반만 공원 공간을 차지하도록 배치됩니다.",
+      "commercialFacilities": "상업 시설은 방문자 센터 왼쪽 열에 건설되며, 먼저 위로 확장하여 가장 오른쪽 열로 확장될 수 있습니다.",
+      "largeCommercialFacilities": "대형 상업 시설은 방문자 센터 위쪽 열에 건설됩니다. 대형 공원 시설은 시설의 절반만 상업 공간을 차지하도록 배치됩니다.",
+      "cards": {
+        "title": "카드 설명",
+        "digSite": {
+          "title": "발굴 현장",
+          "description": "DiNO는 첫 번째 미완성 선호 종 더미에 따라 DNA/eDNA를 선택합니다."
+        },
+        "geneGraftingLab": {
+          "title": "유전자 접합 연구소",
+          "description": "DiNO는 염소를 사용하지 않고 (e)DNA 1장을 추가로 뽑습니다."
+        },
+        "geneticsFacility": {
+          "title": "유전학 시설",
+          "description": "DiNO는 여분 더미를 사용하여 세트를 완성할 수 있지만, 완성된 세트와 토큰/다형성 카드를 먼저 사용하는 것을 선호합니다."
+        },
+        "vipSuite": {
+          "title": "VIP 스위트",
+          "description": "DiNO는 대형 시설이 가장 적은 쪽에 건설합니다. 동점이면 상업 구역에 건설합니다."
+        }
+      }
+    },
+    "dnaCollection": {
+      "title": "DNA 수집",
+      "arrangement": {
+        "title": "수집 및 배치",
+        "setCollection": "게임 중 DiNO는 최대 4종의 서로 다른 종족으로 구성된 DNA 세트를 수집하는 데 집중합니다. DiNO 설정의 일환으로, DiNO의 섬 공원 옆에 선호 종족 스택을 만드세요. 고유한 종족은 각자의 열을 형성하며, 중복된 종족은 뽑은 순서대로 쌓입니다.",
+        "cardOrder": "오른쪽부터 처음 두 DNA 카드/종족(1번째 및 2번째 종족)을 시작하여, eDNA 카드/종족(3번째 종족)을 왼쪽으로, 가능한 4번째 종족을 그 왼쪽에 놓으세요. 맨 왼쪽 열에는 돌연변이 참조 카드를 놓으세요. 선호 종족 3 열은 설정 시 eDNA에만 해당합니다.",
+        "noDuplicates": "중복이 없었다면 5번째 카드는 돌연변이 참조 카드 아래에 놓여 여분 DNA 스택을 형성합니다. 설정 중 뽑힌 모든 다형 DNA는 DiNO의 보유분에 추가됩니다.",
+        "example": {
+          "title": "예시",
+          "description": "DiNO는 설정 시 무작위 카드 5장과 돌연변이 참조 카드를 받았습니다. DiNO가 안킬로사우루스 2장을 받았기 때문에 이들을 함께 그룹화했습니다. DNA 종족들은 받은 순서대로 오른쪽부터 왼쪽으로 배치됩니다. 돌연변이 참조 카드를 맨 왼쪽 공간에 놓으세요. 메갈로돈은 eDNA 덱에서 뽑혔기 때문에 오른쪽에서 3번째 자리에 놓입니다."
+        }
+      },
+      "acquiring": {
+        "title": "새 DNA 획득",
+        "intro": "DiNO가 (e)DNA를 받을 때마다 4가지 결과 중 하나가 발생합니다.",
+        "matchExisting": "DNA 카드가 기존 선호 종족과 일치합니다.",
+        "matchExistingResult": "결과: 카드를 기존 선호 종족 스택에 추가합니다.",
+        "emptyColumn": "DNA 카드가 기존 선호 종족과 일치하지 않지만 4개 열 중 하나가 비어있습니다.",
+        "emptyColumnResult": "결과: 카드를 빈 열에 놓아 새로운 선호 종족을 형성합니다.",
+        "noEmptyColumn": "DNA 카드가 기존 선호 종족과 일치하지 않고 빈 열도 없습니다.",
+        "noEmptyColumnResult": "결과: 카드를 여분 DNA 스택 맨 아래에 놓습니다.",
+        "polymorphicDNA": "DNA 카드가 다형 DNA입니다.",
+        "polymorphicDNAResult": "결과: 카드를 DiNO 보유분에 놓습니다. 이후 행동 시 불완전한 스택의 일부로 사용할 수 있습니다.",
+        "noHandLimit": "(e)DNA 카드 10장 제한은 DiNO에게 적용되지 않으며, 어떤 카드 스택에든 제한 없이 카드를 보유할 수 있습니다."
+      },
+      "refresh": {
+        "title": "공룡 생성 후 선호 종족 새로고침",
+        "intro": "DiNO가 공룡을 생성했다면, 여분 스택에 카드가 있는지 확인하고 이를 사용하여 빈 선호 종족 열을 보충하세요. 여분 스택의 모든 카드를 확인하고 다음 우선순위로 선택합니다:",
+        "notInPark": "DiNO의 공원에 아직 존재하지 않는 종족",
+        "fewestMissingDNA": "부족한 DNA 카드가 가장 적은 종족",
+        "hightestDNA": "DNA 요구량이 가장 높은 종족",
+        "topmost": "맨 위에 있는 종족",
+        "newStack": "결정된 종족의 모든 일치하는 카드를 선택하여 새로운 스택을 만드세요."
+      }
+    },
+    "breakingNews": {
+      "7": "DiNO는 가능하면 사용하지 않은 울타리 4개를 버립니다. 불가능하면 최소 게임 종료 점수 가치의 비어있는 시설을 손상시킵니다. 해당 시설이 없으면 공룡 서식지에서 울타리 4개를 제거합니다.",
+      "14": "DiNO는 뼈무덤에 선호 종족 카드가 최소 2장 있을 때만 이 옵션을 사용합니다.",
+      "15": "DiNO는 모든 조작 카드를 보유합니다.",
+      "26": "DiNO는 스캔들을 2개 가져갑니다.",
+      "27": "가장 많은 승점을 얻는 전문가입니다.",
+      "29": "가능하면 여분에서 DNA 카드 1장을 뼈무덤에 버립니다.",
+      "30": "DiNO는 일반 도심 구매 행동을 해결합니다.",
+      "33": "DiNO는 돈을 쓰지 않고 모든 염소에 대해 승점을 받습니다.",
+      "title": "속보",
+      "D1": "DiNO는 유지보수 주사위를 굴리지 않기로 결정합니다.",
+      "D3": "DiNO는 염소가 없어도 주사위 굴리기를 시도합니다.",
+      "C01": "DiNO는 최고 승점 종족의 축사에서 울타리를 제거합니다. 동점일 경우: 평판이 높은 쪽.",
+      "C02": "DiNO가 스캔들 토큰 및/또는 손상된 시설이 있거나, 상대방이 호텔만 가지고 있다면, 스캔들을 버리고 시설 최대 1개를 수리합니다. 그렇지 않으면 스캔들을 받고 최고 게임 종료 승점의 건물을 파괴합니다.",
+      "C03": "DiNO는 카드 공개 후 공룡의 시즌 승점과 같은 금액으로 입찰하며 스캔들을 받지 않습니다.",
+      "C04": "DiNO는 eDNA 카드 2장을 뽑습니다.",
+      "C05": "숫자를 얻고 고급 선택 번호에 따라 왼쪽 위 모서리부터 빈 공간을 세세요. 그곳에 토큰을 놓습니다.",
+      "N1": "DiNO는 선택지가 주어지면 승진 토큰 1개를 얻습니다.",
+      "N3": "동점일 경우, DiNO가 승점을 가져갑니다.",
+      "N4": "DiNO는 공룡 생성에 사용할 수 있다면 첫 번째 선택지를 택하지만 두 번째는 택하지 않습니다.",
+      "N5": "DiNO는 두 보상을 모두 얻습니다.",
+      "N9": "DiNO는 선호 종족이 있으면 뼈무덤에서 카드 1장을 얻지만 아무것도 지불하지 않습니다.",
+      "N10": "DiNO는 거절합니다.",
+      "corruptedTRex": {
+        "title": "부패한 티라노사우루스 변형 설명",
+        "intro": "부패한 티라노사우루스 속보 카드가 발동되면, DiNO는 행동을 조정합니다:",
+        "dnaAction": "DiNO는 완전한 DNA 세트가 전혀 없고(돌연변이 카드 포함) 해당 행동이 세트 완성 기회를 제공할 때만 DNA 획득 행동을 사용합니다. 카드가 하나 이상 부족하면 정제 또는 뼈무덤 행동을 사용하지 않습니다.",
+        "market": "DiNO는 위의 경우에만 시장에서 구매합니다.",
+        "placeTRex": "DiNO가 부패한 티라노사우루스를 놓아야 한다면, 가능하면 1x1 울타리 축사에 놓습니다."
+      }
+    },
+    "manipulationCard": {
+      "title": "조작 카드",
+      "blackAlleyConnections": {
+        "title": "뒷골목 커넥션",
+        "description": "DiNO가 3배의 보너스를 받습니다."
+      },
+      "benefitsPackage": {
+        "title": "혜택 패키지",
+        "description": "어떤 전문가를 획득할지 결정하기 위해 숫자를 여러 번 얻습니다. 비용이 3에 도달하거나 더 이상 사용할 수 있는 카드가 없으면 중단합니다."
+      },
+      "blackMarket": {
+        "title": "암시장",
+        "description": "DiNO가 선호하는 DNA 세트를 완성할 수 있는 모든 카드를 구매합니다. 맞는 것이 없으면 먼저 새 카드 4장을 뽑습니다."
+      },
+      "charitableDonation": {
+        "title": "자선 기부",
+        "description": "DiNO가 승점 5점과 eDNA 카드 2장을 얻습니다."
+      },
+      "controlTheNewsCycle": {
+        "title": "뉴스 사이클 통제",
+        "description": "DiNO가 속보 카드를 가져와서 무작위로 뒷면으로 재분배합니다. DiNO가 승점 3점을 얻습니다."
+      },
+      "dnaSplice": {
+        "title": "DNA 접합",
+        "description": "DiNO가 첫 번째 미완성 선호 세트(우측에서 좌측)를 기반으로 공룡을 생성합니다. 먼저 선호 세트에서 카드를 버리고, 그다음 여분에서, 마지막으로 좌측에서 우측으로 더미에서 DiNO가 선호 세트의 DNA 요구량 +1과 같은 수의 카드를 버릴 때까지 버립니다. DiNO에게 울타리가 부족하면 이 카드를 사용하지 않습니다."
+      },
+      "floodWaterCleanup": {
+        "title": "홍수 정리",
+        "description": "DiNO가 4개의 행동 위치에 울타리를 배치합니다. 그런 다음 DiNO가 eDNA 4개를 얻습니다."
+      },
+      "foreignMarket": {
+        "title": "해외 시장",
+        "description": "DiNO가 첫 번째 대형 시설과 첫 번째 전문가를 버린 다음 평소처럼 지능형 행동 3개를 결정합니다."
+      },
+      "geneticDeconstruction": {
+        "title": "유전자 분해",
+        "description": "DiNO가 여분 DNA 1개를 가지고 있으면 옵션 B를 선택하고, 그렇지 않으면 옵션 A를 선택합니다."
+      },
+      "goatRustling": {
+        "title": "염소 도둑질",
+        "description": "DiNO는 다른 플레이어로부터 얻은 염소만을 점수로 사용합니다. 얻은 염소가 없으면 DiNO가 공급처에서 염소 1마리를 받습니다. DiNO가 1위로 올라가는 데 필요한 만큼의 염소를 사용합니다."
+      },
+      "infiltrator": {
+        "title": "침투자",
+        "description": "DiNO가 이미 인간 플레이어의 일꾼이 있는 다음 두 위치를 선택합니다.",
+        "chooseLocation": "위치 {number} 선택"
+      },
+      "misdirection": {
+        "title": "잘못된 방향",
+        "description": "DiNO가 차단된 행동 공간을 무시하고 첫 번째 유효한 옵션 위치를 선택합니다. 해당 위치에 일꾼이 있으면 DiNO의 다음 비어있는 행동 위치(같은 카드의)로 이동시킵니다. 그런 다음 DiNO가 선택한 첫 번째 옵션의 행동을 해결합니다."
+      },
+      "nonZeroSumGame": {
+        "title": "비영합 게임",
+        "description": "DiNO가 여분 더미에 최소 3장의 카드가 있으면 2장을 줍니다."
+      },
+      "offshoreContractors": {
+        "title": "해외 계약업자",
+        "description": "숫자를 얻어 더미를 결정하고 DiNO가 이 더미에서 가장 비싼 건물을 짓습니다. 5나 6이 나오면 다시 뽑습니다."
+      },
+      "offSiteLocation": {
+        "title": "외부 위치",
+        "description": "DiNO가 가장 높은 게임 종료 승점을 가진 대형 시설 1개와 일반 시설 1개를 각각 이 카드로 이동시킵니다. 숫자를 얻어 무료 시설을 결정합니다."
+      },
+      "pullingTheStrings": {
+        "title": "줄 당기기",
+        "description": "DiNO가 스캔들을 얻고 채워지기 가장 가깝지만 빈 공간이 있는 첫 번째 위치를 선택합니다."
+      },
+      "rapidGestation": {
+        "title": "빠른 임신",
+        "description": "DiNO가 가장 낮은 시즌 승점을 가진 가장 높은 DNA 요구량 종을 선택합니다. 그런 다음 DiNO가 선호 더미를 완성할 수 있는 경우에만 뼈 무덤에서 카드를 선택합니다."
+      },
+      "renovation": {
+        "title": "개조",
+        "description": "가장 비싼 비어있는 시설을 제거합니다. 동점이면 관광객 센터에 가장 가까운 것을 선택합니다. 숫자를 얻어 새로운 시설을 선택합니다."
+      },
+      "researchPact": {
+        "title": "연구 협약",
+        "description": "DiNO가 가능하면 선호 종에서 2장의 카드를 보관합니다. 플레이어 순서대로 각 인간 플레이어에게 카드 1장씩 줍니다."
+      },
+      "shareholderMeeting": {
+        "title": "주주 총회",
+        "description": "DiNO가 현재 돈으로 최대 승점 5점을 얻습니다. DiNO가 최소 3개가 될 때까지 기본 호텔을 짓고 울타리 3개를 얻습니다."
+      },
+      "strongArmTheMarket": {
+        "title": "시장 강압",
+        "description": "DiNO가 새로운 시설을 뽑지 않고 3가지 표준 DiNO 시티 센터 단계를 모두 수행합니다. DiNO가 시티 센터에 있는 각 일꾼에 대해 2단계를 한 번씩 수행합니다. #1이거나 시설이 표시되지 않으면 시설을 다시 결정합니다."
+      },
+      "unleashContagion": {
+        "title": "전염병 방출",
+        "description": "영향받은 공룡에 대한 힌트를 얻기 위해 <a data-bs-toggle='modal' href='#speciesSelectionModal'>종 선택</a>을 사용합니다. 가능하면 DiNO의 공룡 중 하나와 평판 값이 다른 공룡이 선택될 때까지 힌트를 얻습니다. 그렇지 않으면 첫 번째로 언급된 것이 값을 결정합니다."
+      },
+      "whistleBlower": {
+        "title": "내부 고발자",
+        "description": "DiNO가 가능하면 여분 더미나 미완성 선호 종 더미에서 카드를 줍니다. DiNO가 DNA 세트 중 하나를 완성할 수 있으면 선호 카드 1장을 가져갑니다."
+      }
+    },
+    "specialist": {
+      "title": "전문가",
+      "chaotician": {
+        "title": "혼돈학자",
+        "description": "순진한 관광객이 굴려지지 않으면 광란 주사위를 다시 굴립니다. 두 주사위 모두 익사 기호가 나오면 공해 주사위를 다시 굴립니다."
+      },
+      "financialAdvisor": {
+        "title": "재정 고문",
+        "description": "DiNO가 이 전문가로 최대 승점 5점을 얻습니다."
+      },
+      "masterArchitect": {
+        "title": "마스터 건축가",
+        "description": "건물이 버려지지 않습니다."
+      },
+      "securityOfficer": {
+        "title": "보안 책임자",
+        "description": "DiNO의 죽음을 방지하는 데만 사용됩니다."
+      },
+      "seismologist": {
+        "title": "지진학자",
+        "description": "여분 더미의 카드를 선호 종 카드로 교환할 수 있으면 교환합니다."
+      },
+      "technician": {
+        "title": "기술자:",
+        "description": "획득 시와 각 라운드 시작 시 가장 비싼 비용의 시설을 수리합니다."
+      },
+      "tourGuide": {
+        "title": "투어 가이드",
+        "description": "가장 큰 울타리 축사."
+      },
+      "allCost3": {
+        "title": "모든 비용 3 전문가 (조종사, 생체공학자, 시장 분석가)",
+        "description": "획득 시 DiNO가 즉시 현재 라운드를 포함하여 게임에 남은 라운드당 승점 1점(1-7승점)과 난이도 수준의 2배에 해당하는 승점(2-10승점)을 얻습니다. 비용 3 전문가는 추가 효과가 없습니다."
+      }
+    },
+    "dinosaur": {
+      "title": "공룡",
+      "landDinosaur": "육상 공룡",
+      "aquaticDinosaur": "수생 공룡",
+      "landDinosaurElites": "육상 공룡 엘리트",
+      "aquaticDinosaurElites": "수생 공룡 엘리트",
+      "type": "종류",
+      "vp": "승점",
+      "reputation": "평판",
+      "minPenSize": "최소 축사 크기",
+      "aquaticSpaces": "수생 공간",
+      "dnaRequirement": "DNA 개수",
+      "carnivore": "육식",
+      "herbivore": "초식",
+      "omnivore": "잡식",
+      "trait": {
+        "brontosaurus": "온순한 거인: 열린 공간이 유효한 서식지입니다. 축사에 배치되거나 다른 종이 그 열린 공간에 들어오거나 점유하면 광란 상태가 됩니다.",
+        "tyrannosaurus": "파괴적: 광란 확인 시 주사위 2개를 굴리고, 두 결과를 연속으로 적용합니다.",
+        "ankylosaurus": "방어적: 다른 종 1개까지와 축사를 공유할 수 있으며, 어느 쪽도 광란 상태가 되지 않습니다.",
+        "pterodactyl": "비행: 서식지 조건을 충족하려면 바이오돔에 수용되어야 합니다.",
+        "stegosaurus": "인기자: 유지 보수 7단계에서 크레딧 2개를 얻습니다.",
+        "raptor": "영리한: 광란 확인 중 일반 피해 외에도 광란 베기 결과가 나오면 관광객 사망 1을 당합니다.",
+        "triceratops": "무리 동물: 공유 축사의 트리케라톱스 2마리마다 공룡 가치에서 추가로 승점 2를 얻습니다.",
+        "mutant": "괴물: 기존 돌연변이는 각각 유지 보수 페이즈마다 한 번씩 염소 2마리를 먹여 추가 돌연변이를 만들 수 있습니다.",
+        "gallimimus": "단순한 유전자: 생성 시 즉시 승점 1을 얻습니다. 갈리미무스가 최소 1마리 있으면 이 종의 DNA 요구량이 1이 됩니다.",
+        "ichthyosaur": "수영 동반자: 생성 시 즉시 크레딧 4개를 얻습니다.",
+        "therizinosaurus": "나무 채취자: 유지 보수 7단계에서 테리지노사우루스 축사 내 빈 공간마다 승점 1을 얻습니다(최대 승점 3).",
+        "plesiosaurus": "간단한 급식: 유지 보수 페이즈에서 염소 0마리가 필요합니다.",
+        "megalodon": "리바이어던: 생성 시 즉시 승점 6을 얻습니다.",
+        "mosasaur": "공포: 유지 보수 1단계에서 공원의 공룡 1마리를 파괴하여 모사사우루스 급식을 건너뛸 수 있으며, 그러면 승점 5를 얻습니다.",
+        "spinosaurus": "수생 사냥꾼: 이 종을 생성할 때 공원의 공룡 1마리를 즉시 파괴하여 eDNA 요구량을 2로 줄일 수 있습니다.",
+        "parasaurolophus": "즐거운 화음: 최종 점수 계산 시 공원에 있는 각 종(이 종 포함)마다 승점 1을 추가로 얻습니다.",
+        "dimetrodon": "해안 거주자: 생성 시 공원의 점유된 수생 서식지 타일마다 즉시 승점 2를 얻습니다.",
+        "dreadnoughtus": "경외감을 주는: 평판 *은 현재 게임 시즌과 같습니다. 인접한 열린 공간 2개가 필요하며 축사에 넣을 수 없습니다.",
+        "pachycephalosaurus": "파괴적 오락: 유지 보수 2단계에서 이 종으로 광란 확인을 수행하여 승점 4를 얻을 수 있습니다.",
+        "quetzalcoatlus": "공포 조류: 서식지 조건을 충족하려면 바이오돔에 수용되어야 합니다. 유지 보수 2단계 후 공원의 관광객 1명당 승점 1을 얻습니다.",
+        "compsognathus": "무리: 유지 보수 1단계에서 염소 0/1/2마리를 소모하여 이 공룡의 무리 주사위를 0/1/2만큼 증가시킵니다. 이 종의 시즌 가치는 무리 주사위와 같습니다.<br/>DiNO는 현재 시즌과 다음 시즌에 공원의 다른 모든 육식 공룡을 위한 염소가 충분한 경우에만 급식합니다.",
+        "carnotaurus": "신속한 사냥꾼: 잡식 또는 초식 공룡을 생성할 때 승점 2를 얻습니다.",
+        "dunkleosteus": "이빨 갈기: 유지 보수 1단계에서 공원의 울타리 1개를 파괴하여 승점 2를 얻거나, 울타리 2개를 파괴하여 승점 4를 얻을 수 있습니다.",
+        "dilophosaurus": "위협적: 생성 시 DNA 마켓에서 카드 1장을 무료로 얻습니다. *유일한 육식 공룡이면 승점 4와 평판 3의 가치가 있습니다.",
+        "perucetus": "거대한: 유지 보수 1단계에서 이 종을 파괴하여 공원의 모든 육식 공룡을 급식하고 승점 5를 얻을 수 있습니다.",
+        "bajadasaurus": "돌아다니는 구경거리: 유지 보수 7단계에서 빈 공원 구역 공간 절반(올림)만큼 크레딧을 얻습니다(최대 6).",
+        "depthDragon": "적응성 유전자: 라운드마다 한 번, 유지 보수 7단계에서 염소 토큰 1개를 소모하여 정제된 DNA 토큰 1개를 얻을 수 있습니다.<br/>DiNO가 다음 유지 보수 페이즈와 가장 오른쪽 완성된 DNA 세트에 추가로 여분의 염소가 있으면, 염소 1마리를 소모하고 정제된 DNA 토큰 1개를 얻습니다."
+      }
+    }
+  },
+  "difficultyLevel": {
+    "1": "입문: 워커 플레이스먼트 보드게임을 처음 해보는 플레이어에게 좋습니다.",
+    "2": "쉬움: 워커 플레이스먼트 게임을 가끔 즐기지만 가벼운 경험을 선호하는 경우입니다.",
+    "3": "보통: 대부분의 게이머에게 좋은 시작점입니다. 균형 잡힌 경험을 제공합니다.",
+    "4": "어려움: 다이노제닉스 메커니즘을 잘 이해하고 도전을 원하는 경우입니다.",
+    "5": "매우 어려움: 다이노제닉스를 마스터했으며 한계까지 도전받고 싶은 경우입니다."
+  },
+  "location": {
+    "site-a": {
+      "title": "사이트 A",
+      "ruleSummary": "완성된 DNA 세트가 2개 미만인 경우에만."
+    },
+    "site-b": {
+      "title": "사이트 B",
+      "ruleSummary": "완성된 DNA 세트가 2개 미만인 경우에만.",
+      "noMarketTokens": "DiNO는 마켓 토큰을 받거나 사용하지 않습니다.",
+      "gainBonus": "보너스 획득:",
+      "drawDNA": "DNA 카드 3장을 뽑습니다. DiNO는 가장 오른쪽 선호 스택과 일치하는 첫 번째 카드, 또는 여분 스택의 카드, 또는 뽑은 첫 번째 카드 순으로 유지합니다. 나머지 2장은 DNA 마켓에 추가합니다."
+    },
+    "boneyard": {
+      "title": "뼈 무덤",
+      "ruleSummary": "선호 종족용 카드가 있고 완성된 세트가 2개 미만인 경우.",
+      "locationUse": "DiNO가 아직 완성되지 않은 4개 선호 종족 중 하나에 사용할 수 있는 카드가 최소 1장 있으면 사용됩니다.",
+      "severalMatches": "여러 개가 있으면 DiNO는 가장 오른쪽 스택과 일치하는 카드를 가져갑니다.",
+      "scandalToken": "DiNO는 스캔들 토큰을 얻습니다."
+    },
+    "agency": {
+      "title": "에이전시",
+      "ruleSummary": "사용 가능한 경우.",
+      "drawManipulation": "조작 카드 2장을 DiNO의 보관함으로 뽑습니다.",
+      "discardScandalToken": "DiNO는 스캔들이 있으면 스캔들을 버립니다."
+    },
+    "uplink": {
+      "title": "업링크",
+      "ruleSummary": "사용 가능하고 조작 스택이 비어있지 않은 경우.",
+      "locationUse": "DiNO의 조작 카드 덱이 비어있지 않으면 사용됩니다.",
+      "playManipulation": "DiNO의 조작 스택에서 맨 위 카드를 뽑고 지시를 따릅니다.",
+      "playAlternative": "DiNO는 결과가 즉시 광란 확인이 되는 조작 카드를 플레이하지 않습니다. 그런 경우 조작 카드를 스택 맨 아래에 놓고 다음 카드를 뽑습니다. DiNO가 추가 조작 카드가 없으면 대신 승점 3을 얻고 턴을 끝냅니다."
+    },
+    "farm": {
+      "title": "농장",
+      "ruleSummary": "이번 시즌과 다음 시즌에 염소가 없거나 부족한 경우.",
+      "locationUse": "DiNO는 염소가 0마리이거나 다음 2번의 급식 페이즈에서 건설된 육식 공룡과 가장 오른쪽 선호 DNA 스택의 육식 공룡을 급식할 염소가 부족하면 농장을 사용합니다."
+    },
+    "ferry": {
+      "title": "페리",
+      "ruleSummary": "사용 가능한 경우.",
+      "collectMoney": "DiNO는 $4를 받습니다."
+    },
+    "time-share": {
+      "title": "타임 셰어",
+      "ruleSummary": "관광객 수가 홀수인 경우에만.",
+      "locationUse": "DiNO가 빈 공간이 있는 호텔과 홀수의 관광객이 있는 경우에만 사용됩니다.",
+      "promotionToken": "DiNO가 플레이어로부터 프로모션 토큰을 가져가야 하는 경우, 항상 평판이 가장 높은 플레이어를 선택하며, 동점이면 턴 순서상 앞선 플레이어를 선택합니다."
+    },
+    "outsource": {
+      "title": "아웃소싱",
+      "ruleSummary": "다른 행동 공간을 사용합니다.",
+      "useOtherLocation": "DiNO는 다른 일꾼을 배치하지 않고 이 위치의 행동을 수행합니다:",
+      "actions": "DiNO는 기존 일꾼이 있는 행동으로만 제한되지 않으며, 개인 공항을 건설했더라도 보드 공간을 선호합니다."
+    },
+    "city-center": {
+      "title": "시티 센터",
+      "ruleSummary": "울타리 3개 획득 {'|'} 수리/호텔/시설 획득 {'|'} 시장 구매/판매.",
+      "actionSelection": "DiNO는 1-3개의 행동을 수행합니다:",
+      "receiveFences": "DiNO는 보유품에 새로운 울타리 3개를 받고 손상된 서식지를 교체할 수 있습니다.",
+      "facilityBuildRepair": "DiNO는 손상된 시설이 있으면 하나를 수리하고(가장 비싼 것), 그렇지 않으면 다음 기준에 따라 새 시설을 건설합니다:",
+      "facilityBuildRepairBiodome": "DiNO가 선호하는 프테라노돈 DNA 세트를 가지고 있고 바이오돔을 사용할 수 있으면 바이오돔을 건설합니다.",
+      "facilityBuildRepairHotel": "DiNO가 기본 호텔을 2개 미만으로 가지고 있으면 기본 호텔을 건설합니다.",
+      "facilityBuildRepairOtherwise": "그렇지 않으면 DiNO는 새로운 시설을 선택합니다:",
+      "buyMarket": "DiNO가 불완전한 선호 종 세트 중 하나와 일치하는 DNA 카드를 시장에서 구매할 수 있으면 지불하지 않고 구매합니다. 여러 옵션이 있으면 가장 오른쪽 카드를 선호합니다. 그렇지 않으면 여분 더미에 최소 2장의 카드가 있으면 DNA 카드를 판매합니다. 이 경우 DiNO는 이 더미의 맨 아래 카드를 판매하고 판매 가격을 받습니다. 해당사항이 없으면 시장을 사용하지 않습니다.",
+      "determineFacility": "시설 결정",
+      "buildFacility": "DiNO는 <b>시설 #{number}</b>를 건설합니다.",
+      "noFacility": "DiNO는 <b>시설을 건설하지 않습니다</b>."
+    },
+    "dinogenics-iom": {
+      "title": "다이노제닉스 IOM",
+      "ruleSummary": "완전한 세트, 적절한 서식지 및 염소가 있는 경우.",
+      "locationUse": "다이노제닉스는 두 가지 경우에 사용됩니다:",
+      "locationUseDNASet": "DiNO가 최소 하나의 완전한 선호 DNA 세트를 가지고 있음 – 다형성 DNA 카드 및/또는 정제된 DNA 토큰이 고려됩니다.",
+      "locationUseMutant": "DiNO가 아직 돌연변이를 생성하지 않았고 완전한 선호 세트에 속하지 않는 DNA 또는 eDNA 카드를 최소 2장 가지고 있음.",
+      "enoughFences": "두 경우 모두 DiNO는 적절한 서식지를 만들 수 있는 충분한 울타리를 가져야 하고, 육식동물의 경우 현재 시즌 동안 먹이를 줄 수 있는 충분한 염소를 가져야 합니다.",
+      "creatingDinosaur": "선호 공룡을 생성할 때 더미를 비워 DNA 버린 카드 더미에 넣고 남은 DNA는 여분 더미에 놓습니다. 여러 옵션이 있으면 오른쪽에서 왼쪽으로 선택합니다. 돌연변이를 생성할 때 돌연변이 참조 카드와 DNA 카드 2장을 버립니다. 여분 더미에서 가져온 DNA를 우선하고, 그 다음 왼쪽에서 오른쪽 선호 순서로 불완전한 선호 더미에서 가져옵니다. DiNO는 보너스 카드 혜택이나 이벤트/조작 카드에서 획득한 경우에만 추가 돌연변이를 생성합니다.",
+      "createHabitat": "새로운 공룡을 위해 필요한 최소한의 울타리를 사용하여 적절한 서식지를 만듭니다. 기존 공룡과 같은 종의 공룡(또는 안킬로사우루스)은 더 큰 축사로 통합되어야 합니다. 빈 바이오돔은 비행 특성을 가진 공룡이 생성되었거나 DiNO가 울타리로 생존 가능한 서식지를 만들 수 없는 경우에만 사용됩니다.",
+      "moveStacks": "마지막으로 모든 선호 더미를 오른쪽으로 이동하여 빈 공간을 채우고 왼쪽의 빈 더미 공간을 여분 더미의 카드로 보충합니다."
+    },
+    "special-action": {
+      "title": "특수 행동",
+      "ruleSummary": "5/8/12/14/15/16/20/28/D3 속보가 활성화된 경우.",
+      "locationUse": "특정 속보 카드가 플레이 중일 때 특수 행동이 수행됩니다.",
+      "resolveAction": "특정 카드 행동 공간이나 카드에서 참조하는 강화된 일반 행동 공간에 DiNO의 일꾼을 배치하여 행동을 해결합니다.",
+      "breakingNewsApply": "특수 행동은 다음 속보 카드에 적용됩니다: 5, 8, 12, 14, 15, 16, 20, 28, D3."
+    },
+    "site-d": {
+      "title": "사이트 D",
+      "ruleSummary": "완전한 DNA 세트가 2개 미만인 경우에만.",
+      "drawEDNA": "DiNO는 $1을 지불하지 않고 eDNA 3장을 뽑습니다. DiNO는 선호 더미와 일치하는 카드 2장, 또는 여분 더미의 카드, 또는 첫 번째로 뽑은 카드를 그 순서로 유지합니다. 남은 카드는 DNA 시장에 추가합니다."
+    },
+    "refinement": {
+      "title": "정제",
+      "ruleSummary": "정제된 DNA 토큰이 2개 미만인 경우.",
+      "locationUse": "DiNO가 정제된 DNA 토큰을 2개 미만으로 가지고 있을 때만 사용됩니다.",
+      "noMoney": "DiNO는 DNA 카드나 돈을 지불할 필요가 없습니다.",
+      "tokenPlacement": "토큰은 세트를 완성하는 데 필요할 때까지 DiNO의 보드 근처에 보관됩니다."
+    },
+    "intelligen-designs-hq": {
+      "title": "인텔리젠 디자인즈 본부",
+      "ruleSummary": "오픈 오션 굴리기 또는 전문가 고용, 대형 시설.",
+      "gainBonus": "DiNO는 보너스를 획득합니다:",
+      "action1": {
+        "openOceanRoll": {
+          "title": "<b>오픈 오션 굴리기</b> 해결 (A1):",
+          "aquaticHabitat": "DiNO는 즉시 수중 서식지를 획득합니다.",
+          "rollDice": "DiNO는 플레시오사우루스 배치를 해결하기 위해 유지 보수 주사위 2개를 굴립니다.",
+          "creditsVP": "DiNO는 크레딧을 지불하지 않지만 관련 기호가 나오면 승점을 잃습니다."
+        },
+        "hireSpecialist": "DiNO는 진열대에서 <b>전문가 A{number}</b>를 획득합니다. 돈이나 조작 카드를 소비하지 않습니다.",
+        "removeTrainingToken": "<b>훈련 토큰 #{number}</b>를 제거합니다."
+      },
+      "action2": {
+        "aquaticHabitat": "DiNO가 선호 더미에 1종 이상의 수중 종을 가지고 있고 빈 수중 서식지가 없으면 수중 서식지를 건설합니다.",
+        "otherwise": "그렇지 않으면:",
+        "determineAction": "행동 결정",
+        "addLargeFacility": "DiNO는 자신의 공원에 대형 시설을 추가합니다:",
+        "selectFacility": "대형 시설 B{number}"
+      }
+    },
+    "site-common": {
+      "locationUse": "DiNO가 완전한 DNA 세트를 2개 미만으로 가지고 있을 때만 사용됩니다.",
+      "cardAssignment": "카드를 일치하는 선호 DNA 세트에 할당하거나 여분 더미의 맨 아래에 놓습니다.",
+      "newStack": "비어 있으면 선호 더미를 보충합니다."
+    }
+  },
+  "bonusCardBenefit": {
+    "gain-goat": "염소 1개",
+    "gain-dna-card": "DNA 카드 1장",
+    "gain-fence": "울타리 1개",
+    "discard-scandal": "스캔들 1개 버리기",
+    "gain-edna-card": "eDNA 카드 1장",
+    "gain-vp": "승점 {difficultyLevel}점",
+    "gain-credits": "크레딧 {difficultyLevel}개",
+    "gain-mutant": "DiNO가 돌연변이를 가지고 있고 다른 돌연변이를 위한 유효한 서식지를 제공할 수 있으면 다른 돌연변이를 획득합니다.",
+    "gain-refined-dna-token": "정제된 DNA 토큰 1개",
+    "none": "없음"
+  },
+  "notfound": {
+    "title": "찾을 수 없음"
+  },
+  "action": {
+    "playGame": "게임 플레이",
+    "startGame": "게임 시작",
+    "next": "다음",
+    "nextRound": "다음 라운드",
+    "abortGame": "게임 중단",
+    "abortGameConfirm": "실행 중인 게임을 중단합니다 - 확실합니까?",
+    "endGame": "게임 종료",
+    "endGameConfirm": "이 게임을 종료하고 홈 화면으로 돌아갑니다 - 확실합니까?",
+    "cancel": "취소",
+    "backToHome": "홈으로 돌아가기",
+    "back": "뒤로",
+    "close": "닫기"
+  },
+  "footer": {
+    "credits": "크레딧"
+  },
+  "serviceWorkerUpdatedRefresh": {
+    "title": "앱 새로고침",
+    "notice": "애플리케이션이 업데이트되었습니다 - 최신 버전을 사용하기 위해 새로고침하시겠습니까?"
+  }
+}
