@@ -3,7 +3,7 @@
   "home": {
     "title": "DinoGenics Solo Helper",
     "play1": "Play <a href='https://boardgamegeek.com/boardgame/210296/dinogenics' target='_blank' rel='noopener'><b>DinoGenics</b></a> against a DiNO, the Solo Opponent.",
-    "play2": "You can play against up to 4 DiNOs. The application replaces the action card deck, manages the difficulty levels and guides you trough the DiNO rules.",
+    "play2": "You can play against up to 4 DiNOs. The application replaces the action card deck, manages the difficulty levels and guides you through the DiNO rules.",
     "play3": "The expansions <i>Controlled Chaos</i> and <i>New Arrivals</i> are supported, and most of the modules.",
     "feedback": "Discussion and Feedback:"
   },
@@ -272,7 +272,7 @@
     "breakingNews": {
       "title": "Breaking News",
       "7": "DiNO discards 4 unused fences if possible; if not, damages an un-occupied facility worth the least end game points; if none, remove 4 fences from dinosaur habitats.",
-      "14": "DiNO only uses this option if at least 2 cards in the Bonyard are prefered species.",
+      "14": "DiNO only uses this option if at least 2 cards in the Boneyard are preferred species.",
       "15": "DiNO keeps all manipulation cards.",
       "26": "DiNO takes two scandals.",
       "27": "Specialist that scores the most victory points.", 
@@ -295,7 +295,7 @@
       "corruptedTRex": {
         "title": "Corrupted T-Rex Variant Clarifications",
         "intro": "If the Corrupted T-Rex news card triggered, DiNO will adjust his actions:",
-        "dnaAction": "DiNO will only use a DNA-acquiring action if he has no complete DNA-set at all (including the mutant card) and the action provides a chance to complete a set. if he is missing more than one card, he won’t use the refinement- or boneyard-actions.",
+        "dnaAction": "DiNO will only use a DNA-acquiring action if he has no complete DNA-set at all (including the mutant card) and the action provides a chance to complete a set. If he is missing more than one card, he won’t use the refinement- or boneyard-actions.",
         "market": "DiNO will only buy from the market in the above case.",
         "placeTRex": "If DiNO has to place a corrupted T-Rex, place it in a 1x1 fenced pen if possible."
       }
@@ -469,7 +469,7 @@
         "quetzalcoatlus": "Terror Bird: Must be housed in a biodome to fulfill its Habitat requirement. After Upkeep step 2, gain 1 VP per visitor in your park.",
         "compsognathus": "Swarm: Spend 0/1/2 goats during Upkeep step 1 to increase this dinosaurs Swarm die by 0/1/2. This species’ seasonal value is equal to its Swarm die.<br/>DiNO only feeds if it has enough Goats for all other carnivores in its park for the current season and next.",
         "carnotaurus": "Swift Hunter: Gain 2 VP when you create an omnivore or herbivore.",
-        "dunkleosteus": "Teeth Grinding: During Upkeep step 1, you may destroy 1 fence in your park to gain 2 VP; or 2 fences o gain 4 VP.",
+        "dunkleosteus": "Teeth Grinding: During Upkeep step 1, you may destroy 1 fence in your park to gain 2 VP; or 2 fences to gain 4 VP.",
         "dilophosaurus": "Intimidating: When created, gain 1 card from the DNA Market for free. *Worth 4 VP and 3 Reputation if this is your only carnivore.",
         "perucetus": "Colossus: You may destroy this species during Upkeep step 1 to feed all carnivores in your park and then gain 5 VP.",
         "bajadasaurus": "Roaming Spectacle: During Upkeep step 7, gain credits equal to half of your empty Park Sector spaces rounded up (6 max).",
@@ -519,7 +519,7 @@
     "farm": {
       "title": "The Farm",
       "ruleSummary": "If no/not enough goats for this season and next.",
-      "locationUse": "DiNO uses the farm if it has zero goats or lacks enough goats to feed its built carnivores, and any carnivore in the right most prefered DNA stack, for the next 2 feeding phases."
+      "locationUse": "DiNO uses the farm if it has zero goats or lacks enough goats to feed its built carnivores, and any carnivore in the right most preferred DNA stack, for the next 2 feeding phases."
     },
     "ferry": {
       "title": "The Ferry",
@@ -559,7 +559,7 @@
       "locationUseDNASet": "DiNO has at least one complete preferred DNA set – Polymorphic DNA cards and/or Refined DNA Tokens are considered.",
       "locationUseMutant": "DiNO has not created a mutant yet and it has at least 2 DNA or eDNA cards that are not part of a complete preferred set.",
       "enoughFences": "In either case, DiNO must also have enough fences to create a suitable habitat, and in the case of a carnivore, must have enough goats to feed it for the current season.",
-      "creatingDinosaur": "When creating a preferred dinosaur, empty a stack to the DNA discard pile and any remaining DNA is placed into the Spare pile. Choose right to left if there are multiple options. When creating a mutant, discard the Mutant reference card and 2 DNA cards. Prioritize DNA taken from the spare stack, then incomplete preferred stacks in order of preference left to right. DiNO will only create additional Mutants if gained from from a Bonus Card Benefit or from event/manipulation cards.",
+      "creatingDinosaur": "When creating a preferred dinosaur, empty a stack to the DNA discard pile and any remaining DNA is placed into the Spare pile. Choose right to left if there are multiple options. When creating a mutant, discard the Mutant reference card and 2 DNA cards. Prioritize DNA taken from the spare stack, then incomplete preferred stacks in order of preference left to right. DiNO will only create additional Mutants if gained from a Bonus Card Benefit or from event/manipulation cards.",
       "createHabitat": "Create a suitable habitat for the new dinosaur using the minimal number of fences required. Dinosaurs of the same species as existing dinosaurs (or Ankylosaurus) must be consolidated into a larger pen. An empty Bio dome is only used if a dinosaur with the Flight Trait was created or if DiNO is unable to create a viable habitat with fences.",
       "moveStacks": "Finally, move all preferred stacks to the right to fill the empty space and refresh the empty stack space on the left with cards from the spare pile."
     },
@@ -593,14 +593,14 @@
           "rollDice": "DiNO rolls two Upkeep Dice to resolve placing a Plesiosaurus.",
           "creditsVP": "DiNO pays no Credits but will lose VP if the related symbol is rolled."
         },
-        "hireSpecialist": "DiNO gains <b>Specialist A{number}</b> from the from the display. No money or Manipulation cards are spent.",
+        "hireSpecialist": "DiNO gains <b>Specialist A{number}</b> from the display. No money or Manipulation cards are spent.",
         "removeTrainingToken": "Remove <b>Training Token #{number}.</b>"
       },
       "action2": {
         "aquaticHabitat": "If DiNO has 1 or more Aquatic Species in its Preferred Stacks and no empty Aquatic Habitats, it builds an Aquatic Habitat.",
         "otherwise": "Otherwise:",
         "determineAction": "Determine Action",
-        "addLargeFacility": "DiNO adds a large facility to it's park:",
+        "addLargeFacility": "DiNO adds a large facility to its park:",
         "selectFacility": "Large Facility B{number}"
       }
     },
